@@ -180,7 +180,12 @@
   left: 0;
   width: 100%;
   z-index: 1040;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out; /* Added opacity transition */
+}
+
+.booking-engine-fixed.is-hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevents interaction when hidden */
 }
 
 /* Desktop Styles */
@@ -374,13 +379,12 @@ select.enquiry-input {
 }
 
 /* FOOTER */
-/* Footer Styles */
 .footer {
     background-color: var(--white);
     border-top: 1px solid var(--lightest-blue);
-    position: relative; /* Required for z-index to function on block elements */
-    z-index: 1100;      /* Higher than Booking Engine (1040) and Enquiry (1050) */
     box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Optional: adds depth as it covers elements */
+    position: relative;
+    z-index: 1100;
 }
 
 .footer-heading {

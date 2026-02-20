@@ -147,3 +147,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+/**
+ * Footer Collision Controller
+ * Fades out fixed elements when they overlap the footer
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    const engine = document.querySelector("#bookingEngine");
+    const footer = document.querySelector("#footer");
+
+    if (!engine || !footer) return;
+
+    // Observer options: triggers when footer is within 50px of the viewport bottom
+    const options = {
+        root: null,
+        rootMargin: '0px 0px 50px 0px',
+        threshold: 0
+    };
+
+    const handleFooterIntersection = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Footer is visible, hide the booking engine
+                engine.classList.add("is-hidden");
+            } else {
+                // Footer is away, show the booking engine
+                engine.classList.remove("is-hidden");
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(handleFooterIntersection, options);
+    observer.observe(footer);
+});
