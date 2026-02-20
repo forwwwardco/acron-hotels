@@ -364,3 +364,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* --- Stop YouTube Videos on Carousel Slide --- */
+document.addEventListener("DOMContentLoaded", () => {
+  const videoCarousel = document.getElementById('acronVideoCarousel');
+
+  if (videoCarousel) {
+    videoCarousel.addEventListener('slide.bs.carousel', () => {
+      // Find all iframes inside this carousel
+      const iframes = videoCarousel.querySelectorAll('iframe');
+
+      // Re-assigning the source URL forces the iframe to stop playing
+      iframes.forEach(iframe => {
+        const currentSrc = iframe.src;
+        iframe.src = currentSrc;
+      });
+    });
+  }
+});

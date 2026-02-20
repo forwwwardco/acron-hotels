@@ -986,3 +986,60 @@ select.enquiry-input {
     font-size: 0.9rem;
   }
 }
+
+/* --- Video Carousel Section --- */
+.video-section h3 {
+  font-size: 1.8rem;
+}
+
+/* Customizing the Bootstrap Indicators */
+.custom-video-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between dots */
+}
+
+.custom-video-indicators button {
+  background-color: var(--blue-grey) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  border: none !important;
+  opacity: 0.3 !important;
+  text-indent: -999px;
+  transition: all var(--transition-speed) !important;
+  margin: 0 !important;
+}
+
+/* The active 'pill' shape */
+.custom-video-indicators button.active {
+  opacity: 1 !important;
+  width: 28px !important;
+  border-radius: 6px !important;
+}
+
+/* Custom Prev/Next Arrows */
+.custom-video-control {
+  background: transparent;
+  border: none;
+  color: var(--blue-grey);
+  font-size: 1.25rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-video-control:hover {
+  opacity: 0.6;
+}
+
+/* Mobile Typography Fixes */
+@media (max-width: 991px) {
+  .video-section h3 {
+    font-size: 1.5rem;
+  }
+}
