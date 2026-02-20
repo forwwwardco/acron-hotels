@@ -1,18 +1,113 @@
 <?php include("v2/header.php"); ?>
 
-  <!-- FIXED BOOKING ENGINE -->
-  <?php include("v2/components/booking-engine.php"); ?>
-  <!-- ENQUIRY FORM -->
-  <?php include("v2/components/enquiry-form.php"); ?>
+<!-- FIXED BOOKING ENGINE -->
+<?php include("v2/components/booking-engine.php"); ?>
+<!-- ENQUIRY FORM -->
+<?php include("v2/components/enquiry-form.php"); ?>
 
-  <!-- HERO SECTION -->
-  <!-- EXCLUSIVE DEALS SECTION -->
-  <!-- OUR HOTELS SECTION -->
-  <!-- STATISTICS SECTION -->
-  <!-- TESTIONIALS SECTION -->
-  <!-- YOUTUBE EMBED SECTION -->
-  <!-- ACRON HOMES CROSSLINK SECTION -->
-  <!-- ACRON HOTELS LEGACY SECTION -->
+<!-- HERO SECTION -->
+<section class="hero-section d-flex flex-column" id="heroSection">
+
+  <div class="hero-top-bar bg-white py-3 py-lg-4 border-bottom">
+    <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
+      <h1 class="hero-h1 text-blue-grey fw-bold m-0">
+        GOA'S FINEST<br>
+        <span class="text-waterfront">RIVER, SEA & VILLAGE STAYS</span>
+      </h1>
+
+      <div class="ta-badge-wrapper">
+        <img src="assets/ta-square-placeholder.png" alt="TripAdvisor Travellers' Choice" class="ta-badge-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-resorts-container container-fluid px-0 flex-fill position-relative">
+    <div class="row g-0 h-100">
+
+      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-waterfront.jpg');">
+        <div class="resort-overlay"></div>
+        <div class="resort-content-wrapper p-4 p-xxl-5">
+          <div class="resort-top">
+            <h2 class="resort-h2 fw-bold mb-2">Acron Waterfront Resort</h2>
+            <div class="d-flex align-items-center gap-3">
+              <p class="resort-tagline mb-0 h6">On the Baga River</p>
+              <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill"></i> Show on Map
+              </button>
+            </div>
+          </div>
+          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
+            <a href="/waterfront" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="waterfront">
+              KEY FEATURES
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-seaway.jpg');">
+        <div class="resort-overlay"></div>
+        <div class="resort-content-wrapper p-4 p-xxl-5">
+          <div class="resort-top">
+            <h2 class="resort-h2 fw-bold mb-2">Acron Seaway Resort</h2>
+            <div class="d-flex align-items-center gap-3">
+              <p class="resort-tagline mb-0 h6">Near Candolim Beach</p>
+              <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill"></i> Show on Map
+              </button>
+            </div>
+          </div>
+          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
+            <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="seaway">
+              KEY FEATURES
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-regina.jpg');">
+        <div class="resort-overlay"></div>
+        <div class="resort-content-wrapper p-4 p-xxl-5">
+          <div class="resort-top">
+            <h2 class="resort-h2 fw-bold mb-2">Acron Candolim Regina</h2>
+            <div class="d-flex align-items-center gap-3">
+              <p class="resort-tagline mb-0 h6">In Candolim Village</p>
+              <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill"></i> Show on Map
+              </button>
+            </div>
+          </div>
+          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
+            <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="regina">
+              KEY FEATURES
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hero-tooltip-overlay" id="heroTooltip">
+  <div class="hero-tooltip-box p-4 p-md-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 class="tooltip-title fw-bold m-0 text-yellow" id="tooltipTitle">Resort Features</h4>
+      <button class="btn-close-tooltip" id="closeTooltip"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="tooltip-features-list fa-ul ms-4" id="tooltipList">
+    </ul>
+  </div>
+</div>
+<!-- EXCLUSIVE DEALS SECTION -->
+<!-- OUR HOTELS SECTION -->
+<!-- STATISTICS SECTION -->
+<!-- TESTIONIALS SECTION -->
+<!-- YOUTUBE EMBED SECTION -->
+<!-- ACRON HOMES CROSSLINK SECTION -->
+<!-- ACRON HOTELS LEGACY SECTION -->
 
 <main>
 
@@ -75,7 +170,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- ======= Acron Hotels Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">

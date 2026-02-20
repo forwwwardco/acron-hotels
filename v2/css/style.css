@@ -50,7 +50,8 @@
 
 .social-link:hover {
   opacity: 0.7;
-  color: var(--waterfront); /* Example use of new variable */
+  color: var(--waterfront);
+  /* Example use of new variable */
 }
 
 /* Main Navbar */
@@ -78,6 +79,7 @@
     background-color: var(--blue-grey);
     transition: width var(--transition-speed);
   }
+
   .nav-link:hover::after {
     width: 100%;
   }
@@ -100,7 +102,8 @@
   background-color: var(--yellow);
   filter: brightness(0.95);
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(45, 51, 74, 0.15); /* Using --blue-grey alpha */
+  box-shadow: 0 4px 8px rgba(45, 51, 74, 0.15);
+  /* Using --blue-grey alpha */
 }
 
 /* Mobile Specific Adjustments */
@@ -115,11 +118,13 @@
 /* Ensure the custom SVG for Tripadvisor icon matches FontAwesome behavior */
 .social-link svg {
   transition: fill var(--transition-speed);
-  fill: var(--blue-grey); /* Matches your font-awesome icon color */
+  fill: var(--blue-grey);
+  /* Matches your font-awesome icon color */
 }
 
 .social-link:hover svg {
-  fill: var(--waterfront); /* Matches your hover variable */
+  fill: var(--waterfront);
+  /* Matches your hover variable */
 }
 
 /* Modal Backdrop Blur */
@@ -165,11 +170,13 @@
 @media (min-width: 992px) {
   #specialOffersTrigger {
     cursor: default;
-    pointer-events: none; /* Text is non-clickable */
+    pointer-events: none;
+    /* Text is non-clickable */
   }
 
   .contact-numbers a {
-    pointer-events: auto; /* Ensure numbers remain clickable */
+    pointer-events: auto;
+    /* Ensure numbers remain clickable */
   }
 }
 
@@ -180,12 +187,14 @@
   left: 0;
   width: 100%;
   z-index: 1040;
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out; /* Added opacity transition */
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  /* Added opacity transition */
 }
 
 .booking-engine-fixed.is-hidden {
-    opacity: 0;
-    pointer-events: none; /* Prevents interaction when hidden */
+  opacity: 0;
+  pointer-events: none;
+  /* Prevents interaction when hidden */
 }
 
 /* Desktop Styles */
@@ -213,7 +222,8 @@
 
   /* Updated Toggle Tab Colour */
   .engine-toggle-btn {
-    background: var(--light-blue); /* Changed from --white/--lightest-blue */
+    background: var(--light-blue);
+    /* Changed from --white/--lightest-blue */
     color: var(--blue-grey);
     border: none;
     padding: 10px 20px;
@@ -243,6 +253,7 @@
 
 /* Desktop Specific: Dark Grey Background Visibility */
 @media (min-width: 992px) {
+
   .booking-engine-fixed .form-control,
   .booking-engine-fixed .form-select {
     background-color: var(--white) !important;
@@ -265,6 +276,7 @@
 
 /* Mobile Specific: Light Blue Background Visibility */
 @media (max-width: 991px) {
+
   .booking-engine-fixed .form-control,
   .booking-engine-fixed .form-select {
     background-color: transparent !important;
@@ -312,7 +324,8 @@
 
 /* Vertical Tab Trigger */
 .enquiry-trigger {
-  background-color: var(--light-blue); /* Synced with booking tab */
+  background-color: var(--light-blue);
+  /* Synced with booking tab */
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-right: none;
   color: var(--blue-grey);
@@ -320,7 +333,8 @@
   border-radius: 8px 0 0 8px;
   cursor: pointer;
   position: absolute;
-  left: -35px; /* Updated position */
+  left: -35px;
+  /* Updated position */
   top: 0;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -345,8 +359,10 @@
 .enquiry-input {
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 2px solid rgba(45, 51, 74, 0.2) !important; /* Subtle bottom border */
-  border-radius: 0 !important; /* Remove default rounding for line-style */
+  border-bottom: 2px solid rgba(45, 51, 74, 0.2) !important;
+  /* Subtle bottom border */
+  border-radius: 0 !important;
+  /* Remove default rounding for line-style */
   padding: 10px 5px !important;
   color: var(--blue-grey) !important;
   transition: border-color var(--transition-speed);
@@ -380,71 +396,280 @@ select.enquiry-input {
 
 /* FOOTER */
 .footer {
-    background-color: var(--white);
-    border-top: 1px solid var(--lightest-blue);
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Optional: adds depth as it covers elements */
-    position: relative;
-    z-index: 1100;
+  background-color: var(--white);
+  border-top: 1px solid var(--lightest-blue);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+  /* Optional: adds depth as it covers elements */
+  position: relative;
+  z-index: 1100;
 }
 
 .footer-heading {
-    color: var(--dark-blue); /* Cyan/Teal heading color from design */
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+  color: var(--dark-blue);
+  /* Cyan/Teal heading color from design */
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .footer-links a {
-    color: var(--blue-grey);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color var(--transition-speed);
+  color: var(--blue-grey);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition-speed);
 }
 
 .footer-links a:hover {
-    color: var(--waterfront);
+  color: var(--waterfront);
 }
 
 /* Footer Bottom Bar */
 .footer-bottom {
-    background-color: var(--lightest-blue);
-    color: var(--blue-grey);
-    position: relative;
-    z-index: 1100;
+  background-color: var(--lightest-blue);
+  color: var(--blue-grey);
+  position: relative;
+  z-index: 1100;
 }
 
 
 .credit-text {
-    letter-spacing: 1px;
-    font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
 }
 
 .brand-forwwward {
-    color: var(--blue-grey);
+  color: var(--blue-grey);
 }
 
 /* Back to Top */
 .back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    background: var(--yellow);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-    color: var(--blue-grey);
-    text-decoration: none;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--yellow);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  color: var(--blue-grey);
+  text-decoration: none;
 }
 
 .back-to-top.active {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- 1. Hero Section Layout & Top Bar --- */
+.hero-section {
+  /* Ensure the section fills the viewport height at minimum */
+  min-height: 100vh;
+  /* Offset fixed navbar height so content isn't hidden */
+  padding-top: var(--nav-height-desktop);
+  background-color: var(--white);
+}
+
+.hero-h1 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.text-waterfront {
+  color: var(--waterfront);
+}
+
+/* TripAdvisor Badge Styling */
+.ta-badge-img {
+  width: 90px;
+  /* Adjust based on your actual image */
+  height: 90px;
+  object-fit: contain;
+  /* CSS rounded corners and shadow as requested */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 2. Resort Columns Layout --- */
+.hero-resorts-container {
+  /* On mobile, define a min-height so it doesn't collapse if content is short */
+  min-height: 800px;
+}
+
+.resort-col {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  /* Ensure columns take full available height on desktop */
+  height: 100%;
+  min-height: 400px;
+  /* Mobile fallback height per resort */
+}
+
+/* Dark Overlay for readability */
+.resort-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+/* Content Wrapper - Flex column to push buttons to bottom */
+.resort-content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+/* Resort Text Typography */
+.resort-h2 {
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.resort-tagline {
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.btn-map-link {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-map-link:hover {
+  background: var(--white);
+  color: var(--blue-grey);
+}
+
+/* Hero Buttons */
+.hero-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* White Outline Button */
+.btn-outline-hero {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-hero:hover {
+  background-color: var(--white);
+  color: var(--blue-grey);
+}
+
+/* --- 3. Tooltip Modal Styles --- */
+.hero-tooltip-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(45, 51, 74, 0.95);
+  /* Dark blue-grey backdrop */
+  z-index: 2000;
+  /* Highest priority */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.hero-tooltip-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-tooltip-box {
+  background-color: var(--blue-grey);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: var(--white);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.hero-tooltip-overlay.active .hero-tooltip-box {
+  transform: translateY(0);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+.btn-close-tooltip {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-close-tooltip:hover {
+  opacity: 1;
+}
+
+.tooltip-features-list li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-section {
+    /* On mobile, we don't force 100vh as content might scroll */
+    height: auto;
+    min-height: auto;
+  }
+
+  .hero-h1 {
+    font-size: 1.4rem;
+  }
+
+  .ta-badge-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-resorts-container {
+    /* Remove the flex-fill on mobile so it stacks naturally */
+    flex: 0 0 auto;
+  }
+
+  .resort-col {
+    height: 500px;
+    /* Fixed height per resort on mobile row */
+  }
+
+  .resort-h2 {
+    font-size: 1.6rem;
+  }
 }

@@ -153,30 +153,124 @@ document.addEventListener("DOMContentLoaded", () => {
  * Fades out fixed elements when they overlap the footer
  */
 document.addEventListener("DOMContentLoaded", () => {
-    const engine = document.querySelector("#bookingEngine");
-    const footer = document.querySelector("#footer");
+  const engine = document.querySelector("#bookingEngine");
+  const footer = document.querySelector("#footer");
 
-    if (!engine || !footer) return;
+  if (!engine || !footer) return;
 
-    // Observer options: triggers when footer is within 50px of the viewport bottom
-    const options = {
-        root: null,
-        rootMargin: '0px 0px 50px 0px',
-        threshold: 0
-    };
+  // Observer options: triggers when footer is within 50px of the viewport bottom
+  const options = {
+    root: null,
+    rootMargin: '0px 0px 50px 0px',
+    threshold: 0
+  };
 
-    const handleFooterIntersection = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Footer is visible, hide the booking engine
-                engine.classList.add("is-hidden");
-            } else {
-                // Footer is away, show the booking engine
-                engine.classList.remove("is-hidden");
-            }
-        });
-    };
+  const handleFooterIntersection = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Footer is visible, hide the booking engine
+        engine.classList.add("is-hidden");
+      } else {
+        // Footer is away, show the booking engine
+        engine.classList.remove("is-hidden");
+      }
+    });
+  };
 
-    const observer = new IntersectionObserver(handleFooterIntersection, options);
-    observer.observe(footer);
+  const observer = new IntersectionObserver(handleFooterIntersection, options);
+  observer.observe(footer);
+});
+
+/* HERO Section Tooltip */
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Hero Tooltip Logic ---
+
+  // 1. Data Source for Features
+  const resortFeatures = {
+    waterfront: {
+      title: "Waterfront Highlights",
+      features: [
+        "Situated on the Baga River",
+        "Infinity Pool with River View",
+        "Premium Riverfront Dining",
+        "Walking Distance to Baga Beach",
+        "Luxury Boutique Rooms",
+        "Ideal for Couples & Honeymoons"
+      ]
+    },
+    seaway: {
+      title: "Seaway Highlights",
+      features: [
+        "300m from Candolim Beach",
+        "Large Lagoon-style Pool",
+        "Family-Friendly Atmosphere",
+        "Spacious Rooms with Balconies",
+        "Near Candolim Main Street",
+        "Poolside Bar & Restaurant"
+      ]
+    },
+    regina: {
+      title: "Regina Highlights",
+      features: [
+        "Heart of Candolim Village",
+        "Rated Best for Families",
+        "Expansive Resort Grounds",
+        "Multiple Dining Options",
+        "Kids Club & Activities",
+        "Generic Feature Six",
+        "Generic Feature Seven"
+      ]
+    }
+  };
+
+  const tooltipOverlay = document.getElementById('heroTooltip');
+  const tooltipTitle = document.getElementById('tooltipTitle');
+  const tooltipList = document.getElementById('tooltipList');
+  const closeBtn = document.getElementById('closeTooltip');
+  const triggers = document.querySelectorAll('.tooltip-trigger');
+
+  // Function to open tooltip
+  const openTooltip = (resortKey) => {
+    const data = resortFeatures[resortKey];
+    if (!data) return;
+
+    // Populate Title
+    tooltipTitle.textContent = data.title;
+
+    // Populate List using Font Awesome check icon
+    tooltipList.innerHTML = data.features
+      .map(feature => `<li><span class="fa-li"><i class="fa-solid fa-check text-yellow"></i></span>${feature}</li>`)
+      .join('');
+
+    // Show Overlay
+    tooltipOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  // Function to close tooltip
+  const closeTooltip = () => {
+    tooltipOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  };
+
+  // Event Listeners
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      const resortKey = e.currentTarget.getAttribute('data-resort');
+      openTooltip(resortKey);
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeTooltip);
+  }
+
+  // Close on outside click
+  if (tooltipOverlay) {
+    tooltipOverlay.addEventListener('click', (e) => {
+      if (e.target === tooltipOverlay) {
+        closeTooltip();
+      }
+    });
+  }
 });
