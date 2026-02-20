@@ -34,7 +34,7 @@
             <div class="d-flex align-items-center gap-3">
               <p class="resort-tagline mb-0 h6">Baga, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
-                <i class="bi bi-geo-alt-fill"></i> Show on Map
+                <i class="fa-solid fa-location-dot"></i> Show on Map
               </button>
             </div>
           </div>
@@ -56,7 +56,7 @@
             <div class="d-flex align-items-center gap-3">
               <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
-                <i class="bi bi-geo-alt-fill"></i> Show on Map
+                <i class="fa-solid fa-location-dot"></i> Show on Map
               </button>
             </div>
           </div>
@@ -78,7 +78,7 @@
             <div class="d-flex align-items-center gap-3">
               <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
-                <i class="bi bi-geo-alt-fill"></i> Show on Map
+                <i class="fa-solid fa-location-dot"></i> Show on Map
               </button>
             </div>
           </div>
@@ -109,15 +109,15 @@
 <section id="exclusiveDeals" class="exclusive-deals py-5">
   <div class="container py-4">
 
-    <h2 class="text-center fw-bold text-blue-grey mb-4">Exclusive Deals, Just For You</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-4 fade-in-element">Exclusive Deals, Just For You</h2>
 
-    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
+    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0 fade-in-element">
       <button class="filter-pill active" data-filter="deal-pack-1">SUMMER OFFERS</button>
       <button class="filter-pill" data-filter="deal-pack-2">MONSOON MAGIC</button>
       <button class="filter-pill" data-filter="deal-pack-3">WINTER ESCAPES</button>
     </div>
 
-    <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
+    <div class="row g-4 justify-content-center px-3 px-lg-0 fade-in-element" id="dealsGrid">
 
       <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
         <div class="card h-100 border-0 shadow deals-card-wrapper">
@@ -252,7 +252,7 @@
   <div class="container py-4">
     <div class="row g-5 text-center justify-content-center">
 
-      <div class="col-6 col-lg-3 stat-item">
+      <div class="col-6 col-lg-3 stat-item fade-in-element">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-face-smile"></i>
         </div>
@@ -260,7 +260,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item">
+      <div class="col-6 col-lg-3 stat-item fade-in-element">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-star"></i>
         </div>
@@ -268,7 +268,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item">
+      <div class="col-6 col-lg-3 stat-item fade-in-element">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-building"></i>
         </div>
@@ -276,7 +276,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item">
+      <div class="col-6 col-lg-3 stat-item fade-in-element">
         <div class="stat-icon mb-3">
           <i class="fa-solid fa-location-dot"></i>
         </div>
@@ -291,10 +291,10 @@
 <!-- TESTIONIALS SECTION -->
 <section class="reviews-section py-5">
   <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-5">What Our Guests Say</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 fade-in-element">What Our Guests Say</h2>
   </div>
 
-  <div class="container-fluid px-0">
+  <div class="container-fluid px-0 fade-in-element">
     <div class="reviews-slider d-flex gap-4 px-3 px-lg-5 pb-4">
 
       <div class="review-card shadow bg-white">
@@ -428,7 +428,7 @@
 </section>
 
 <!-- YOUTUBE EMBED SECTION -->
-<section class="video-section py-5 bg-white">
+<section class="video-section py-5 bg-white fade-in-element">
   <div class="container py-4">
 
     <div class="row align-items-center gy-5">
@@ -482,7 +482,7 @@
 </section>
 
 <!-- ACRON HOMES CROSSLINK SECTION -->
-<section class="cross-promo-section py-5 bg-white">
+<section class="cross-promo-section py-5 bg-white fade-in-element">
   <div class="container py-4">
     <div class="row align-items-center gy-5">
 
@@ -548,11 +548,11 @@
   <div class="container py-4">
     <div class="row align-items-center gy-5">
 
-      <div class="col-lg-6">
+      <div class="col-lg-6 fade-in-element">
         <img src="https://placehold.co/600x400" class="img-fluid w-100 rounded-4 shadow-sm legacy-img" alt="Acron Legacy - Hospitality and Development" loading="lazy">
       </div>
 
-      <div class="col-lg-6 px-lg-5 text-center text-lg-start">
+      <div class="col-lg-6 px-lg-5 text-center text-lg-start fade-in-element">
 
         <h6 class="legacy-tagline text-uppercase fw-bold text-blue-grey opacity-75 mb-3">
           The Architects of Luxury

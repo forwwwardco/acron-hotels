@@ -382,3 +382,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/**
+ * Scroll Fade-In Observer
+ * Triggers elements to fade up elegantly when they enter the viewport
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll('.fade-in-element');
+
+  // Trigger when 15% of the element is visible in the viewport
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Stops observing once visible so it doesn't repeat
+      }
+    });
+  }, observerOptions);
+
+  fadeElements.forEach(el => fadeObserver.observe(el));
+});
+
+/**
+ * Booking Engine Reveal Sequence
+ * Waits for the hero animation to finish before fading in the engine
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const engine = document.getElementById("bookingEngine");
+    if (engine) {
+      engine.classList.add("engine-ready");
+    }
+  }, 2300); // 3100ms perfectly matches the hero's 2.8s duration + 0.3s delay
+});

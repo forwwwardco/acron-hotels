@@ -49,6 +49,11 @@ body {
   text-transform: uppercase;
 }
 
+.btn-yellow:hover {
+  background-color: var(--yellow-dark);
+  filter: none !important;
+}
+
 /* General Header Styles */
 .acron-header {
   background-color: var(--white);
@@ -216,13 +221,25 @@ body {
   width: 100%;
   z-index: 1040;
   transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
-  /* Added opacity transition */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .booking-engine-fixed.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* Prevents interaction when hidden */
+}
+
+/* New class added by JS after the hero animation */
+.booking-engine-fixed.engine-ready {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Your existing class for when it hits the footer */
+.booking-engine-fixed.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Desktop Styles */
@@ -1203,4 +1220,166 @@ select.enquiry-input {
     min-height: 300px;
     /* Slightly shorter on mobile */
   }
+}
+
+/* --- Hero Stacking & Spread Animation --- */
+.resort-col {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* Desktop Spread (Horizontal from Centre) */
+@media (min-width: 992px) {
+  .resort-col:nth-child(1) {
+    animation-name: spreadLeftDesktop;
+    z-index: 1;
+  }
+
+  .resort-col:nth-child(2) {
+    animation-name: spreadCentreDesktop;
+    z-index: 2;
+    /* Keeps the middle resort on top of the stack */
+  }
+
+  .resort-col:nth-child(3) {
+    animation-name: spreadRightDesktop;
+    z-index: 1;
+  }
+
+  @keyframes spreadLeftDesktop {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spreadCentreDesktop {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spreadRightDesktop {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Mobile Spread (Vertical downwards) */
+@media (max-width: 991px) {
+  .resort-col:nth-child(1) {
+    animation-name: spreadTopMobile;
+    z-index: 3;
+    /* Top element stays on top of the stack */
+  }
+
+  .resort-col:nth-child(2) {
+    animation-name: spreadMiddleMobile;
+    z-index: 2;
+  }
+
+  .resort-col:nth-child(3) {
+    animation-name: spreadBottomMobile;
+    z-index: 1;
+  }
+
+  @keyframes spreadTopMobile {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spreadMiddleMobile {
+
+    /* Starts pulled up by exactly its height to hide behind the first card */
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spreadBottomMobile {
+
+    /* Starts pulled up by twice its height */
+    0% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* --- Scroll Fade-In Behaviour --- */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+/* Class added by JavaScript when the element enters the viewport */
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
