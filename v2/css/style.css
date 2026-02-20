@@ -1,0 +1,446 @@
+/* Brand Variables */
+:root {
+  /* Primary Palette */
+  --lightest-blue: #e3f6f5;
+  --yellow: #ffd803;
+  --blue-grey: #2d334a;
+  --white: #fffffe;
+
+  /* Secondary / Property Palette */
+  --waterfront: #319bff;
+  --seaway: #664393;
+  --regina: #ff3c4d;
+  --dark-grey: #333333;
+  --dark-blue: #339999;
+  --light-blue: #bae8e8;
+
+  /* Typography & Spacing */
+  --nav-font-size: 0.9rem;
+  --transition-speed: 0.3s ease;
+}
+
+/* General Header Styles */
+.acron-header {
+  background-color: var(--white);
+  transition: transform var(--transition-speed);
+}
+
+/* Top Utility Bar */
+.top-bar {
+  background-color: var(--lightest-blue);
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.cta-link {
+  color: var(--blue-grey);
+  font-size: 0.85rem;
+}
+
+.contact-numbers a {
+  color: var(--blue-grey);
+  font-weight: 500;
+}
+
+.social-link {
+  color: var(--blue-grey);
+  font-size: 1.1rem;
+  transition: opacity var(--transition-speed);
+}
+
+.social-link:hover {
+  opacity: 0.7;
+  color: var(--waterfront); /* Example use of new variable */
+}
+
+/* Main Navbar */
+.navbar-brand .main-logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-link {
+  color: var(--blue-grey) !important;
+  font-size: var(--nav-font-size);
+  position: relative;
+  padding: 0.5rem 0 !important;
+}
+
+/* Underline hover effect for desktop */
+@media (min-width: 992px) {
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--blue-grey);
+    transition: width var(--transition-speed);
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Book Now Button Custom Styling */
+.btn-book-now {
+  background-color: var(--yellow);
+  color: var(--blue-grey);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-book-now:hover {
+  background-color: var(--yellow);
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(45, 51, 74, 0.15); /* Using --blue-grey alpha */
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 991px) {
+  .offcanvas-body .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid var(--lightest-blue);
+  }
+}
+
+/* Ensure the custom SVG for Tripadvisor icon matches FontAwesome behavior */
+.social-link svg {
+  transition: fill var(--transition-speed);
+  fill: var(--blue-grey); /* Matches your font-awesome icon color */
+}
+
+.social-link:hover svg {
+  fill: var(--waterfront); /* Matches your hover variable */
+}
+
+/* Modal Backdrop Blur */
+.modal-backdrop.show {
+  opacity: 0.7;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Floating Card Styling */
+.special-offers-card {
+  background-color: var(--lightest-blue) !important;
+  border-radius: 12px;
+  color: var(--blue-grey);
+}
+
+.btn-close-custom {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--blue-grey);
+  width: fit-content;
+  z-index: 1060;
+}
+
+.modal-contacts a {
+  color: var(--blue-grey);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color var(--transition-speed);
+}
+
+.modal-contacts a:hover {
+  color: var(--waterfront);
+}
+
+/* Desktop override: Disable pointer events on the CTA text only */
+@media (min-width: 992px) {
+  #specialOffersTrigger {
+    cursor: default;
+    pointer-events: none; /* Text is non-clickable */
+  }
+
+  .contact-numbers a {
+    pointer-events: auto; /* Ensure numbers remain clickable */
+  }
+}
+
+/* Fixed Booking Engine Positioning */
+.booking-engine-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1040;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .booking-panel {
+    background-color: var(--dark-grey);
+  }
+}
+
+/* Mobile Drawer Logic */
+@media (max-width: 991px) {
+  .booking-engine-fixed {
+    transform: translateY(calc(100% - 45px));
+  }
+
+  .booking-engine-fixed.engine-expanded {
+    transform: translateY(0);
+  }
+
+  .booking-panel {
+    background-color: var(--lightest-blue);
+    border-top: 1px solid var(--light-blue);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Updated Toggle Tab Colour */
+  .engine-toggle-btn {
+    background: var(--light-blue); /* Changed from --white/--lightest-blue */
+    color: var(--blue-grey);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 800;
+    border-radius: 8px 8px 0 0;
+    margin-left: 15px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  .text-blue-grey {
+    color: var(--blue-grey);
+  }
+}
+
+/* Minimalist Line-Style for Booking Inputs */
+/* Booking Engine Form Controls */
+.booking-engine-fixed .form-control,
+.booking-engine-fixed .form-select {
+  border: none !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 0 !important;
+  padding: 12px 10px !important;
+  transition: all var(--transition-speed);
+}
+
+/* Desktop Specific: Dark Grey Background Visibility */
+@media (min-width: 992px) {
+  .booking-engine-fixed .form-control,
+  .booking-engine-fixed .form-select {
+    background-color: var(--white) !important;
+    color: var(--blue-grey) !important;
+  }
+
+  .booking-engine-fixed .form-control:focus,
+  .booking-engine-fixed .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-bottom-color: var(--yellow) !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+  }
+
+  /* Placeholder color for desktop */
+  .booking-engine-fixed .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* Mobile Specific: Light Blue Background Visibility */
+@media (max-width: 991px) {
+  .booking-engine-fixed .form-control,
+  .booking-engine-fixed .form-select {
+    background-color: transparent !important;
+    border-bottom-color: rgba(45, 51, 74, 0.2) !important;
+    color: var(--blue-grey) !important;
+  }
+
+  .booking-engine-fixed .form-control:focus,
+  .booking-engine-fixed .form-select:focus {
+    border-bottom-color: var(--blue-grey) !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Common Form Styles */
+.date-input,
+.custom-select {
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid var(--light-blue);
+}
+
+.date-input {
+  text-transform: uppercase;
+}
+
+/* ENQUIRY FORM */
+/* Enquiry Panel Wrapper */
+.enquiry-panel-wrapper {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  width: 350px;
+  max-width: 90vw;
+  z-index: 1050;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.enquiry-panel-wrapper.active {
+  transform: translateX(0);
+}
+
+/* Vertical Tab Trigger */
+.enquiry-trigger {
+  background-color: var(--light-blue); /* Synced with booking tab */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  color: var(--blue-grey);
+  padding: 15px 8px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  position: absolute;
+  left: -35px; /* Updated position */
+  top: 0;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry-trigger span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.enquiry-content {
+  background-color: var(--lightest-blue);
+  width: 100%;
+  border-radius: 0 0 0 12px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Enquiry Form Field Styling */
+.enquiry-input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(45, 51, 74, 0.2) !important; /* Subtle bottom border */
+  border-radius: 0 !important; /* Remove default rounding for line-style */
+  padding: 10px 5px !important;
+  color: var(--blue-grey) !important;
+  transition: border-color var(--transition-speed);
+}
+
+.enquiry-input:focus {
+  box-shadow: none !important;
+  border-bottom-color: var(--blue-grey) !important;
+}
+
+/* Specific Select Arrow adjustment for line-style */
+select.enquiry-input {
+  background-position: right 0 center !important;
+}
+
+/* Enquiry Form Submit Button */
+#enquiryForm .btn-yellow {
+  background-color: var(--yellow) !important;
+  color: var(--blue-grey) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#enquiryForm .btn-yellow:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+/* FOOTER */
+/* Footer Styles */
+.footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--lightest-blue);
+    position: relative; /* Required for z-index to function on block elements */
+    z-index: 1100;      /* Higher than Booking Engine (1040) and Enquiry (1050) */
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Optional: adds depth as it covers elements */
+}
+
+.footer-heading {
+    color: var(--dark-blue); /* Cyan/Teal heading color from design */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--blue-grey);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--waterfront);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    background-color: var(--lightest-blue);
+    color: var(--blue-grey);
+    position: relative;
+    z-index: 1100;
+}
+
+
+.credit-text {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+.brand-forwwward {
+    color: var(--blue-grey);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: var(--yellow);
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+    color: var(--blue-grey);
+    text-decoration: none;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 30 30"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil1 {fill:#0B3F59}
+    .fil8 {fill:url(#id0)}
+    .fil7 {fill:url(#id1)}
+    .fil3 {fill:url(#id2)}
+    .fil6 {fill:url(#id3)}
+    .fil4 {fill:url(#id4)}
+    .fil5 {fill:url(#id5)}
+    .fil2 {fill:url(#id6)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="1.10669" y1="18.9343" x2="4.59685" y2="18.9343">
+   <stop offset="0" style="stop-opacity:1; stop-color:#0B3F59"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#419DAB"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="25.2484" y1="18.9343" x2="28.7374" y2="18.9343">
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="4.4563" y1="19.3169" x2="8.64449" y2="19.3169">
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="8.78268" y1="19.5071" x2="12.6898" y2="19.5071">
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="17.1543" y1="19.5071" x2="21.0614" y2="19.5071">
+  </linearGradient>
+  <linearGradient id="id5" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="12.9685" y1="19.5461" x2="16.8768" y2="19.5461">
+  </linearGradient>
+  <linearGradient id="id6" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="21.2008" y1="19.3169" x2="25.389" y2="19.3169">
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1597984894528">
+   <rect class="fil0" width="30" height="30"/>
+   <path class="fil1" d="M17 13c-1,0 -1,0 -1,0 1,0 0,0 1,0zm-1 0c-1,0 0,0 0,0 0,0 0,0 0,0zm0 0c-1,0 -1,0 -1,0 1,0 1,0 1,0zm-1 0c0,0 0,0 0,0 1,0 0,0 0,0zm0 0l0 0 0 0zm-1 -1c0,0 1,1 0,0 0,0 0,1 0,0zm3 1c0,0 0,0 1,0 0,0 0,0 1,0 -1,1 -2,3 -2,3 0,0 1,0 2,0 1,0 1,0 2,0 0,-1 0,-1 1,-1 0,-1 0,-1 1,-1l-1 1c0,1 0,1 0,1 1,0 3,-2 4,-2l0 0c0,-1 0,-1 -1,-1 -1,-1 -4,-2 -4,-2 -4,1 -3,1 -6,0 -1,0 -1,0 -2,0 0,0 0,1 0,1 0,0 1,0 1,0 0,1 0,0 -1,1l-2 0c-2,0 -3,0 -4,0 -1,0 -4,0 -5,1 -1,0 -1,0 -1,1 0,0 0,0 0,0 1,0 1,0 2,-1 5,0 9,0 14,0 0,0 0,0 0,0l0 -1z"/>
+   <path class="fil2" d="M21 16c0,1 0,1 0,2 0,0 0,1 0,1 0,1 0,1 0,2 0,0 0,1 0,1 5,0 4,0 4,-1l0 -3c0,0 0,0 0,-1 0,0 0,0 0,-1 -1,0 -2,0 -4,0z"/>
+   <path class="fil3" d="M9 22c0,0 0,-1 0,-1 0,-1 -1,-1 0,-2 0,0 -1,-1 0,-1 0,-1 -1,-1 -1,-2 -1,0 -2,0 -4,0 0,1 1,1 1,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,1 0,2 0,0 0,0 0,0 1,0 3,0 4,0z"/>
+   <path class="fil4" d="M17 17l0 5 4 0c0,0 0,0 0,-1 0,-1 0,-1 0,-2 0,0 0,0 0,-1 0,0 0,-1 0,-1l-4 0z"/>
+   <path class="fil5" d="M13 19c0,2 0,2 0,3l4 0 0 -5 -4 0 0 2z"/>
+   <polygon class="fil6" points="9,22 13,22 13,17 9,17 "/>
+   <path class="fil7" d="M26 16l-1 5c0,0 0,0 0,1 1,0 3,0 3,0 0,-1 0,-3 0,-3l1 -3c-1,0 -2,0 -3,0z"/>
+   <path class="fil8" d="M5 22l-1 -6c-1,0 -2,0 -3,0l1 6c0,0 2,0 3,0z"/>
+   <path class="fil1" d="M28 22l0 0c-1,0 -4,0 -6,0 -4,1 -17,1 -20,0 0,0 0,0 2,1 3,0 6,0 9,0 0,0 1,0 2,0 2,0 7,0 10,0 1,-1 2,-1 3,-1z"/>
+   <path class="fil1" d="M19 9c0,3 4,2 4,0 0,-3 -4,-2 -4,0z"/>
+   <rect class="fil0" width="30" height="30"/>
+   <path class="fil1" d="M26 14l0 0c0,1 0,0 0,0 1,0 1,0 1,1 1,0 1,0 2,0 0,0 0,0 0,0 0,0 0,0 0,0l0 -1c0,0 0,0 -1,0 -1,-1 -1,-1 -2,-1 0,1 0,1 0,1z"/>
+  </g>
+ </g>
+</svg>
