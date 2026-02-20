@@ -1043,3 +1043,102 @@ select.enquiry-input {
     font-size: 1.5rem;
   }
 }
+
+/* --- Cross Promotion Section --- */
+
+/* Standardize the image heights */
+.promo-carousel-img {
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Gradient overlay for control visibility */
+.carousel-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+  /* Allows clicks to pass through to the image */
+}
+
+/* Wrapper for controls positioned at the bottom */
+.promo-controls-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Custom Arrows */
+.promo-control-btn {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0 10px;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.promo-control-btn:hover {
+  opacity: 1;
+}
+
+/* Custom Indicators (Reusing the pill logic from videos but in white) */
+.promo-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.promo-indicators button {
+  background-color: var(--white) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  border: none !important;
+  opacity: 0.4 !important;
+  text-indent: -999px;
+  transition: all var(--transition-speed) !important;
+  margin: 0 !important;
+}
+
+.promo-indicators button.active {
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 6px !important;
+}
+
+/* Typography Styling */
+.promo-tagline {
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.promo-heading {
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+.promo-text {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .promo-heading {
+    font-size: 2.2rem;
+  }
+
+  .promo-carousel-img {
+    height: 350px;
+    /* Slightly shorter aspect ratio on mobile */
+  }
+}
