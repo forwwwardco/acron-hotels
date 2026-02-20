@@ -5,40 +5,7 @@
   <?php include("v2/components/enquiry-form.php"); ?>
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center flex-column justify-content-end" tabindex="-1">
-  <video id="background-video" autoplay loop muted height="100%" width="100%" poster="assets/img/bg.webp">
-    <source src="assets/video/acron-hotels-goa.mp4" type="video/mp4">
-  </video>
-  
-  <!-- <div class="container">
-    <div class="row">
-      <form class="php-email-form book-direct" id="book-direct-form" target="_blank" action="" method="post">
-        <div class="col-lg-9" style="padding: 10px; background-color: #00000060; border-radius: 5px;">
-          <div class="row">
-            <div class="col-md-3">
-              <input type="text" onfocus="(this.type='date')" id="checkin" class="form-control" name="checkin" placeholder="CHECK IN" required>
-            </div>
-            <div class="col-md-3">
-              <input type="text" onfocus="(this.type='date')" id="checkout" class="form-control" name="checkout" placeholder="CHECK OUT" required>
-            </div>
-            <div class="col-md-3">
-              <select required class="form-control form-select" name="select_prop" id="select_prop">
-                <option value="" selected disabled>SELECT HOTEL</option>
-                <option value="Mjk4">Acron Candolim Resort</option>
-                <option value="NzQy">Acron Seaway Resort</option>
-                <option value="MzAw">Acron Waterfront Resort</option>
-              </select>
-            </div>
-            <div class="col-md-3">
-              <button class="form-control btn-danger" id="submit_book_now"><b>BOOK NOW</b></button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div> -->
 
-</section>
 <main>
 
   <!-- ======= Book Direct Section ======= -->
