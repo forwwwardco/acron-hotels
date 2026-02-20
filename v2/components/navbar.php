@@ -36,7 +36,7 @@
         <div class="container-fluid px-lg-5">
 
             <a class="navbar-brand me-auto me-lg-0" href="/">
-                <img src="assets/logo-acron.png" alt="Acron Hotels" class="img-fluid main-logo">
+                <img src="https://placehold.co/200x60" alt="Acron Hotels" class="img-fluid main-logo">
             </a>
 
             <div class="ms-auto me-3 d-lg-none">
@@ -78,11 +78,11 @@
             <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
                 <i class="bi bi-x-circle"></i>
             </button>
-            
+
             <div class="modal-body text-center py-4">
                 <h6 class="fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Call for Special Offers</h6>
                 <hr class="mx-auto mb-4" style="width: 40px; border-top: 2px solid var(--blue-grey); opacity: 1;">
-                
+
                 <div class="modal-contacts d-flex flex-column gap-3">
                     <a href="tel:+91XXXXX XXXXX" class="d-flex align-items-center justify-content-center gap-2 text-decoration-none">
                         <i class="bi bi-telephone-fill"></i> / <i class="bi bi-whatsapp"></i>

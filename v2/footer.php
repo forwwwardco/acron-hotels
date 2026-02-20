@@ -4,7 +4,7 @@
 
             <div class="col-lg-4 col-md-12 text-center text-lg-start">
                 <a href="/">
-                    <img src="assets/logo-acron.png" alt="Acron Group of Hotels" class="footer-logo img-fluid" width="220">
+                    <img src="https://placehold.co/200x60" alt="Acron Group of Hotels" class="footer-logo img-fluid" width="220">
                 </a>
             </div>
 
