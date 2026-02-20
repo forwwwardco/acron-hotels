@@ -3,6 +3,7 @@
   /* Primary Palette */
   --lightest-blue: #e3f6f5;
   --yellow: #ffd803;
+  --yellow-dark: #ffe942;
   --blue-grey: #2d334a;
   --white: #fffffe;
 
@@ -18,7 +19,7 @@
   --nav-font-size: 0.9rem;
   --transition-speed: 0.3s ease;
 
-  --nav-height-desktop: 150px;
+  --nav-height-desktop: 140px;
   --nav-height-mobile: 140px;
 }
 
@@ -106,7 +107,7 @@ body {
 /* Book Now Button Custom Styling */
 .btn-book-now {
   background-color: var(--yellow);
-  color: var(--blue-grey);
+  color: var(--blue-grey) !important;
   border: none;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -117,11 +118,9 @@ body {
 }
 
 .btn-book-now:hover {
-  background-color: var(--yellow);
-  filter: brightness(0.95);
+  background-color: var(--yellow-dark);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(45, 51, 74, 0.15);
-  /* Using --blue-grey alpha */
 }
 
 /* Mobile Specific Adjustments */
@@ -342,8 +341,7 @@ body {
 
 /* Vertical Tab Trigger */
 .enquiry-trigger {
-  background-color: var(--light-blue);
-  /* Synced with booking tab */
+  background-color: var(--lightest-blue);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-right: none;
   color: var(--blue-grey);
@@ -352,7 +350,6 @@ body {
   cursor: pointer;
   position: absolute;
   left: -35px;
-  /* Updated position */
   top: 0;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -398,7 +395,7 @@ select.enquiry-input {
 
 /* Enquiry Form Submit Button */
 #enquiryForm .btn-yellow {
-  background-color: var(--yellow) !important;
+  background-color: var(--yellow);
   color: var(--blue-grey) !important;
   border: none !important;
   border-radius: 8px !important;
@@ -408,7 +405,7 @@ select.enquiry-input {
 }
 
 #enquiryForm .btn-yellow:hover {
-  filter: brightness(0.95);
+  background-color: var(--yellow-dark);
   transform: translateY(-1px);
 }
 
@@ -525,7 +522,7 @@ select.enquiry-input {
   background-size: cover;
   background-position: center center;
   height: 100%;
-  min-height: 400px;
+  min-height: 300px;
   overflow: hidden;
 }
 
@@ -578,9 +575,10 @@ select.enquiry-input {
 }
 
 .btn-map-link {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--white);
+  background: var(--lightest-blue);
+  border: 1px solid var(--light-blue);
+  color: var(--blue-grey);
+  font-weight: 600;
   font-size: 0.8rem;
   padding: 6px 12px;
   border-radius: 30px;
@@ -614,8 +612,7 @@ select.enquiry-input {
 }
 
 .btn-outline-hero:hover {
-  background-color: var(--white);
-  color: var(--blue-grey);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* --- 3. Tooltip Modal Styles --- */
