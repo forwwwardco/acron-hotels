@@ -1142,3 +1142,65 @@ select.enquiry-input {
     /* Slightly shorter aspect ratio on mobile */
   }
 }
+
+/* --- Acron Legacy Section --- */
+.legacy-section {
+  background-color: var(--light-blue);
+  /* Updated to your light-blue variable */
+}
+
+/* Ensure the image has a good aspect ratio and fills space */
+.legacy-img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+  border-radius: 20px !important;
+}
+
+/* Typography sizing to match screenshot */
+.legacy-tagline {
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+}
+
+.legacy-heading {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  max-width: 500px;
+  /*Prevents heading from getting too wide on large screens*/
+}
+
+/* Ensure the button definition exists globally */
+.btn-yellow {
+  background-color: var(--yellow);
+  color: var(--blue-grey);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 216, 3, 0.3);
+  /* Subtle yellow shadow */
+}
+
+.btn-yellow:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+  color: var(--blue-grey);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .legacy-heading {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* Centers the max-width block on mobile */
+  }
+
+  .legacy-img {
+    min-height: 300px;
+    /* Slightly shorter on mobile */
+  }
+}
