@@ -1,423 +1,236 @@
 /**
- * Acron Navbar Controller
- * Handles mobile triggers and header scroll states
+ * Acron Group of Hotels - Master Script Controller
  */
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ==========================================================================
+     1. HEADER & NAVIGATION
+     ========================================================================== */
   const header = document.querySelector(".acron-header");
-  const offersTrigger = document.getElementById("specialOffersTrigger");
 
-  // 1. Scroll Effect: Adds a shadow/background shift on scroll
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      header.classList.add("header-scrolled");
-    } else {
-      header.classList.remove("header-scrolled");
-    }
-  };
+  if (header) {
+    // Scroll Effect: Adds shadow/background shift
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("header-scrolled", window.scrollY > 50);
+    });
 
-  // 2. Special Offers Popup (Mobile Logic)
-  const handleOffersClick = (e) => {
-    // Only trigger modal on mobile/tablet widths
-    if (window.innerWidth < 992) {
-      e.preventDefault();
-
-      const offersModal = new bootstrap.Modal(
-        document.getElementById("specialOffersModal"),
-      );
-      offersModal.show();
-    }
-  };
-
-  // Event Listeners
-  window.addEventListener("scroll", handleScroll);
-  if (offersTrigger) {
-    offersTrigger.addEventListener("click", handleOffersClick);
+    // Dynamic Navbar Height Calculation for CSS Variable
+    const updateHeaderHeight = () => {
+      document.documentElement.style.setProperty('--nav-height-gap', `${header.offsetHeight}px`);
+    };
+    new ResizeObserver(updateHeaderHeight).observe(header);
   }
 
-  // 3. Accessibility: Close Offcanvas on link click (for SPA-like feel)
-  const navLinks = document.querySelectorAll(".offcanvas-body .nav-link");
-  const bsOffcanvas = document.getElementById("acronOffcanvas");
+  // Special Offers Mobile Popup
+  const offersTrigger = document.getElementById("specialOffersTrigger");
+  if (offersTrigger) {
+    offersTrigger.addEventListener("click", (e) => {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        new bootstrap.Modal(document.getElementById("specialOffersModal")).show();
+      }
+    });
+  }
 
+  // Auto-Close Offcanvas on link click (SPA-like feel)
+  const bsOffcanvas = document.getElementById("acronOffcanvas");
   if (bsOffcanvas) {
-    navLinks.forEach((link) => {
+    bsOffcanvas.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", () => {
         const openedCanvas = bootstrap.Offcanvas.getInstance(bsOffcanvas);
         if (openedCanvas) openedCanvas.hide();
       });
     });
   }
-});
 
-/* Booking Engine */
-/**
- * Unified Booking Engine Controller
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const engine = document.querySelector("#bookingEngine");
-  const engineToggle = document.querySelector("#engineToggle");
-  const bookingForm = document.querySelector("#book-direct-form");
-  const checkinInput = document.querySelector("#checkin");
-  const checkoutInput = document.querySelector("#checkout");
+  /* ==========================================================================
+     2. FIXED BOOKING ENGINE
+     ========================================================================== */
+  const engine = document.getElementById("bookingEngine");
 
-  if (!engine) return;
+  if (engine) {
+    // Delayed Reveal (Waits for Hero Animation: 2.3s)
+    setTimeout(() => engine.classList.add("engine-ready"), 800);
 
-  // 1. Mobile Toggle & Outside Click
-  if (engineToggle) {
-    const toggleText = engineToggle.querySelector(".btn-text");
-
-    engineToggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-      engine.classList.toggle("engine-expanded");
-      toggleText.textContent = engine.classList.contains("engine-expanded")
-        ? "CLOSE"
-        : "BOOK NOW";
-    });
-
-    // Close when clicking anywhere else on mobile
-    document.addEventListener("click", (e) => {
-      if (
-        window.innerWidth < 992 &&
-        engine.classList.contains("engine-expanded") &&
-        !engine.contains(e.target)
-      ) {
-        engine.classList.remove("engine-expanded");
-        toggleText.textContent = "BOOK NOW";
-      }
-    });
-  }
-
-  // 2. Date Handling (Set min date to today)
-  const today = new Date().toISOString().split("T")[0];
-  if (checkinInput) {
-    checkinInput.min = today;
-    checkinInput.addEventListener("change", () => {
-      checkoutInput.min = checkinInput.value;
-    });
-  }
-
-  // 3. STAAH Integration
-  if (bookingForm) {
-    bookingForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const prop = document.querySelector("#select_prop").value;
-      const checkin = checkinInput.value;
-      const checkout = checkoutInput.value;
-
-      if (!prop || !checkin || !checkout) return;
-
-      const baseUrl = "https://staahmax.staah.net/be/indexpackdetail";
-      const query = `?propertyId=${prop}&individual=true&checkIn=${checkin}&checkOut=${checkout}`;
-
-      window.open(baseUrl + query, "_blank");
-    });
-  }
-});
-
-/* ENQUIRY FORM */
-document.addEventListener("DOMContentLoaded", () => {
-  const enquiryPanel = document.querySelector("#enquiryPanel");
-  const enquiryTrigger = document.querySelector("#enquiryTrigger");
-  const enquiryClose = document.querySelector("#enquiryClose");
-  const triggerText = enquiryTrigger.querySelector(".btn-text");
-
-  const togglePanel = () => {
-    enquiryPanel.classList.toggle("active");
-
-    // Toggle text between Enquire and Close
-    if (enquiryPanel.classList.contains("active")) {
-      triggerText.textContent = "CLOSE";
-    } else {
-      triggerText.textContent = "ENQUIRE";
+    // Footer Collision Observer
+    const footer = document.getElementById("footer");
+    if (footer) {
+      new IntersectionObserver((entries) => {
+        entries[0].isIntersecting ? engine.classList.add("is-hidden") : engine.classList.remove("is-hidden");
+      }, { rootMargin: '0px 0px 50px 0px', threshold: 0 }).observe(footer);
     }
-  };
 
-  if (enquiryTrigger) enquiryTrigger.addEventListener("click", togglePanel);
-  if (enquiryClose) enquiryClose.addEventListener("click", togglePanel);
+    // Mobile Toggle
+    const engineToggle = document.getElementById("engineToggle");
+    if (engineToggle) {
+      const toggleText = engineToggle.querySelector(".btn-text");
 
-  // Auto-close on outside click
-  document.addEventListener("click", (e) => {
-    if (
-      enquiryPanel.classList.contains("active") &&
-      !enquiryPanel.contains(e.target) &&
-      !enquiryTrigger.contains(e.target)
-    ) {
-      enquiryPanel.classList.remove("active");
-      triggerText.textContent = "ENQUIRE";
+      engineToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isExpanded = engine.classList.toggle("engine-expanded");
+        toggleText.textContent = isExpanded ? "CLOSE" : "BOOK NOW";
+      });
+
+      // Close on outside click (mobile)
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth < 992 && engine.classList.contains("engine-expanded") && !engine.contains(e.target)) {
+          engine.classList.remove("engine-expanded");
+          toggleText.textContent = "BOOK NOW";
+        }
+      });
     }
-  });
-});
 
-/**
- * Footer Collision Controller
- * Fades out fixed elements when they overlap the footer
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const engine = document.querySelector("#bookingEngine");
-  const footer = document.querySelector("#footer");
-
-  if (!engine || !footer) return;
-
-  // Observer options: triggers when footer is within 50px of the viewport bottom
-  const options = {
-    root: null,
-    rootMargin: '0px 0px 50px 0px',
-    threshold: 0
-  };
-
-  const handleFooterIntersection = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Footer is visible, hide the booking engine
-        engine.classList.add("is-hidden");
-      } else {
-        // Footer is away, show the booking engine
-        engine.classList.remove("is-hidden");
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(handleFooterIntersection, options);
-  observer.observe(footer);
-});
-
-/* HERO Section Tooltip */
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Hero Tooltip Logic ---
-
-  // 1. Data Source for Features
-  const resortFeatures = {
-    waterfront: {
-      title: "Waterfront Highlights",
-      features: [
-        "Situated on the Baga River",
-        "Infinity Pool with River View",
-        "Premium Riverfront Dining",
-        "Walking Distance to Baga Beach",
-        "Luxury Boutique Rooms",
-        "Ideal for Couples & Honeymoons"
-      ]
-    },
-    seaway: {
-      title: "Seaway Highlights",
-      features: [
-        "300m from Candolim Beach",
-        "Large Lagoon-style Pool",
-        "Family-Friendly Atmosphere",
-        "Spacious Rooms with Balconies",
-        "Near Candolim Main Street",
-        "Poolside Bar & Restaurant"
-      ]
-    },
-    regina: {
-      title: "Regina Highlights",
-      features: [
-        "Heart of Candolim Village",
-        "Rated Best for Families",
-        "Expansive Resort Grounds",
-        "Multiple Dining Options",
-        "Kids Club & Activities",
-        "Generic Feature Six",
-        "Generic Feature Seven"
-      ]
+    // Date Handling (Min date = today)
+    const checkinInput = document.getElementById("checkin");
+    const checkoutInput = document.getElementById("checkout");
+    if (checkinInput && checkoutInput) {
+      checkinInput.min = new Date().toISOString().split("T")[0];
+      checkinInput.addEventListener("change", () => checkoutInput.min = checkinInput.value);
     }
-  };
 
-  const tooltipOverlay = document.getElementById('heroTooltip');
-  const tooltipTitle = document.getElementById('tooltipTitle');
-  const tooltipList = document.getElementById('tooltipList');
-  const closeBtn = document.getElementById('closeTooltip');
-  const triggers = document.querySelectorAll('.tooltip-trigger');
+    // STAAH Submission
+    const bookingForm = document.getElementById("book-direct-form");
+    if (bookingForm) {
+      bookingForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const prop = document.getElementById("select_prop").value;
+        if (!prop || !checkinInput.value || !checkoutInput.value) return;
 
-  // Function to open tooltip
-  const openTooltip = (resortKey) => {
-    const data = resortFeatures[resortKey];
-    if (!data) return;
-
-    // Populate Title
-    tooltipTitle.textContent = data.title;
-
-    // Populate List using Font Awesome check icon
-    tooltipList.innerHTML = data.features
-      .map(feature => `<li><span class="fa-li"><i class="fa-solid fa-check text-yellow"></i></span>${feature}</li>`)
-      .join('');
-
-    // Show Overlay
-    tooltipOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  };
-
-  // Function to close tooltip
-  const closeTooltip = () => {
-    tooltipOverlay.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scrolling
-  };
-
-  // Event Listeners
-  triggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      const resortKey = e.currentTarget.getAttribute('data-resort');
-      openTooltip(resortKey);
-    });
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeTooltip);
+        window.open(`https://staahmax.staah.net/be/indexpackdetail?propertyId=${prop}&individual=true&checkIn=${checkinInput.value}&checkOut=${checkoutInput.value}`, "_blank");
+      });
+    }
   }
 
-  // Close on outside click
-  if (tooltipOverlay) {
-    tooltipOverlay.addEventListener('click', (e) => {
-      if (e.target === tooltipOverlay) {
-        closeTooltip();
-      }
-    });
-  }
-});
+  /* ==========================================================================
+     3. ENQUIRY FORM DRAWER
+     ========================================================================== */
+  const enquiryPanel = document.getElementById("enquiryPanel");
+  const enquiryTrigger = document.getElementById("enquiryTrigger");
 
-/**
- * Dynamic Navbar Height Calculation
- * Uses ResizeObserver to perfectly track header height including image loads
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".acron-header");
+  if (enquiryPanel && enquiryTrigger) {
+    const triggerText = enquiryTrigger.querySelector(".btn-text");
 
-  if (header) {
-    const updateHeaderHeight = () => {
-      // Get the exact rendered height
-      const height = header.offsetHeight;
-
-      // Update both desktop and mobile variables so it applies universally
-      document.documentElement.style.setProperty('--nav-height-gap', `${height}px`);
+    const togglePanel = () => {
+      const isActive = enquiryPanel.classList.toggle("active");
+      triggerText.textContent = isActive ? "CLOSE" : "ENQUIRE";
     };
 
-    // Initialize the observer to watch the header element continuously
-    const headerObserver = new ResizeObserver(() => {
-      updateHeaderHeight();
+    enquiryTrigger.addEventListener("click", togglePanel);
+
+    // Auto-close on outside click
+    document.addEventListener("click", (e) => {
+      if (enquiryPanel.classList.contains("active") && !enquiryPanel.contains(e.target) && !enquiryTrigger.contains(e.target)) {
+        enquiryPanel.classList.remove("active");
+        triggerText.textContent = "ENQUIRE";
+      }
+    });
+  }
+
+  /* ==========================================================================
+     4. HERO SECTION TOOLTIPS
+     ========================================================================== */
+  const tooltipOverlay = document.getElementById('heroTooltip');
+
+  if (tooltipOverlay) {
+    const tooltipTitle = document.getElementById('tooltipTitle');
+    const tooltipList = document.getElementById('tooltipList');
+
+    const resortFeatures = {
+      waterfront: { title: "Waterfront Highlights", features: ["Situated on the Baga River", "Infinity Pool with River View", "Premium Riverfront Dining", "Walking Distance to Baga Beach", "Luxury Boutique Rooms", "Ideal for Couples & Honeymoons"] },
+      seaway: { title: "Seaway Highlights", features: ["300m from Candolim Beach", "Large Lagoon-style Pool", "Family-Friendly Atmosphere", "Spacious Rooms with Balconies", "Near Candolim Main Street", "Poolside Bar & Restaurant"] },
+      regina: { title: "Regina Highlights", features: ["Heart of Candolim Village", "Rated Best for Families", "Expansive Resort Grounds", "Multiple Dining Options", "Kids Club & Activities", "Generic Feature Six", "Generic Feature Seven"] }
+    };
+
+    const closeTooltip = () => {
+      tooltipOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.tooltip-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        const data = resortFeatures[e.currentTarget.dataset.resort];
+        if (!data) return;
+
+        tooltipTitle.textContent = data.title;
+        tooltipList.innerHTML = data.features.map(f => `<li><span class="fa-li"><i class="fa-solid fa-check text-yellow"></i></span>${f}</li>`).join('');
+
+        tooltipOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
     });
 
-    // Start observing
-    headerObserver.observe(header);
+    document.getElementById('closeTooltip')?.addEventListener('click', closeTooltip);
+    tooltipOverlay.addEventListener('click', (e) => { if (e.target === tooltipOverlay) closeTooltip(); });
   }
-});
 
-/* Exclusive Deals Filter Logic with Fade Animation */
-/* Exclusive Deals Filter Logic with Smooth Fade-In/Out */
-document.addEventListener("DOMContentLoaded", () => {
+  /* ==========================================================================
+     5. EXCLUSIVE DEALS FILTER
+     ========================================================================== */
   const filterPills = document.querySelectorAll(".filter-pill");
   const dealCards = document.querySelectorAll(".deal-card");
 
-  if (filterPills.length === 0 || dealCards.length === 0) return;
+  if (filterPills.length && dealCards.length) {
+    // Initial State Prep
+    dealCards.forEach(card => card.classList.contains("d-none") && card.classList.add("fade-out"));
+    let isAnimating = false;
 
-  // Set initial state for hidden cards
-  dealCards.forEach(card => {
-    if (card.classList.contains("d-none")) {
-      card.classList.add("fade-out");
-    }
-  });
+    filterPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        if (isAnimating || pill.classList.contains("active")) return;
+        isAnimating = true;
 
-  let isAnimating = false;
+        // Toggle Active Pill
+        filterPills.forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
 
-  filterPills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      if (isAnimating || pill.classList.contains("active")) return;
-      isAnimating = true;
+        const targetCategory = pill.dataset.filter;
 
-      // 1. Update pills
-      filterPills.forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
+        // Fade out current cards
+        dealCards.forEach(card => !card.classList.contains("d-none") && card.classList.add("fade-out"));
 
-      const selectedCategory = pill.getAttribute("data-filter");
-
-      // 2. Fade out currently visible cards
-      dealCards.forEach(card => {
-        if (!card.classList.contains("d-none")) {
-          card.classList.add("fade-out");
-        }
-      });
-
-      // 3. Wait for fade-out (300ms)
-      setTimeout(() => {
-        dealCards.forEach(card => {
-          if (card.getAttribute("data-category") === selectedCategory) {
-            // Remove display: none first
-            card.classList.remove("d-none");
-
-            // Force a browser reflow to register the display change BEFORE changing opacity
-            void card.offsetWidth;
-
-            // Now trigger the fade-in transition
-            card.classList.remove("fade-out");
-          } else {
-            // Keep non-matching cards hidden and faded out
-            card.classList.add("d-none");
-            card.classList.add("fade-out");
-          }
-        });
-
-        // Unlock animation
+        // Wait for fade-out (300ms), then swap and fade in
         setTimeout(() => {
-          isAnimating = false;
+          dealCards.forEach(card => {
+            if (card.dataset.category === targetCategory) {
+              card.classList.remove("d-none");
+              void card.offsetWidth; // Force reflow
+              card.classList.remove("fade-out");
+            } else {
+              card.classList.add("d-none", "fade-out");
+            }
+          });
+          setTimeout(() => isAnimating = false, 300); // Unlock
         }, 300);
-
-      }, 300);
-    });
-  });
-});
-
-/* --- Stop YouTube Videos on Carousel Slide --- */
-document.addEventListener("DOMContentLoaded", () => {
-  const videoCarousel = document.getElementById('acronVideoCarousel');
-
-  if (videoCarousel) {
-    videoCarousel.addEventListener('slide.bs.carousel', () => {
-      // Find all iframes inside this carousel
-      const iframes = videoCarousel.querySelectorAll('iframe');
-
-      // Re-assigning the source URL forces the iframe to stop playing
-      iframes.forEach(iframe => {
-        const currentSrc = iframe.src;
-        iframe.src = currentSrc;
       });
     });
   }
-});
 
-/**
- * Scroll Fade-In Observer
- * Triggers elements to fade up elegantly when they enter the viewport
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeElements = document.querySelectorAll('.fade-in-element');
-
-  // Trigger when 15% of the element is visible in the viewport
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
-
-  const fadeObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Stops observing once visible so it doesn't repeat
-      }
+  /* ==========================================================================
+     6. MEDIA & CAROUSELS
+     ========================================================================== */
+  const videoCarousel = document.getElementById('acronVideoCarousel');
+  if (videoCarousel) {
+    // Stop YouTube videos from playing when sliding away
+    videoCarousel.addEventListener('slide.bs.carousel', () => {
+      videoCarousel.querySelectorAll('iframe').forEach(iframe => iframe.src = iframe.src);
     });
-  }, observerOptions);
+  }
 
-  fadeElements.forEach(el => fadeObserver.observe(el));
-});
+  /* ==========================================================================
+     7. SCROLL FADE-IN OBSERVER
+     ========================================================================== */
+  const fadeElements = document.querySelectorAll('.fade-in-element');
+  if (fadeElements.length) {
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px', threshold: 0.15 });
 
-/**
- * Booking Engine Reveal Sequence
- * Waits for the hero animation to finish before fading in the engine
- */
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    const engine = document.getElementById("bookingEngine");
-    if (engine) {
-      engine.classList.add("engine-ready");
-    }
-  }, 2300); // 3100ms perfectly matches the hero's 2.8s duration + 0.3s delay
+    fadeElements.forEach(el => fadeObserver.observe(el));
+  }
+
 });

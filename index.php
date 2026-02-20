@@ -93,7 +93,6 @@
     </div>
   </div>
 </section>
-
 <div class="hero-tooltip-overlay" id="heroTooltip">
   <div class="hero-tooltip-box p-4 p-md-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -106,18 +105,18 @@
 </div>
 
 <!-- EXCLUSIVE DEALS SECTION -->
-<section id="exclusiveDeals" class="exclusive-deals py-5">
+<section id="exclusiveDeals" class="exclusive-deals py-5 fade-in-element">
   <div class="container py-4">
 
-    <h2 class="text-center fw-bold text-blue-grey mb-4 fade-in-element">Exclusive Deals, Just For You</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-4">Exclusive Deals, Just For You</h2>
 
-    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0 fade-in-element">
+    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
       <button class="filter-pill active" data-filter="deal-pack-1">SUMMER OFFERS</button>
       <button class="filter-pill" data-filter="deal-pack-2">MONSOON MAGIC</button>
       <button class="filter-pill" data-filter="deal-pack-3">WINTER ESCAPES</button>
     </div>
 
-    <div class="row g-4 justify-content-center px-3 px-lg-0 fade-in-element" id="dealsGrid">
+    <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
 
       <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
         <div class="card h-100 border-0 shadow deals-card-wrapper">

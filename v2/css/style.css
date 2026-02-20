@@ -28,6 +28,12 @@
   --deals-grad-btm: #FFFFFE;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
 body {
   padding-top: var(--nav-height-gap);
   background-color: var(--white);
@@ -310,7 +316,7 @@ body {
   }
 
   .engine-toggle-btn {
-    background: var(--light-blue);
+    background: var(--lightest-blue);
     color: var(--blue-grey);
     border: none;
     padding: 10px 20px;
