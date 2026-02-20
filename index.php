@@ -1,10 +1,18 @@
 <?php include("v2/header.php"); ?>
 
-  <!-- FIXED BOOKING ENGINE HTML HERE -->
+  <!-- FIXED BOOKING ENGINE -->
   <?php include("v2/components/booking-engine.php"); ?>
+  <!-- ENQUIRY FORM -->
   <?php include("v2/components/enquiry-form.php"); ?>
 
-<!-- ======= Hero Section ======= -->
+  <!-- HERO SECTION -->
+  <!-- EXCLUSIVE DEALS SECTION -->
+  <!-- OUR HOTELS SECTION -->
+  <!-- STATISTICS SECTION -->
+  <!-- TESTIONIALS SECTION -->
+  <!-- YOUTUBE EMBED SECTION -->
+  <!-- ACRON HOMES CROSSLINK SECTION -->
+  <!-- ACRON HOTELS LEGACY SECTION -->
 
 <main>
 
