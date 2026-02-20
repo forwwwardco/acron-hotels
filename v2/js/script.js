@@ -300,3 +300,67 @@ document.addEventListener("DOMContentLoaded", () => {
     headerObserver.observe(header);
   }
 });
+
+/* Exclusive Deals Filter Logic with Fade Animation */
+/* Exclusive Deals Filter Logic with Smooth Fade-In/Out */
+document.addEventListener("DOMContentLoaded", () => {
+  const filterPills = document.querySelectorAll(".filter-pill");
+  const dealCards = document.querySelectorAll(".deal-card");
+
+  if (filterPills.length === 0 || dealCards.length === 0) return;
+
+  // Set initial state for hidden cards
+  dealCards.forEach(card => {
+    if (card.classList.contains("d-none")) {
+      card.classList.add("fade-out");
+    }
+  });
+
+  let isAnimating = false;
+
+  filterPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      if (isAnimating || pill.classList.contains("active")) return;
+      isAnimating = true;
+
+      // 1. Update pills
+      filterPills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      const selectedCategory = pill.getAttribute("data-filter");
+
+      // 2. Fade out currently visible cards
+      dealCards.forEach(card => {
+        if (!card.classList.contains("d-none")) {
+          card.classList.add("fade-out");
+        }
+      });
+
+      // 3. Wait for fade-out (300ms)
+      setTimeout(() => {
+        dealCards.forEach(card => {
+          if (card.getAttribute("data-category") === selectedCategory) {
+            // Remove display: none first
+            card.classList.remove("d-none");
+
+            // Force a browser reflow to register the display change BEFORE changing opacity
+            void card.offsetWidth;
+
+            // Now trigger the fade-in transition
+            card.classList.remove("fade-out");
+          } else {
+            // Keep non-matching cards hidden and faded out
+            card.classList.add("d-none");
+            card.classList.add("fade-out");
+          }
+        });
+
+        // Unlock animation
+        setTimeout(() => {
+          isAnimating = false;
+        }, 300);
+
+      }, 300);
+    });
+  });
+});

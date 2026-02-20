@@ -104,7 +104,146 @@
     </ul>
   </div>
 </div>
+
 <!-- EXCLUSIVE DEALS SECTION -->
+<section id="exclusiveDeals" class="exclusive-deals py-5">
+  <div class="container py-4">
+
+    <h2 class="text-center fw-bold text-blue-grey mb-4">Exclusive Deals, Just For You</h2>
+
+    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
+      <button class="filter-pill active" data-filter="deal-pack-1">SUMMER OFFERS</button>
+      <button class="filter-pill" data-filter="deal-pack-2">MONSOON MAGIC</button>
+      <button class="filter-pill" data-filter="deal-pack-3">WINTER ESCAPES</button>
+    </div>
+
+    <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
+
+      <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center d-flex flex-column justify-content-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">XX% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Waterfront Resort</h4>
+          </div>
+          <a href="/waterfront/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-seaway-1.webp" class="card-img-top deal-img" alt="Acron Seaway Resort Deal" loading="lazy">
+          <div class="card-body text-center d-flex flex-column justify-content-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">XX% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+          </div>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-regina-1.webp" class="card-img-top deal-img" alt="Acron Candolim Regina Deal" loading="lazy">
+          <div class="card-body text-center d-flex flex-column justify-content-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">XX% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
+          </div>
+          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-2">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">15% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Waterfront Resort</h4>
+          </div>
+          <a href="/waterfront/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-2">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">15% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+          </div>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-2">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">15% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
+          </div>
+          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-3">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">10% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Waterfront Resort</h4>
+          </div>
+          <a href="/waterfront/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-3">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">10% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+          </div>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-3">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="assets/deal-waterfront-1.webp" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
+          <div class="card-body text-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">10% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
+          </div>
+          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- OUR HOTELS SECTION -->
 <!-- STATISTICS SECTION -->
 <!-- TESTIONIALS SECTION -->
