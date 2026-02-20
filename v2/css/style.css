@@ -29,11 +29,19 @@
 /* Global Body Padding to clear the fixed navbar */
 body {
   padding-top: var(--nav-height-gap);
+  background-color: var(--white);
+  animation: fadeInPage 0.6s ease-in-out forwards;
 }
 
-@media (max-width: 991px) {
-  body {
-    padding-top: var(--nav-height-gap);
+
+/* Keyframes for the fade effect */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -858,5 +866,50 @@ select.enquiry-input {
   .deal-img {
     height: 200px;
     /* Slightly shorter image on mobile */
+  }
+}
+
+/* --- Statistics Section --- */
+.stats-section {
+  background-color: var(--lightest-blue);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon {
+  color: var(--dark-blue);
+  /* Teal color matching the design */
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+  .stat-icon {
+    font-size: 2.8rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
   }
 }

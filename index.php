@@ -246,6 +246,46 @@
 </section>
 <!-- OUR HOTELS SECTION -->
 <!-- STATISTICS SECTION -->
+<section class="stats-section py-5">
+  <div class="container py-4">
+    <div class="row g-5 text-center justify-content-center">
+
+      <div class="col-6 col-lg-3 stat-item">
+        <div class="stat-icon mb-3">
+          <i class="fa-regular fa-face-smile"></i>
+        </div>
+        <h3 class="stat-number fw-bold mb-1 text-blue-grey">XXXXXX</h3>
+        <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
+      </div>
+
+      <div class="col-6 col-lg-3 stat-item">
+        <div class="stat-icon mb-3">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3 class="stat-number fw-bold mb-1 text-blue-grey">XXXXXX</h3>
+        <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
+      </div>
+
+      <div class="col-6 col-lg-3 stat-item">
+        <div class="stat-icon mb-3">
+          <i class="fa-regular fa-building"></i>
+        </div>
+        <h3 class="stat-number fw-bold mb-1 text-blue-grey">XXXXXX</h3>
+        <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
+      </div>
+
+      <div class="col-6 col-lg-3 stat-item">
+        <div class="stat-icon mb-3">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h3 class="stat-number fw-bold mb-1 text-blue-grey">XXXXXX</h3>
+        <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- TESTIONIALS SECTION -->
 <!-- YOUTUBE EMBED SECTION -->
 <!-- ACRON HOMES CROSSLINK SECTION -->
