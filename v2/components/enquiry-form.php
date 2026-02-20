@@ -4,9 +4,9 @@
     </button>
 
     <div class="enquiry-content py-4 px-4">
-        <div class="d-flex justify-content-end mb-3">
+        <!-- <div class="d-flex justify-content-end mb-3">
             <button type="button" class="btn-close text-reset" id="enquiryClose"></button>
-        </div>
+        </div> -->
 
         <form id="enquiryForm" action="process-enquiry.php" method="POST">
             <div class="mb-3">
@@ -27,7 +27,7 @@
                 </select>
             </div>
             <div class="mb-3">
-                <textarea name="message" class="form-control enquiry-input" rows="4" placeholder="Message"></textarea>
+                <textarea name="message" class="form-control enquiry-input" rows="2" placeholder="Message"></textarea>
             </div>
 
             <div class="form-check mb-3">
@@ -37,7 +37,7 @@
                 </label>
             </div>
 
-            <p class="small text-blue-grey mb-4">Rest assured! We promise not to spam you! :)</p>
+            <p class="assurance small text-blue-grey mb-4">Rest assured! We promise not to spam you! :)</p>
 
             <button type="submit" class="btn btn-yellow w-100 fw-bold py-3">ENQUIRE</button>
         </form>

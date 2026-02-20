@@ -274,3 +274,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/**
+ * Dynamic Navbar Height Calculation
+ * Uses ResizeObserver to perfectly track header height including image loads
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".acron-header");
+
+  if (header) {
+    const updateHeaderHeight = () => {
+      // Get the exact rendered height
+      const height = header.offsetHeight;
+
+      // Update both desktop and mobile variables so it applies universally
+      document.documentElement.style.setProperty('--nav-height-gap', `${height}px`);
+    };
+
+    // Initialize the observer to watch the header element continuously
+    const headerObserver = new ResizeObserver(() => {
+      updateHeaderHeight();
+    });
+
+    // Start observing
+    headerObserver.observe(header);
+  }
+});

@@ -19,18 +19,17 @@
   --nav-font-size: 0.9rem;
   --transition-speed: 0.3s ease;
 
-  --nav-height-desktop: 135px;
-  --nav-height-mobile: 125px;
+  --nav-height-gap: 135px;
 }
 
 /* Global Body Padding to clear the fixed navbar */
 body {
-  padding-top: var(--nav-height-desktop);
+  padding-top: var(--nav-height-gap);
 }
 
 @media (max-width: 991px) {
   body {
-    padding-top: var(--nav-height-mobile);
+    padding-top: var(--nav-height-gap);
   }
 }
 
@@ -481,10 +480,10 @@ select.enquiry-input {
 
 /* --- 1. Hero Section Layout & Top Bar --- */
 .hero-section {
-  /* min-height: calc(100vh - var(--nav-height-desktop)); */
-  min-height: calc(100vh - var(--nav-height-desktop));
+  /* min-height: calc(100vh - var(--nav-height-gap)); */
+  min-height: calc(100vh - var(--nav-height-gap));
   background-color: var(--white);
-  /* padding-top: var(--nav-height-desktop); */
+  /* padding-top: var(--nav-height-gap); */
 }
 
 @media (max-width: 991px) {
@@ -544,8 +543,8 @@ select.enquiry-input {
 
 /* Middle Column White Borders */
 .middle-resort-col {
-  border-top: 10px solid var(--white);
-  border-bottom: 10px solid var(--white);
+  border-top: 4px solid var(--white);
+  border-bottom: 4px solid var(--white);
 }
 
 /* Content Wrapper - Flex column to push buttons to bottom */
@@ -556,6 +555,8 @@ select.enquiry-input {
   display: flex;
   flex-direction: column;
   color: var(--white);
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 /* Resort Text Typography */
@@ -569,6 +570,10 @@ select.enquiry-input {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.resort-bottom {
+  margin-top: 1rem !important;
 }
 
 .btn-map-link {
@@ -592,7 +597,7 @@ select.enquiry-input {
 .hero-btn {
   padding-top: 12px;
   padding-bottom: 12px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
 }
 
@@ -603,7 +608,7 @@ select.enquiry-input {
   color: var(--white);
   border-radius: 8px;
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
@@ -617,9 +622,7 @@ select.enquiry-input {
   position: fixed;
   inset: 0;
   background-color: rgba(45, 51, 74, 0.95);
-  /* Dark blue-grey backdrop */
   z-index: 2000;
-  /* Highest priority */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -635,12 +638,12 @@ select.enquiry-input {
 }
 
 .hero-tooltip-box {
-  background-color: var(--blue-grey);
+  background-color: var(--lightest-blue);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
-  color: var(--white);
+  color: var(--blue-grey);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   transform: translateY(20px);
   transition: transform 0.3s ease;
@@ -673,16 +676,22 @@ select.enquiry-input {
 }
 
 #heroResortsContainerRow {
-  height: calc(100vh - var(--nav-height-desktop)) !important;
+  height: 100% !important;
   padding-bottom: 0;
 }
 
 @media (min-width: 992px) {
+
+  .hero-btn,
+  .btn-outline-hero {
+    font-size: 0.9rem;
+  }
+
   .middle-resort-col {
     border-top: none;
     border-bottom: none;
-    border-left: 10px solid var(--white);
-    border-right: 10px solid var(--white);
+    border-left: 6px solid var(--white);
+    border-right: 6px solid var(--white);
   }
 
   .resort-content-wrapper {
@@ -690,7 +699,7 @@ select.enquiry-input {
   }
 
   #heroResortsContainerRow {
-    height: calc(100vh - var(--nav-height-desktop)) !important;
+    height: calc(100vh - var(--nav-height-gap)) !important;
     padding-bottom: 250px;
   }
 }
@@ -718,11 +727,21 @@ select.enquiry-input {
   }
 
   .resort-h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .resort-col {
     height: auto;
     min-height: auto;
   }
+}
+
+.form-check-label,
+.assurance {
+  font-size: 0.7rem;
+}
+
+.form-check.mb-3,
+.assurance {
+  margin-bottom: 0.2rem !important;
 }

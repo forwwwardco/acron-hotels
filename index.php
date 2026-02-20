@@ -11,8 +11,8 @@
   <div class="hero-top-bar bg-white py-3 py-lg-4 border-bottom">
     <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
       <h1 class="hero-h1 text-blue-grey fw-bold m-0">
-        GOA'S FINEST<br>
-        <span class="text-waterfront">RIVER, SEA & VILLAGE STAYS</span>
+        GOA'S FINEST RIVER, SEA & VILLAGE STAYS<br>
+        <!-- <span class="text-waterfront">RIVER, SEA & VILLAGE STAYS</span> -->
       </h1>
 
       <div class="ta-badge-wrapper">
@@ -38,8 +38,7 @@
               </button>
             </div>
           </div>
-          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/waterfront" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
+          <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/waterfront" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="waterfront">
               Why Stay Here?
             </button>
@@ -61,8 +60,7 @@
               </button>
             </div>
           </div>
-          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
+          <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="seaway">
               Why Stay Here?
             </button>
@@ -84,8 +82,7 @@
               </button>
             </div>
           </div>
-          <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
+          <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="regina">
               Why Stay Here?
             </button>
