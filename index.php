@@ -244,7 +244,9 @@
     </div>
   </div>
 </section>
+
 <!-- OUR HOTELS SECTION -->
+
 <!-- STATISTICS SECTION -->
 <section class="stats-section py-5">
   <div class="container py-4">
@@ -287,7 +289,194 @@
 </section>
 
 <!-- TESTIONIALS SECTION -->
+<section class="reviews-section py-5">
+  <div class="container py-4">
+    <h2 class="text-center fw-bold text-blue-grey mb-5">What Our Guests Say</h2>
+  </div>
+
+  <div class="container-fluid px-0">
+    <div class="reviews-slider d-flex gap-4 px-3 px-lg-5 pb-4">
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">John Doe</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Absolutely Fantastic Stay</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular, and the staff went above and beyond to make our anniversary special. Highly recommend for a tranquil Goan getaway.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Sarah Jenkins</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Perfect Family Holiday</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          We stayed at Seaway and it was brilliant. The proximity to the beach and the massive pool kept the kids entertained all day. The rooms were spotless and the buffet breakfast had a wonderful spread.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Amit Patel</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Great Location & Food</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          Candolim Regina is perfectly situated right in the heart of the action, yet quiet once you are inside the resort. The live music in the evenings and the Goan fish curry were definite highlights of our trip.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Emily R.</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">A Hidden Gem</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          I cannot stress enough how beautiful the sunset is from the riverside deck at Waterfront. The boutique feel makes it so much more personal than the larger chain hotels. We will definitely be returning next year.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Vikram Singh</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Exceptional Service</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          Every single staff member greeted us with a smile. They accommodated our early check-in request and helped arrange a lovely scooter for us to explore North Goa. Top-tier hospitality through and through.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Clare Thomas</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Luxury & Comfort</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          The bed was incredibly comfortable and the room was equipped with everything we needed. We loved spending our afternoons by the pool with a cocktail. It truly felt like a premium holiday experience.
+        </p>
+      </div>
+
+      <div class="review-card shadow bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <div class="review-avatar d-flex align-items-center justify-content-center me-3">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold text-blue-grey">Rohan & Priya</h6>
+            <div class="text-yellow small">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold text-blue-grey text-uppercase mb-2">Beautiful Memories</h6>
+        <p class="review-body text-blue-grey mb-0 small">
+          We celebrated our honeymoon here and the resort completely spoiled us. From the towel art on the bed to the complimentary cake, the attention to detail was marvellous. Thank you Acron for the beautiful memories!
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- YOUTUBE EMBED SECTION -->
+<section class="video-section py-5 bg-white">
+  <div class="container py-4">
+    <h2 class="text-center fw-bold text-blue-grey mb-5">Experience the Acron Life</h2>
+
+    <div class="row align-items-center gy-5">
+
+      <div class="col-lg-5 order-1 order-lg-1 text-center text-lg-start">
+        <h3 class="fw-bold text-blue-grey mb-3">Experience the best of Goa with Acron</h3>
+        <p class="text-blue-grey opacity-75 mb-0">
+          Watch our guests enjoying the tranquil riverside sunsets, the bustling poolside vibes, and the vibrant culture that surrounds our resorts. See why Acron is the preferred choice for travellers seeking the true essence of Goan hospitality.
+        </p>
+      </div>
+
+      <div class="col-lg-7 order-2 order-lg-2">
+        <div class="swiper videoSwiper rounded-4 overflow-hidden shadow-sm">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="YouTube video player" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0" title="YouTube video player" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?rel=0" title="YouTube video player" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="video-controls-container d-flex align-items-center justify-content-center justify-content-lg-start gap-4 mt-4">
+          <div class="swiper-button-prev video-prev"></div>
+          <div class="swiper-pagination video-pagination position-relative"></div>
+          <div class="swiper-button-next video-next"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ACRON HOMES CROSSLINK SECTION -->
 <!-- ACRON HOTELS LEGACY SECTION -->
 
@@ -623,63 +812,7 @@
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/purecounter/purecounter.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
 
-<!-- FIXED BOOKING ENGINE SCRIPT HERE -->
-<!-- <script>
-  $(document).ready(function() {
-
-    // $(function() {
-    //   $("#checkin").datepicker({
-    //     minDate: '-0d',
-    //     dateFormat: 'yyyy-MM-dd'
-    //   });
-    // });
-
-    // $(function() {
-    //   $("#checkout").datepicker({
-    //     minDate: '+1d',
-    //     dateFormat: 'yyyy-MM-dd'
-    //   });
-    // });
-
-    checkin.min = new Date().toISOString().split("T")[0];
-    $('#checkin').on('change', function() {
-      $('#checkout').attr({
-        "min": checkin.value // values (or variables) here
-      });
-    });
-  })
-</script>
-<script type="text/javascript">
-  $("#submit_book_now").click(function(e) {
-    e.preventDefault();
-    var checkin = $('#checkin').val();
-    var checkout = $('#checkout').val();
-    var prop = $('#select_prop').val();
-    var url = 'https://staahmax.staah.net/be/indexpackdetail?propertyId=' + prop + '&individual=true&checkIn=' + checkin + '&checkOut=' + checkout;
-    $("#book-direct-form").validate({
-      rules: {
-        checkin: {
-          required: true
-        },
-        checkout: {
-          required: true
-        },
-        select_prop: {
-          required: true
-        }
-      },
-      messages: {
-        checkin: "Please Select Check In Date",
-        checkout: "Please Select Check Out Date",
-        select_prop: "Please Select Hotel",
-      },
-    });
-    $('#book-direct-form').prop('action', url);
-    $('#book-direct-form').submit();
-  });
-</script> -->
 <?php include("footer-tracking.php"); ?>
 </body>
 

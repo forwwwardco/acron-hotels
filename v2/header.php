@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Acron Group of Hotels | Premier Boutique Resorts in Goa</title>
     <meta name="description" content="Experience luxury at Acron Group of Hotels. Boutique beach resorts in North Goa, ideal for families and couples, located just minutes from the coast.">
     <meta name="author" content="Acron Group of Hotels">
     <meta name="copyright" content="Acron Hospitality Pvt. Ltd.">
-    
+
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
@@ -25,12 +26,16 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RE4RL53T8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'G-4RE4RL53T8');
         gtag('config', 'AW-852966872');
     </script>
 </head>
+
 <body>
 
     <?php include("components/navbar.php"); ?>

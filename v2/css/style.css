@@ -913,3 +913,76 @@ select.enquiry-input {
     font-size: 0.85rem;
   }
 }
+
+/* --- Reviews Slider Section --- */
+.reviews-section {
+  background-color: var(--white);
+  overflow: hidden;
+  /* Prevents vertical body scrollbars if shadow bleeds */
+}
+
+/* The scrollable wrapper */
+.reviews-slider {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  padding-top: 15px;
+  /* Space for the shadow */
+  padding-bottom: 30px;
+  /* Space for the shadow */
+  scroll-snap-type: x mandatory;
+  /* Optional: adds snap-to-card behaviour */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.reviews-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Review Card */
+.review-card {
+  flex: 0 0 380px;
+  /* Fixed width on desktop */
+  border-radius: 12px;
+  padding: 30px;
+  scroll-snap-align: center;
+  /* Snaps card to center when scrolling stops */
+  border: 1px solid rgba(45, 51, 74, 0.05);
+  /* Very subtle border */
+}
+
+/* Avatar Styling */
+.review-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: var(--blue-grey);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.review-body {
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .review-card {
+    flex: 0 0 300px;
+    /* Slightly narrower cards on mobile to show the next one peeking */
+    padding: 20px;
+  }
+
+  .review-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}

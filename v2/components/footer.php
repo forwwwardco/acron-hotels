@@ -1,7 +1,7 @@
 <footer id="footer" class="footer pt-5">
     <div class="container pb-4">
         <div class="row gy-5 align-items-start">
-            
+
             <div class="col-lg-4 col-md-12 text-center text-lg-start">
                 <a href="/">
                     <img src="assets/logo-acron.png" alt="Acron Group of Hotels" class="footer-logo img-fluid" width="220">
@@ -63,5 +63,6 @@
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up"></i></a>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="v2/js/script.js"></script>
 <?php include("footer-tracking.php"); ?>
