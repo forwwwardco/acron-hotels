@@ -16,7 +16,7 @@
       </h1>
 
       <div class="ta-badge-wrapper">
-        <img src="assets/ta-square-placeholder.png" alt="TripAdvisor Travellers' Choice" class="ta-badge-img">
+        <img src="https://placehold.co/100x100" alt="TripAdvisor Travellers' Choice" class="ta-badge-img">
       </div>
     </div>
   </div>

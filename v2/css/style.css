@@ -19,8 +19,8 @@
   --nav-font-size: 0.9rem;
   --transition-speed: 0.3s ease;
 
-  --nav-height-desktop: 140px;
-  --nav-height-mobile: 140px;
+  --nav-height-desktop: 135px;
+  --nav-height-mobile: 125px;
 }
 
 /* Global Body Padding to clear the fixed navbar */
@@ -279,9 +279,6 @@ body {
 
   .booking-engine-fixed .form-control:focus,
   .booking-engine-fixed .form-select:focus {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border-bottom-color: var(--yellow) !important;
-    color: var(--white) !important;
     box-shadow: none !important;
   }
 
@@ -497,7 +494,7 @@ select.enquiry-input {
 }
 
 .hero-h1 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   line-height: 1.2;
 }
 
@@ -561,8 +558,6 @@ select.enquiry-input {
   color: var(--white);
 }
 
-
-
 /* Resort Text Typography */
 .resort-h2 {
   font-size: 2rem;
@@ -571,7 +566,9 @@ select.enquiry-input {
 
 .resort-tagline {
   letter-spacing: 1px;
-  opacity: 0.9;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .btn-map-link {
