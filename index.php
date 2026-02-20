@@ -22,66 +22,72 @@
   </div>
 
   <div class="hero-resorts-container container-fluid px-0 flex-fill position-relative">
-    <div class="row g-0 h-100">
+    <div class="row g-0 h-100" id="heroResortsContainerRow">
 
-      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-waterfront.jpg');">
+      <div class="col-12 col-lg-4 resort-col">
+        <img src="https://placehold.co/600x400" alt="Acron Waterfront Resort" class="resort-bg-img" fetchpriority="high">
+
         <div class="resort-overlay"></div>
         <div class="resort-content-wrapper p-4 p-xxl-5">
           <div class="resort-top">
             <h2 class="resort-h2 fw-bold mb-2">Acron Waterfront Resort</h2>
             <div class="d-flex align-items-center gap-3">
-              <p class="resort-tagline mb-0 h6">On the Baga River</p>
+              <p class="resort-tagline mb-0 h6">Baga, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
                 <i class="bi bi-geo-alt-fill"></i> Show on Map
               </button>
             </div>
           </div>
           <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/waterfront" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <a href="/waterfront" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="waterfront">
-              KEY FEATURES
+              Why Stay Here?
             </button>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-seaway.jpg');">
+      <div class="col-12 col-lg-4 resort-col middle-resort-col">
+        <img src="https://placehold.co/600x400" alt="Acron Seaway Resort" class="resort-bg-img" fetchpriority="high">
+
         <div class="resort-overlay"></div>
         <div class="resort-content-wrapper p-4 p-xxl-5">
           <div class="resort-top">
             <h2 class="resort-h2 fw-bold mb-2">Acron Seaway Resort</h2>
             <div class="d-flex align-items-center gap-3">
-              <p class="resort-tagline mb-0 h6">Near Candolim Beach</p>
+              <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
                 <i class="bi bi-geo-alt-fill"></i> Show on Map
               </button>
             </div>
           </div>
           <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="seaway">
-              KEY FEATURES
+              Why Stay Here?
             </button>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-4 resort-col" style="background-image: url('assets/hero-regina.jpg');">
+      <div class="col-12 col-lg-4 resort-col">
+        <img src="https://placehold.co/600x400" alt="Acron Candolim Regina" class="resort-bg-img" fetchpriority="high">
+
         <div class="resort-overlay"></div>
         <div class="resort-content-wrapper p-4 p-xxl-5">
           <div class="resort-top">
             <h2 class="resort-h2 fw-bold mb-2">Acron Candolim Regina</h2>
             <div class="d-flex align-items-center gap-3">
-              <p class="resort-tagline mb-0 h6">In Candolim Village</p>
+              <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
               <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
                 <i class="bi bi-geo-alt-fill"></i> Show on Map
               </button>
             </div>
           </div>
           <div class="resort-bottom d-flex flex-column flex-sm-row gap-3 mt-5 mt-lg-0">
-            <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill">BOOK NOW</a>
+            <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="regina">
-              KEY FEATURES
+              Why Stay Here?
             </button>
           </div>
         </div>

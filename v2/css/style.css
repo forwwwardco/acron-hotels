@@ -17,6 +17,24 @@
   /* Typography & Spacing */
   --nav-font-size: 0.9rem;
   --transition-speed: 0.3s ease;
+
+  --nav-height-desktop: 150px;
+  --nav-height-mobile: 140px;
+}
+
+/* Global Body Padding to clear the fixed navbar */
+body {
+  padding-top: var(--nav-height-desktop);
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: var(--nav-height-mobile);
+  }
+}
+
+.btn {
+  text-transform: uppercase;
 }
 
 /* General Header Styles */
@@ -469,11 +487,16 @@ select.enquiry-input {
 
 /* --- 1. Hero Section Layout & Top Bar --- */
 .hero-section {
-  /* Ensure the section fills the viewport height at minimum */
-  min-height: 100vh;
-  /* Offset fixed navbar height so content isn't hidden */
-  padding-top: var(--nav-height-desktop);
+  /* min-height: calc(100vh - var(--nav-height-desktop)); */
+  min-height: calc(100vh - var(--nav-height-desktop));
   background-color: var(--white);
+  /* padding-top: var(--nav-height-desktop); */
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: auto;
+  }
 }
 
 .hero-h1 {
@@ -497,27 +520,38 @@ select.enquiry-input {
 }
 
 /* --- 2. Resort Columns Layout --- */
-.hero-resorts-container {
-  /* On mobile, define a min-height so it doesn't collapse if content is short */
-  min-height: 800px;
-}
-
 .resort-col {
   position: relative;
   background-size: cover;
   background-position: center center;
-  /* Ensure columns take full available height on desktop */
   height: 100%;
   min-height: 400px;
-  /* Mobile fallback height per resort */
+  overflow: hidden;
+}
+
+.resort-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-color: var(--dark-grey);
+  /* Fallback colour while loading */
 }
 
 /* Dark Overlay for readability */
 .resort-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
+}
+
+/* Middle Column White Borders */
+.middle-resort-col {
+  border-top: 10px solid var(--white);
+  border-bottom: 10px solid var(--white);
 }
 
 /* Content Wrapper - Flex column to push buttons to bottom */
@@ -527,9 +561,10 @@ select.enquiry-input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   color: var(--white);
 }
+
+
 
 /* Resort Text Typography */
 .resort-h2 {
@@ -550,6 +585,7 @@ select.enquiry-input {
   padding: 6px 12px;
   border-radius: 30px;
   transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 .btn-map-link:hover {
@@ -642,6 +678,29 @@ select.enquiry-input {
   font-size: 1.05rem;
 }
 
+#heroResortsContainerRow {
+  height: calc(100vh - var(--nav-height-desktop)) !important;
+  padding-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .middle-resort-col {
+    border-top: none;
+    border-bottom: none;
+    border-left: 10px solid var(--white);
+    border-right: 10px solid var(--white);
+  }
+
+  .resort-content-wrapper {
+    justify-content: space-between;
+  }
+
+  #heroResortsContainerRow {
+    height: calc(100vh - var(--nav-height-desktop)) !important;
+    padding-bottom: 250px;
+  }
+}
+
 /* Mobile Responsive Adjustments */
 @media (max-width: 991px) {
   .hero-section {
@@ -664,12 +723,12 @@ select.enquiry-input {
     flex: 0 0 auto;
   }
 
-  .resort-col {
-    height: 500px;
-    /* Fixed height per resort on mobile row */
-  }
-
   .resort-h2 {
     font-size: 1.6rem;
+  }
+
+  .resort-col {
+    height: auto;
+    min-height: auto;
   }
 }
