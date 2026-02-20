@@ -1263,3 +1263,158 @@ select.enquiry-input {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==========================================================================
+   14. OUR HOTELS SECTION
+   ========================================================================== */
+
+/* Typography & Icons */
+.hotel-amenity-icon {
+  color: var(--dark-blue);
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+
+.hotel-brand-dot {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.dot-waterfront {
+  background-color: var(--waterfront);
+}
+
+.dot-seaway {
+  background-color: var(--seaway);
+}
+
+.dot-regina {
+  background-color: var(--regina);
+}
+
+/* Buttons Customization */
+.btn-explore,
+.btn-walkthrough,
+.hotel-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all var(--transition-speed);
+}
+
+.btn-explore {
+  background-color: var(--lightest-blue);
+  color: var(--blue-grey);
+}
+
+.btn-explore:hover {
+  background-color: var(--light-blue);
+  color: var(--blue-grey);
+}
+
+.btn-walkthrough {
+  background-color: transparent;
+  border: 1px solid var(--blue-grey);
+  color: var(--blue-grey);
+}
+
+.btn-walkthrough:hover {
+  background-color: var(--blue-grey);
+  color: var(--white);
+}
+
+/* Image Composition Constraints */
+.hotel-image-composition {
+  /* Padding provides the space for the overlapping image to bleed into */
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.hotel-carousel {
+  height: 420px;
+  width: 100%;
+}
+
+/* Overlapping Image */
+.overlapping-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  max-width: 250px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* Tripadvisor Review Badge */
+.review-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  background: var(--white);
+  border-radius: 30px;
+  padding: 6px 16px 6px 6px;
+  display: flex;
+  align-items: center;
+}
+
+.tripadvisor-icon-wrapper {
+  background-color: #00AA6C;
+  /* Tripadvisor brand green */
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* Specific left-aligned indicators for this carousel */
+.hotel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.hotel-indicators button {
+  background-color: var(--white) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  border: none !important;
+  opacity: 0.6 !important;
+  text-indent: -999px;
+  transition: all var(--transition-speed) !important;
+  margin: 0 !important;
+}
+
+.hotel-indicators button.active {
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 6px !important;
+}
+
+/* Mobile Responsive Tweaks */
+@media (max-width: 991px) {
+  .hotel-image-composition {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .hotel-carousel {
+    height: 320px;
+  }
+
+  .review-badge {
+    top: 15px;
+    right: 15px;
+  }
+}

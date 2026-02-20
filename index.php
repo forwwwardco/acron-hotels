@@ -245,6 +245,301 @@
 </section>
 
 <!-- OUR HOTELS SECTION -->
+<section class="our-hotels-section py-5 bg-white">
+  <div class="container py-4">
+    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 fade-in-element">Our Hotels</h2>
+
+    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+
+      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <span class="text-blue-grey fw-bold small ls-1">BAGA, GOA</span>
+          <button class="btn-map-link d-flex align-items-center gap-2 m-0 border-0 shadow-sm">
+            <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
+          </button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <h3 class="fw-bold text-blue-grey mb-0">Acron Waterfront Resort</h3>
+          <div class="hotel-brand-dot dot-waterfront shadow-sm"></div>
+        </div>
+
+        <p class="text-blue-grey opacity-75 mb-4 small fw-medium lh-lg">
+          Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx
+          xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.
+        </p>
+
+        <div class="row gy-3 mb-4 hotel-amenities">
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxx & Xxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxxxxx Xxxxxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxx Xxxx & Xxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx & Xxxxxxx</span>
+          </div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-6 col-lg-auto order-2 order-lg-1">
+            <a href="/waterfront" class="btn btn-explore w-100">EXPLORE PROPERTY</a>
+          </div>
+          <div class="col-6 col-lg-auto order-3 order-lg-2">
+            <a href="/book" class="btn btn-yellow hotel-btn w-100">BOOK NOW</a>
+          </div>
+          <div class="col-12 col-lg-auto order-1 order-lg-3">
+            <button class="btn btn-walkthrough w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="hotel-image-composition position-relative">
+
+          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+
+            <div class="review-badge shadow-sm">
+              <div class="tripadvisor-icon-wrapper me-2">
+                <i class="fa-brands fa-tripadvisor"></i>
+              </div>
+              <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
+            </div>
+
+            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+              <div class="carousel-item active h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+              </div>
+            </div>
+
+            <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <img src="https://placehold.co/600x400" class="overlapping-img shadow rounded-3 border  border-white placeholder-img" alt="Waterfront Detail">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+
+      <div class="col-lg-6 order-1 order-lg-1">
+        <div class="hotel-image-composition position-relative">
+
+          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+
+            <div class="review-badge shadow-sm">
+              <div class="tripadvisor-icon-wrapper me-2">
+                <i class="fa-brands fa-tripadvisor"></i>
+              </div>
+              <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
+            </div>
+
+            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+              <div class="carousel-item active h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+              </div>
+            </div>
+
+            <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <img src="https://placehold.co/600x400" class="overlapping-img shadow rounded-3 border  border-white placeholder-img" alt="Waterfront Detail">
+
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-2 order-lg-2 pe-lg-5">
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <span class="text-blue-grey fw-bold small ls-1">CANDOLIM, GOA</span>
+          <button class="btn-map-link d-flex align-items-center gap-2 m-0 border-0 shadow-sm">
+            <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
+          </button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <h3 class="fw-bold text-blue-grey mb-0">Acron Seaway Resort</h3>
+          <div class="hotel-brand-dot dot-seaway shadow-sm"></div>
+        </div>
+
+        <p class="text-blue-grey opacity-75 mb-4 small fw-medium lh-lg">
+          Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx
+          xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.
+        </p>
+
+        <div class="row gy-3 mb-4 hotel-amenities">
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxx & Xxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxxxxx Xxxxxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxx Xxxx & Xxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx & Xxxxxxx</span>
+          </div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-6 col-lg-auto order-2 order-lg-1">
+            <a href="/waterfront" class="btn btn-explore w-100">EXPLORE PROPERTY</a>
+          </div>
+          <div class="col-6 col-lg-auto order-3 order-lg-2">
+            <a href="/book" class="btn btn-yellow hotel-btn w-100">BOOK NOW</a>
+          </div>
+          <div class="col-12 col-lg-auto order-1 order-lg-3">
+            <button class="btn btn-walkthrough w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+
+      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <span class="text-blue-grey fw-bold small ls-1">CANDOLIM, GOA</span>
+          <button class="btn-map-link d-flex align-items-center gap-2 m-0 border-0 shadow-sm">
+            <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
+          </button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <h3 class="fw-bold text-blue-grey mb-0">Acron Candolim Regina</h3>
+          <div class="hotel-brand-dot dot-regina shadow-sm"></div>
+        </div>
+
+        <p class="text-blue-grey opacity-75 mb-4 small fw-medium lh-lg">
+          Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx
+          xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.
+        </p>
+
+        <div class="row gy-3 mb-4 hotel-amenities">
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxx & Xxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxxxxx Xxxxxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxx Xxxx & Xxxxx</span>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-water hotel-amenity-icon"></i>
+            <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx & Xxxxxxx</span>
+          </div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-6 col-lg-auto order-2 order-lg-1">
+            <a href="/waterfront" class="btn btn-explore w-100">EXPLORE PROPERTY</a>
+          </div>
+          <div class="col-6 col-lg-auto order-3 order-lg-2">
+            <a href="/book" class="btn btn-yellow hotel-btn w-100">BOOK NOW</a>
+          </div>
+          <div class="col-12 col-lg-auto order-1 order-lg-3">
+            <button class="btn btn-walkthrough w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="hotel-image-composition position-relative">
+
+          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+
+            <div class="review-badge shadow-sm">
+              <div class="tripadvisor-icon-wrapper me-2">
+                <i class="fa-brands fa-tripadvisor"></i>
+              </div>
+              <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
+            </div>
+
+            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+              <div class="carousel-item active h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+              </div>
+            </div>
+
+            <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <img src="https://placehold.co/600x400" class="overlapping-img shadow rounded-3 border  border-white placeholder-img" alt="Waterfront Detail">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- STATISTICS SECTION -->
 <section class="stats-section py-5">
