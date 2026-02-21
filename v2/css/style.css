@@ -504,18 +504,19 @@ select.enquiry-input {
 
 .btn-map-link {
   background: var(--lightest-blue);
-  border: 1px solid var(--light-blue);
+  border: none !important;
   color: var(--blue-grey);
-  font-weight: 600;
-  font-size: 0.8rem;
-  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 6px 14px;
   border-radius: 30px;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  box-shadow: none !important;
 }
 
 .btn-map-link:hover {
-  background: var(--white);
+  background: var(--light-blue);
   color: var(--blue-grey);
 }
 
@@ -1406,6 +1407,31 @@ select.enquiry-input {
   border-radius: 6px !important;
 }
 
+/* Decorative Starfish */
+.decorative-starfish {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+  /* Prevents the image from blocking clicks on the map button */
+}
+
+.decorative-umbrella {
+  position: absolute;
+  bottom: -130px;
+  right: -130px;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+  /* Prevents interference with clicks on the slider below */
+}
+
 /* Mobile Responsive Tweaks */
 @media (max-width: 991px) {
   .hotel-image-composition {
@@ -1420,5 +1446,88 @@ select.enquiry-input {
   .review-badge {
     top: 15px;
     right: 15px;
+  }
+
+  .decorative-starfish {
+    top: -60px;
+    left: calc(calc(100vw - 120px) / 2);
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+  }
+
+  .decorative-umbrella {
+    bottom: -60px;
+    right: -20px;
+    width: 140px;
+    height: 140px;
+    opacity: 0.8;
+    /* Faded slightly to preserve text legibility */
+  }
+}
+
+/* Tighter Amenities Grid */
+.hotel-amenities {
+  max-width: 450px;
+  /* Constrains the width so the columns sit closer together */
+}
+
+/* Dynamic Action Buttons Layout */
+.hotel-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hotel-action-buttons .btn {
+  width: auto;
+  /* Buttons will hug their text content naturally */
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* Desktop explicit ordering */
+@media (min-width: 992px) {
+  .hotel-action-buttons {
+    gap: 16px;
+  }
+
+  .hotel-action-buttons .btn-explore {
+    order: 1;
+  }
+
+  .hotel-action-buttons .hotel-btn {
+    order: 2;
+  }
+
+  .hotel-action-buttons .btn-walkthrough {
+    order: 3;
+  }
+
+  .hotel-row .col-lg-6.order-2.order-lg-1.pe-lg-5 .col-lg-6.order-2.order-lg-1.pe-lg-5,
+  .hotel-row .col-lg-6.col-lg-6.order-2.order-lg-2.pe-lg-5 .col-lg-6.order-2.order-lg-2.pe-lg-5 {
+    width: 100%;
+  }
+}
+
+/* Mobile-specific sizing & ordering */
+@media (max-width: 991px) {
+
+  /* Creates an invisible break after the walkthrough button */
+  .hotel-action-buttons::after {
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+  }
+
+  .hotel-action-buttons .btn-walkthrough {
+    width: auto;
+    /* Reverts from 100% to hug the text content */
+    order: 1;
+  }
+
+  .hotel-action-buttons .btn-explore,
+  .hotel-action-buttons .hotel-btn {
+    order: 2;
   }
 }
