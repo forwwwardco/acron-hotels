@@ -1348,6 +1348,10 @@ select.enquiry-input {
   aspect-ratio: 4/3;
   object-fit: cover;
   z-index: 2;
+  border-bottom-width: 0 !important;
+  border-top-width: 0 !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
 }
 
 /* Tripadvisor Review Badge */
