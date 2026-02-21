@@ -234,3 +234,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // 1. Image Fade-In Logic
+  const handleImageLoad = (img) => {
+    img.classList.add('loaded');
+  };
+
+  document.querySelectorAll('img').forEach(img => {
+    if (img.complete) {
+      handleImageLoad(img);
+    } else {
+      img.addEventListener('load', () => handleImageLoad(img));
+    }
+  });
+
+  // 2. Scroll Reveal Observer
+  const revealOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' // Starts animation slightly before element enters view
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        // Unobserve after showing to save resources
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // 3. Tactile Vibration (Optional for Android)
+  document.querySelectorAll('.btn, button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (navigator.vibrate) navigator.vibrate(5);
+    });
+  });
+
+});

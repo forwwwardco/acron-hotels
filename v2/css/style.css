@@ -180,6 +180,88 @@ body {
   padding: 0.5rem 0 !important;
 }
 
+/* 1. Tactile Interactions (The "Google" Press Feel) */
+a,
+.btn,
+button,
+.nav-link,
+.card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+}
+
+a:active,
+.btn:active,
+button:active,
+.card:active {
+  transform: scale(0.97) !important;
+  filter: brightness(0.9);
+}
+
+/* 2. Bespoke Navigation Hover */
+.nav-link {
+  position: relative;
+  text-decoration: none !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* 3. Smooth Scroll-Reveal Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Progressive Image Loading */
+img {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* 5. Custom Selection & Momentum Scrolling */
+::selection {
+  background: #000;
+  /* Replace with brand colour */
+  color: #fff;
+}
+
+.scroll-snap-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-snap-container::-webkit-scrollbar {
+  display: none;
+}
+
 /* Special Offers Modal */
 .special-offers-card {
   background-color: var(--lightest-blue) !important;

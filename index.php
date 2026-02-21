@@ -105,7 +105,7 @@
 </div>
 
 <!-- EXCLUSIVE DEALS SECTION -->
-<section id="exclusiveDeals" class="exclusive-deals py-5 fade-in-element">
+<section id="exclusiveDeals" class="exclusive-deals py-5 reveal">
   <div class="container py-4">
 
     <h2 class="text-center fw-bold text-blue-grey mb-4">Exclusive Deals, Just For You</h2>
@@ -248,10 +248,10 @@
 <section class="our-hotels-section py-5 bg-white position-relative">
   <img src="v2/assets/starfish.png" class="decorative-starfish" alt="Decorative Starfish">
   <div class="container py-4 position-relative z-1">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 fade-in-element">Our Hotels</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal">Our Hotels</h2>
 
     <!-- WATERFRONT -->
-    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+    <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
 
       <!-- TEXT -->
       <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
@@ -340,7 +340,7 @@
     </div>
 
     <!-- SEAWAY -->
-    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+    <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
 
       <!-- IMAGE -->
       <div class="col-lg-6 order-1 order-lg-1">
@@ -437,7 +437,7 @@
     </div>
 
     <!-- REGINA -->
-    <div class="row align-items-center gy-5 mb-5 hotel-row fade-in-element">
+    <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
 
       <!-- TEXT -->
       <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
@@ -540,7 +540,7 @@
   <div class="container py-4">
     <div class="row g-5 text-center justify-content-center">
 
-      <div class="col-6 col-lg-3 stat-item fade-in-element">
+      <div class="col-6 col-lg-3 stat-item reveal">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-face-smile"></i>
         </div>
@@ -548,7 +548,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item fade-in-element">
+      <div class="col-6 col-lg-3 stat-item reveal">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-star"></i>
         </div>
@@ -556,7 +556,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item fade-in-element">
+      <div class="col-6 col-lg-3 stat-item reveal">
         <div class="stat-icon mb-3">
           <i class="fa-regular fa-building"></i>
         </div>
@@ -564,7 +564,7 @@
         <p class="stat-label mb-0 text-blue-grey">Xxxxx Xxxxxxxxx</p>
       </div>
 
-      <div class="col-6 col-lg-3 stat-item fade-in-element">
+      <div class="col-6 col-lg-3 stat-item reveal">
         <div class="stat-icon mb-3">
           <i class="fa-solid fa-location-dot"></i>
         </div>
@@ -579,10 +579,10 @@
 <!-- TESTIONIALS SECTION -->
 <section class="reviews-section py-5" style="padding-bottom:0!important;">
   <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 fade-in-element" style="margin-bottom: 0!important;">What Our Guests Say</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 reveal" style="margin-bottom: 0!important;">What Our Guests Say</h2>
   </div>
 
-  <div class="container-fluid px-0 fade-in-element">
+  <div class="container-fluid px-0 reveal">
     <div class="reviews-slider d-flex gap-4 px-3 px-lg-5 pb-4">
 
       <div class="review-card shadow bg-white">
@@ -716,7 +716,7 @@
 </section>
 
 <!-- YOUTUBE EMBED SECTION -->
-<section class="video-section py-5 bg-white fade-in-element" style="padding-bottom:0!important;">
+<section class="video-section py-5 bg-white reveal" style="padding-bottom:0!important;">
   <div class="container py-4">
 
     <div class="row align-items-center gy-5">

@@ -10,6 +10,9 @@
     <meta name="author" content="Acron Group of Hotels">
     <meta name="copyright" content="Acron Hospitality Pvt. Ltd.">
 
+    <meta name="theme-color" content="#ffd803">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yellow">
+
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
@@ -22,6 +25,23 @@
 
     <link rel="stylesheet" href="v2/css/style.css">
     <link rel="stylesheet" href="v2/css/home.css">
+    <style>
+        /* Immediate Page Entry: Prevents the "white flash" on PHP navigation */
+        body {
+            opacity: 0;
+            animation: pageEntry 0.4s ease-out forwards;
+        }
+
+        @keyframes pageEntry {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RE4RL53T8"></script>
     <script>
