@@ -110,6 +110,7 @@ body {
   height: 48px;
   border-radius: 6px;
   border: 1px solid var(--light-blue);
+  background-color: var(--white);
 }
 
 .date-input {
@@ -330,7 +331,7 @@ body {
 
   .booking-engine-fixed .form-control,
   .booking-engine-fixed .form-select {
-    background-color: transparent !important;
+    background-color: var(--white) !important;
     border-bottom-color: rgba(45, 51, 74, 0.2) !important;
     color: var(--blue-grey) !important;
   }
@@ -393,7 +394,7 @@ body {
 }
 
 .enquiry-input {
-  background-color: transparent !important;
+  background-color: var(--white);
   border: none !important;
   border-bottom: 2px solid rgba(45, 51, 74, 0.2) !important;
   border-radius: 0 !important;
@@ -945,6 +946,30 @@ select.enquiry-input {
   }
 }
 
+/* Decorative Shell */
+.decorative-shell {
+  position: absolute;
+  top: -100px;
+  /* Pulls it up by exactly half its height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Mobile Responsive Tweaks for Shell */
+@media (max-width: 991px) {
+  .decorative-shell {
+    top: -60px;
+    /* Adjust pull-up for smaller height */
+    width: 120px;
+    height: 120px;
+  }
+}
+
 /* ==========================================================================
    9. REVIEWS SLIDER SECTION
    ========================================================================== */
@@ -1141,6 +1166,30 @@ select.enquiry-input {
   }
 }
 
+/* Decorative Crab */
+.decorative-crab {
+  position: absolute;
+  top: -70px;
+  /* Pulls the crab up to sit on the edge */
+  left: 40px;
+  /* Indents it slightly from the left corner */
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+  /* Prevents it from blocking clicks */
+}
+
+/* Mobile Responsive Tweaks for Crab */
+@media (max-width: 991px) {
+  .decorative-crab {
+    top: -45px;
+    left: 20px;
+    width: 110px;
+  }
+}
+
 /* ==========================================================================
    11. LEGACY SECTION
    ========================================================================== */
@@ -1176,6 +1225,27 @@ select.enquiry-input {
 
   .legacy-img {
     min-height: 300px;
+  }
+}
+
+/* Decorative Palm Leaves */
+.decorative-palm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Mobile Responsive Tweaks for Palm */
+@media (max-width: 991px) {
+  .decorative-palm {
+    top: 0;
+    right: 0;
+    width: 200px;
   }
 }
 
@@ -1268,6 +1338,13 @@ select.enquiry-input {
 /* ==========================================================================
    14. OUR HOTELS SECTION
    ========================================================================== */
+
+.our-hotels-section {
+  background-image: url('./../assets/sand.png');
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 
 /* Typography & Icons */
 .hotel-amenity-icon {
@@ -1410,10 +1487,10 @@ select.enquiry-input {
 /* Decorative Starfish */
 .decorative-starfish {
   position: absolute;
-  top: -100px;
+  top: -150px;
   left: 20px;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: contain;
   z-index: 0;
   pointer-events: none;
@@ -1423,9 +1500,9 @@ select.enquiry-input {
 .decorative-umbrella {
   position: absolute;
   bottom: -130px;
-  right: -130px;
-  width: 250px;
-  height: 250px;
+  right: -200px;
+  width: 300px;
+  height: 300px;
   object-fit: contain;
   z-index: 0;
   pointer-events: none;
@@ -1449,18 +1526,18 @@ select.enquiry-input {
   }
 
   .decorative-starfish {
-    top: -60px;
-    left: calc(calc(100vw - 120px) / 2);
-    width: 120px;
-    height: 120px;
+    top: -80px;
+    left: calc(calc(100vw - 180px) / 2);
+    width: 180px;
+    height: 180px;
     opacity: 0.8;
   }
 
   .decorative-umbrella {
-    bottom: -60px;
-    right: -20px;
-    width: 140px;
-    height: 140px;
+    bottom: -80px;
+    right: -90px;
+    width: 200px;
+    height: 200px;
     opacity: 0.8;
     /* Faded slightly to preserve text legibility */
   }

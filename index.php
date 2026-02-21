@@ -246,7 +246,7 @@
 
 <!-- OUR HOTELS SECTION -->
 <section class="our-hotels-section py-5 bg-white position-relative">
-  <img src="https://placehold.co/200x200" class="decorative-starfish" alt="Decorative Starfish">
+  <img src="v2/assets/starfish.png" class="decorative-starfish" alt="Decorative Starfish">
   <div class="container py-4 position-relative z-1">
     <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 fade-in-element">Our Hotels</h2>
 
@@ -383,7 +383,7 @@
       <div class="col-lg-6 order-2 order-lg-2 pe-lg-5 position-relative">
         <div class="col-lg-6 order-2 order-lg-2 pe-lg-5 position-relative">
 
-          <img src="https://placehold.co/200x200" class="decorative-umbrella" alt="Decorative Umbrella">
+          <img src="v2/assets/umbrella.png" class="decorative-umbrella" alt="Decorative Umbrella">
 
           <div class="d-flex align-items-center gap-3 mb-2">
             <span class="text-blue-grey fw-bold small ls-1">CANDOLIM, GOA</span>
@@ -535,7 +535,8 @@
 </section>
 
 <!-- STATISTICS SECTION -->
-<section class="stats-section py-5">
+<section class="stats-section py-5 position-relative">
+  <img src="v2/assets/shell.png" class="decorative-shell" alt="Decorative Shell">
   <div class="container py-4">
     <div class="row g-5 text-center justify-content-center">
 
@@ -576,9 +577,9 @@
 </section>
 
 <!-- TESTIONIALS SECTION -->
-<section class="reviews-section py-5">
+<section class="reviews-section py-5" style="padding-bottom:0!important;">
   <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 fade-in-element">What Our Guests Say</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 fade-in-element" style="margin-bottom: 0!important;">What Our Guests Say</h2>
   </div>
 
   <div class="container-fluid px-0 fade-in-element">
@@ -715,13 +716,13 @@
 </section>
 
 <!-- YOUTUBE EMBED SECTION -->
-<section class="video-section py-5 bg-white fade-in-element">
+<section class="video-section py-5 bg-white fade-in-element" style="padding-bottom:0!important;">
   <div class="container py-4">
 
     <div class="row align-items-center gy-5">
 
-      <div class="col-lg-12 order-2 order-lg-2">
-
+      <div class="col-lg-12 order-2 order-lg-2 position-relative">
+        <img src="v2/assets/crab.png" class="decorative-crab" alt="Decorative Crab">
         <div id="acronVideoCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
 
           <div class="carousel-inner rounded-4 shadow-sm">
@@ -769,94 +770,10 @@
 </section>
 
 <!-- ACRON HOMES CROSSLINK SECTION -->
-<section class="cross-promo-section py-5 bg-white fade-in-element">
-  <div class="container py-4">
-    <div class="row align-items-center gy-5">
-
-      <div class="col-lg-5">
-        <div id="crossPromoCarousel" class="carousel slide rounded-4 shadow overflow-hidden position-relative" data-bs-ride="carousel">
-
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">
-            </div>
-            <div class="carousel-item">
-              <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">
-            </div>
-            <div class="carousel-item">
-              <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">
-            </div>
-            <div class="carousel-item">
-              <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">
-            </div>
-            <div class="carousel-item">
-              <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">
-            </div>
-          </div>
-
-          <div class="carousel-gradient-overlay"></div>
-
-          <div class="promo-controls-wrapper d-flex align-items-center justify-content-center gap-3">
-
-            <button class="promo-control-btn" type="button" data-bs-target="#crossPromoCarousel" data-bs-slide="prev">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-            <div class="carousel-indicators promo-indicators position-static m-0">
-              <button type="button" data-bs-target="#crossPromoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#crossPromoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#crossPromoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#crossPromoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#crossPromoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-
-            <button class="promo-control-btn" type="button" data-bs-target="#crossPromoCarousel" data-bs-slide="next">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 offset-lg-0 text-center text-lg-start">
-        <p class="promo-tagline fw-bold text-uppercase mb-2 text-blue-grey opacity-75">XYZ Tagline</p>
-        <h2 class="promo-heading fw-bold text-blue-grey mb-4">Acron Homes Cross Promotion</h2>
-        <p class="promo-text text-blue-grey opacity-75 mb-0">
-          Xxxxxx xx x xxxxxx xx xxxxxxx xxxx xxxxxx xxx xxxxxxxxxxx, xxx Xxxxx Xxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxx xxxxxxxxx xxx xxxxxx xxxxxx xx xxx xxxxxx xx xxxxxxxxxxx. Xxxx xxxxxxxxxx xx xxxxxxxxxx xxxxxx xx xx xxxxxx xxxxxx xxxxxxxxxx xxxxxxxxxxx, xxxx xxxxxxxx x xxxxxx xxxxxxxxxxx xx Xxx’x xxxxxxx xxxxx.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
+<?php include("v2/components/acron-homes-crosslink.php"); ?>
 
 <!-- ACRON HOTELS LEGACY SECTION -->
-<section class="legacy-section py-5 position-relative">
-  <div class="container py-4">
-    <div class="row align-items-center gy-5">
-
-      <div class="col-lg-6 fade-in-element">
-        <img src="https://placehold.co/600x400" class="img-fluid w-100 rounded-4 shadow-sm legacy-img" alt="Acron Legacy - Hospitality and Development" loading="lazy">
-      </div>
-
-      <div class="col-lg-6 px-lg-5 text-center text-lg-start fade-in-element">
-
-        <h6 class="legacy-tagline text-uppercase fw-bold text-blue-grey opacity-75 mb-3">
-          The Architects of Luxury
-        </h6>
-
-        <h2 class="legacy-heading fw-bold text-blue-grey mb-4">
-          Acron Hotels Legacy Trusted Homes, We Craft Goa’s Most Loved Experiences
-        </h2>
-
-        <a href="/book-now" class="btn btn-yellow fw-bold px-5 py-3">
-          Book Now
-        </a>
-
-      </div>
-    </div>
-  </div>
-</section>
+<?php include("v2/components/acron-hotels-legacy.php"); ?>
 
 <!-- FOOTER -->
 <?php include("v2/footer.php"); ?>
