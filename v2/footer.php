@@ -44,7 +44,9 @@
             <div class="row align-items-center gy-3">
                 <div class="col-md-6 text-center text-md-start">
                     <div class="footer-social-icons d-flex justify-content-center justify-content-md-start gap-4">
-                        <a href="#" aria-label="TripAdvisor" class="social-link"><i class="bi bi-tripadvisor"></i></a>
+                        <a href="#" aria-label="TripAdvisor" class="social-link">
+                            <img src="v2/assets/icon-tripadvisor.png" alt="TripAdvisor" class="ta-custom-icon">
+                        </a>
                         <a href="#" aria-label="Google" class="social-link"><i class="fa-brands fa-google"></i></a>
                         <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
                         <a href="#" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>

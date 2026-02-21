@@ -19,9 +19,7 @@
 
                 <div class="social-icons d-none d-lg-flex gap-3">
                     <a href="#" aria-label="TripAdvisor" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle; margin-top: -3px;">
-                            <path d="M14.735 12.871a1.864 1.864 0 1 0 0 3.727 1.864 1.864 0 0 0 0-3.727zm-5.47 0a1.864 1.864 0 1 0 0 3.727 1.864 1.864 0 0 0 0-3.727zM24 12.016c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-3.516 4.606a3.67 3.67 0 0 1-2.909-1.444 3.67 3.67 0 0 1-1.121 1.444c1.696.53 2.924 2.106 2.924 3.972 0 .193-.014.383-.04.57 2.106-1.137 3.633-3.235 4.01-5.69-.844.733-1.854 1.148-2.864 1.148zm-8.484-8.033c0-.986-.713-1.841-1.636-2.152l2.364-1.636 2.364 1.636c-.923.311-1.636 1.166-1.636 2.152 0 1.272 1.023 2.311 2.311 2.311s2.311-1.039 2.311-2.311c0-.986-.713-1.841-1.636-2.152l1.378-.95c-.886-.484-1.923-.746-3.03-.746s-2.144.262-3.03.746l1.378.95c-.923.311-1.636 1.166-1.636 2.152 0 1.272 1.023 2.311 2.311 2.311.238 0 .463-.041.674-.112l.142.112c.211.071.436.112.674.112 1.288 0 2.311-1.039 2.311-2.311z" />
-                        </svg>
+                        <img src="v2/assets/icon-tripadvisor.png" alt="TripAdvisor" class="ta-custom-icon">
                     </a>
                     <a href="#" aria-label="Google" class="social-link"><i class="fa-brands fa-google"></i></a>
                     <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
@@ -49,7 +47,7 @@
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="acronOffcanvas" aria-labelledby="acronOffcanvasLabel" data-bs-backdrop="false">
                 <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="acronOffcanvasLabel">MENU</h5>
+                    <h5 class="offcanvas-title fw-bold" id="acronOffcanvasLabel">ACRON GROUP OF HOTELS</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -80,7 +78,31 @@
                         </li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Exclusive Deals</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Why Book Directly?</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="whyBookDropdown" role="button" aria-expanded="false">
+                                Why Book Directly?
+                            </a>
+                            <ul class="dropdown-menu border-0 desktop-tooltip-menu p-3" aria-labelledby="whyBookDropdown">
+                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Best Rate Guarantee</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Priority Room Upgrades</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Flexible Cancellations</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Early Check-in / Late Check-out</li>
+                                <li class="mb-0"><i class="fa-solid fa-check text-yellow me-2"></i> Exclusive Welcome Drink</li>
+                            </ul>
+
+                            <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileWhyBookMenu" role="button" aria-expanded="false" aria-controls="mobileWhyBookMenu">
+                                Why Book Directly?
+                            </a>
+                            <div class="collapse d-lg-none" id="mobileWhyBookMenu">
+                                <ul class="list-unstyled ps-4 mt-2 mb-3 why-book-mobile-list">
+                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Best Rate Guarantee</li>
+                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Priority Room Upgrades</li>
+                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Flexible Cancellations</li>
+                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Early Check-in / Late Check-out</li>
+                                    <li class="small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Exclusive Welcome Drink</li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                     </ul>
 

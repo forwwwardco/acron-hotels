@@ -97,7 +97,7 @@
   <div class="hero-tooltip-box p-4 p-md-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h4 class="tooltip-title fw-bold m-0" id="tooltipTitle">Resort Features</h4>
-      <button class="btn-close-tooltip" id="closeTooltip"><i class="bi bi-x-lg"></i></button>
+      <button class="btn-close-tooltip" id="closeTooltip"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <ul class="tooltip-features-list fa-ul ms-4" id="tooltipList">
     </ul>
@@ -108,8 +108,7 @@
 <section id="exclusiveDeals" class="exclusive-deals py-5 reveal">
   <div class="container py-4">
 
-    <h2 class="text-center fw-bold text-blue-grey mb-4">Exclusive Deals, Just For You</h2>
-
+    <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">Exclusive Deals, Just For You</h2>
     <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
       <button class="filter-pill active" data-filter="deal-pack-1">SUMMER OFFERS</button>
       <button class="filter-pill" data-filter="deal-pack-2">MONSOON MAGIC</button>
@@ -248,7 +247,7 @@
 <section class="our-hotels-section py-5 bg-white position-relative">
   <img src="v2/assets/starfish.png" class="decorative-starfish" alt="Decorative Starfish">
   <div class="container py-4 position-relative z-1">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal">Our Hotels</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
 
     <!-- WATERFRONT -->
     <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
@@ -308,22 +307,26 @@
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="hotel-image-composition position-relative">
           <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
-            <div class="review-badge shadow-sm">
-              <div class="tripadvisor-icon-wrapper me-2">
-                <i class="fa-brands fa-tripadvisor"></i>
-              </div>
+            <a href="#" class="review-badge shadow-sm text-decoration-none">
+              <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
-            </div>
+            </a>
 
-            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+            <div class="carousel-inner h-100 rounded-4 shadow">
               <div class="carousel-item active h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront 1">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront 2">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront 3">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront 4">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront 5">
               </div>
             </div>
 
@@ -331,6 +334,8 @@
               <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
           </div>
           <img src="https://placehold.co/600x400" class="overlapping-img shadow rounded-3 border  border-white placeholder-img" alt="Waterfront Detail">
@@ -340,37 +345,43 @@
     </div>
 
     <!-- SEAWAY -->
+    <div class="hotel-section-divider reveal"></div>
     <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
 
       <!-- IMAGE -->
       <div class="col-lg-6 order-1 order-lg-1">
         <div class="hotel-image-composition position-relative">
 
-          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
-
-            <div class="review-badge shadow-sm">
-              <div class="tripadvisor-icon-wrapper me-2">
-                <i class="fa-brands fa-tripadvisor"></i>
-              </div>
+          <div id="reginaCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+            <a href="#" class="review-badge shadow-sm text-decoration-none">
+              <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
-            </div>
+            </a>
 
-            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+            <div class="carousel-inner h-100 rounded-4 shadow">
               <div class="carousel-item active h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Regina 1">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Regina 2">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Regina 3">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Regina 4">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Regina 5">
               </div>
             </div>
 
             <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#reginaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#reginaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#reginaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#reginaCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#reginaCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
           </div>
 
@@ -437,6 +448,7 @@
     </div>
 
     <!-- REGINA -->
+    <div class="hotel-section-divider reveal"></div>
     <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
 
       <!-- TEXT -->
@@ -497,31 +509,35 @@
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="hotel-image-composition position-relative">
 
-          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
-
-            <div class="review-badge shadow-sm">
-              <div class="tripadvisor-icon-wrapper me-2">
-                <i class="fa-brands fa-tripadvisor"></i>
-              </div>
+          <div id="seawayCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+            <a href="#" class="review-badge shadow-sm text-decoration-none">
+              <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
-            </div>
-
-            <div class="carousel-inner h-100 rounded-4 shadow-sm">
+            </a>
+            <div class="carousel-inner h-100 rounded-4 shadow">
               <div class="carousel-item active h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Seaway 1">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Pool">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Seaway 2">
               </div>
               <div class="carousel-item h-100">
-                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Waterfront Room">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Seaway 3">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Seaway 4">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://placehold.co/600x400" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="Acron Seaway 5">
               </div>
             </div>
 
             <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#waterfrontCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#seawayCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#seawayCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#seawayCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#seawayCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#seawayCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
           </div>
 
@@ -579,7 +595,7 @@
 <!-- TESTIONIALS SECTION -->
 <section class="reviews-section py-5" style="padding-bottom:0!important;">
   <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 reveal" style="margin-bottom: 0!important;">What Our Guests Say</h2>
+    <h2 class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
   </div>
 
   <div class="container-fluid px-0 reveal">

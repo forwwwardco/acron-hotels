@@ -216,6 +216,20 @@ document.addEventListener("DOMContentLoaded", () => {
       videoCarousel.querySelectorAll('iframe').forEach(iframe => iframe.src = iframe.src);
     });
   }
+  /* ==========================================================================
+     WAVY DIVIDER SCROLL ANIMATION
+     ========================================================================== */
+  const dividers = document.querySelectorAll('.hotel-section-divider');
+  if (dividers.length) {
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      dividers.forEach(divider => {
+        // Shifts the background image horizontally based on scroll depth
+        // The * 0.5 acts as a slight friction modifier for a smoother ripple
+        divider.style.backgroundPositionX = `-${scrollPos * 0.5}px`;
+      });
+    });
+  }
 
   /* ==========================================================================
      7. SCROLL FADE-IN OBSERVER

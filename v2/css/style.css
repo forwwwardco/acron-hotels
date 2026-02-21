@@ -149,23 +149,29 @@ body {
 }
 
 .social-link {
-  color: var(--blue-grey);
+  color: var(--blue-grey) !important;
+  /* Forces the base colour */
   font-size: 1.1rem;
-  transition: opacity var(--transition-speed);
+  transition: opacity var(--transition-speed) ease;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .social-link:hover {
-  opacity: 0.7;
-  color: var(--waterfront);
+  opacity: 0.6;
+  /* Creates the clean, translucent fade */
+  color: var(--blue-grey) !important;
+  /* Prevents the colour from shifting */
 }
 
-.social-link svg {
-  transition: fill var(--transition-speed);
-  fill: var(--blue-grey);
-}
-
-.social-link:hover svg {
-  fill: var(--waterfront);
+/* Custom Image Icon Scaling */
+.ta-custom-icon {
+  height: 1em;
+  /* Matches the 1.1rem font size of the other icons perfectly */
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .navbar-brand .main-logo {
@@ -629,7 +635,9 @@ select.enquiry-input {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Hero Tooltip */
+/* ==========================================================================
+   HERO TOOLTIP (MOBILE FIRST)
+   ========================================================================== */
 .hero-tooltip-overlay {
   position: fixed;
   inset: 0;
@@ -642,6 +650,7 @@ select.enquiry-input {
   pointer-events: none;
   transition: opacity 0.3s ease;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .hero-tooltip-overlay.active {
@@ -655,6 +664,7 @@ select.enquiry-input {
   border-radius: 12px;
   width: 90%;
   max-width: 420px;
+  /* Base mobile width */
   color: var(--blue-grey);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   transform: translateY(20px);
@@ -668,10 +678,13 @@ select.enquiry-input {
 .btn-close-tooltip {
   background: transparent;
   border: none;
-  color: var(--white);
+  color: var(--blue-grey);
+  /* Fixed the invisible button colour globally */
   font-size: 1.5rem;
+  /* Base mobile size */
   opacity: 0.7;
   transition: opacity 0.2s;
+  padding: 0;
 }
 
 .btn-close-tooltip:hover {
@@ -681,6 +694,34 @@ select.enquiry-input {
 .tooltip-features-list li {
   margin-bottom: 12px;
   font-size: 1.05rem;
+  /* Base mobile size */
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   DESKTOP: ENLARGED TOOLTIP
+   ========================================================================== */
+@media (min-width: 992px) {
+  .hero-tooltip-box {
+    max-width: 550px;
+    /* Widened to accommodate larger text */
+  }
+
+  .tooltip-title {
+    font-size: 2.25rem;
+    /* Made the heading more prominent */
+  }
+
+  .btn-close-tooltip {
+    font-size: 2.25rem;
+    /* Enlarged the close icon by 1.5x */
+  }
+
+  .tooltip-features-list li {
+    margin-bottom: 16px;
+    font-size: 1.55rem;
+    /* Increased font size by ~1.5x */
+  }
 }
 
 #heroResortsContainerRow {
@@ -1280,9 +1321,38 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
+   DESKTOP: ENLARGED PROMO CAROUSEL CONTROLS
+   ========================================================================== */
+@media (min-width: 992px) {
+
+  /* Increase arrow size from 1.1rem to 1.65rem */
+  .promo-control-btn {
+    font-size: 1.65rem;
+    padding: 0 15px;
+    /* Added a bit more padding for a larger click target */
+  }
+
+  /* Increase inactive dot size from 8px to 12px */
+  .promo-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* Increase active pill size from 24px to 36px */
+  .promo-indicators button.active {
+    width: 36px !important;
+  }
+}
+
+/* ==========================================================================
    11. LEGACY SECTION
    ========================================================================== */
 .legacy-section {
+  background-color: var(--lightest-blue);
+}
+
+/* Add the light blue background to the cross promo section instead */
+.cross-promo-section {
   background-color: var(--light-blue);
 }
 
@@ -1300,14 +1370,16 @@ select.enquiry-input {
 }
 
 .legacy-heading {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  /* Increased from 2.5rem */
   line-height: 1.2;
   max-width: 500px;
 }
 
 @media (max-width: 991px) {
   .legacy-heading {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    /* Increased from 2rem */
     margin-left: auto;
     margin-right: auto;
   }
@@ -1534,17 +1606,12 @@ select.enquiry-input {
   align-items: center;
 }
 
-.tripadvisor-icon-wrapper {
-  background-color: #00AA6C;
-  /* Tripadvisor brand green */
-  color: white;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
+.review-badge-icon {
+  height: 20px;
+  /* Sets the perfect height to match the text */
+  width: auto;
+  /* Maintains the logo's natural aspect ratio */
+  display: block;
 }
 
 /* Specific left-aligned indicators for this carousel */
@@ -1698,6 +1765,46 @@ select.enquiry-input {
   }
 }
 
+/* Resort Section Dividers (Wavy Line) */
+.hotel-section-divider {
+  height: 19px;
+  /* Scaled down from 24px */
+  max-width: 1000px;
+  width: 85%;
+  margin: 5rem auto;
+
+  background-color: transparent;
+  box-shadow: none;
+
+  /* SVG Repeating Wave Background in --dark-blue */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='32' height='19'%3E%3Cpath d='M0 12 Q 10 2, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  background-size: 32px 19px;
+  /* Scaled down from 40px 24px */
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .hotel-section-divider {
+    margin: 4rem auto;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL SECTION HEADINGS
+   ========================================================================== */
+.section-heading {
+  font-size: 2.8rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 991px) {
+  .section-heading {
+    font-size: 2.2rem;
+  }
+}
+
 /* ==========================================================================
    DESKTOP DROPDOWN STYLING & BEHAVIOUR
    ========================================================================== */
@@ -1749,5 +1856,87 @@ select.enquiry-input {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   WHY BOOK DIRECTLY TOOLTIP (DESKTOP & MOBILE)
+   ========================================================================== */
+.desktop-tooltip-menu {
+  background-color: rgba(45, 51, 74, 0.95) !important;
+  /* Dark translucent box */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  min-width: 260px;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-tooltip-menu li {
+  color: rgba(255, 255, 255, 0.95);
+  /* White text */
+  list-style-type: none;
+  letter-spacing: 0.5px;
+}
+
+/* Force hide the desktop tooltip from the mobile DOM */
+@media (max-width: 991.98px) {
+  .desktop-tooltip-menu {
+    display: none !important;
+  }
+
+  .why-book-mobile-list li {
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+}
+
+/* Desktop Hover Logic for Tooltip */
+@media all and (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover .desktop-tooltip-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeInDropdown 0.2s ease forwards;
+  }
+}
+
+/* ==========================================================================
+   STATIC WAVE DIVIDER
+   ========================================================================== */
+.wave-divider-bottom {
+  position: absolute;
+  bottom: -1px;
+  /* Pulled down by 1px to prevent microscopic rendering gaps */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Ensures the shape doesn't block any clicks */
+}
+
+.wave-divider-bottom svg {
+  display: block;
+  width: 100%;
+  height: 40px;
+  /* Subtle, slimmer wave curve for mobile screens */
+}
+
+.cross-promo-section .container {
+  padding-bottom: 5rem !important;
+}
+
+@media (min-width: 992px) {
+  .wave-divider-bottom svg {
+    height: 110px;
+    /* Grand, sweeping wave curve for desktop screens */
+  }
+
+  .cross-promo-section .container {
+    margin-bottom: 0 !important;
+    padding-bottom: 7rem !important;
+
   }
 }

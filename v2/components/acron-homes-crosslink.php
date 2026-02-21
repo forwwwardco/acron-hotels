@@ -1,5 +1,6 @@
-<section class="cross-promo-section py-5 bg-white fade-in-element">
-    <div class="container py-4">
+<section class="cross-promo-section pt-5 position-relative reveal">
+    <img src="v2/assets/palm.png" class="decorative-palm" alt="Decorative Palm Leaves">
+    <div class="container pb-5 mb-lg-4">
         <div class="row align-items-center gy-5">
 
             <div class="col-lg-5">
@@ -56,5 +57,11 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="wave-divider-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+        </svg>
     </div>
 </section>
