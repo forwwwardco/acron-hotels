@@ -306,7 +306,13 @@
       <!-- IMAGE -->
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="hotel-image-composition position-relative">
-          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+          <div id="waterfrontCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <div class="carousel-loader">
+              <svg viewBox="0 0 36 36">
+                <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
+                <circle class="loader-track" cx="18" cy="18" r="16"></circle>
+              </svg>
+            </div>
             <a href="#" class="review-badge shadow-sm text-decoration-none">
               <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
@@ -352,7 +358,13 @@
       <div class="col-lg-6 order-1 order-lg-1">
         <div class="hotel-image-composition position-relative">
 
-          <div id="reginaCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+          <div id="reginaCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <div class="carousel-loader">
+              <svg viewBox="0 0 36 36">
+                <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
+                <circle class="loader-track" cx="18" cy="18" r="16"></circle>
+              </svg>
+            </div>
             <a href="#" class="review-badge shadow-sm text-decoration-none">
               <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
@@ -509,7 +521,13 @@
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="hotel-image-composition position-relative">
 
-          <div id="seawayCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel">
+          <div id="seawayCarousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <div class="carousel-loader">
+              <svg viewBox="0 0 36 36">
+                <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
+                <circle class="loader-track" cx="18" cy="18" r="16"></circle>
+              </svg>
+            </div>
             <a href="#" class="review-badge shadow-sm text-decoration-none">
               <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
               <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>

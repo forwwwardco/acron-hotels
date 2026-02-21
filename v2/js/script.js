@@ -293,3 +293,76 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+/* ==========================================================================
+   CAROUSEL PROGRESS TRACKER LOGIC
+   ========================================================================== */
+const initCarouselProgress = () => {
+  const carousels = document.querySelectorAll('.carousel[data-bs-ride="carousel"]');
+
+  carousels.forEach(carousel => {
+    if (carousel.id === 'acronVideoCarousel') return;
+
+    const loader = carousel.querySelector('.carousel-loader');
+    const track = carousel.querySelector('.loader-track');
+    if (!track || !loader) return;
+
+    const interval = parseInt(carousel.getAttribute('data-bs-interval')) || 5000;
+    let startTime, remainingTime = interval, isPaused = false, animationFrame;
+
+    const runAnimation = (duration) => {
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+
+      track.classList.remove('is-locked'); // Unlock if it was locked
+      track.style.transition = 'none';
+      track.style.strokeDashoffset = '100';
+
+      void track.offsetWidth; // Reflow
+
+      animationFrame = requestAnimationFrame(() => {
+        track.style.transition = `stroke-dashoffset ${duration}ms linear`;
+        track.style.strokeDashoffset = '0';
+        startTime = Date.now();
+      });
+    };
+
+    const resetAndStart = () => {
+      isPaused = false;
+      remainingTime = interval;
+      loader.classList.remove('is-paused');
+      runAnimation(interval);
+    };
+
+    carousel.addEventListener('mouseenter', () => {
+      isPaused = true;
+      loader.classList.add('is-paused');
+      const timePassed = Date.now() - startTime;
+      remainingTime = Math.max(0, remainingTime - timePassed);
+      const computedStyle = window.getComputedStyle(track);
+      const currentOffset = computedStyle.getPropertyValue('stroke-dashoffset');
+      track.style.transition = 'none';
+      track.style.strokeDashoffset = currentOffset;
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      isPaused = false;
+      loader.classList.remove('is-paused');
+      if (remainingTime > 0) {
+        track.style.transition = `stroke-dashoffset ${remainingTime}ms linear`;
+        track.style.strokeDashoffset = '0';
+        startTime = Date.now();
+      }
+    });
+
+    carousel.addEventListener('slide.bs.carousel', resetAndStart);
+
+    // --- INITIALIZATION ---
+    track.classList.add('is-locked'); // Lock it instantly on load
+
+    setTimeout(() => {
+      resetAndStart(); // This now handles the removal of 'is-locked' via runAnimation
+    }, 400);
+  });
+};
+
+initCarouselProgress();

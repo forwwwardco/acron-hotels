@@ -4,8 +4,13 @@
         <div class="row align-items-center gy-5">
 
             <div class="col-lg-5">
-                <div id="crossPromoCarousel" class="carousel slide rounded-4 shadow overflow-hidden position-relative" data-bs-ride="carousel">
-
+                <div id="crossPromoCarousel" class="carousel slide rounded-4 shadow overflow-hidden position-relative" data-bs-ride="carousel" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                    <div class="carousel-loader">
+                        <svg viewBox="0 0 36 36">
+                            <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
+                            <circle class="loader-track" cx="18" cy="18" r="16"></circle>
+                        </svg>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="https://placehold.co/600x400" class="d-block w-100 promo-carousel-img" alt="Acron Homes Cross Promotion">

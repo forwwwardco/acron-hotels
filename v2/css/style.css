@@ -1940,3 +1940,60 @@ select.enquiry-input {
 
   }
 }
+
+/* ==========================================================================
+   CAROUSEL LOADER: SYNCED & FADING
+   ========================================================================== */
+.carousel-loader {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out 1s;
+  /* Delayed fade-in */
+}
+
+.carousel-loader.is-paused {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out 0s;
+  /* Instant fade-out */
+}
+
+.carousel-loader svg {
+  transform: rotate(-90deg);
+  width: 36px;
+  height: 36px;
+}
+
+.carousel-loader circle {
+  fill: none;
+  stroke-width: 3;
+}
+
+.loader-bg {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.loader-track {
+  stroke: var(--white);
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  transition: none;
+}
+
+/* This class prevents the 40% jump by hard-forcing the 100 offset */
+.loader-track.is-locked {
+  stroke-dashoffset: 100 !important;
+  transition: none !important;
+}
