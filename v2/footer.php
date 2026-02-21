@@ -23,8 +23,8 @@
                 <h6 class="footer-heading text-uppercase fw-bold mb-4">Our Hotels</h6>
                 <ul class="list-unstyled footer-links">
                     <li><a href="waterfront-resort.php">Acron Waterfront Resort</a></li>
-                    <li><a href="seaway-resort.php">Acron Seaway Resort</a></li>
                     <li><a href="candolim-regina.php">Acron Candolim Regina</a></li>
+                    <li><a href="seaway-resort.php">Acron Seaway Resort</a></li>
                 </ul>
             </div>
 

@@ -56,7 +56,29 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-uppercase fw-semibold" id="mainNavLinks">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Our Hotels</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="hotelsDropdown" role="button" aria-expanded="false">
+                                Our Hotels
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm desktop-dropdown-menu" aria-labelledby="hotelsDropdown">
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Waterfront Resort</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Candolim Regina</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Seaway Resort</a></li>
+                            </ul>
+
+                            <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileHotelsMenu" role="button" aria-expanded="true" aria-controls="mobileHotelsMenu">
+                                Our Hotels
+                            </a>
+                            <div class="collapse show d-lg-none" id="mobileHotelsMenu">
+                                <ul class="navbar-nav ps-4">
+                                    <li class="nav-item"><a class="nav-link" href="#">Acron Waterfront Resort</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Acron Candolim Regina</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Acron Seaway Resort</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
                         <li class="nav-item"><a class="nav-link" href="#">Exclusive Deals</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Why Book Directly?</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>

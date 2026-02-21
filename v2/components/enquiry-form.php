@@ -22,8 +22,8 @@
                 <select name="hotel" class="form-select enquiry-input" required>
                     <option value="" selected disabled>Select Hotel</option>
                     <option value="waterfront">Acron Waterfront Resort</option>
-                    <option value="seaway">Acron Seaway Resort</option>
                     <option value="regina">Acron Candolim Regina</option>
+                    <option value="seaway">Acron Seaway Resort</option>
                 </select>
             </div>
             <div class="mb-3">

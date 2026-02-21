@@ -47,28 +47,6 @@
       </div>
 
       <div class="col-12 col-lg-4 resort-col middle-resort-col">
-        <img src="https://placehold.co/600x400" alt="Acron Seaway Resort" class="resort-bg-img" fetchpriority="high">
-
-        <div class="resort-overlay"></div>
-        <div class="resort-content-wrapper p-4 p-xxl-5">
-          <div class="resort-top">
-            <h2 class="resort-h2 fw-bold mb-2">Acron Seaway Resort</h2>
-            <div class="d-flex align-items-center gap-3">
-              <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
-              <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
-                <i class="fa-solid fa-location-dot"></i> Show on Map
-              </button>
-            </div>
-          </div>
-          <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
-            <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="seaway">
-              Why Stay Here?
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4 resort-col">
         <img src="https://placehold.co/600x400" alt="Acron Candolim Regina" class="resort-bg-img" fetchpriority="high">
 
         <div class="resort-overlay"></div>
@@ -84,6 +62,28 @@
           </div>
           <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/candolim-regina" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
             <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="regina">
+              Why Stay Here?
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 resort-col">
+        <img src="https://placehold.co/600x400" alt="Acron Seaway Resort" class="resort-bg-img" fetchpriority="high">
+
+        <div class="resort-overlay"></div>
+        <div class="resort-content-wrapper p-4 p-xxl-5">
+          <div class="resort-top">
+            <h2 class="resort-h2 fw-bold mb-2">Acron Seaway Resort</h2>
+            <div class="d-flex align-items-center gap-3">
+              <p class="resort-tagline mb-0 h6">Candolim, Goa</p>
+              <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
+                <i class="fa-solid fa-location-dot"></i> Show on Map
+              </button>
+            </div>
+          </div>
+          <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0"> <a href="/seaway" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
+            <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="seaway">
               Why Stay Here?
             </button>
           </div>
@@ -134,20 +134,6 @@
 
       <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
         <div class="card h-100 border-0 shadow deals-card-wrapper">
-          <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="Acron Seaway Resort Deal" loading="lazy">
-          <div class="card-body text-center d-flex flex-column justify-content-center py-4">
-            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
-              <span class="deal-offer fw-bold">XX% OFF</span>
-              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
-            </div>
-            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
-          </div>
-          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
-        <div class="card h-100 border-0 shadow deals-card-wrapper">
           <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="Acron Candolim Regina Deal" loading="lazy">
           <div class="card-body text-center d-flex flex-column justify-content-center py-4">
             <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
@@ -160,6 +146,20 @@
         </div>
       </div>
 
+      <div class="col-12 col-lg-4 deal-card" data-category="deal-pack-1">
+        <div class="card h-100 border-0 shadow deals-card-wrapper">
+          <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="Acron Seaway Resort Deal" loading="lazy">
+          <div class="card-body text-center d-flex flex-column justify-content-center py-4">
+            <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
+              <span class="deal-offer fw-bold">XX% OFF</span>
+              <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+            </div>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+          </div>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+        </div>
+      </div>
+
       <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-2">
         <div class="card h-100 border-0 shadow deals-card-wrapper">
           <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="Acron Waterfront Resort Deal" fetchpriority="low" loading="lazy">
@@ -181,9 +181,9 @@
               <span class="deal-offer fw-bold">15% OFF</span>
               <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
             </div>
-            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
           </div>
-          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
         </div>
       </div>
       <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-2">
@@ -194,9 +194,9 @@
               <span class="deal-offer fw-bold">15% OFF</span>
               <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
             </div>
-            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
           </div>
-          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
         </div>
       </div>
 
@@ -221,9 +221,9 @@
               <span class="deal-offer fw-bold">10% OFF</span>
               <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
             </div>
-            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
           </div>
-          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
         </div>
       </div>
       <div class="col-12 col-lg-4 deal-card d-none" data-category="deal-pack-3">
@@ -234,9 +234,9 @@
               <span class="deal-offer fw-bold">10% OFF</span>
               <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
             </div>
-            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Candolim Regina</h4>
+            <h4 class="card-title fw-bold text-blue-grey mb-0">Acron Seaway Resort</h4>
           </div>
-          <a href="/candolim-regina/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
+          <a href="/seaway/offers" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
         </div>
       </div>
 
@@ -393,64 +393,6 @@
           </div>
 
           <div class="d-flex align-items-center gap-3 mb-2">
-            <h3 class="fw-bold text-blue-grey mb-0 fs-2">Acron Seaway Resort</h3>
-            <div class="hotel-brand-dot dot-seaway flex-shrink-0"></div>
-          </div>
-
-          <p class="text-blue-grey opacity-75 mb-3 small fw-medium lh-lg">
-            Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx
-            xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.
-          </p>
-
-          <div class="row gy-3 mb-4 hotel-amenities">
-            <div class="col-6 d-flex align-items-center gap-2">
-              <i class="fa-solid fa-water hotel-amenity-icon"></i>
-              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx</span>
-            </div>
-            <div class="col-6 d-flex align-items-center gap-2">
-              <i class="fa-solid fa-water hotel-amenity-icon"></i>
-              <span class="fw-bold text-blue-grey opacity-75 small">Xxx & Xxx</span>
-            </div>
-            <div class="col-6 d-flex align-items-center gap-2">
-              <i class="fa-solid fa-water hotel-amenity-icon"></i>
-              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxxxxx Xxxxxxxx</span>
-            </div>
-            <div class="col-6 d-flex align-items-center gap-2">
-              <i class="fa-solid fa-water hotel-amenity-icon"></i>
-              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxx Xxxx & Xxxxx</span>
-            </div>
-            <div class="col-6 d-flex align-items-center gap-2">
-              <i class="fa-solid fa-water hotel-amenity-icon"></i>
-              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx & Xxxxxxx</span>
-            </div>
-          </div>
-
-          <div class="hotel-action-buttons">
-            <a href="/seaway" class="btn btn-explore">EXPLORE PROPERTY</a>
-            <a href="/book" class="btn btn-yellow hotel-btn">BOOK NOW</a>
-            <button class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2">
-              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- REGINA -->
-    <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
-
-      <!-- TEXT -->
-      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
-        <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
-
-          <div class="d-flex align-items-center gap-3 mb-2">
-            <span class="text-blue-grey fw-bold small ls-1">CANDOLIM, GOA</span>
-            <button class="btn-map-link d-flex align-items-center gap-2 m-0">
-              <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
-            </button>
-          </div>
-
-          <div class="d-flex align-items-center gap-3 mb-2">
             <h3 class="fw-bold text-blue-grey mb-0 fs-2">Acron Candolim Regina</h3>
             <div class="hotel-brand-dot dot-regina flex-shrink-0"></div>
           </div>
@@ -485,6 +427,64 @@
 
           <div class="hotel-action-buttons">
             <a href="/candolim-regina" class="btn btn-explore">EXPLORE PROPERTY</a>
+            <a href="/book" class="btn btn-yellow hotel-btn">BOOK NOW</a>
+            <button class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGINA -->
+    <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
+
+      <!-- TEXT -->
+      <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
+        <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
+
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="text-blue-grey fw-bold small ls-1">CANDOLIM, GOA</span>
+            <button class="btn-map-link d-flex align-items-center gap-2 m-0">
+              <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
+            </button>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <h3 class="fw-bold text-blue-grey mb-0 fs-2">Acron Seaway Resort</h3>
+            <div class="hotel-brand-dot dot-seaway flex-shrink-0"></div>
+          </div>
+
+          <p class="text-blue-grey opacity-75 mb-3 small fw-medium lh-lg">
+            Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx
+            xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.
+          </p>
+
+          <div class="row gy-3 mb-4 hotel-amenities">
+            <div class="col-6 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-water hotel-amenity-icon"></i>
+              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx</span>
+            </div>
+            <div class="col-6 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-water hotel-amenity-icon"></i>
+              <span class="fw-bold text-blue-grey opacity-75 small">Xxx & Xxx</span>
+            </div>
+            <div class="col-6 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-water hotel-amenity-icon"></i>
+              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxxxxx Xxxxxxxx</span>
+            </div>
+            <div class="col-6 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-water hotel-amenity-icon"></i>
+              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxx Xxxx & Xxxxx</span>
+            </div>
+            <div class="col-6 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-water hotel-amenity-icon"></i>
+              <span class="fw-bold text-blue-grey opacity-75 small">Xxxxxxxx Xxxx & Xxxxxxx</span>
+            </div>
+          </div>
+
+          <div class="hotel-action-buttons">
+            <a href="/seaway" class="btn btn-explore">EXPLORE PROPERTY</a>
             <a href="/book" class="btn btn-yellow hotel-btn">BOOK NOW</a>
             <button class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2">
               <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH

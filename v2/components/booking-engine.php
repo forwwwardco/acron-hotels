@@ -6,7 +6,7 @@
     <div class="booking-panel container-fluid px-lg-5">
         <form class="booking-form py-3 py-lg-4" id="book-direct-form" target="_blank">
             <div class="row align-items-end g-3 g-lg-4">
-                
+
                 <div class="col-12 col-lg-3">
                     <label class="form-label text-white small fw-semibold d-none d-lg-block">Check In</label>
                     <label class="form-label d-lg-none fw-bold text-blue-grey">Check In</label>
@@ -25,8 +25,8 @@
                     <select class="form-select custom-select" name="select_prop" id="select_prop" required>
                         <option value="" selected disabled>SELECT</option>
                         <option value="MzAw">Acron Waterfront Resort</option>
-                        <option value="NzQy">Acron Seaway Resort</option>
                         <option value="Mjk4">Acron Candolim Regina</option>
+                        <option value="NzQy">Acron Seaway Resort</option>
                     </select>
                 </div>
 

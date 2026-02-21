@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Auto-Close Offcanvas on link click (SPA-like feel)
   const bsOffcanvas = document.getElementById("acronOffcanvas");
   if (bsOffcanvas) {
-    bsOffcanvas.querySelectorAll(".nav-link").forEach(link => {
+    // Exclude links that toggle dropdowns or collapses
+    bsOffcanvas.querySelectorAll(".nav-link:not([data-bs-toggle='collapse']):not([data-bs-toggle='dropdown'])").forEach(link => {
       link.addEventListener("click", () => {
         const openedCanvas = bootstrap.Offcanvas.getInstance(bsOffcanvas);
         if (openedCanvas) openedCanvas.hide();

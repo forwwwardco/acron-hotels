@@ -198,27 +198,31 @@ button:active,
 }
 
 /* 2. Bespoke Navigation Hover */
+/* 2. Bespoke Navigation Hover */
 .nav-link {
   position: relative;
   text-decoration: none !important;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: currentColor;
-  transform-origin: bottom right;
-  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
-}
+/* Restrict the animated underline to desktop only */
+@media (min-width: 992px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  }
 
-.nav-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 /* 3. Smooth Scroll-Reveal Classes */
@@ -295,20 +299,6 @@ img.loaded {
 }
 
 @media (min-width: 992px) {
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--blue-grey);
-    transition: width var(--transition-speed);
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
 
   #specialOffersTrigger {
     cursor: default;
@@ -323,8 +313,25 @@ img.loaded {
 @media (max-width: 991px) {
   .offcanvas-body .nav-link {
     font-size: 1.2rem;
-    padding: 1rem 0 !important;
+    padding: 1rem !important;
+    margin: 0 -1rem;
+    /* Pulls the background edge-to-edge with the offcanvas padding */
     border-bottom: 1px solid var(--lightest-blue);
+    border-radius: 8px;
+    /* Smooth, modern button feel */
+    transition: background-color 0.2s ease;
+  }
+
+  .offcanvas-body .nav-link:hover,
+  .offcanvas-body .nav-link:focus,
+  .offcanvas-body .nav-link:active {
+    background-color: var(--lightest-blue);
+    /* Subtle, clean brand colour highlight */
+  }
+
+  /* Force hide the underline pseudo-element on mobile */
+  .nav-link::after {
+    display: none !important;
   }
 }
 
@@ -1688,5 +1695,59 @@ select.enquiry-input {
   .hotel-action-buttons .btn-explore,
   .hotel-action-buttons .hotel-btn {
     order: 2;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP DROPDOWN STYLING & BEHAVIOUR
+   ========================================================================== */
+.desktop-dropdown-menu {
+  padding: 0.5rem 0;
+  border-radius: 8px;
+}
+
+.desktop-dropdown-menu .dropdown-item {
+  padding: 14px 24px;
+  /* Makes the items much taller and spaces them out */
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: var(--blue-grey);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.desktop-dropdown-menu .dropdown-item:hover {
+  background-color: var(--lightest-blue);
+  color: var(--waterfront);
+}
+
+/* Force hide the desktop menu from the mobile DOM to prevent ghosting */
+@media (max-width: 991.98px) {
+  .desktop-dropdown-menu {
+    display: none !important;
+  }
+}
+
+/* Desktop Hover Logic */
+@media all and (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover .desktop-dropdown-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeInDropdown 0.2s ease forwards;
+  }
+
+  .navbar .nav-item.dropdown:hover .nav-link.dropdown-toggle {
+    color: var(--bs-nav-link-hover-color);
+  }
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
