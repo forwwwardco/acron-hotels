@@ -115,38 +115,38 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
+
       if (!bookingEnginePanel) return;
 
-      // 1. Auto-select hotel in the dropdown if a specific resort was clicked
+      // 1. Check for specific resort ID
       const staahId = btn.getAttribute('data-staah-id');
+
       if (staahId && hotelSelect) {
+        // Resort button clicked: update the dropdown
         hotelSelect.value = staahId;
+      } else {
+        // Generic button clicked (Navbar or Legacy): scroll to top smoothly
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       }
 
       // 2. Handle Mobile vs Desktop behaviour
       if (window.innerWidth < 992) {
-
         // --- MOBILE BEHAVIOUR ---
-        // Expand the panel natively if it isn't already open. No pulse applied.
         if (!bookingEnginePanel.classList.contains('engine-expanded')) {
           const engineToggle = document.getElementById('engineToggle');
           if (engineToggle) {
-            engineToggle.click(); // Uses your existing toggle logic to change button text
+            engineToggle.click();
           }
         }
-
       } else {
-
         // --- DESKTOP BEHAVIOUR ---
-        // Remove and re-add class to allow the animation to trigger multiple times
         bookingEnginePanel.classList.remove('engine-highlight-pulse');
-
-        // Force a DOM reflow to restart the CSS animation
         void bookingEnginePanel.offsetWidth;
-
         bookingEnginePanel.classList.add('engine-highlight-pulse');
 
-        // Focus the check-in date to pull the user's cursor to the panel
         if (checkinInput) {
           setTimeout(() => checkinInput.focus(), 150);
         }
@@ -283,6 +283,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ==========================================================================
+     8. DECORATIVE ELEMENTS SCROLL ANIMATION
+     ========================================================================== */
+  const starfish = document.querySelector('.decorative-starfish');
+  const umbrella = document.querySelector('.decorative-umbrella');
+  const crab = document.querySelector('.decorative-crab');
+  const videoSection = document.querySelector('.video-section');
+
+  if (starfish || umbrella || crab) {
+    window.addEventListener('scroll', () => {
+      // Use requestAnimationFrame for buttery smooth rendering
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+
+        // --- Starfish & Umbrella Logic ---
+        if (starfish) {
+          const scaleStar = Math.min(1.2, 1 + (scrollY * 0.00008));
+          const rotStar = scrollY * 0.02;
+          starfish.style.transform = `scale(${scaleStar}) rotate(${rotStar}deg)`;
+        }
+
+        if (umbrella) {
+          const scaleUmb = Math.min(1.3, 1 + (scrollY * 0.0001));
+          const rotUmb = scrollY * -0.03;
+          umbrella.style.transform = `scale(${scaleUmb}) rotate(${rotUmb}deg)`;
+        }
+
+        // --- Crab Slide Logic ---
+        if (crab && videoSection) {
+          const rect = videoSection.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+
+          // Only animate if the video section is currently in the viewport
+          if (rect.top <= windowHeight && rect.bottom >= 0) {
+
+            // Calculate scroll progress from 0 (entering bottom) to 1 (hitting the top)
+            let progress = 1 - (rect.top / windowHeight);
+            progress = Math.max(0, Math.min(1, progress)); // Clamp between 0 and 1
+
+            // Calculate exact midpoint distance based on dynamic screen sizes
+            const parentWidth = crab.parentElement.offsetWidth;
+            const crabWidth = crab.offsetWidth;
+            const currentLeftOffset = crab.offsetLeft;
+
+            // Total pixels needed to travel to reach perfect center
+            const maxTravelX = (parentWidth / 2) - currentLeftOffset - (crabWidth / 2);
+
+            // Move the crab based on the scroll progress percentage
+            crab.style.transform = `translateX(${progress * maxTravelX}px)`;
+          }
+        }
+
+      });
+    });
+  }
   /* ==========================================================================
      7. SCROLL FADE-IN OBSERVER
      ========================================================================== */

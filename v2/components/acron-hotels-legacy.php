@@ -16,7 +16,7 @@
                     Acron Hotels Legacy Trusted Homes, We Craft Goa’s Most Loved Experiences
                 </h2>
 
-                <a href="/book-now" class="btn btn-yellow fw-bold px-5 py-3">
+                <a href="#" class="btn btn-yellow fw-bold px-5 py-3 trigger-book-engine">
                     Book Now
                 </a>
 

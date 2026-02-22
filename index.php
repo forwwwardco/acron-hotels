@@ -63,7 +63,11 @@ $hotels = [
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
     'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
-    'staahId' => 'MzAw'
+    'staahId' => 'MzAw',
+    'walkthroughLink' => '#',
+    'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g635747-d7289335-Reviews-Acron_Waterfront_Resort-Baga_North_Goa_District_Goa.html?m=19905',
+    'taRating' => '4.8',
+    'taReviews' => '2,386'
   ],
   [
     'id' => 'regina',
@@ -75,7 +79,11 @@ $hotels = [
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
     'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
-    'staahId' => 'Mjk4'
+    'staahId' => 'Mjk4',
+    'walkthroughLink' => '#',
+    'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g297605-d1657397-Reviews-Acron_Candolim_Regina-Candolim_Bardez_North_Goa_District_Goa.html?m=19905',
+    'taRating' => '4.4',
+    'taReviews' => '2,752'
   ],
   [
     'id' => 'seaway',
@@ -87,7 +95,11 @@ $hotels = [
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
     'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
-    'staahId' => 'NzQy'
+    'staahId' => 'NzQy',
+    'walkthroughLink' => '#',
+    'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g297605-d15871394-Reviews-Acron_Seaway_Resort-Candolim_Bardez_North_Goa_District_Goa.html?m=19905',
+    'taRating' => '4.8',
+    'taReviews' => '581'
   ]
 ];
 
@@ -267,9 +279,9 @@ function renderStars($rating)
           <div class="hotel-action-buttons">
             <a href="<?= $hotel['link'] ?>" class="btn btn-explore">EXPLORE PROPERTY</a>
             <button class="btn btn-yellow hotel-btn trigger-book-engine" data-staah-id="<?= $hotel['staahId'] ?>">BOOK NOW</button>
-            <button class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2">
+            <a href="<?= $hotel['walkthroughLink'] ?>" class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2 text-decoration-none">
               <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
-            </button>
+            </a>
           </div>
         </div>
 
@@ -282,9 +294,9 @@ function renderStars($rating)
                   <circle class="loader-track" cx="18" cy="18" r="16"></circle>
                 </svg>
               </div>
-              <a href="#" class="review-badge shadow-sm text-decoration-none">
+              <a href="<?= $hotel['taLink'] ?>" target="_blank" class="review-badge shadow-sm text-decoration-none">
                 <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
-                <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;">4.8 rating from 2,379 reviews</span>
+                <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;"><?= $hotel['taRating'] ?> rating from <?= $hotel['taReviews'] ?> reviews</span>
               </a>
 
               <div class="carousel-inner h-100 rounded-4 shadow">

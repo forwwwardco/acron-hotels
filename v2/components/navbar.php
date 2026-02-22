@@ -38,7 +38,7 @@
             </a>
 
             <div class="ms-auto me-3 d-lg-none">
-                <a href="/book" class="btn btn-book-now fw-bold px-4 py-2">BOOK NOW</a>
+                <a href="#" class="btn btn-book-now fw-bold px-4 py-2 trigger-book-engine">BOOK NOW</a>
             </div>
 
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#acronOffcanvas" aria-controls="acronOffcanvas">
@@ -107,7 +107,7 @@
                     </ul>
 
                     <div class="d-none d-lg-block">
-                        <a href="/book" class="btn btn-book-now fw-bold px-4 py-2">BOOK NOW</a>
+                        <a href="#" class="btn btn-book-now fw-bold px-4 py-2 trigger-book-engine" data-bs-dismiss="offcanvas">BOOK NOW</a>
                     </div>
                 </div>
             </div>
