@@ -1072,6 +1072,22 @@ select.enquiry-input {
   background: linear-gradient(to bottom, var(--deals-grad-seaway-top) 0%, var(--deals-grad-seaway-mid) 50%, var(--deals-grad-seaway-btm) 100%);
 }
 
+.deals-home h2 {
+  color: var(--blue-grey);
+}
+
+.deals-waterfront h2 {
+  color: var(--white);
+}
+
+.deals-regina h2 {
+  color: var(--white);
+}
+
+.deals-seaway h2 {
+  color: var(--white);
+}
+
 /* Filter Pills (Mobile Base) */
 .filter-pills-wrapper {
   overflow-x: auto;
@@ -1104,6 +1120,42 @@ select.enquiry-input {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   white-space: nowrap;
+}
+
+.deals-home .filter-pill {
+  border-color: var(--blue-grey);
+  color: var(--blue-grey);
+}
+
+.deals-home .filter-pill.active {
+  color: var(--blue-grey) !important;
+}
+
+.deals-waterfront .filter-pill {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.deals-waterfront .filter-pill.active {
+  color: var(--blue-grey) !important;
+}
+
+.deals-regina .filter-pill {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.deals-regina .filter-pill.active {
+  color: var(--deals-grad-regina-top) !important;
+}
+
+.deals-seaway .filter-pill {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.deals-seaway .filter-pill.active {
+  color: var(--deals-grad-seaway-top) !important;
 }
 
 .filter-pill.active {
@@ -1989,6 +2041,20 @@ select.enquiry-input {
   transition: transform 0.1s ease-out;
 }
 
+.decorative-flamingo {
+  position: absolute;
+  top: 40px;
+  left: calc(calc(100vw - 130px) / 2);
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
 .decorative-starfish {
   position: absolute;
   top: -60px;
@@ -2001,6 +2067,10 @@ select.enquiry-input {
   pointer-events: none;
   will-change: transform;
   transition: transform 0.1s ease-out;
+}
+
+.deals-regina .decorative-starfish {
+  top: 0px;
 }
 
 .decorative-umbrella {
@@ -2060,12 +2130,22 @@ select.enquiry-input {
     opacity: 1;
   }
 
+  .decorative-flamingo {
+    left: 50px;
+    width: 180px;
+    opacity: 1;
+  }
+
   .decorative-starfish {
     top: -120px;
     left: 20px;
     width: 300px;
     height: 300px;
     opacity: 1;
+  }
+
+  .deals-seaway .decorative-starfish {
+    top: 0;
   }
 
   .decorative-umbrella {

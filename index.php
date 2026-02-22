@@ -1,4 +1,6 @@
 <?php
+$pageResort = 'regina';
+
 $amenitiesTemplate = ['Xxxxxxxx Xxxx', 'Xxx & Xxx', 'Xxxxxxxxxxx Xxxxxxxx', 'Xxxxx Xxxx & Xxxxx', 'Xxxxxxxx Xxxx & Xxxxxxx'];
 $placeholderImages = ['https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400'];
 
@@ -61,8 +63,6 @@ $hotels = [
     'taReviews' => '581'
   ]
 ];
-
-$pageResort = 'waterfront';
 
 $dealsHeading = "Exclusive Deals, Just For You";
 $filterData = [

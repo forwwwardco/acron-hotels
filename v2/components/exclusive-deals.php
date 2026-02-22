@@ -12,15 +12,15 @@
 $resortThemeConfig = [
     'waterfront' => [
         'context'   => 'deals-waterfront',
-        'decoSrc'   => 'v2/assets/shell.png',
-        'decoClass' => 'decorative-shell',
-        'decoAlt'   => 'Decorative Sea Shell'
+        'decoSrc'   => 'v2/assets/flamingo.png',
+        'decoClass' => 'decorative-flamingo',
+        'decoAlt'   => 'Decorative Flamingo'
     ],
     'regina' => [
         'context'   => 'deals-regina',
-        'decoSrc'   => 'v2/assets/umbrella-2.png',
-        'decoClass' => 'decorative-umbrella',
-        'decoAlt'   => 'Decorative Beach Umbrella'
+        'decoSrc'   => 'v2/assets/coconut.png',
+        'decoClass' => 'decorative-coconut',
+        'decoAlt'   => 'Decorative Beach Coconut'
     ],
     'seaway' => [
         'context'   => 'deals-seaway',
