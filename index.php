@@ -34,6 +34,17 @@ $heroResorts = [
   ]
 ];
 
+$dealsContext = 'deals-home';
+$decoImgSrc   = 'v2/assets/coconut.png';
+$decoImgClass = 'decorative-coconut';
+$decoImgAlt   = 'Decorative Coconut';
+
+$filterData = [
+  'deal-pack-1' => 'SUMMER SAVINGS',
+  'deal-pack-2' => 'RIVERSIDE MONSOON',
+  'deal-pack-3' => 'WINTER LUXURY'
+];
+
 $deals = [
   // SUMMER OFFERS
   ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'link' => '/waterfront/offers', 'hidden' => false],
@@ -110,7 +121,7 @@ $stats = [
   ['icon' => 'fa-solid fa-location-dot', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx']
 ];
 
-$reviews = [
+$pageReviews = [
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular, and the staff went above and beyond to make our anniversary special. Highly recommend for a tranquil Goan getaway.'],
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'We stayed at Seaway and it was brilliant. The proximity to the beach and the massive pool kept the kids entertained all day. The rooms were spotless and the buffet breakfast had a wonderful spread.'],
   ['name' => 'Amit Patel', 'stars' => 4.5, 'title' => 'Great Location & Food', 'text' => 'Candolim Regina is perfectly situated right in the heart of the action, yet quiet once you are inside the resort. The live music in the evenings and the Goan fish curry were definite highlights of our trip.'],
@@ -125,21 +136,6 @@ $videos = [
   'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
 ];
-
-// Helper function to render stars
-function renderStars($rating)
-{
-  $html = '';
-  $fullStars = floor($rating);
-  $halfStar = ($rating - $fullStars) >= 0.5;
-  for ($i = 0; $i < $fullStars; $i++) {
-    $html .= '<i class="fa-solid fa-star"></i>';
-  }
-  if ($halfStar) {
-    $html .= '<i class="fa-solid fa-star-half-stroke"></i>';
-  }
-  return '<div class="text-yellow small">' . $html . '</div>';
-}
 ?>
 
 <?php include("v2/header.php"); ?>
@@ -200,35 +196,7 @@ function renderStars($rating)
   </div>
 </div>
 
-<section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative">
-  <img src="v2/assets/coconut.png" class="decorative-coconut" alt="Decorative Coconut">
-  <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">Exclusive Deals, Just For You</h2>
-    <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
-      <button class="filter-pill active" data-filter="deal-pack-1">SUMMER OFFERS</button>
-      <button class="filter-pill" data-filter="deal-pack-2">MONSOON MAGIC</button>
-      <button class="filter-pill" data-filter="deal-pack-3">WINTER ESCAPES</button>
-    </div>
-
-    <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
-      <?php foreach ($deals as $deal): ?>
-        <div class="col-12 col-lg-4 deal-card <?= $deal['hidden'] ? 'd-none' : '' ?>" data-category="<?= $deal['category'] ?>">
-          <div class="card h-100 border-0 shadow deals-card-wrapper">
-            <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="<?= $deal['hotel'] ?> Deal" loading="lazy">
-            <div class="card-body text-center d-flex flex-column justify-content-center py-4">
-              <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
-                <span class="deal-offer fw-bold"><?= $deal['discount'] ?></span>
-                <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
-              </div>
-              <h4 class="card-title fw-bold text-blue-grey mb-0"><?= $deal['hotel'] ?></h4>
-            </div>
-            <a href="<?= $deal['link'] ?>" class="btn btn-deal-book w-100 rounded-0">BOOK NOW</a>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
+<?php include("v2/components/exclusive-deals.php"); ?>
 
 <section class="our-hotels-section py-5 bg-white position-relative">
   <img src="v2/assets/starfish.png" class="decorative-starfish" alt="Decorative Starfish">
@@ -345,27 +313,7 @@ function renderStars($rating)
     <h2 class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
   </div>
 
-  <div class="container-fluid px-0 reveal">
-    <div class="reviews-slider d-flex gap-4 px-3 px-lg-5 pb-4">
-      <?php foreach ($reviews as $review): ?>
-        <div class="review-card shadow bg-white">
-          <div class="d-flex align-items-center mb-3">
-            <div class="review-avatar d-flex align-items-center justify-content-center me-3">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div>
-              <h6 class="mb-0 fw-bold text-blue-grey"><?= $review['name'] ?></h6>
-              <?= renderStars($review['stars']) ?>
-            </div>
-          </div>
-          <h6 class="fw-bold text-blue-grey text-uppercase mb-2"><?= $review['title'] ?></h6>
-          <p class="review-body text-blue-grey mb-0 small">
-            <?= $review['text'] ?>
-          </p>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
+  <?php include("v2/components/reviews-slider.php"); ?>
 </section>
 
 <section class="video-section py-5 bg-white reveal" style="padding-bottom:0!important;">
