@@ -128,18 +128,32 @@
                 <hr class="mx-auto mb-4" style="width: 40px; border-top: 2px solid var(--blue-grey); opacity: 1;">
 
                 <div class="modal-contacts d-flex flex-column gap-3">
-                    <a href="tel:+91XXXXX XXXXX" class="d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                        <i class="bi bi-telephone-fill"></i> / <i class="bi bi-whatsapp"></i>
-                        <span>+91 XXXXX XXXXX</span>
-                    </a>
-                    <a href="tel:+91XXXXX XXXXX" class="d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                        <i class="bi bi-telephone-fill"></i> / <i class="bi bi-whatsapp"></i>
-                        <span>+91 XXXXX XXXXX</span>
-                    </a>
-                    <a href="tel:+91XXXXX XXXXX" class="d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                        <i class="bi bi-telephone-fill"></i> / <i class="bi bi-whatsapp"></i>
-                        <span>+91 XXXXX XXXXX</span>
-                    </a>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+91XXXXXXXXXX" aria-label="Call" class="text-decoration-none text-blue-grey"><i class="fa-solid fa-phone"></i></a>
+                        <span class="opacity-50 fw-light">/</span>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp" class="text-decoration-none text-blue-grey wa-link"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+91XXXXXXXXXX" class="text-decoration-none ms-1 text-blue-grey">
+                            <span>+91 XXXXX XXXXX</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+91XXXXXXXXXX" aria-label="Call" class="text-decoration-none text-blue-grey"><i class="fa-solid fa-phone"></i></a>
+                        <span class="opacity-50 fw-light">/</span>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp" class="text-decoration-none text-blue-grey wa-link"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+91XXXXXXXXXX" class="text-decoration-none ms-1 text-blue-grey">
+                            <span>+91 XXXXX XXXXX</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+91XXXXXXXXXX" aria-label="Call" class="text-decoration-none text-blue-grey"><i class="fa-solid fa-phone"></i></a>
+                        <span class="opacity-50 fw-light">/</span>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp" class="text-decoration-none text-blue-grey wa-link"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+91XXXXXXXXXX" class="text-decoration-none ms-1 text-blue-grey">
+                            <span>+91 XXXXX XXXXX</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

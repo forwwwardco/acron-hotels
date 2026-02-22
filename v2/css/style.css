@@ -117,11 +117,21 @@ body {
   text-transform: uppercase;
 }
 
+
+/* Modal Z-Index Fix & Backdrop Blur */
+.modal-backdrop {
+  z-index: 1150 !important;
+}
+
 /* Modal Backdrop Blur */
 .modal-backdrop.show {
   opacity: 0.7;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.modal {
+  z-index: 1155 !important;
 }
 
 /* ==========================================================================
@@ -302,6 +312,11 @@ img.loaded {
 
 .modal-contacts a:hover {
   color: var(--waterfront);
+}
+
+.modal-contacts .wa-link:hover {
+  color: #25D366 !important;
+  /* WhatsApp Brand Green */
 }
 
 @media (min-width: 992px) {
@@ -930,6 +945,7 @@ select.enquiry-input {
 .exclusive-deals {
   background: linear-gradient(to bottom, var(--deals-grad-top) 0%, var(--deals-grad-mid) 50%, var(--deals-grad-btm) 100%);
   min-height: 800px;
+  padding-top: 6rem !important;
 }
 
 .filter-pill {
@@ -1029,6 +1045,36 @@ select.enquiry-input {
   .deal-img {
     height: 200px;
   }
+}
+
+/* Decorative Coconut */
+.decorative-coconut {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+@media (max-width: 991px) {
+  .decorative-coconut {
+    top: 20px;
+    right: calc(calc(100vw - 130px) / 2);
+    width: 130px;
+    opacity: 0.9;
+  }
+
+  .exclusive-deals {
+    background: linear-gradient(to bottom, var(--deals-grad-top) 0%, var(--deals-grad-mid) 50%, var(--deals-grad-btm) 100%);
+    min-height: 800px;
+    padding-top: 10rem !important;
+  }
+
 }
 
 /* ==========================================================================
@@ -1420,7 +1466,7 @@ select.enquiry-input {
   border-top: 1px solid var(--lightest-blue);
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1100;
+  z-index: 10;
 }
 
 .footer-heading {
@@ -1449,7 +1495,7 @@ select.enquiry-input {
   background-color: var(--lightest-blue);
   color: var(--blue-grey);
   position: relative;
-  z-index: 1100;
+  z-index: 10;
 }
 
 .credit-text {
@@ -1507,11 +1553,13 @@ select.enquiry-input {
   background-position: bottom center;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-top: 6rem !important;
 }
 
 /* Double bottom padding for desktop only */
 @media (min-width: 992px) {
   .our-hotels-section {
+    padding-top: 3rem !important;
     padding-bottom: 14rem !important;
   }
 }
@@ -1652,7 +1700,7 @@ select.enquiry-input {
 /* Decorative Starfish */
 .decorative-starfish {
   position: absolute;
-  top: -150px;
+  top: -120px;
   left: 20px;
   width: 300px;
   height: 300px;
@@ -1668,8 +1716,8 @@ select.enquiry-input {
   position: absolute;
   bottom: -130px;
   right: -200px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   z-index: 0;
   pointer-events: none;
@@ -1695,7 +1743,7 @@ select.enquiry-input {
   }
 
   .decorative-starfish {
-    top: -80px;
+    top: -60px;
     left: calc(calc(100vw - 180px) / 2);
     width: 180px;
     height: 180px;
@@ -1704,9 +1752,9 @@ select.enquiry-input {
 
   .decorative-umbrella {
     bottom: -80px;
-    right: -90px;
-    width: 200px;
-    height: 200px;
+    right: -60px;
+    width: 150px;
+    height: 150px;
     opacity: 0.8;
     /* Faded slightly to preserve text legibility */
   }
@@ -2053,4 +2101,71 @@ select.enquiry-input {
   animation: pulseAndGlow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform-origin: bottom center;
   will-change: transform, box-shadow;
+}
+
+/* 15. LEGACY & HOME STYLES */
+.hero {
+  padding: 50px 0 50px 0;
+  background: unset;
+  height: 100vh;
+}
+
+.book-direct input,
+.book-direct select,
+.book-direct button {
+  padding: 0.8rem;
+}
+
+#select_prop-error,
+#checkout-error,
+#checkin-error {
+  font-size: small;
+  color: #fff;
+  /*background-color: #ffc107;*/
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.btn-know-more {
+  text-transform: uppercase;
+  padding: 0.3125rem 1.25rem;
+  border-radius: 25px;
+  vertical-align: middle;
+  transition: 0.5s;
+  color: #fff;
+  background: #ffffff;
+  color: #3aafa9;
+  border: 1px solid #3aafa9;
+  /*box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);*/
+}
+
+.btn-know-more span {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 600;
+  /*font-size: 18px;*/
+  /* letter-spacing: 1px;*/
+}
+
+.btn-know-more i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn-know-more:hover {
+  /*transform: translateX(5px);*/
+  background: #3aafa9;
+  color: #fff;
+  cursor: pointer;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }

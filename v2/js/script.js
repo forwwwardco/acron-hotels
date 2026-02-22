@@ -289,25 +289,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const starfish = document.querySelector('.decorative-starfish');
   const umbrella = document.querySelector('.decorative-umbrella');
   const crab = document.querySelector('.decorative-crab');
+  const coconut = document.querySelector('.decorative-coconut');
   const videoSection = document.querySelector('.video-section');
 
-  if (starfish || umbrella || crab) {
+  if (starfish || umbrella || crab || coconut) {
     window.addEventListener('scroll', () => {
       // Use requestAnimationFrame for buttery smooth rendering
       window.requestAnimationFrame(() => {
         const scrollY = window.scrollY;
 
-        // --- Starfish & Umbrella Logic ---
+        // --- Starfish, Umbrella & Coconut Logic ---
         if (starfish) {
-          const scaleStar = Math.min(1.2, 1 + (scrollY * 0.00008));
+          const scaleStar = Math.min(1.2, 1 + (scrollY * 0.0001));
           const rotStar = scrollY * 0.02;
           starfish.style.transform = `scale(${scaleStar}) rotate(${rotStar}deg)`;
         }
 
         if (umbrella) {
-          const scaleUmb = Math.min(1.3, 1 + (scrollY * 0.0001));
-          const rotUmb = scrollY * -0.03;
+          const scaleUmb = Math.min(1.15, 1 + (scrollY * 0.00008));
+          const rotUmb = scrollY * -0.02;
           umbrella.style.transform = `scale(${scaleUmb}) rotate(${rotUmb}deg)`;
+        }
+
+        if (coconut) {
+          // Scales up slightly, rotates at a custom speed for an organic feel
+          const scaleCoco = Math.min(1.2, 1 + (scrollY * 0.0001));
+          const rotCoco = scrollY * -0.02;
+          coconut.style.transform = `scale(${scaleCoco}) rotate(${rotCoco}deg)`;
         }
 
         // --- Crab Slide Logic ---
@@ -315,22 +323,16 @@ document.addEventListener("DOMContentLoaded", () => {
           const rect = videoSection.getBoundingClientRect();
           const windowHeight = window.innerHeight;
 
-          // Only animate if the video section is currently in the viewport
           if (rect.top <= windowHeight && rect.bottom >= 0) {
-
-            // Calculate scroll progress from 0 (entering bottom) to 1 (hitting the top)
             let progress = 1 - (rect.top / windowHeight);
-            progress = Math.max(0, Math.min(1, progress)); // Clamp between 0 and 1
+            progress = Math.max(0, Math.min(1, progress));
 
-            // Calculate exact midpoint distance based on dynamic screen sizes
             const parentWidth = crab.parentElement.offsetWidth;
             const crabWidth = crab.offsetWidth;
             const currentLeftOffset = crab.offsetLeft;
 
-            // Total pixels needed to travel to reach perfect center
             const maxTravelX = (parentWidth / 2) - currentLeftOffset - (crabWidth / 2);
 
-            // Move the crab based on the scroll progress percentage
             crab.style.transform = `translateX(${progress * maxTravelX}px)`;
           }
         }
@@ -338,6 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
   /* ==========================================================================
      7. SCROLL FADE-IN OBSERVER
      ========================================================================== */

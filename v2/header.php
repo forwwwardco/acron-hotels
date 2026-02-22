@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="v2/css/style.css">
-    <link rel="stylesheet" href="v2/css/home.css">
     <style>
         /* Immediate Page Entry: Prevents the "white flash" on PHP navigation */
         body {

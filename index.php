@@ -200,7 +200,8 @@ function renderStars($rating)
   </div>
 </div>
 
-<section id="exclusiveDeals" class="exclusive-deals py-5 reveal">
+<section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative">
+  <img src="v2/assets/coconut.png" class="decorative-coconut" alt="Decorative Coconut">
   <div class="container py-4">
     <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">Exclusive Deals, Just For You</h2>
     <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
@@ -248,7 +249,7 @@ function renderStars($rating)
       <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
         <div class="col-lg-6 <?= $textOrder ?>">
           <?php if ($isAlternate): ?>
-            <img src="v2/assets/umbrella.png" class="decorative-umbrella" alt="Decorative Umbrella">
+            <img src="v2/assets/umbrella-2.png" class="decorative-umbrella" alt="Decorative Umbrella">
           <?php endif; ?>
 
           <div class="d-flex align-items-center gap-3 mb-2">
