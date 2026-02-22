@@ -58,7 +58,8 @@ $hotels = [
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/waterfront',
     'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages
+    'images' => $placeholderImages,
+    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6'
   ],
   [
     'id' => 'regina',
@@ -68,7 +69,8 @@ $hotels = [
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/candolim-regina',
     'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages
+    'images' => $placeholderImages,
+    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6'
   ],
   [
     'id' => 'seaway',
@@ -78,7 +80,8 @@ $hotels = [
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/seaway',
     'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages
+    'images' => $placeholderImages,
+    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA'
   ]
 ];
 
@@ -232,9 +235,9 @@ function renderStars($rating)
 
           <div class="d-flex align-items-center gap-3 mb-2">
             <span class="text-blue-grey fw-bold small ls-1"><?= $hotel['location'] ?></span>
-            <button class="btn-map-link d-flex align-items-center gap-2 m-0">
+            <a href="<?= $hotel['mapLink'] ?>" target="_blank" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey">
               <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
-            </button>
+            </a>
           </div>
 
           <div class="d-flex align-items-center gap-3 mb-2">
