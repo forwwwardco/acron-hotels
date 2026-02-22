@@ -44,6 +44,77 @@ $videos = [
 <?php include("v2/components/enquiry-form.php"); ?>
 
 <!-- WATERFRONT HERO -->
+<section class="resort-hero-wrapper position-relative overflow-hidden">
+  <div class="hero-content-overlay d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+
+      <div class="hero-text-box reveal">
+        <h1 class="resort-h2 fw-bold mb-2 text-uppercase text-white">
+          Acron Waterfront Resort
+        </h1>
+
+        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+          <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
+          <a href="https://maps.google.com/?q=Acron+Waterfront+Resort" target="_blank" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none">
+            <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
+          </a>
+        </div>
+
+        <p class="hero-feature-list text-white opacity-75 mb-4">
+          Lorem Ipsum Dolor | Sit Amet | Consectetur | Adipiscing Elit | Nullam Nec Augue | Varius Quam
+        </p>
+
+        <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
+          <button class="btn btn-book-now hero-btn btn-waterfront fw-bold trigger-book-engine" data-staah-id="MzAw">
+            BOOK NOW
+          </button>
+          <button class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="waterfront">
+            WHY STAY HERE?
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="heroCarousel" class="carousel slide hero-carousel-bg" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner h-100">
+      <?php
+      $heroImages = [
+        'v2/assets/waterfront/hero-1.jpg',
+        'v2/assets/waterfront/hero-2.jpg',
+        'v2/assets/waterfront/hero-3.jpg',
+        'v2/assets/waterfront/hero-4.jpg',
+        'v2/assets/waterfront/hero-5.jpg'
+      ];
+      foreach ($heroImages as $index => $img):
+      ?>
+        <div class="carousel-item h-100 <?= $index === 0 ? 'active' : '' ?>">
+          <div class="hero-img-render" style="background-image: url('<?= $img ?>');"></div>
+          <div class="resort-overlay"></div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <div class="hero-controls-wrapper d-flex align-items-center justify-content-center gap-3">
+      <button class="promo-control-btn" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel-indicators promo-indicators position-static m-0">
+        <?php foreach ($heroImages as $index => $img): ?>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="<?= $index ?>"
+            class="<?= $index === 0 ? 'active' : '' ?>" aria-label="Slide <?= $index + 1 ?>">
+          </button>
+        <?php endforeach; ?>
+      </div>
+
+      <button class="promo-control-btn" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
 
 <!-- SIGNATURE AMENITIES -->
 

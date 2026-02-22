@@ -2223,3 +2223,194 @@ select.enquiry-input {
     width: 180px;
   }
 }
+
+/* === 14. Resort Page Hero === */
+.resort-hero-wrapper {
+  height: calc(100vh - var(--nav-height-gap));
+  width: 100%;
+}
+
+.hero-content-overlay {
+  padding-bottom: 130px;
+}
+
+.hero-carousel-bg,
+.hero-carousel-bg .carousel-inner {
+  height: 100%;
+}
+
+.hero-img-render {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fixed Text Content Overlay */
+.hero-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  /* Sit above carousel, below loader/controls */
+  pointer-events: none;
+  /* Allows clicking through to carousel if needed */
+}
+
+.hero-text-box {
+  pointer-events: auto;
+  /* Re-enable clicks for buttons/text */
+  color: var(--white);
+}
+
+.hero-sample-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Positioning the Loader (Top Left) */
+.hero-loader-pos {
+  top: 30px !important;
+  left: 30px !important;
+  opacity: 1 !important;
+  /* Ensure it stays visible */
+}
+
+/* Positioning the Controls (Bottom Center) */
+.hero-controls-wrapper {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 991px) {
+  .resort-hero-wrapper {
+    height: calc(100vh - var(--nav-height-gap));
+    width: 100%;
+  }
+
+  .hero-content-overlay {
+    padding-bottom: 60px;
+  }
+
+  .hero-loader-pos {
+    top: 15px !important;
+    left: 15px !important;
+  }
+
+  .hero-controls-wrapper {
+    bottom: 60px;
+  }
+}
+
+/* Ensure the text box is centered and readable on the full-screen background */
+.hero-text-box {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Scaling the heading for a true Hero feel */
+.hero-text-box .resort-h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+/* Adjusting the map link for the dark hero background */
+.hero-text-box .btn-map-link {
+  background: var(--lightest-blue);
+  color: var(--blue-grey);
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  /* Slightly larger than home page for better legibility */
+}
+
+.hero-text-box .resort-tagline {
+  font-size: 1rem;
+}
+
+/* Mobile adjustments to prevent text crowding */
+@media (max-width: 991px) {
+  .hero-text-box .resort-h2 {
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-text-box .resort-tagline {
+    font-size: 1rem;
+  }
+}
+
+/* Feature List Typography */
+.hero-feature-list {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.resort-hero-wrapper .hero-btn {
+  background-color: var(--yellow);
+  color: var(--blue-grey);
+  min-width: 160px;
+}
+
+.resort-hero-wrapper .hero-btn:hover {
+  background-color: var(--yellow-dark);
+}
+
+.btn-waterfront {
+  background-color: var(--waterfront) !important;
+  color: var(--white) !important;
+}
+
+.btn-waterfront:hover {
+  background-color: var(--waterfront-dark) !important;
+}
+
+.btn-regina {
+  background-color: var(--regina) !important;
+  color: var(--white) !important;
+}
+
+.btn-regina:hover {
+  background-color: var(--regina-dark) !important;
+}
+
+.btn-seaway {
+  background-color: var(--seaway) !important;
+  color: var(--white) !important;
+}
+
+.btn-seaway:hover {
+  background-color: var(--seaway-dark) !important;
+}
+
+.resort-hero-wrapper .btn-outline-hero {
+  min-width: 160px;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 991px) {
+  .hero-feature-list {
+    font-size: 0.75rem;
+    padding: 0 20px;
+  }
+
+  .resort-hero-wrapper .hero-btn,
+  .resort-hero-wrapper .btn-outline-hero {
+    min-width: 140px;
+    font-size: 0.75rem;
+    padding: 10px 5px;
+  }
+}
