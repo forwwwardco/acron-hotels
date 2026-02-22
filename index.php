@@ -1,5 +1,5 @@
 <?php
-$pageResort = 'regina';
+$pageResort = '';
 
 $amenitiesTemplate = ['Xxxxxxxx Xxxx', 'Xxx & Xxx', 'Xxxxxxxxxxx Xxxxxxxx', 'Xxxxx Xxxx & Xxxxx', 'Xxxxxxxx Xxxx & Xxxxxxx'];
 $placeholderImages = ['https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400'];
@@ -14,7 +14,7 @@ $hotels = [
     'heroExtraClass' => '',
     'dotClass' => 'dot-waterfront',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
-    'link' => '/waterfront',
+    'link' => './waterfront.php',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages, // Images for Carousel
     'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
@@ -33,7 +33,7 @@ $hotels = [
     'heroExtraClass' => 'middle-resort-col',
     'dotClass' => 'dot-regina',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
-    'link' => '/candolim-regina',
+    'link' => './candolim-regina.php',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
     'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
@@ -52,7 +52,7 @@ $hotels = [
     'heroExtraClass' => '',
     'dotClass' => 'dot-seaway',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
-    'link' => '/seaway',
+    'link' => './seaway.php',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
     'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',

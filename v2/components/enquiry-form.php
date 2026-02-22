@@ -2,14 +2,33 @@
 
 /**
  * Reusable Enquiry Form Component
+ * * @param string $pageResort    - Context key: 'waterfront', 'regina', 'seaway' (optional)
  */
+
+// Centralised Configuration Mapping
+$resortThemeConfig = [
+    'waterfront' => [
+        'context'   => 'enquiry-form-waterfront'
+    ],
+    'regina' => [
+        'context'   => 'enquiry-form-regina'
+    ],
+    'seaway' => [
+        'context'   => 'enquiry-form-seaway'
+    ]
+];
+
+// Fallback to Home/Default Configuration if no match is found
+$activeTheme = $resortThemeConfig[$pageResort] ?? [
+    'context'   => 'enquiry-form-home'
+];
 ?>
 <aside class="enquiry-panel-wrapper" id="enquiryPanel">
     <button class="enquiry-trigger" id="enquiryTrigger">
         <span class="btn-text">ENQUIRE</span>
     </button>
 
-    <div class="enquiry-content py-4 px-4">
+    <div class="enquiry-content <?php echo $activeTheme['context']; ?> py-4 px-4">
         <form id="enquiryForm" action="process-enquiry.php" method="POST">
             <div class="mb-3">
                 <input type="text" name="name" class="form-control enquiry-input" placeholder="Name *" required>
@@ -41,7 +60,7 @@
 
             <p class="assurance small text-blue-grey mb-4">Rest assured! We promise not to spam you! :)</p>
 
-            <button type="submit" class="btn btn-yellow w-100 fw-bold py-3">ENQUIRE</button>
+            <button type="submit" class="btn btn-yellow w-100 enquiry-submit fw-bold py-3">ENQUIRE</button>
         </form>
     </div>
 </aside>

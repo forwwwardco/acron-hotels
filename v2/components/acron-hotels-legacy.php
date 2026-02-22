@@ -6,9 +6,26 @@ $legacyData = [
     'btnText' => 'Book Now',
     'btnLink' => '#' // Link used if not triggering the booking engine
 ];
+// Centralised Configuration Mapping
+$resortThemeConfig = [
+    'waterfront' => [
+        'context'   => 'legacy-waterfront'
+    ],
+    'regina' => [
+        'context'   => 'legacy-regina'
+    ],
+    'seaway' => [
+        'context'   => 'legacy-seaway'
+    ]
+];
+
+// Fallback to Home/Default Configuration if no match is found
+$activeTheme = $resortThemeConfig[$pageResort] ?? [
+    'context'   => 'legacy-home'
+];
 ?>
 
-<section class="legacy-section py-5 position-relative">
+<section class="legacy-section py-5 position-relative <?php echo $activeTheme['context']; ?>">
     <div class="container py-4">
         <div class="row align-items-center gy-5">
 

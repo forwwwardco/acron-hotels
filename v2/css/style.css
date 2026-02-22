@@ -9,8 +9,11 @@
   --white: #fffffe;
 
   --waterfront: #319bff;
+  --waterfront-dark: #167bd9;
   --seaway: #664393;
+  --seaway-dark: #452b68;
   --regina: #ff3c4d;
+  --regina-dark: #c51f2d;
   --dark-grey: #333333;
   --dark-blue: #339999;
   --light-blue: #bae8e8;
@@ -98,7 +101,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(255, 216, 3, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn-yellow:hover {
@@ -344,6 +347,58 @@ img {
 
 .modal-contacts .wa-link:hover {
   color: #25D366 !important;
+}
+
+.nav-home .btn-book-now,
+.enquiry-form-home .btn.enquiry-submit,
+.legacy-home .btn.trigger-book-engine {
+  background-color: var(--yellow) !important;
+  color: var(--blue-grey) !important;
+}
+
+.nav-home .btn-book-now:hover,
+.enquiry-form-home .btn.enquiry-submit:hover,
+.legacy-home .btn.trigger-book-engine:hover {
+  background-color: var(--yellow-dark) !important;
+}
+
+.nav-waterfront .btn-book-now,
+.enquiry-form-waterfront .btn.enquiry-submit,
+.legacy-waterfront .btn.trigger-book-engine {
+  background-color: var(--waterfront) !important;
+  color: var(--white) !important;
+}
+
+.nav-waterfront .btn-book-now:hover,
+.enquiry-form-waterfront .btn.enquiry-submit:hover,
+.legacy-waterfront .btn.trigger-book-engine:hover {
+  background-color: var(--waterfront-dark) !important;
+}
+
+.nav-regina .btn-book-now,
+.enquiry-form-regina .btn.enquiry-submit,
+.legacy-regina .btn.trigger-book-engine {
+  background-color: var(--regina) !important;
+  color: var(--white) !important;
+}
+
+.nav-regina .btn-book-now:hover,
+.enquiry-form-regina .btn.enquiry-submit:hover,
+.legacy-regina .btn.trigger-book-engine:hover {
+  background-color: var(--regina-dark) !important;
+}
+
+.nav-seaway .btn-book-now,
+.enquiry-form-seaway .btn.enquiry-submit,
+.legacy-seaway .btn.trigger-book-engine {
+  background-color: var(--seaway) !important;
+  color: var(--white) !important;
+}
+
+.nav-seaway .btn-book-now:hover,
+.enquiry-form-seaway .btn.enquiry-submit:hover,
+.legacy-seaway .btn.trigger-book-engine:hover {
+  background-color: var(--seaway-dark) !important;
 }
 
 /* Animations */
@@ -1222,7 +1277,7 @@ select.enquiry-input {
 }
 
 .deals-waterfront .btn-deal-book:hover {
-  background-color: #167bd9;
+  background-color: var(--waterfront-dark);
   color: var(--white);
 }
 
@@ -1232,7 +1287,7 @@ select.enquiry-input {
 }
 
 .deals-regina .btn-deal-book:hover {
-  background-color: #c51f2d;
+  background-color: var(--regina-dark);
   color: var(--white);
 }
 
@@ -1242,7 +1297,7 @@ select.enquiry-input {
 }
 
 .deals-seaway .btn-deal-book:hover {
-  background-color: #452b68;
+  background-color: var(--seaway-dark);
   color: var(--white);
 }
 
@@ -1899,7 +1954,6 @@ select.enquiry-input {
 }
 
 .btn-know-more span {
-  font-family: "Philosopher", sans-serif;
   font-weight: 600;
 }
 

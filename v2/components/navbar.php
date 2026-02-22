@@ -1,4 +1,36 @@
-<header class="acron-header shadow-sm fixed-top">
+<?php
+
+/**
+ * Reusable Navbar Component
+ * * @param string $pageResort    - Context key: 'waterfront', 'regina', 'seaway' (optional)
+ */
+
+$home = '/acron-hotels';
+$waterfront = '/acron-hotels/waterfront.php';
+$regina = '/acron-hotels/candolim-regina.php';
+$seaway = '/acron-hotels/seaway.php';
+$contact = '/acron-hotels/contact.php';
+
+// Centralised Configuration Mapping
+$resortThemeConfig = [
+    'waterfront' => [
+        'context'   => 'nav-waterfront'
+    ],
+    'regina' => [
+        'context'   => 'nav-regina'
+    ],
+    'seaway' => [
+        'context'   => 'nav-seaway'
+    ]
+];
+
+// Fallback to Home/Default Configuration if no match is found
+$activeTheme = $resortThemeConfig[$pageResort] ?? [
+    'context'   => 'nav-home'
+];
+?>
+
+<header class="acron-header shadow-sm fixed-top <?php echo $activeTheme['context']; ?>">
 
     <div class="top-bar py-2 text-center">
         <div class="container-fluid px-lg-5">
@@ -33,7 +65,7 @@
     <nav class="navbar navbar-expand-lg bg-white py-3">
         <div class="container-fluid px-lg-5">
 
-            <a class="navbar-brand me-auto me-lg-0" href="/">
+            <a class="navbar-brand me-auto me-lg-0" href="<?php echo $home; ?>">
                 <img src="https://placehold.co/200x60" alt="Acron Hotels" class="img-fluid main-logo">
             </a>
 
@@ -53,16 +85,16 @@
 
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-uppercase fw-semibold" id="mainNavLinks">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo $home; ?>">Home</a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="hotelsDropdown" role="button" aria-expanded="false">
                                 Our Hotels
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm desktop-dropdown-menu" aria-labelledby="hotelsDropdown">
-                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Waterfront Resort</a></li>
-                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Candolim Regina</a></li>
-                                <li><a class="dropdown-item fw-semibold text-uppercase" href="#">Acron Seaway Resort</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="<?php echo $waterfront; ?>">Acron Waterfront Resort</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="<?php echo $regina; ?>">Acron Candolim Regina</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="<?php echo $seaway; ?>">Acron Seaway Resort</a></li>
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileHotelsMenu" role="button" aria-expanded="true" aria-controls="mobileHotelsMenu">
@@ -70,9 +102,9 @@
                             </a>
                             <div class="collapse show d-lg-none" id="mobileHotelsMenu">
                                 <ul class="navbar-nav ps-4">
-                                    <li class="nav-item"><a class="nav-link" href="#">Acron Waterfront Resort</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Acron Candolim Regina</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Acron Seaway Resort</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo $waterfront; ?>">Acron Waterfront Resort</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo $regina; ?>">Acron Candolim Regina</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo $seaway; ?>">Acron Seaway Resort</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -103,7 +135,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo $contact; ?>">Contact Us</a></li>
                     </ul>
 
                     <div class="d-none d-lg-block">
