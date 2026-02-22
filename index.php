@@ -8,7 +8,8 @@ $heroResorts = [
     'image' => 'https://placehold.co/600x400',
     'link' => '/waterfront',
     'resortKey' => 'waterfront',
-    'extraClass' => ''
+    'extraClass' => '',
+    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6'
   ],
   [
     'name' => 'Acron Candolim Regina',
@@ -16,7 +17,8 @@ $heroResorts = [
     'image' => 'https://placehold.co/600x400',
     'link' => '/candolim-regina',
     'resortKey' => 'regina',
-    'extraClass' => 'middle-resort-col'
+    'extraClass' => 'middle-resort-col',
+    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6'
   ],
   [
     'name' => 'Acron Seaway Resort',
@@ -24,7 +26,8 @@ $heroResorts = [
     'image' => 'https://placehold.co/600x400',
     'link' => '/seaway',
     'resortKey' => 'seaway',
-    'extraClass' => ''
+    'extraClass' => '',
+    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA'
   ]
 ];
 
@@ -147,9 +150,9 @@ function renderStars($rating)
               <h2 class="resort-h2 fw-bold mb-2"><?= $resort['name'] ?></h2>
               <div class="d-flex align-items-center gap-3">
                 <p class="resort-tagline mb-0 h6"><?= $resort['tagline'] ?></p>
-                <button class="btn-map-link d-none d-lg-flex align-items-center gap-2">
+                <a href="<?= $resort['mapLink'] ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none">
                   <i class="fa-solid fa-location-dot"></i> Show on Map
-                </button>
+                </a>
               </div>
             </div>
             <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
