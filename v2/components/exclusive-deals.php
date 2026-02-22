@@ -2,21 +2,52 @@
 
 /**
  * Reusable Exclusive Deals Component
- * @param array $deals - The data array
- * @param array $filterData - The filter buttons [ID => Label]
- * @param string $dealsContext - Unique page class
- * @param string $decoImgSrc - Image path
- * @param string $decoImgClass - Positioning class
- * @param string $decoImgAlt - Alt text
+ * * @param string $pageResort    - Context key: 'waterfront', 'regina', 'seaway' (optional)
+ * @param string $dealsHeading  - The main section title
+ * @param array  $deals         - The data array of individual deal items
+ * @param array  $filterData    - The filter button configuration [ID => Label]
  */
+
+// Centralised Configuration Mapping
+$resortThemeConfig = [
+    'waterfront' => [
+        'context'   => 'deals-waterfront',
+        'decoSrc'   => 'v2/assets/shell.png',
+        'decoClass' => 'decorative-shell',
+        'decoAlt'   => 'Decorative Sea Shell'
+    ],
+    'regina' => [
+        'context'   => 'deals-regina',
+        'decoSrc'   => 'v2/assets/umbrella-2.png',
+        'decoClass' => 'decorative-umbrella',
+        'decoAlt'   => 'Decorative Beach Umbrella'
+    ],
+    'seaway' => [
+        'context'   => 'deals-seaway',
+        'decoSrc'   => 'v2/assets/starfish.png',
+        'decoClass' => 'decorative-starfish',
+        'decoAlt'   => 'Decorative Starfish'
+    ]
+];
+
+// Fallback to Home/Default Configuration if no match is found
+$activeTheme = $resortThemeConfig[$pageResort] ?? [
+    'context'   => 'deals-home',
+    'decoSrc'   => 'v2/assets/coconut.png',
+    'decoClass' => 'decorative-coconut',
+    'decoAlt'   => 'Decorative Coconut'
+];
 ?>
-<section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative <?php echo $dealsContext ?? ''; ?>">
-    <img src="<?php echo $decoImgSrc ?? 'v2/assets/coconut.png'; ?>"
-        class="<?php echo $decoImgClass ?? 'decorative-coconut'; ?>"
-        alt="<?php echo $decoImgAlt ?? 'Decorative Element'; ?>">
+
+<section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative <?php echo $activeTheme['context']; ?>">
+    <img src="<?php echo $activeTheme['decoSrc']; ?>"
+        class="<?php echo $activeTheme['decoClass']; ?>"
+        alt="<?php echo $activeTheme['decoAlt']; ?>">
 
     <div class="container py-4">
-        <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">Exclusive Deals, Just For You</h2>
+        <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">
+            <?php echo $dealsHeading ?? 'Exclusive Deals, Just For You'; ?>
+        </h2>
 
         <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
             <?php
@@ -38,11 +69,11 @@
                 <div class="col-12 col-lg-4 deal-card <?php echo $deal['hidden'] ? 'd-none' : ''; ?>"
                     data-category="<?php echo $deal['category']; ?>">
                     <div class="card h-100 border-0 shadow deals-card-wrapper">
-                        <img src="https://placehold.co/600x400" class="card-img-top deal-img" alt="<?php echo $deal['hotel']; ?> Deal" loading="lazy">
+                        <img src="<?php echo $deal['img']; ?>" class="card-img-top deal-img" alt="<?php echo $deal['hotel']; ?> Deal" loading="lazy">
                         <div class="card-body text-center d-flex flex-column justify-content-center py-4">
                             <div class="mb-2 d-flex align-items-baseline justify-content-center flex-wrap">
                                 <span class="deal-offer fw-bold"><?php echo $deal['discount']; ?></span>
-                                <span class="deal-condition fw-bold ms-2">PER PERSON PER NIGHT</span>
+                                <span class="deal-condition fw-bold ms-2"><?php echo $deal['condition']; ?></span>
                             </div>
                             <h4 class="card-title fw-bold text-blue-grey mb-0"><?php echo $deal['hotel']; ?></h4>
                         </div>

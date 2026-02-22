@@ -1,13 +1,15 @@
+<?php
+
+/**
+ * Reusable Enquiry Form Component
+ */
+?>
 <aside class="enquiry-panel-wrapper" id="enquiryPanel">
     <button class="enquiry-trigger" id="enquiryTrigger">
         <span class="btn-text">ENQUIRE</span>
     </button>
 
     <div class="enquiry-content py-4 px-4">
-        <!-- <div class="d-flex justify-content-end mb-3">
-            <button type="button" class="btn-close text-reset" id="enquiryClose"></button>
-        </div> -->
-
         <form id="enquiryForm" action="process-enquiry.php" method="POST">
             <div class="mb-3">
                 <input type="text" name="name" class="form-control enquiry-input" placeholder="Name *" required>

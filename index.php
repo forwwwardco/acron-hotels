@@ -1,65 +1,4 @@
 <?php
-// --- CONTENT VARIABLES ---
-
-$heroResorts = [
-  [
-    'name' => 'Acron Waterfront Resort',
-    'tagline' => 'Baga, Goa',
-    'image' => 'https://placehold.co/600x400',
-    'link' => '/waterfront',
-    'resortKey' => 'waterfront',
-    'extraClass' => '',
-    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
-    'staahId' => 'MzAw'
-  ],
-  [
-    'name' => 'Acron Candolim Regina',
-    'tagline' => 'Candolim, Goa',
-    'image' => 'https://placehold.co/600x400',
-    'link' => '/candolim-regina',
-    'resortKey' => 'regina',
-    'extraClass' => 'middle-resort-col',
-    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
-    'staahId' => 'Mjk4'
-  ],
-  [
-    'name' => 'Acron Seaway Resort',
-    'tagline' => 'Candolim, Goa',
-    'image' => 'https://placehold.co/600x400',
-    'link' => '/seaway',
-    'resortKey' => 'seaway',
-    'extraClass' => '',
-    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
-    'staahId' => 'NzQy'
-  ]
-];
-
-$dealsContext = 'deals-home';
-$decoImgSrc   = 'v2/assets/coconut.png';
-$decoImgClass = 'decorative-coconut';
-$decoImgAlt   = 'Decorative Coconut';
-
-$filterData = [
-  'deal-pack-1' => 'SUMMER SAVINGS',
-  'deal-pack-2' => 'RIVERSIDE MONSOON',
-  'deal-pack-3' => 'WINTER LUXURY'
-];
-
-$deals = [
-  // SUMMER OFFERS
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'link' => '/waterfront/offers', 'hidden' => false],
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Candolim Regina', 'discount' => 'XX% OFF', 'link' => '/candolim-regina/offers', 'hidden' => false],
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Seaway Resort', 'discount' => 'XX% OFF', 'link' => '/seaway/offers', 'hidden' => false],
-  // MONSOON MAGIC
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'link' => '/waterfront/offers', 'hidden' => true],
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Candolim Regina', 'discount' => '15% OFF', 'link' => '/candolim-regina/offers', 'hidden' => true],
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Seaway Resort', 'discount' => '15% OFF', 'link' => '/seaway/offers', 'hidden' => true],
-  // WINTER ESCAPES
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'link' => '/waterfront/offers', 'hidden' => true],
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Candolim Regina', 'discount' => '10% OFF', 'link' => '/candolim-regina/offers', 'hidden' => true],
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Seaway Resort', 'discount' => '10% OFF', 'link' => '/seaway/offers', 'hidden' => true],
-];
-
 $amenitiesTemplate = ['Xxxxxxxx Xxxx', 'Xxx & Xxx', 'Xxxxxxxxxxx Xxxxxxxx', 'Xxxxx Xxxx & Xxxxx', 'Xxxxxxxx Xxxx & Xxxxxxx'];
 $placeholderImages = ['https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400'];
 
@@ -68,11 +7,14 @@ $hotels = [
     'id' => 'waterfront',
     'name' => 'Acron Waterfront Resort',
     'location' => 'BAGA, GOA',
+    'heroTagline' => 'Baga, Goa',
+    'heroImage' => 'https://placehold.co/600x400', // Image for Hero
+    'heroExtraClass' => '',
     'dotClass' => 'dot-waterfront',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/waterfront',
     'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages,
+    'images' => $placeholderImages, // Images for Carousel
     'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
     'staahId' => 'MzAw',
     'walkthroughLink' => '#',
@@ -84,6 +26,9 @@ $hotels = [
     'id' => 'regina',
     'name' => 'Acron Candolim Regina',
     'location' => 'CANDOLIM, GOA',
+    'heroTagline' => 'Candolim, Goa',
+    'heroImage' => 'https://placehold.co/600x400',
+    'heroExtraClass' => 'middle-resort-col',
     'dotClass' => 'dot-regina',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/candolim-regina',
@@ -100,6 +45,9 @@ $hotels = [
     'id' => 'seaway',
     'name' => 'Acron Seaway Resort',
     'location' => 'CANDOLIM, GOA',
+    'heroTagline' => 'Candolim, Goa',
+    'heroImage' => 'https://placehold.co/600x400',
+    'heroExtraClass' => '',
     'dotClass' => 'dot-seaway',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => '/seaway',
@@ -112,6 +60,31 @@ $hotels = [
     'taRating' => '4.8',
     'taReviews' => '581'
   ]
+];
+
+$pageResort = 'waterfront';
+
+$dealsHeading = "Exclusive Deals, Just For You";
+$filterData = [
+  'deal-pack-1' => 'SUMMER SAVINGS',
+  'deal-pack-2' => 'RIVERSIDE MONSOON',
+  'deal-pack-3' => 'WINTER LUXURY'
+];
+$deals = [
+  // SUMMER OFFERS
+  ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
+  ['category' => 'deal-pack-1', 'hotel' => 'Acron Candolim Regina', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
+  ['category' => 'deal-pack-1', 'hotel' => 'Acron Seaway Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
+
+  // MONSOON MAGIC
+  ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
+  ['category' => 'deal-pack-2', 'hotel' => 'Acron Candolim Regina', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
+  ['category' => 'deal-pack-2', 'hotel' => 'Acron Seaway Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
+
+  // WINTER ESCAPES
+  ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
+  ['category' => 'deal-pack-3', 'hotel' => 'Acron Candolim Regina', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
+  ['category' => 'deal-pack-3', 'hotel' => 'Acron Seaway Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
 ];
 
 $stats = [
@@ -158,29 +131,31 @@ $videos = [
   <div class="hero-resorts-container container-fluid px-0 flex-fill position-relative">
     <div class="row g-0 h-100" id="heroResortsContainerRow">
 
-      <?php foreach ($heroResorts as $resort): ?>
-        <div class="col-12 col-lg-4 resort-col <?= $resort['extraClass'] ?>">
-          <img src="<?= $resort['image'] ?>" alt="<?= $resort['name'] ?>" class="resort-bg-img" fetchpriority="high">
-          <div class="resort-overlay"></div>
-          <div class="resort-content-wrapper p-4 p-xxl-5">
-            <div class="resort-top">
-              <h2 class="resort-h2 fw-bold mb-2"><?= $resort['name'] ?></h2>
-              <div class="d-flex align-items-center gap-3">
-                <p class="resort-tagline mb-0 h6"><?= $resort['tagline'] ?></p>
-                <a href="<?= $resort['mapLink'] ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none">
-                  <i class="fa-solid fa-location-dot"></i> Show on Map
-                </a>
+      <div class="row g-0 h-100" id="heroResortsContainerRow">
+        <?php foreach ($hotels as $hotel): ?>
+          <div class="col-12 col-lg-4 resort-col <?= $hotel['heroExtraClass'] ?>">
+            <img src="<?= $hotel['heroImage'] ?>" alt="<?= $hotel['name'] ?>" class="resort-bg-img" fetchpriority="high">
+            <div class="resort-overlay"></div>
+            <div class="resort-content-wrapper p-4 p-xxl-5">
+              <div class="resort-top">
+                <h2 class="resort-h2 fw-bold mb-2"><?= $hotel['name'] ?></h2>
+                <div class="d-flex align-items-center gap-3">
+                  <p class="resort-tagline mb-0 h6"><?= $hotel['heroTagline'] ?></p>
+                  <a href="<?= $hotel['mapLink'] ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none">
+                    <i class="fa-solid fa-location-dot"></i> Show on Map
+                  </a>
+                </div>
+              </div>
+              <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
+                <button class="btn btn-book-now hero-btn fw-bold flex-fill text-center trigger-book-engine" data-staah-id="<?= $hotel['staahId'] ?>">Book Now</button>
+                <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= $hotel['id'] ?>">
+                  Why Stay Here?
+                </button>
               </div>
             </div>
-            <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
-              <button class="btn btn-book-now hero-btn fw-bold flex-fill text-center trigger-book-engine" data-staah-id="<?= $resort['staahId'] ?>">Book Now</button>
-              <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= $resort['resortKey'] ?>">
-                Why Stay Here?
-              </button>
-            </div>
           </div>
-        </div>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+      </div>
 
     </div>
   </div>

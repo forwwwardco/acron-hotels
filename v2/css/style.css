@@ -1,15 +1,13 @@
-/* ==========================================================================
-   1. BRAND VARIABLES & GLOBAL SETUP
-   ========================================================================== */
+/* === 1. GLOBAL === */
+
+/* Variables */
 :root {
-  /* Primary Palette */
   --lightest-blue: #e3f6f5;
   --yellow: #ffd803;
   --yellow-dark: #ffe942;
   --blue-grey: #2d334a;
   --white: #fffffe;
 
-  /* Secondary / Property Palette */
   --waterfront: #319bff;
   --seaway: #664393;
   --regina: #ff3c4d;
@@ -17,17 +15,30 @@
   --dark-blue: #339999;
   --light-blue: #bae8e8;
 
-  /* Typography & Spacing */
   --nav-font-size: 0.9rem;
   --transition-speed: 0.3s ease;
   --nav-height-gap: 135px;
 
-  /* Gradients */
-  --deals-grad-top: #FCB908;
-  --deals-grad-mid: #FBED91;
-  --deals-grad-btm: #FFFFFE;
+  --deals-grad-home-top: #FCB908;
+  --deals-grad-home-mid: #FBED91;
+  --deals-grad-home-btm: #FFFFFE;
+
+  --deals-grad-waterfront-top: #0090B7;
+  --deals-grad-waterfront-mid: #67D6F4;
+  --deals-grad-waterfront-btm: #E3F6F5;
+
+  --deals-grad-seaway-top: #614882;
+  --deals-grad-seaway-mid: #F07B98;
+  --deals-grad-seaway-btm: #E3F6F5;
+
+  --deals-grad-regina-top: #FF3B4E;
+  --deals-grad-regina-mid: #FFF4B8;
+  --deals-grad-regina-btm: #E3F6F5;
+
+  --base-font: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Base & Layout */
 html,
 body {
   overflow-x: hidden !important;
@@ -35,28 +46,18 @@ body {
 }
 
 body {
+  font-family: var(--base-font);
   padding-top: var(--nav-height-gap);
   background-color: var(--white);
   animation: fadeInPage 0.6s ease-in-out forwards;
 }
 
-@keyframes fadeInPage {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+::selection {
+  background: var(--light-blue);
+  color: var(--dark-blue);
 }
 
-/* ==========================================================================
-   2. GLOBAL UTILITIES & BUTTONS
-   ========================================================================== */
-.btn {
-  text-transform: uppercase;
-}
-
+/* Typography & Colours */
 .text-yellow {
   color: var(--yellow);
 }
@@ -69,12 +70,31 @@ body {
   color: var(--blue-grey);
 }
 
-/* Global Yellow Button */
-.btn-yellow {
+.section-heading {
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 2.8rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-yellow,
+.btn-book-now {
   background-color: var(--yellow);
   color: var(--blue-grey) !important;
   border: none;
   border-radius: 8px;
+}
+
+.btn-yellow {
   font-weight: 700;
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
@@ -87,12 +107,7 @@ body {
   color: var(--blue-grey);
 }
 
-/* Global Book Now Button */
 .btn-book-now {
-  background-color: var(--yellow);
-  color: var(--blue-grey) !important;
-  border: none;
-  border-radius: 8px;
   font-size: 0.9rem;
   letter-spacing: 0.02rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -104,7 +119,7 @@ body {
   box-shadow: 0 4px 8px rgba(45, 51, 74, 0.15);
 }
 
-/* Common Form Inputs */
+/* Forms */
 .date-input,
 .custom-select {
   height: 48px;
@@ -117,26 +132,94 @@ body {
   text-transform: uppercase;
 }
 
+/* Modals */
+.modal {
+  z-index: 1155 !important;
+}
 
-/* Modal Z-Index Fix & Backdrop Blur */
 .modal-backdrop {
   z-index: 1150 !important;
 }
 
-/* Modal Backdrop Blur */
 .modal-backdrop.show {
   opacity: 0.7;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-.modal {
-  z-index: 1155 !important;
+/* Utilities */
+.scroll-snap-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-/* ==========================================================================
-   3. HEADER & NAVBAR
-   ========================================================================== */
+.scroll-snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animations & Interactions */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+a,
+.btn,
+button,
+.nav-link,
+.card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+}
+
+a:active,
+.btn:active,
+button:active,
+.card:active {
+  transform: scale(0.97) !important;
+  filter: brightness(0.9);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal-visible,
+.fade-in-element.is-visible,
+img.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-element.is-visible {
+  transform: translateY(0);
+}
+
+img {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* === 2. HEADER & NAVBAR === */
+
+/* Base Header & Top Bar */
 .acron-header {
   background-color: var(--white);
   transition: transform var(--transition-speed);
@@ -160,7 +243,6 @@ body {
 
 .social-link {
   color: var(--blue-grey) !important;
-  /* Forces the base colour */
   font-size: 1.1rem;
   transition: opacity var(--transition-speed) ease;
   display: inline-flex;
@@ -170,15 +252,11 @@ body {
 
 .social-link:hover {
   opacity: 0.6;
-  /* Creates the clean, translucent fade */
   color: var(--blue-grey) !important;
-  /* Prevents the colour from shifting */
 }
 
-/* Custom Image Icon Scaling */
 .ta-custom-icon {
   height: 1em;
-  /* Matches the 1.1rem font size of the other icons perfectly */
   width: auto;
   display: block;
   object-fit: contain;
@@ -189,100 +267,50 @@ body {
   width: auto;
 }
 
+/* Navigation Base */
 .nav-link {
   color: var(--blue-grey) !important;
   font-size: var(--nav-font-size);
   position: relative;
   padding: 0.5rem 0 !important;
-}
-
-/* 1. Tactile Interactions (The "Google" Press Feel) */
-a,
-.btn,
-button,
-.nav-link,
-.card {
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
-}
-
-a:active,
-.btn:active,
-button:active,
-.card:active {
-  transform: scale(0.97) !important;
-  filter: brightness(0.9);
-}
-
-/* 2. Bespoke Navigation Hover */
-/* 2. Bespoke Navigation Hover */
-.nav-link {
-  position: relative;
   text-decoration: none !important;
 }
 
-/* Restrict the animated underline to desktop only */
-@media (min-width: 992px) {
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: currentColor;
-    transform-origin: bottom right;
-    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-
-  .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+/* Menus & Tooltips Base */
+.desktop-tooltip-menu {
+  background-color: rgba(45, 51, 74, 0.95) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  min-width: 260px;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* 3. Smooth Scroll-Reveal Classes */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+.desktop-tooltip-menu li {
+  color: rgba(255, 255, 255, 0.95);
+  list-style-type: none;
+  letter-spacing: 0.5px;
 }
 
-.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
+.desktop-dropdown-menu {
+  padding: 0.5rem 0;
+  border-radius: 8px;
 }
 
-/* 4. Progressive Image Loading */
-img {
-  opacity: 0;
-  transition: opacity 0.8s ease-out;
+.desktop-dropdown-menu .dropdown-item {
+  padding: 14px 24px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: var(--blue-grey);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-img.loaded {
-  opacity: 1;
+.desktop-dropdown-menu .dropdown-item:hover {
+  background-color: var(--lightest-blue);
 }
 
-/* 5. Custom Selection & Momentum Scrolling */
-::selection {
-  background: #000;
-  /* Replace with brand colour */
-  color: #fff;
-}
-
-.scroll-snap-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.scroll-snap-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* Special Offers Modal */
+/* Special Offers Modal & Contacts Base */
 .special-offers-card {
   background-color: var(--lightest-blue) !important;
   border-radius: 12px;
@@ -311,15 +339,77 @@ img.loaded {
 }
 
 .modal-contacts a:hover {
-  color: var(--waterfront);
+  color: var(--dark-blue);
 }
 
 .modal-contacts .wa-link:hover {
   color: #25D366 !important;
-  /* WhatsApp Brand Green */
 }
 
+/* Animations */
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Behaviour */
+@media (max-width: 991.98px) {
+  .offcanvas-body .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem !important;
+    margin: 0 -1rem;
+    border-bottom: 1px solid var(--lightest-blue);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+
+  .offcanvas-body .nav-link:hover,
+  .offcanvas-body .nav-link:focus,
+  .offcanvas-body .nav-link:active {
+    background-color: var(--lightest-blue);
+  }
+
+  .nav-link::after {
+    display: none !important;
+  }
+
+  .desktop-tooltip-menu,
+  .desktop-dropdown-menu {
+    display: none !important;
+  }
+
+  .why-book-mobile-list li {
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+}
+
+/* Desktop Behaviour */
 @media (min-width: 992px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
   #specialOffersTrigger {
     cursor: default;
@@ -329,36 +419,22 @@ img.loaded {
   .contact-numbers a {
     pointer-events: auto;
   }
-}
 
-@media (max-width: 991px) {
-  .offcanvas-body .nav-link {
-    font-size: 1.2rem;
-    padding: 1rem !important;
-    margin: 0 -1rem;
-    /* Pulls the background edge-to-edge with the offcanvas padding */
-    border-bottom: 1px solid var(--lightest-blue);
-    border-radius: 8px;
-    /* Smooth, modern button feel */
-    transition: background-color 0.2s ease;
+  .navbar .nav-item.dropdown:hover .desktop-tooltip-menu,
+  .navbar .nav-item.dropdown:hover .desktop-dropdown-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeInDropdown 0.2s ease forwards;
   }
 
-  .offcanvas-body .nav-link:hover,
-  .offcanvas-body .nav-link:focus,
-  .offcanvas-body .nav-link:active {
-    background-color: var(--lightest-blue);
-    /* Subtle, clean brand colour highlight */
-  }
-
-  /* Force hide the underline pseudo-element on mobile */
-  .nav-link::after {
-    display: none !important;
+  .navbar .nav-item.dropdown:hover .nav-link.dropdown-toggle {
+    color: var(--bs-nav-link-hover-color);
   }
 }
 
-/* ==========================================================================
-   4. FIXED BOOKING ENGINE
-   ========================================================================== */
+/* === 3. BOOKING ENGINE === */
+
+/* Base Layout & States */
 .booking-engine-fixed {
   position: fixed;
   bottom: 0;
@@ -370,7 +446,6 @@ img.loaded {
   pointer-events: none;
 }
 
-/* State Classes (Order matters for cascade) */
 .booking-engine-fixed.engine-ready {
   opacity: 1;
   pointer-events: auto;
@@ -381,6 +456,7 @@ img.loaded {
   pointer-events: none;
 }
 
+/* Base Form Elements */
 .booking-engine-fixed .form-control,
 .booking-engine-fixed .form-select {
   border: none !important;
@@ -390,6 +466,50 @@ img.loaded {
   transition: all var(--transition-speed);
 }
 
+/* Animations */
+@keyframes highlightEngine {
+  0% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 -15px 40px rgba(255, 204, 0, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes pulseAndGlow {
+  0% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    box-shadow: 0 -20px 50px rgba(255, 204, 0, 0.5);
+    transform: translateY(-8px) scale(1.01);
+  }
+
+  100% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Note: Retained duplicate selector to safely preserve your original cascade */
+.engine-highlight-pulse .booking-panel {
+  animation: highlightEngine 0.8s ease-out;
+}
+
+.engine-highlight-pulse .booking-panel {
+  animation: pulseAndGlow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: bottom center;
+  will-change: transform, box-shadow;
+}
+
+/* Desktop Behaviour */
 @media (min-width: 992px) {
   .booking-panel {
     background-color: rgba(0, 0, 0, 0.6);
@@ -411,6 +531,7 @@ img.loaded {
   }
 }
 
+/* Mobile Behaviour */
 @media (max-width: 991px) {
   .booking-engine-fixed {
     transform: translateY(calc(100% - 45px));
@@ -453,9 +574,9 @@ img.loaded {
   }
 }
 
-/* ==========================================================================
-   5. ENQUIRY FORM DRAWER
-   ========================================================================== */
+/* === 4. ENQUIRY FORM === */
+
+/* Wrapper & Container */
 .enquiry-panel-wrapper {
   position: fixed;
   right: 0;
@@ -473,6 +594,14 @@ img.loaded {
   transform: translateX(0);
 }
 
+.enquiry-content {
+  background-color: var(--lightest-blue);
+  width: 100%;
+  border-radius: 0 0 0 12px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Trigger Button */
 .enquiry-trigger {
   background-color: var(--lightest-blue);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -485,6 +614,7 @@ img.loaded {
   left: -35px;
   top: 0;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  clip-path: inset(-20px 0 -20px -20px);
 }
 
 .enquiry-trigger span {
@@ -496,13 +626,7 @@ img.loaded {
   font-size: 0.8rem;
 }
 
-.enquiry-content {
-  background-color: var(--lightest-blue);
-  width: 100%;
-  border-radius: 0 0 0 12px;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-}
-
+/* Form Inputs */
 .enquiry-input {
   background-color: var(--white);
   border: none !important;
@@ -522,7 +646,7 @@ select.enquiry-input {
   background-position: right 0 center !important;
 }
 
-/* Overrides for Enquiry Form Button */
+/* Form Submit Button Overrides */
 #enquiryForm .btn-yellow {
   font-weight: 800 !important;
   letter-spacing: 1px !important;
@@ -533,9 +657,9 @@ select.enquiry-input {
   transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   6. HERO SECTION
-   ========================================================================== */
+/* === 5. HERO SECTION === */
+
+/* Base Layout & Text */
 .hero-section {
   background-color: var(--white);
 }
@@ -553,6 +677,7 @@ select.enquiry-input {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Resort Columns Base */
 .resort-col {
   position: relative;
   background-size: cover;
@@ -560,7 +685,6 @@ select.enquiry-input {
   height: 100%;
   min-height: 300px;
   overflow: hidden;
-  /* Animation Setup */
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -613,6 +737,7 @@ select.enquiry-input {
   margin-top: 1rem !important;
 }
 
+/* Hero Buttons */
 .btn-map-link {
   background: var(--lightest-blue);
   border: none !important;
@@ -650,9 +775,7 @@ select.enquiry-input {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* ==========================================================================
-   HERO TOOLTIP (MOBILE FIRST)
-   ========================================================================== */
+/* Tooltip & Info */
 .hero-tooltip-overlay {
   position: fixed;
   inset: 0;
@@ -679,7 +802,6 @@ select.enquiry-input {
   border-radius: 12px;
   width: 90%;
   max-width: 420px;
-  /* Base mobile width */
   color: var(--blue-grey);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   transform: translateY(20px);
@@ -694,9 +816,7 @@ select.enquiry-input {
   background: transparent;
   border: none;
   color: var(--blue-grey);
-  /* Fixed the invisible button colour globally */
   font-size: 1.5rem;
-  /* Base mobile size */
   opacity: 0.7;
   transition: opacity 0.2s;
   padding: 0;
@@ -709,44 +829,45 @@ select.enquiry-input {
 .tooltip-features-list li {
   margin-bottom: 12px;
   font-size: 1.05rem;
-  /* Base mobile size */
   line-height: 1.4;
 }
 
-/* ==========================================================================
-   DESKTOP: ENLARGED TOOLTIP
-   ========================================================================== */
-@media (min-width: 992px) {
-  .hero-tooltip-box {
-    max-width: 550px;
-    /* Widened to accommodate larger text */
-  }
-
-  .tooltip-title {
-    font-size: 2.25rem;
-    /* Made the heading more prominent */
-  }
-
-  .btn-close-tooltip {
-    font-size: 2.25rem;
-    /* Enlarged the close icon by 1.5x */
-  }
-
-  .tooltip-features-list li {
-    margin-bottom: 16px;
-    font-size: 1.55rem;
-    /* Increased font size by ~1.5x */
-  }
+/* Form Helper Text */
+.form-check-label,
+.assurance {
+  font-size: 0.7rem;
 }
 
+.form-check.mb-3,
+.assurance {
+  margin-bottom: 0.2rem !important;
+}
+
+/* Shared Container Logic */
 #heroResortsContainerRow {
   height: 100% !important;
   min-height: calc(90vh - var(--nav-height-gap)) !important;
   padding-bottom: 0;
 }
 
-/* Hero Desktop Adjustments */
+/* Desktop Styles & Animations */
 @media (min-width: 992px) {
+  .hero-tooltip-box {
+    max-width: 550px;
+  }
+
+  .tooltip-title {
+    font-size: 2.25rem;
+  }
+
+  .btn-close-tooltip {
+    font-size: 2.25rem;
+  }
+
+  .tooltip-features-list li {
+    margin-bottom: 16px;
+    font-size: 1.55rem;
+  }
 
   .hero-btn,
   .btn-outline-hero {
@@ -766,7 +887,6 @@ select.enquiry-input {
     height: calc(calc(90vh - var(--nav-height-gap)) - 1px) !important;
   }
 
-  /* Desktop Stacking Animation */
   .resort-col:nth-child(1) {
     animation-name: spreadLeftDesktop;
     z-index: 1;
@@ -831,7 +951,7 @@ select.enquiry-input {
   }
 }
 
-/* Hero Mobile Adjustments */
+/* Mobile Styles & Animations */
 @media (max-width: 991px) {
   .hero-section {
     min-height: auto;
@@ -864,7 +984,6 @@ select.enquiry-input {
     border-bottom: 4px solid var(--white);
   }
 
-  /* Mobile Stacking Animation */
   .resort-col:nth-child(1) {
     animation-name: spreadTopMobile;
     z-index: 3;
@@ -929,23 +1048,49 @@ select.enquiry-input {
   }
 }
 
-.form-check-label,
-.assurance {
-  font-size: 0.7rem;
-}
+/* === 6. EXCLUSIVE DEALS === */
 
-.form-check.mb-3,
-.assurance {
-  margin-bottom: 0.2rem !important;
-}
-
-/* ==========================================================================
-   7. EXCLUSIVE DEALS SECTION
-   ========================================================================== */
+/* Section & Background */
 .exclusive-deals {
-  background: linear-gradient(to bottom, var(--deals-grad-top) 0%, var(--deals-grad-mid) 50%, var(--deals-grad-btm) 100%);
   min-height: 800px;
-  padding-top: 6rem !important;
+  padding-top: 10rem !important;
+}
+
+.exclusive-deals.deals-home {
+  background: linear-gradient(to bottom, var(--deals-grad-home-top) 0%, var(--deals-grad-home-mid) 50%, var(--deals-grad-home-btm) 100%);
+}
+
+.exclusive-deals.deals-waterfront {
+  background: linear-gradient(to bottom, var(--deals-grad-waterfront-top) 0%, var(--deals-grad-waterfront-mid) 50%, var(--deals-grad-waterfront-btm) 100%);
+}
+
+.exclusive-deals.deals-regina {
+  background: linear-gradient(to bottom, var(--deals-grad-regina-top) 0%, var(--deals-grad-regina-mid) 50%, var(--deals-grad-regina-btm) 100%);
+}
+
+.exclusive-deals.deals-seaway {
+  background: linear-gradient(to bottom, var(--deals-grad-seaway-top) 0%, var(--deals-grad-seaway-mid) 50%, var(--deals-grad-seaway-btm) 100%);
+}
+
+/* Filter Pills (Mobile Base) */
+.filter-pills-wrapper {
+  overflow-x: auto;
+  justify-content: flex-start;
+  padding-bottom: 15px;
+  /* Increased for active pill shadow */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 1rem !important;
+
+  /* BREAK OUT LOGIC: Forces the row to reach the screen edges on mobile */
+  margin-left: calc(-1 * var(--bs-gutter-x, 1rem));
+  margin-right: calc(-1 * var(--bs-gutter-x, 1rem));
+  padding-left: var(--bs-gutter-x, 1rem) !important;
+  padding-right: var(--bs-gutter-x, 1rem) !important;
+}
+
+.filter-pills-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .filter-pill {
@@ -971,22 +1116,21 @@ select.enquiry-input {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+/* Deal Cards & Images */
 .deals-card-wrapper {
   border-radius: 12px;
   overflow: hidden;
   background-color: var(--white);
 }
 
-.deal-img {
-  height: 250px;
+.deal-img,
+.placeholder-img {
+  height: 200px;
   object-fit: cover;
   background-color: #808080;
 }
 
-.placeholder-img {
-  background-color: #808080;
-}
-
+/* Card Content & Buttons */
 .deal-offer {
   font-size: 1.5rem;
   color: var(--blue-grey);
@@ -1010,11 +1154,47 @@ select.enquiry-input {
   transition: background-color 0.2s;
 }
 
+.btn-deal-book:active {
+  transform: none !important;
+  border-width: 0 !important;
+}
+
 .btn-deal-book:hover {
   background-color: #1a1e2d;
   color: var(--white);
 }
 
+.deals-waterfront .btn-deal-book {
+  background-color: var(--waterfront);
+  color: var(--white);
+}
+
+.deals-waterfront .btn-deal-book:hover {
+  background-color: #167bd9;
+  color: var(--white);
+}
+
+.deals-regina .btn-deal-book {
+  background-color: var(--regina);
+  color: var(--white);
+}
+
+.deals-regina .btn-deal-book:hover {
+  background-color: #c51f2d;
+  color: var(--white);
+}
+
+.deals-seaway .btn-deal-book {
+  background-color: var(--seaway);
+  color: var(--white);
+}
+
+.deals-seaway .btn-deal-book:hover {
+  background-color: #452b68;
+  color: var(--white);
+}
+
+/* Animations */
 .deal-card {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   opacity: 1;
@@ -1027,197 +1207,36 @@ select.enquiry-input {
   pointer-events: none;
 }
 
-@media (max-width: 991px) {
-  .filter-pills-wrapper {
-    overflow: visible;
-    overflow-x: scroll;
-    justify-content: flex-start;
-    padding-bottom: 10px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin-bottom: 1rem !important;
+/* Desktop Overrides */
+@media (min-width: 992px) {
+  .exclusive-deals {
+    padding-top: 6rem !important;
   }
 
-  .filter-pills-wrapper::-webkit-scrollbar {
-    display: none;
+  .filter-pills-wrapper {
+    overflow-x: visible;
+    justify-content: center;
+    /* Centered for desktop */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: unset !important;
   }
 
   .deal-img {
-    height: 200px;
+    height: 250px;
   }
 }
 
-/* Decorative Coconut */
-.decorative-coconut {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  width: 180px;
-  height: auto;
-  object-fit: contain;
-  z-index: 0;
-  pointer-events: none;
-  will-change: transform;
-  transition: transform 0.1s ease-out;
-}
+/* === 7. MEDIA CAROUSELS === */
 
-@media (max-width: 991px) {
-  .decorative-coconut {
-    top: 20px;
-    right: calc(calc(100vw - 130px) / 2);
-    width: 130px;
-    opacity: 0.9;
-  }
-
-  .exclusive-deals {
-    background: linear-gradient(to bottom, var(--deals-grad-top) 0%, var(--deals-grad-mid) 50%, var(--deals-grad-btm) 100%);
-    min-height: 800px;
-    padding-top: 10rem !important;
-  }
-
-}
-
-/* ==========================================================================
-   8. STATISTICS SECTION
-   ========================================================================== */
-.stats-section {
-  background-color: var(--lightest-blue);
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat-icon {
-  color: var(--dark-blue);
-  font-size: 3.5rem;
-  line-height: 1;
-}
-
-.stat-number {
-  font-size: 2rem;
-  letter-spacing: 1px;
-}
-
-.stat-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-@media (max-width: 991px) {
-  .stat-icon {
-    font-size: 2.8rem;
-  }
-
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-  }
-}
-
-/* Decorative Shell */
-.decorative-shell {
-  position: absolute;
-  top: -100px;
-  /* Pulls it up by exactly half its height */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  z-index: 10;
-  pointer-events: none;
-}
-
-/* Mobile Responsive Tweaks for Shell */
-@media (max-width: 991px) {
-  .decorative-shell {
-    top: -60px;
-    /* Adjust pull-up for smaller height */
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* ==========================================================================
-   9. REVIEWS SLIDER SECTION
-   ========================================================================== */
-.reviews-section {
-  background-color: var(--white);
-  overflow: hidden;
-}
-
-.reviews-slider {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  scroll-snap-type: x mandatory;
-}
-
-.reviews-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.review-card {
-  flex: 0 0 380px;
-  border-radius: 12px;
-  padding: 30px;
-  scroll-snap-align: center;
-  border: 1px solid rgba(45, 51, 74, 0.05);
-}
-
-.review-avatar {
-  width: 45px;
-  height: 45px;
-  background-color: var(--blue-grey);
-  color: var(--white);
-  border-radius: 50%;
-  font-size: 1.1rem;
-}
-
-.review-body {
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-@media (max-width: 991px) {
-  .review-card {
-    flex: 0 0 300px;
-    padding: 20px;
-  }
-
-  .review-avatar {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
-  }
-}
-
-/* ==========================================================================
-   10. MEDIA CAROUSELS (VIDEO & CROSS PROMO)
-   ========================================================================== */
-.video-section h3 {
-  font-size: 1.8rem;
-}
-
+/* Carousel Layout & Overlays */
 .promo-carousel-img {
   height: 450px;
   object-fit: cover;
 }
 
-/* Carousel Controls Overlays */
 .carousel-gradient-overlay {
   position: absolute;
   bottom: 0;
@@ -1229,6 +1248,7 @@ select.enquiry-input {
   pointer-events: none;
 }
 
+/* Controls & Indicators Base */
 .promo-controls-wrapper {
   position: absolute;
   bottom: 20px;
@@ -1237,7 +1257,6 @@ select.enquiry-input {
   z-index: 2;
 }
 
-/* Unified Carousel Indicators */
 .custom-video-indicators,
 .promo-indicators {
   display: flex;
@@ -1280,7 +1299,6 @@ select.enquiry-input {
   border-radius: 6px !important;
 }
 
-/* Unified Carousel Controls */
 .custom-video-control,
 .promo-control-btn {
   background: transparent;
@@ -1313,6 +1331,11 @@ select.enquiry-input {
   opacity: 1;
 }
 
+/* Typography */
+.video-section h3 {
+  font-size: 1.8rem;
+}
+
 .promo-tagline {
   font-size: 0.85rem;
   letter-spacing: 1.5px;
@@ -1328,6 +1351,59 @@ select.enquiry-input {
   font-size: 1rem;
 }
 
+/* Carousel Loader */
+.carousel-loader {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out 1s;
+}
+
+.carousel-loader.is-paused {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.carousel-loader svg {
+  transform: rotate(-90deg);
+  width: 36px;
+  height: 36px;
+}
+
+.carousel-loader circle {
+  fill: none;
+  stroke-width: 3;
+}
+
+.loader-bg {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.loader-track {
+  stroke: var(--white);
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  transition: none;
+}
+
+.loader-track.is-locked {
+  stroke-dashoffset: 100 !important;
+  transition: none !important;
+}
+
+/* Mobile Behaviour */
 @media (max-width: 991px) {
   .video-section h3 {
     font-size: 1.5rem;
@@ -1342,64 +1418,365 @@ select.enquiry-input {
   }
 }
 
-/* Decorative Crab */
-.decorative-crab {
-  position: absolute;
-  top: -70px;
-  /* Pulls the crab up to sit on the edge */
-  left: 40px;
-  /* Indents it slightly from the left corner */
-  width: 180px;
-  height: auto;
-  object-fit: contain;
-  z-index: 10;
-  pointer-events: none;
-  will-change: transform;
-  transition: transform 0.1s ease-out;
-  /* Prevents it from blocking clicks */
-}
-
-/* Mobile Responsive Tweaks for Crab */
-@media (max-width: 991px) {
-  .decorative-crab {
-    top: -45px;
-    left: 20px;
-    width: 110px;
-  }
-}
-
-/* ==========================================================================
-   DESKTOP: ENLARGED PROMO CAROUSEL CONTROLS
-   ========================================================================== */
+/* Desktop Behaviour */
 @media (min-width: 992px) {
-
-  /* Increase arrow size from 1.1rem to 1.65rem */
   .promo-control-btn {
     font-size: 1.65rem;
     padding: 0 15px;
-    /* Added a bit more padding for a larger click target */
   }
 
-  /* Increase inactive dot size from 8px to 12px */
   .promo-indicators button {
     width: 12px !important;
     height: 12px !important;
   }
 
-  /* Increase active pill size from 24px to 36px */
   .promo-indicators button.active {
     width: 36px !important;
   }
 }
 
-/* ==========================================================================
-   11. LEGACY SECTION
-   ========================================================================== */
+/* === 8. OUR HOTELS === */
+.our-hotels-section {
+  background-image: url('./../assets/sand-2.png');
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-top: 6rem !important;
+}
+
+.hotel-amenity-icon {
+  color: var(--dark-blue);
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+
+.hotel-brand-dot {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.dot-waterfront {
+  background-color: var(--waterfront);
+}
+
+.dot-seaway {
+  background-color: var(--seaway);
+}
+
+.dot-regina {
+  background-color: var(--regina);
+}
+
+.btn-explore,
+.btn-walkthrough,
+.hotel-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all var(--transition-speed);
+}
+
+.btn-explore {
+  background-color: var(--lightest-blue);
+  color: var(--blue-grey);
+}
+
+.btn-explore:hover {
+  background-color: var(--light-blue);
+  color: var(--blue-grey);
+}
+
+.btn-walkthrough {
+  background-color: transparent;
+  border: 1px solid var(--blue-grey);
+  color: var(--blue-grey);
+}
+
+.btn-walkthrough:hover {
+  background-color: var(--blue-grey);
+  color: var(--white);
+}
+
+.hotel-image-composition {
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.hotel-carousel {
+  height: 420px;
+  width: 100%;
+}
+
+.overlapping-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  max-width: 250px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  z-index: 2;
+  border-bottom-width: 0 !important;
+  border-top-width: 0 !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+}
+
+.review-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  background: var(--white);
+  border-radius: 30px;
+  padding: 6px 16px 6px 6px;
+  display: flex;
+  align-items: center;
+}
+
+.review-badge-icon {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+.hotel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.hotel-indicators button {
+  background-color: var(--white) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  border: none !important;
+  opacity: 0.6 !important;
+  text-indent: -999px;
+  transition: all var(--transition-speed) !important;
+  margin: 0 !important;
+}
+
+.hotel-indicators button.active {
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 6px !important;
+}
+
+.hotel-amenities {
+  max-width: 450px;
+}
+
+.hotel-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hotel-action-buttons .btn {
+  width: auto;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.hotel-section-divider {
+  height: 19px;
+  max-width: 1000px;
+  width: 85%;
+  margin: 5rem auto;
+
+  background-color: transparent;
+  box-shadow: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='32' height='19'%3E%3Cpath d='M0 12 Q 10 2, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  background-size: 32px 19px;
+  opacity: 0.9;
+}
+
+@media (min-width: 992px) {
+  .our-hotels-section {
+    padding-top: 3rem !important;
+    padding-bottom: 14rem !important;
+  }
+
+  .hotel-action-buttons {
+    gap: 16px;
+  }
+
+  .hotel-action-buttons .btn-explore {
+    order: 1;
+  }
+
+  .hotel-action-buttons .hotel-btn {
+    order: 2;
+  }
+
+  .hotel-action-buttons .btn-walkthrough {
+    order: 3;
+  }
+
+  .hotel-row .col-lg-6.order-2.order-lg-1.pe-lg-5 .col-lg-6.order-2.order-lg-1.pe-lg-5,
+  .hotel-row .col-lg-6.col-lg-6.order-2.order-lg-2.pe-lg-5 .col-lg-6.order-2.order-lg-2.pe-lg-5 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .hotel-image-composition {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .hotel-carousel {
+    height: 320px;
+  }
+
+  .review-badge {
+    top: 15px;
+    right: 15px;
+  }
+
+  .hotel-action-buttons::after {
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+  }
+
+  .hotel-action-buttons .btn-walkthrough {
+    width: auto;
+    order: 1;
+  }
+
+  .hotel-action-buttons .btn-explore,
+  .hotel-action-buttons .hotel-btn {
+    order: 2;
+  }
+
+  .hotel-section-divider {
+    margin: 4rem auto;
+  }
+}
+
+/* === 9. STATISTICS === */
+
+/* Section Layout */
+.stats-section {
+  background-color: var(--lightest-blue);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content Styling */
+.stat-icon {
+  color: var(--dark-blue);
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Mobile Overrides */
+@media (max-width: 991px) {
+  .stat-icon {
+    font-size: 2.8rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* === 10. REVIEWS SLIDER === */
+
+/* Section & Slider Container */
+.reviews-section {
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.reviews-slider {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  scroll-snap-type: x mandatory;
+}
+
+.reviews-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Review Card & Typography */
+.review-card {
+  flex: 0 0 380px;
+  border-radius: 12px;
+  padding: 30px;
+  scroll-snap-align: center;
+  border: 1px solid rgba(45, 51, 74, 0.05);
+}
+
+.review-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: var(--blue-grey);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.review-body {
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Mobile Overrides */
+@media (max-width: 991px) {
+  .review-card {
+    flex: 0 0 300px;
+    padding: 20px;
+  }
+
+  .review-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* === 11. LEGACY === */
 .legacy-section {
   background-color: var(--lightest-blue);
 }
 
-/* Add the light blue background to the cross promo section instead */
 .cross-promo-section {
   background-color: var(--light-blue);
 }
@@ -1419,7 +1796,6 @@ select.enquiry-input {
 
 .legacy-heading {
   font-size: 2.8rem;
-  /* Increased from 2.5rem */
   line-height: 1.2;
   max-width: 500px;
 }
@@ -1427,7 +1803,6 @@ select.enquiry-input {
 @media (max-width: 991px) {
   .legacy-heading {
     font-size: 2.2rem;
-    /* Increased from 2rem */
     margin-left: auto;
     margin-right: auto;
   }
@@ -1437,30 +1812,101 @@ select.enquiry-input {
   }
 }
 
-/* Decorative Palm Leaves */
-.decorative-palm {
+.hero {
+  padding: 50px 0 50px 0;
+  background: unset;
+  height: 100vh;
+}
+
+.book-direct input,
+.book-direct select,
+.book-direct button {
+  padding: 0.8rem;
+}
+
+#select_prop-error,
+#checkout-error,
+#checkin-error {
+  font-size: small;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.btn-know-more {
+  text-transform: uppercase;
+  padding: 0.3125rem 1.25rem;
+  border-radius: 25px;
+  vertical-align: middle;
+  transition: 0.5s;
+  color: #fff;
+  background: #ffffff;
+  color: #3aafa9;
+  border: 1px solid #3aafa9;
+}
+
+.btn-know-more span {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 600;
+}
+
+.btn-know-more i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn-know-more:hover {
+  background: #3aafa9;
+  color: #fff;
+  cursor: pointer;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
+  left: 0;
   top: 0;
-  right: 0;
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  z-index: 10;
+  z-index: -1;
+}
+
+.wave-divider-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
-/* Mobile Responsive Tweaks for Palm */
-@media (max-width: 991px) {
-  .decorative-palm {
-    top: 0;
-    right: 0;
-    width: 200px;
+.wave-divider-bottom svg {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+.cross-promo-section .container {
+  padding-bottom: 5rem !important;
+}
+
+@media (min-width: 992px) {
+  .wave-divider-bottom svg {
+    height: 110px;
+  }
+
+  .cross-promo-section .container {
+    margin-bottom: 0 !important;
+    padding-bottom: 7rem !important;
+
   }
 }
 
-/* ==========================================================================
-   12. FOOTER
-   ========================================================================== */
+/* === 12. FOOTER === */
 .footer {
   background-color: var(--white);
   border-top: 1px solid var(--lightest-blue);
@@ -1488,7 +1934,7 @@ select.enquiry-input {
 }
 
 .footer-links a:hover {
-  color: var(--waterfront);
+  color: var(--dark-blue);
 }
 
 .footer-bottom {
@@ -1528,644 +1974,118 @@ select.enquiry-input {
   opacity: 1;
 }
 
-/* ==========================================================================
-   13. HELPER ANIMATIONS
-   ========================================================================== */
-.fade-in-element {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-    transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  will-change: opacity, transform;
-}
-
-.fade-in-element.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ==========================================================================
-   14. OUR HOTELS SECTION
-   ========================================================================== */
-
-.our-hotels-section {
-  background-image: url('./../assets/sand-2.png');
-  background-position: bottom center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  padding-top: 6rem !important;
-}
-
-/* Double bottom padding for desktop only */
-@media (min-width: 992px) {
-  .our-hotels-section {
-    padding-top: 3rem !important;
-    padding-bottom: 14rem !important;
-  }
-}
-
-/* Typography & Icons */
-.hotel-amenity-icon {
-  color: var(--dark-blue);
-  opacity: 0.6;
-  font-size: 1.1rem;
-}
-
-.hotel-brand-dot {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.dot-waterfront {
-  background-color: var(--waterfront);
-}
-
-.dot-seaway {
-  background-color: var(--seaway);
-}
-
-.dot-regina {
-  background-color: var(--regina);
-}
-
-/* Buttons Customization */
-.btn-explore,
-.btn-walkthrough,
-.hotel-btn {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: all var(--transition-speed);
-}
-
-.btn-explore {
-  background-color: var(--lightest-blue);
-  color: var(--blue-grey);
-}
-
-.btn-explore:hover {
-  background-color: var(--light-blue);
-  color: var(--blue-grey);
-}
-
-.btn-walkthrough {
-  background-color: transparent;
-  border: 1px solid var(--blue-grey);
-  color: var(--blue-grey);
-}
-
-.btn-walkthrough:hover {
-  background-color: var(--blue-grey);
-  color: var(--white);
-}
-
-/* Image Composition Constraints */
-.hotel-image-composition {
-  /* Padding provides the space for the overlapping image to bleed into */
-  padding-right: 50px;
-  padding-bottom: 50px;
-}
-
-.hotel-carousel {
-  height: 420px;
-  width: 100%;
-}
-
-/* Overlapping Image */
-.overlapping-img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 45%;
-  max-width: 250px;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  z-index: 2;
-  border-bottom-width: 0 !important;
-  border-top-width: 0 !important;
-  border-left-width: 0 !important;
-  border-right-width: 0 !important;
-}
-
-/* Tripadvisor Review Badge */
-.review-badge {
+/* === 13. DECORATIVE FLOATING ITEMS === */
+.decorative-coconut {
   position: absolute;
   top: 20px;
-  right: 20px;
-  z-index: 3;
-  background: var(--white);
-  border-radius: 30px;
-  padding: 6px 16px 6px 6px;
-  display: flex;
-  align-items: center;
-}
-
-.review-badge-icon {
-  height: 20px;
-  /* Sets the perfect height to match the text */
-  width: auto;
-  /* Maintains the logo's natural aspect ratio */
-  display: block;
-}
-
-/* Specific left-aligned indicators for this carousel */
-.hotel-indicators {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 3;
-}
-
-.hotel-indicators button {
-  background-color: var(--white) !important;
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50%;
-  border: none !important;
-  opacity: 0.6 !important;
-  text-indent: -999px;
-  transition: all var(--transition-speed) !important;
-  margin: 0 !important;
-}
-
-.hotel-indicators button.active {
-  opacity: 1 !important;
-  width: 24px !important;
-  border-radius: 6px !important;
-}
-
-/* Decorative Starfish */
-.decorative-starfish {
-  position: absolute;
-  top: -120px;
-  left: 20px;
-  width: 300px;
-  height: 300px;
+  right: calc(calc(100vw - 130px) / 2);
+  width: 130px;
+  height: auto;
   object-fit: contain;
   z-index: 0;
+  opacity: 0.9;
   pointer-events: none;
   will-change: transform;
   transition: transform 0.1s ease-out;
-  /* Prevents the image from blocking clicks on the map button */
+}
+
+.decorative-starfish {
+  position: absolute;
+  top: -60px;
+  left: calc(calc(100vw - 180px) / 2);
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
 .decorative-umbrella {
   position: absolute;
-  bottom: -130px;
-  right: -200px;
-  width: 250px;
-  height: 250px;
+  bottom: -80px;
+  right: -60px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   z-index: 0;
+  opacity: 0.8;
   pointer-events: none;
   will-change: transform;
   transition: transform 0.1s ease-out;
-  /* Prevents interference with clicks on the slider below */
 }
 
-/* Mobile Responsive Tweaks */
-@media (max-width: 991px) {
-  .hotel-image-composition {
-    padding-right: 30px;
-    padding-bottom: 30px;
-  }
+.decorative-shell {
+  position: absolute;
+  top: -60px;
+  left: calc(calc(100vw - 120px) / 2);
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
 
-  .hotel-carousel {
-    height: 320px;
-  }
+.decorative-crab {
+  position: absolute;
+  top: -45px;
+  left: 20px;
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
 
-  .review-badge {
-    top: 15px;
-    right: 15px;
+.decorative-palm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .decorative-coconut {
+    right: 50px;
+    width: 180px;
+    opacity: 1;
   }
 
   .decorative-starfish {
-    top: -60px;
-    left: calc(calc(100vw - 180px) / 2);
-    width: 180px;
-    height: 180px;
-    opacity: 0.8;
+    top: -120px;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+    opacity: 1;
   }
 
   .decorative-umbrella {
-    bottom: -80px;
-    right: -60px;
-    width: 150px;
-    height: 150px;
-    opacity: 0.8;
-    /* Faded slightly to preserve text legibility */
-  }
-}
-
-/* Tighter Amenities Grid */
-.hotel-amenities {
-  max-width: 450px;
-  /* Constrains the width so the columns sit closer together */
-}
-
-/* Dynamic Action Buttons Layout */
-.hotel-action-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hotel-action-buttons .btn {
-  width: auto;
-  /* Buttons will hug their text content naturally */
-  padding: 10px 20px;
-  margin: 0;
-}
-
-/* Desktop explicit ordering */
-@media (min-width: 992px) {
-  .hotel-action-buttons {
-    gap: 16px;
-  }
-
-  .hotel-action-buttons .btn-explore {
-    order: 1;
-  }
-
-  .hotel-action-buttons .hotel-btn {
-    order: 2;
-  }
-
-  .hotel-action-buttons .btn-walkthrough {
-    order: 3;
-  }
-
-  .hotel-row .col-lg-6.order-2.order-lg-1.pe-lg-5 .col-lg-6.order-2.order-lg-1.pe-lg-5,
-  .hotel-row .col-lg-6.col-lg-6.order-2.order-lg-2.pe-lg-5 .col-lg-6.order-2.order-lg-2.pe-lg-5 {
-    width: 100%;
-  }
-}
-
-/* Mobile-specific sizing & ordering */
-@media (max-width: 991px) {
-
-  /* Creates an invisible break after the walkthrough button */
-  .hotel-action-buttons::after {
-    content: "";
-    flex-basis: 100%;
-    order: 1;
-  }
-
-  .hotel-action-buttons .btn-walkthrough {
-    width: auto;
-    /* Reverts from 100% to hug the text content */
-    order: 1;
-  }
-
-  .hotel-action-buttons .btn-explore,
-  .hotel-action-buttons .hotel-btn {
-    order: 2;
-  }
-}
-
-/* Resort Section Dividers (Wavy Line) */
-.hotel-section-divider {
-  height: 19px;
-  /* Scaled down from 24px */
-  max-width: 1000px;
-  width: 85%;
-  margin: 5rem auto;
-
-  background-color: transparent;
-  box-shadow: none;
-
-  /* SVG Repeating Wave Background in --dark-blue */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='32' height='19'%3E%3Cpath d='M0 12 Q 10 2, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: 0 center;
-  background-size: 32px 19px;
-  /* Scaled down from 40px 24px */
-  opacity: 0.9;
-}
-
-@media (max-width: 991px) {
-  .hotel-section-divider {
-    margin: 4rem auto;
-  }
-}
-
-/* ==========================================================================
-   GLOBAL SECTION HEADINGS
-   ========================================================================== */
-.section-heading {
-  font-size: 2.8rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 991px) {
-  .section-heading {
-    font-size: 2.2rem;
-  }
-}
-
-/* ==========================================================================
-   DESKTOP DROPDOWN STYLING & BEHAVIOUR
-   ========================================================================== */
-.desktop-dropdown-menu {
-  padding: 0.5rem 0;
-  border-radius: 8px;
-}
-
-.desktop-dropdown-menu .dropdown-item {
-  padding: 14px 24px;
-  /* Makes the items much taller and spaces them out */
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  color: var(--blue-grey);
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.desktop-dropdown-menu .dropdown-item:hover {
-  background-color: var(--lightest-blue);
-  color: var(--waterfront);
-}
-
-/* Force hide the desktop menu from the mobile DOM to prevent ghosting */
-@media (max-width: 991.98px) {
-  .desktop-dropdown-menu {
-    display: none !important;
-  }
-}
-
-/* Desktop Hover Logic */
-@media all and (min-width: 992px) {
-  .navbar .nav-item.dropdown:hover .desktop-dropdown-menu {
-    display: block;
-    margin-top: 0;
-    animation: fadeInDropdown 0.2s ease forwards;
-  }
-
-  .navbar .nav-item.dropdown:hover .nav-link.dropdown-toggle {
-    color: var(--bs-nav-link-hover-color);
-  }
-}
-
-@keyframes fadeInDropdown {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
+    bottom: -130px;
+    right: -200px;
+    width: 250px;
+    height: 250px;
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==========================================================================
-   WHY BOOK DIRECTLY TOOLTIP (DESKTOP & MOBILE)
-   ========================================================================== */
-.desktop-tooltip-menu {
-  background-color: rgba(45, 51, 74, 0.95) !important;
-  /* Dark translucent box */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 8px;
-  min-width: 260px;
-  font-size: 0.85rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.desktop-tooltip-menu li {
-  color: rgba(255, 255, 255, 0.95);
-  /* White text */
-  list-style-type: none;
-  letter-spacing: 0.5px;
-}
-
-/* Force hide the desktop tooltip from the mobile DOM */
-@media (max-width: 991.98px) {
-  .desktop-tooltip-menu {
-    display: none !important;
   }
 
-  .why-book-mobile-list li {
-    opacity: 0.85;
-    line-height: 1.4;
-  }
-}
-
-/* Desktop Hover Logic for Tooltip */
-@media all and (min-width: 992px) {
-  .navbar .nav-item.dropdown:hover .desktop-tooltip-menu {
-    display: block;
-    margin-top: 0;
-    animation: fadeInDropdown 0.2s ease forwards;
-  }
-}
-
-/* ==========================================================================
-   STATIC WAVE DIVIDER
-   ========================================================================== */
-.wave-divider-bottom {
-  position: absolute;
-  bottom: -1px;
-  /* Pulled down by 1px to prevent microscopic rendering gaps */
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 1;
-  pointer-events: none;
-  /* Ensures the shape doesn't block any clicks */
-}
-
-.wave-divider-bottom svg {
-  display: block;
-  width: 100%;
-  height: 40px;
-  /* Subtle, slimmer wave curve for mobile screens */
-}
-
-.cross-promo-section .container {
-  padding-bottom: 5rem !important;
-}
-
-@media (min-width: 992px) {
-  .wave-divider-bottom svg {
-    height: 110px;
-    /* Grand, sweeping wave curve for desktop screens */
+  .decorative-shell {
+    left: calc(calc(100vw - 200px) / 2);
+    top: -100px;
+    width: 200px;
+    height: 200px;
   }
 
-  .cross-promo-section .container {
-    margin-bottom: 0 !important;
-    padding-bottom: 7rem !important;
-
+  .decorative-crab {
+    top: -75px;
+    left: 40px;
+    width: 180px;
   }
-}
-
-/* ==========================================================================
-   CAROUSEL LOADER: SYNCED & FADING
-   ========================================================================== */
-.carousel-loader {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  width: 44px;
-  height: 44px;
-  background: transparent;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-  pointer-events: none;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out 1s;
-  /* Delayed fade-in */
-}
-
-.carousel-loader.is-paused {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out 0s;
-  /* Instant fade-out */
-}
-
-.carousel-loader svg {
-  transform: rotate(-90deg);
-  width: 36px;
-  height: 36px;
-}
-
-.carousel-loader circle {
-  fill: none;
-  stroke-width: 3;
-}
-
-.loader-bg {
-  stroke: rgba(255, 255, 255, 0.25);
-}
-
-.loader-track {
-  stroke: var(--white);
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  stroke-linecap: round;
-  transition: none;
-}
-
-/* This class prevents the 40% jump by hard-forcing the 100 offset */
-.loader-track.is-locked {
-  stroke-dashoffset: 100 !important;
-  transition: none !important;
-}
-
-@keyframes highlightEngine {
-  0% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  50% {
-    box-shadow: 0 -15px 40px rgba(255, 204, 0, 0.4);
-  }
-
-  /* Yellow glow */
-  100% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.engine-highlight-pulse .booking-panel {
-  animation: highlightEngine 0.8s ease-out;
-}
-
-@keyframes pulseAndGlow {
-  0% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(0) scale(1);
-  }
-
-  50% {
-    box-shadow: 0 -20px 50px rgba(255, 204, 0, 0.5);
-    /* Yellow glow */
-    transform: translateY(-8px) scale(1.01);
-    /* The pulse/bump */
-  }
-
-  100% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(0) scale(1);
-  }
-}
-
-.engine-highlight-pulse .booking-panel {
-  animation: pulseAndGlow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform-origin: bottom center;
-  will-change: transform, box-shadow;
-}
-
-/* 15. LEGACY & HOME STYLES */
-.hero {
-  padding: 50px 0 50px 0;
-  background: unset;
-  height: 100vh;
-}
-
-.book-direct input,
-.book-direct select,
-.book-direct button {
-  padding: 0.8rem;
-}
-
-#select_prop-error,
-#checkout-error,
-#checkin-error {
-  font-size: small;
-  color: #fff;
-  /*background-color: #ffc107;*/
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
-}
-
-.btn-know-more {
-  text-transform: uppercase;
-  padding: 0.3125rem 1.25rem;
-  border-radius: 25px;
-  vertical-align: middle;
-  transition: 0.5s;
-  color: #fff;
-  background: #ffffff;
-  color: #3aafa9;
-  border: 1px solid #3aafa9;
-  /*box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);*/
-}
-
-.btn-know-more span {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 600;
-  /*font-size: 18px;*/
-  /* letter-spacing: 1px;*/
-}
-
-.btn-know-more i {
-  margin-left: 5px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.btn-know-more:hover {
-  /*transform: translateX(5px);*/
-  background: #3aafa9;
-  color: #fff;
-  cursor: pointer;
-}
-
-#background-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
 }
