@@ -1997,3 +1997,47 @@ select.enquiry-input {
   stroke-dashoffset: 100 !important;
   transition: none !important;
 }
+
+@keyframes highlightEngine {
+  0% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 -15px 40px rgba(255, 204, 0, 0.4);
+  }
+
+  /* Yellow glow */
+  100% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.engine-highlight-pulse .booking-panel {
+  animation: highlightEngine 0.8s ease-out;
+}
+
+@keyframes pulseAndGlow {
+  0% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    box-shadow: 0 -20px 50px rgba(255, 204, 0, 0.5);
+    /* Yellow glow */
+    transform: translateY(-8px) scale(1.01);
+    /* The pulse/bump */
+  }
+
+  100% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.engine-highlight-pulse .booking-panel {
+  animation: pulseAndGlow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: bottom center;
+  will-change: transform, box-shadow;
+}

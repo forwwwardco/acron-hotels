@@ -103,6 +103,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================================
+     GLOBAL BOOK NOW TRIGGERS
+     ========================================================================== */
+  const bookTriggers = document.querySelectorAll('.trigger-book-engine');
+  // Ensure we grab the engine container
+  const bookingEnginePanel = document.getElementById('bookingEngine');
+  const hotelSelect = document.getElementById('select_prop');
+  const checkinInput = document.getElementById('checkin');
+
+  bookTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!bookingEnginePanel) return;
+
+      // 1. Auto-select hotel in the dropdown if a specific resort was clicked
+      const staahId = btn.getAttribute('data-staah-id');
+      if (staahId && hotelSelect) {
+        hotelSelect.value = staahId;
+      }
+
+      // 2. Handle Mobile vs Desktop behaviour
+      if (window.innerWidth < 992) {
+
+        // --- MOBILE BEHAVIOUR ---
+        // Expand the panel natively if it isn't already open. No pulse applied.
+        if (!bookingEnginePanel.classList.contains('engine-expanded')) {
+          const engineToggle = document.getElementById('engineToggle');
+          if (engineToggle) {
+            engineToggle.click(); // Uses your existing toggle logic to change button text
+          }
+        }
+
+      } else {
+
+        // --- DESKTOP BEHAVIOUR ---
+        // Remove and re-add class to allow the animation to trigger multiple times
+        bookingEnginePanel.classList.remove('engine-highlight-pulse');
+
+        // Force a DOM reflow to restart the CSS animation
+        void bookingEnginePanel.offsetWidth;
+
+        bookingEnginePanel.classList.add('engine-highlight-pulse');
+
+        // Focus the check-in date to pull the user's cursor to the panel
+        if (checkinInput) {
+          setTimeout(() => checkinInput.focus(), 150);
+        }
+      }
+    });
+  });
+
+  /* ==========================================================================
      3. ENQUIRY FORM DRAWER
      ========================================================================== */
   const enquiryPanel = document.getElementById("enquiryPanel");

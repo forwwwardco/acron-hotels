@@ -9,7 +9,8 @@ $heroResorts = [
     'link' => '/waterfront',
     'resortKey' => 'waterfront',
     'extraClass' => '',
-    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6'
+    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
+    'staahId' => 'MzAw'
   ],
   [
     'name' => 'Acron Candolim Regina',
@@ -18,7 +19,8 @@ $heroResorts = [
     'link' => '/candolim-regina',
     'resortKey' => 'regina',
     'extraClass' => 'middle-resort-col',
-    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6'
+    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
+    'staahId' => 'Mjk4'
   ],
   [
     'name' => 'Acron Seaway Resort',
@@ -27,7 +29,8 @@ $heroResorts = [
     'link' => '/seaway',
     'resortKey' => 'seaway',
     'extraClass' => '',
-    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA'
+    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
+    'staahId' => 'NzQy'
   ]
 ];
 
@@ -59,7 +62,8 @@ $hotels = [
     'link' => '/waterfront',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
-    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6'
+    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
+    'staahId' => 'MzAw'
   ],
   [
     'id' => 'regina',
@@ -70,7 +74,8 @@ $hotels = [
     'link' => '/candolim-regina',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
-    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6'
+    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
+    'staahId' => 'Mjk4'
   ],
   [
     'id' => 'seaway',
@@ -81,7 +86,8 @@ $hotels = [
     'link' => '/seaway',
     'amenities' => $amenitiesTemplate,
     'images' => $placeholderImages,
-    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA'
+    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
+    'staahId' => 'NzQy'
   ]
 ];
 
@@ -159,7 +165,7 @@ function renderStars($rating)
               </div>
             </div>
             <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
-              <a href="<?= $resort['link'] ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">Book Now</a>
+              <button class="btn btn-book-now hero-btn fw-bold flex-fill text-center trigger-book-engine" data-staah-id="<?= $resort['staahId'] ?>">Book Now</button>
               <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= $resort['resortKey'] ?>">
                 Why Stay Here?
               </button>
@@ -260,7 +266,7 @@ function renderStars($rating)
 
           <div class="hotel-action-buttons">
             <a href="<?= $hotel['link'] ?>" class="btn btn-explore">EXPLORE PROPERTY</a>
-            <a href="/book" class="btn btn-yellow hotel-btn">BOOK NOW</a>
+            <button class="btn btn-yellow hotel-btn trigger-book-engine" data-staah-id="<?= $hotel['staahId'] ?>">BOOK NOW</button>
             <button class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2">
               <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
             </button>
