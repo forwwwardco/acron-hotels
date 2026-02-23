@@ -117,7 +117,9 @@ $videos = [
 </section>
 
 <!-- SIGNATURE AMENITIES -->
+<?php include("v2/components/signature-amenities.php"); ?>
 
+<!-- EXCLUSIVE DEALS -->
 <?php include("v2/components/exclusive-deals.php"); ?>
 
 <!-- GALLERY -->

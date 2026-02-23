@@ -2528,3 +2528,80 @@ select.enquiry-input {
         margin-bottom: 0.5rem;
     }
 }
+
+/* === 17. SIGNATURE AMENITIES SECTION === */
+
+.signature-amenities-section {
+    background-color: var(--lightest-blue);
+}
+
+/* Slider Track Logic (Mirrors Reviews Slider) */
+.amenities-slider {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    scroll-snap-type: x mandatory;
+}
+
+.amenities-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card Styling */
+.amenity-card {
+    flex: 0 0 380px;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    border: 1px solid rgba(45, 51, 74, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures the top image corners adhere to the border radius */
+}
+
+.amenity-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.amenity-content {
+    flex-grow: 1; /* Ensures text blocks stretch to match equal heights if content varies */
+}
+
+/* Specific Decorative Element */
+.amenities-flamingo {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* Desktop Overrides */
+@media (min-width: 992px) {
+    .amenities-flamingo {
+        bottom: -80px;
+        width: 180px;
+    }
+}
+
+/* Mobile Overrides */
+@media (max-width: 991px) {
+    .amenity-card {
+        flex: 0 0 300px;
+    }
+    
+    .amenity-img {
+        height: 220px;
+    }
+}
