@@ -2655,3 +2655,27 @@ select.enquiry-input {
         margin-bottom: 0.5rem;
     }
 }
+/* === 19. HIGHLIGHT AMENITIES SECTION === */
+
+.highlight-amenities-section {
+    background-color: var(--light-blue); 
+}
+
+.highlight-img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Standard rectangle for mobile */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Desktop Overrides */
+@media (min-width: 992px) {
+    .highlight-amenities-section {
+        padding-top: 5rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    .highlight-img {
+        aspect-ratio: 1 / 1; /* Perfectly square for the 3-column desktop grid */
+    }
+}

@@ -10,40 +10,6 @@ if (isset($pageResort)) {
     if ($pageResort === 'regina') $resortBtnClass = 'btn-regina';
     if ($pageResort === 'seaway') $resortBtnClass = 'btn-seaway';
 }
-
-$suitesHeading = "Explore Our Suites";
-
-// Mock data array (can be overridden by the parent page)
-$suitesList = $suitesData ?? [
-    [
-        'id' => 'emerald-suite',
-        'name' => 'Emerald Suite',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ],
-    [
-        'id' => 'royal-suite',
-        'name' => 'Royal Suite',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ]
-];
 ?>
 
 <section class="explore-suites-section py-5 bg-lightest-blue position-relative">

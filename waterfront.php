@@ -21,6 +21,143 @@ $deals = [
   ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
 ];
 
+$galleryHeading = "Browse Gallery";
+$galleryFilters = [
+    'rooms'         => 'ROOMS',
+    'exterior'      => 'EXTERIOR',
+    'restaurant'    => 'RESTAURANT',
+    'common-spaces' => 'COMMON SPACES',
+    'amenities'     => 'AMENITIES'
+];
+// Simulating 8 images per category with varied aspect ratios for the masonry effect
+$galleryItems = [];
+foreach (array_keys($galleryFilters) as $category) {
+    for ($i = 1; $i <= 8; $i++) {
+        // Alternating dimensions purely to demonstrate the masonry effect with placeholders
+        $width = ($i % 2 == 0) ? 600 : 400;
+        $height = ($i % 3 == 0) ? 600 : 400; 
+        
+        $galleryItems[] = [
+            'category' => $category,
+            'thumb'    => "https://placehold.co/{$width}x{$height}",
+            'full'     => "https://placehold.co/1200x800",
+            'alt'      => ucfirst($category) . " Image " . $i,
+            'hidden'   => ($category !== 'rooms') // Hide non-rooms on load
+        ];
+    }
+}
+
+$roomsHeading = "Explore Our Rooms";
+$roomsList = $roomsData ?? [
+    [
+        'id' => 'seaside-room',
+        'name' => 'Seaside Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ],
+    [
+        'id' => 'riverside-room',
+        'name' => 'Riverside Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ],
+    [
+        'id' => 'courtyard-room',
+        'name' => 'Courtyard Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ],
+    [
+        'id' => 'upper-deck-room',
+        'name' => 'Upper Deck Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ]
+];
+
+$suitesHeading = "Explore Our Suites";
+$suitesList = $suitesData ?? [
+    [
+        'id' => 'emerald-suite',
+        'name' => 'Emerald Suite',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ],
+    [
+        'id' => 'royal-suite',
+        'name' => 'Royal Suite',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
+    ]
+];
+
+$highlightsHeading = "Lorem Ipsum";
+$highlightAmenitiesList = $pageHighlights ?? [
+    [
+        'title' => 'Al Fresco',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'image' => 'https://placehold.co/600x600'
+    ],
+    [
+        'title' => 'Board Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'image' => 'https://placehold.co/600x600'
+    ],
+    [
+        'title' => 'River Restaurant',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'image' => 'https://placehold.co/600x600'
+    ]
+];
+
 $pageReviews = [
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular, and the staff went above and beyond to make our anniversary special. Highly recommend for a tranquil Goan getaway.'],
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'We stayed at Seaway and it was brilliant. The proximity to the beach and the massive pool kept the kids entertained all day. The rooms were spotless and the buffet breakfast had a wonderful spread.'],
@@ -132,6 +269,7 @@ $videos = [
 <?php include("v2/components/explore-suites.php"); ?>
 
 <!-- HIGHLIGHTS -->
+<?php include("v2/components/highlight-amenities.php"); ?>
 
 <section class="reviews-section py-5" style="padding-bottom:0!important;">
   <div class="container py-4">

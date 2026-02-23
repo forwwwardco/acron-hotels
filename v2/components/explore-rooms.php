@@ -10,68 +10,6 @@ if (isset($pageResort)) {
     if ($pageResort === 'regina') $resortBtnClass = 'btn-regina';
     if ($pageResort === 'seaway') $resortBtnClass = 'btn-seaway';
 }
-
-$roomsHeading = "Explore Our Rooms";
-
-// Mock data array (can be overridden by the parent page)
-$roomsList = $roomsData ?? [
-    [
-        'id' => 'seaside-room',
-        'name' => 'Seaside Room',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ],
-    [
-        'id' => 'riverside-room',
-        'name' => 'Riverside Room',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ],
-    [
-        'id' => 'courtyard-room',
-        'name' => 'Courtyard Room',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ],
-    [
-        'id' => 'upper-deck-room',
-        'name' => 'Upper Deck Room',
-        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-        'amenities' => [
-            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
-            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
-            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
-        ],
-        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
-        'bookLink' => '#',
-        'learnLink' => '#'
-    ]
-];
 ?>
 
 <section class="explore-rooms-section py-5 bg-white position-relative">

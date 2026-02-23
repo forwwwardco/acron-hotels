@@ -3,7 +3,6 @@
  * Reusable Gallery Component
  */
 
-
 // Centralised Configuration Mapping
 $resortThemeConfig = [
     'waterfront' => [
@@ -21,33 +20,6 @@ $resortThemeConfig = [
 $activeTheme = $resortThemeConfig[$pageResort] ?? [
     'context'   => 'gallery-home'
 ];
-
-$galleryHeading = "Browse Gallery";
-$galleryFilters = [
-    'rooms'         => 'ROOMS',
-    'exterior'      => 'EXTERIOR',
-    'restaurant'    => 'RESTAURANT',
-    'common-spaces' => 'COMMON SPACES',
-    'amenities'     => 'AMENITIES'
-];
-// Simulating 8 images per category with varied aspect ratios for the masonry effect
-$galleryItems = [];
-foreach (array_keys($galleryFilters) as $category) {
-    for ($i = 1; $i <= 8; $i++) {
-        // Alternating dimensions purely to demonstrate the masonry effect with placeholders
-        $width = ($i % 2 == 0) ? 600 : 400;
-        $height = ($i % 3 == 0) ? 600 : 400; 
-        
-        $galleryItems[] = [
-            'category' => $category,
-            'thumb'    => "https://placehold.co/{$width}x{$height}",
-            'full'     => "https://placehold.co/1200x800",
-            'alt'      => ucfirst($category) . " Image " . $i,
-            'hidden'   => ($category !== 'rooms') // Hide non-rooms on load
-        ];
-    }
-}
-
 ?>
 
 <section id="resortGallery" class="resort-gallery py-5 reveal <?php echo $activeTheme['context']; ?>">
