@@ -56,6 +56,20 @@ $roomsList = $roomsData ?? [
         'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
         'bookLink' => '#',
         'learnLink' => '#'
+    ],
+    [
+        'id' => 'upper-deck-room',
+        'name' => 'Upper Deck Room',
+        'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+        'amenities' => [
+            ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+            ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+            ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+            ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+        ],
+        'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+        'bookLink' => '#',
+        'learnLink' => '#'
     ]
 ];
 ?>
@@ -73,6 +87,11 @@ $roomsList = $roomsData ?? [
             $imgOrder  = $isAlternate ? 'order-1' : 'order-1 order-lg-2';
             $imgWrapperPadding = $isAlternate ? 'pe-lg-4' : 'ps-lg-4';
         ?>
+        
+      <?php if ($index > 0): ?>
+        <div class="hotel-section-divider reveal"></div>
+      <?php endif; ?>
+
 
             <div class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal">
                 <div class="col-lg-6 <?= $textOrder ?>">
