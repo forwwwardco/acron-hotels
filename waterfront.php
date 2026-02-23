@@ -121,8 +121,10 @@ $videos = [
 <?php include("v2/components/exclusive-deals.php"); ?>
 
 <!-- GALLERY -->
+<?php include("v2/components/gallery.php"); ?>
 
 <!-- OUR ROOMS -->
+<?php include("v2/components/explore-rooms.php"); ?>
 
 <!-- OUR SUITES -->
 

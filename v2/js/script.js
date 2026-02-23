@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================================
      5. EXCLUSIVE DEALS FILTER
      ========================================================================== */
-  const filterPills = document.querySelectorAll(".filter-pill");
+  const filterPills = document.querySelectorAll(".exclusive-deals .filter-pill");
   const dealCards = document.querySelectorAll(".deal-card");
 
   if (filterPills.length && dealCards.length) {
@@ -337,6 +337,58 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
 
+      });
+    });
+  }
+
+  /* ==========================================================================
+     9. GALLERY FILTER & LIGHTBOX
+     ========================================================================== */
+  
+  // Initialize GLightbox
+  const galleryLightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+
+  // Scoped Gallery Filtering logic
+  const galleryPills = document.querySelectorAll(".gallery-filter-pill");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  if (galleryPills.length && galleryItems.length) {
+    // Initial State Prep
+    galleryItems.forEach(item => item.classList.contains("d-none") && item.classList.add("fade-out"));
+    let isGalleryAnimating = false;
+
+    galleryPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        if (isGalleryAnimating || pill.classList.contains("active")) return;
+        isGalleryAnimating = true;
+
+        // Toggle Active Pill
+        galleryPills.forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
+
+        const targetCategory = pill.dataset.filter;
+
+        // Fade out current items
+        galleryItems.forEach(item => !item.classList.contains("d-none") && item.classList.add("fade-out"));
+
+        // Wait for fade-out (300ms), then swap and fade in
+        setTimeout(() => {
+          galleryItems.forEach(item => {
+            if (item.dataset.category === targetCategory) {
+              item.classList.remove("d-none");
+              void item.offsetWidth; // Force reflow
+              item.classList.remove("fade-out");
+            } else {
+              item.classList.add("d-none", "fade-out");
+            }
+          });
+          setTimeout(() => isGalleryAnimating = false, 300); // Unlock
+        }, 300);
       });
     });
   }

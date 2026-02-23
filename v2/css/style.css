@@ -2414,3 +2414,117 @@ select.enquiry-input {
     padding: 10px 5px;
   }
 }
+
+/* === 15. GALLERY SECTION === */
+.resort-gallery {
+  background-color: var(--white);
+}
+.resort-gallery.gallery-waterfront {
+  background-color: var(--lightest-blue)!important;
+}
+
+/* Mobile: 2-Column Square Grid */
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--white);
+    /* Animation classes matching your deals setup */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px) !important; /* Slight lift on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05); /* Soft zoom effect inside the box */
+}
+
+.gallery-item.fade-out {
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+}
+
+/* Desktop: 3-Column Masonry */
+@media (min-width: 992px) {
+    .gallery-grid-container {
+        display: block; /* Disable CSS grid to allow columns */
+        column-count: 3;
+        column-gap: 20px;
+    }
+
+    .gallery-item {
+        display: inline-block; /* Prevents items breaking across columns */
+        width: 100%;
+        margin-bottom: 20px;
+        aspect-ratio: auto; /* Removes the 1:1 constraint for masonry */
+    }
+    
+    .gallery-img {
+        height: auto; /* Allows images to dictate their natural height */
+    }
+}
+
+/* === 16. EXPLORE ROOMS SECTION === */
+
+.room-carousel {
+    height: 480px; /* Slightly taller aspect ratio for rooms */
+    width: 100%;
+    overflow: hidden;
+}
+
+.btn-outline-room {
+    background-color: transparent;
+    border: 1px solid var(--blue-grey);
+    color: var(--blue-grey);
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-room:hover {
+    background-color: var(--blue-grey);
+    color: var(--white);
+}
+
+/* Room Desktop Spacing */
+@media (min-width: 992px) {
+    .explore-rooms-section {
+        padding-top: 3rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    .room-image-composition.ps-lg-4 {
+        padding-left: 2rem !important; /* Forces a nice gap between text and image on desktop */
+    }
+}
+
+/* Room Mobile Adjustments */
+@media (max-width: 991px) {
+    .room-carousel {
+        height: 350px;
+    }
+    
+    .room-amenities .col-6 {
+        margin-bottom: 0.5rem;
+    }
+}
