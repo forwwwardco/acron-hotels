@@ -28,6 +28,15 @@ $resortThemeConfig = [
 $activeTheme = $resortThemeConfig[$pageResort] ?? [
     'context'   => 'nav-home'
 ];
+
+$direct_booking_benefits = [
+    "Best Rate Guarantee",
+    "Priority Room Upgrades",
+    "Flexible Cancellations",
+    "Early Check-in",
+    "Late Check-out",
+    "Exclusive Welcome Drink"
+];
 ?>
 
 <header class="acron-header shadow-sm fixed-top <?php echo $activeTheme['context']; ?>">
@@ -110,28 +119,33 @@ $activeTheme = $resortThemeConfig[$pageResort] ?? [
                         </li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Exclusive Deals</a></li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="whyBookDropdown" role="button" aria-expanded="false">
                                 Why Book Directly?
                             </a>
+
                             <ul class="dropdown-menu border-0 desktop-tooltip-menu p-3" aria-labelledby="whyBookDropdown">
-                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Best Rate Guarantee</li>
-                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Priority Room Upgrades</li>
-                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Flexible Cancellations</li>
-                                <li class="mb-2"><i class="fa-solid fa-check text-yellow me-2"></i> Early Check-in / Late Check-out</li>
-                                <li class="mb-0"><i class="fa-solid fa-check text-yellow me-2"></i> Exclusive Welcome Drink</li>
+                                <?php foreach ($direct_booking_benefits as $index => $benefit): ?>
+                                    <?php $is_last = ($index === array_key_last($direct_booking_benefits)); ?>
+                                    <li class="<?= $is_last ? 'mb-0' : 'mb-2' ?>">
+                                        <i class="fa-solid fa-check text-yellow me-2"></i> <?= $benefit ?>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileWhyBookMenu" role="button" aria-expanded="false" aria-controls="mobileWhyBookMenu">
                                 Why Book Directly?
                             </a>
+
                             <div class="collapse d-lg-none" id="mobileWhyBookMenu">
                                 <ul class="list-unstyled ps-4 mt-2 mb-3 why-book-mobile-list">
-                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Best Rate Guarantee</li>
-                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Priority Room Upgrades</li>
-                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Flexible Cancellations</li>
-                                    <li class="mb-2 small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Early Check-in / Late Check-out</li>
-                                    <li class="small fw-medium text-blue-grey"><i class="fa-solid fa-check text-yellow me-2"></i> Exclusive Welcome Drink</li>
+                                    <?php foreach ($direct_booking_benefits as $index => $benefit): ?>
+                                        <?php $is_last = ($index === array_key_last($direct_booking_benefits)); ?>
+                                        <li class="<?= $is_last ? '' : 'mb-2' ?> small fw-medium text-blue-grey">
+                                            <i class="fa-solid fa-check text-yellow me-2"></i> <?= $benefit ?>
+                                        </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </li>
