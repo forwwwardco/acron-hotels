@@ -129,6 +129,7 @@ $videos = [
 <?php include("v2/components/explore-rooms.php"); ?>
 
 <!-- OUR SUITES -->
+<?php include("v2/components/explore-suites.php"); ?>
 
 <!-- HIGHLIGHTS -->
 

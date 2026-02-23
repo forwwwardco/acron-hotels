@@ -2605,3 +2605,53 @@ select.enquiry-input {
         height: 220px;
     }
 }
+
+/* === 18. EXPLORE SUITES SECTION === */
+
+    .explore-suites-section {
+      background-color: var(--lightest-blue);
+    }
+
+.suite-carousel {
+    height: 480px; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.btn-outline-suite {
+    background-color: transparent;
+    border: 1px solid var(--blue-grey);
+    color: var(--blue-grey);
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-suite:hover {
+    background-color: var(--blue-grey);
+    color: var(--white);
+}
+
+/* Suite Desktop Spacing */
+@media (min-width: 992px) {
+    .explore-suites-section {
+        padding-top: 3rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    .suite-image-composition.ps-lg-4 {
+        padding-left: 2rem !important; 
+    }
+}
+
+/* Suite Mobile Adjustments */
+@media (max-width: 991px) {
+    .suite-carousel {
+        height: 350px;
+    }
+    
+    .suite-amenities .col-6 {
+        margin-bottom: 0.5rem;
+    }
+}
