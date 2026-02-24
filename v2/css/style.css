@@ -2419,263 +2419,359 @@ select.enquiry-input {
 .resort-gallery {
   background-color: var(--white);
 }
+
 .resort-gallery.gallery-waterfront {
-  background-color: var(--lightest-blue)!important;
+  background-color: var(--lightest-blue) !important;
 }
 
 /* Mobile: 2-Column Square Grid */
 .gallery-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .gallery-item {
-    display: block;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 12px;
-    background-color: var(--white);
-    /* Animation classes matching your deals setup */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 1;
-    transform: translateY(0);
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--white);
+  /* Animation classes matching your deals setup */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .gallery-item:hover {
-    transform: translateY(-3px) !important; /* Slight lift on hover */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(-3px) !important;
+  /* Slight lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .gallery-item:hover .gallery-img {
-    transform: scale(1.05); /* Soft zoom effect inside the box */
+  transform: scale(1.05);
+  /* Soft zoom effect inside the box */
 }
 
 .gallery-item.fade-out {
-    opacity: 0;
-    transform: translateY(15px);
-    pointer-events: none;
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
 }
 
 /* Desktop: 3-Column Masonry */
 @media (min-width: 992px) {
-    .gallery-grid-container {
-        display: block; /* Disable CSS grid to allow columns */
-        column-count: 3;
-        column-gap: 20px;
-    }
+  .gallery-grid-container {
+    display: block;
+    /* Disable CSS grid to allow columns */
+    column-count: 3;
+    column-gap: 20px;
+  }
 
-    .gallery-item {
-        display: inline-block; /* Prevents items breaking across columns */
-        width: 100%;
-        margin-bottom: 20px;
-        aspect-ratio: auto; /* Removes the 1:1 constraint for masonry */
-    }
-    
-    .gallery-img {
-        height: auto; /* Allows images to dictate their natural height */
-    }
+  .gallery-item {
+    display: inline-block;
+    /* Prevents items breaking across columns */
+    width: 100%;
+    margin-bottom: 20px;
+    aspect-ratio: auto;
+    /* Removes the 1:1 constraint for masonry */
+  }
+
+  .gallery-img {
+    height: auto;
+    /* Allows images to dictate their natural height */
+  }
 }
 
 /* === 16. EXPLORE ROOMS SECTION === */
 
 .room-carousel {
-    height: 480px; /* Slightly taller aspect ratio for rooms */
-    width: 100%;
-    overflow: hidden;
+  height: 480px;
+  /* Slightly taller aspect ratio for rooms */
+  width: 100%;
+  overflow: hidden;
 }
 
 .btn-outline-room {
-    background-color: transparent;
-    border: 1px solid var(--blue-grey);
-    color: var(--blue-grey);
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-    transition: all var(--transition-speed);
+  background-color: transparent;
+  border: 1px solid var(--blue-grey);
+  color: var(--blue-grey);
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-speed);
 }
 
 .btn-outline-room:hover {
-    background-color: var(--blue-grey);
-    color: var(--white);
+  background-color: var(--blue-grey);
+  color: var(--white);
 }
 
 /* Room Desktop Spacing */
 @media (min-width: 992px) {
-    .explore-rooms-section {
-        padding-top: 3rem !important;
-        padding-bottom: 6rem !important;
-    }
-    
-    .room-image-composition.ps-lg-4 {
-        padding-left: 2rem !important; /* Forces a nice gap between text and image on desktop */
-    }
+  .explore-rooms-section {
+    padding-top: 3rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  .room-image-composition.ps-lg-4 {
+    padding-left: 2rem !important;
+    /* Forces a nice gap between text and image on desktop */
+  }
 }
 
 /* Room Mobile Adjustments */
 @media (max-width: 991px) {
-    .room-carousel {
-        height: 350px;
-    }
-    
-    .room-amenities .col-6 {
-        margin-bottom: 0.5rem;
-    }
+  .room-carousel {
+    height: 350px;
+  }
+
+  .room-amenities .col-6 {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* === 17. SIGNATURE AMENITIES SECTION === */
 
 .signature-amenities-section {
-    background-color: var(--lightest-blue);
+  background-color: var(--lightest-blue);
 }
 
 /* Slider Track Logic (Mirrors Reviews Slider) */
 .amenities-slider {
-    display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-top: 15px;
-    padding-bottom: 30px;
-    scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  scroll-snap-type: x mandatory;
 }
 
 .amenities-slider::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Card Styling */
 .amenity-card {
-    flex: 0 0 380px;
-    border-radius: 12px;
-    scroll-snap-align: center;
-    border: 1px solid rgba(45, 51, 74, 0.05);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* Ensures the top image corners adhere to the border radius */
+  flex: 0 0 380px;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  border: 1px solid rgba(45, 51, 74, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Ensures the top image corners adhere to the border radius */
 }
 
 .amenity-img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
 }
 
 .amenity-content {
-    flex-grow: 1; /* Ensures text blocks stretch to match equal heights if content varies */
+  flex-grow: 1;
+  /* Ensures text blocks stretch to match equal heights if content varies */
 }
 
 /* Specific Decorative Element */
 .amenities-flamingo {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-    z-index: 0;
-    opacity: 0.9;
-    pointer-events: none;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 /* Desktop Overrides */
 @media (min-width: 992px) {
-    .amenities-flamingo {
-        bottom: -80px;
-        width: 180px;
-    }
+  .amenities-flamingo {
+    bottom: -80px;
+    width: 180px;
+  }
 }
 
 /* Mobile Overrides */
 @media (max-width: 991px) {
-    .amenity-card {
-        flex: 0 0 300px;
-    }
-    
-    .amenity-img {
-        height: 220px;
-    }
+  .amenity-card {
+    flex: 0 0 300px;
+  }
+
+  .amenity-img {
+    height: 220px;
+  }
 }
 
 /* === 18. EXPLORE SUITES SECTION === */
 
-    .explore-suites-section {
-      background-color: var(--lightest-blue);
-    }
+.explore-suites-section {
+  background-color: var(--lightest-blue);
+}
 
 .suite-carousel {
-    height: 480px; 
-    width: 100%;
-    overflow: hidden;
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .btn-outline-suite {
-    background-color: transparent;
-    border: 1px solid var(--blue-grey);
-    color: var(--blue-grey);
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-    font-size: 0.75rem;
-    transition: all var(--transition-speed);
+  background-color: transparent;
+  border: 1px solid var(--blue-grey);
+  color: var(--blue-grey);
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  transition: all var(--transition-speed);
 }
 
 .btn-outline-suite:hover {
-    background-color: var(--blue-grey);
-    color: var(--white);
+  background-color: var(--blue-grey);
+  color: var(--white);
 }
 
 /* Suite Desktop Spacing */
 @media (min-width: 992px) {
-    .explore-suites-section {
-        padding-top: 3rem !important;
-        padding-bottom: 6rem !important;
-    }
-    
-    .suite-image-composition.ps-lg-4 {
-        padding-left: 2rem !important; 
-    }
+  .explore-suites-section {
+    padding-top: 3rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  .suite-image-composition.ps-lg-4 {
+    padding-left: 2rem !important;
+  }
 }
 
 /* Suite Mobile Adjustments */
 @media (max-width: 991px) {
-    .suite-carousel {
-        height: 350px;
-    }
-    
-    .suite-amenities .col-6 {
-        margin-bottom: 0.5rem;
-    }
+  .suite-carousel {
+    height: 350px;
+  }
+
+  .suite-amenities .col-6 {
+    margin-bottom: 0.5rem;
+  }
 }
+
 /* === 19. HIGHLIGHT AMENITIES SECTION === */
 
 .highlight-amenities-section {
-    background-color: var(--light-blue); 
+  background-color: var(--light-blue);
 }
 
 .highlight-img {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* Standard rectangle for mobile */
-    object-fit: cover;
-    border-radius: 12px;
+  min-height: 300px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  /* Standard rectangle for mobile */
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* Desktop Overrides */
 @media (min-width: 992px) {
-    .highlight-amenities-section {
-        padding-top: 5rem !important;
-        padding-bottom: 6rem !important;
-    }
-    
-    .highlight-img {
-        aspect-ratio: 1 / 1; /* Perfectly square for the 3-column desktop grid */
-    }
+  .highlight-amenities-section {
+    padding-top: 5rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  .highlight-img {
+    aspect-ratio: 1 / 1;
+    /* Perfectly square for the 3-column desktop grid */
+  }
+}
+
+.reviews-section.bg-lightest-blue {
+  background-color: var(--lightest-blue);
+}
+
+/* === 20. TRIPADVISOR SUMMARY === */
+
+.reviews-section.bg-lightest-blue {
+  background-color: var(--lightest-blue);
+}
+
+.review-summary-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 1.5rem 0 2rem 0; /* Consistent spacing below heading and above slider */
+}
+
+.tripadvisor-pill {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid var(--light-blue); /* Uses your theme's light blue */
+  border-radius: 50px;
+  padding: 8px 24px 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.ta-icon-circle {
+  background-color: #34E0A1; /* TripAdvisor brand green */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+/* Forces the image to centre perfectly, overriding the .me-2 class */
+.ta-icon-circle img.review-badge-icon {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  margin: 0 !important;
+}
+
+.ta-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.ta-rating {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue-grey);
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.ta-count {
+  font-size: 15px;
+  color: var(--blue-grey);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.ta-badge-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .review-summary-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
