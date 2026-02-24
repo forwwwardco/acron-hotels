@@ -202,10 +202,10 @@ $videos = [
         </p>
 
         <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
-          <button class="btn btn-book-now hero-btn btn-waterfront fw-bold trigger-book-engine" data-staah-id="MzAw">
+          <button class="btn btn-book-now hero-btn btn-<?= $pageResort ?> fw-bold trigger-book-engine" data-staah-id="MzAw">
             BOOK NOW
           </button>
-          <button class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="waterfront">
+          <button class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= $pageResort ?>">
             WHY STAY HERE?
           </button>
         </div>
@@ -252,6 +252,7 @@ $videos = [
     </div>
   </div>
 </section>
+<?php include("v2/components/hero-tooltip-overlay.php"); ?>
 
 <!-- SIGNATURE AMENITIES -->
 <?php include("v2/components/signature-amenities.php"); ?>

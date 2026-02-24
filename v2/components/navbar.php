@@ -78,7 +78,7 @@ $direct_booking_benefits = [
                 <img src="https://placehold.co/200x60" alt="Acron Hotels" class="img-fluid main-logo">
             </a>
 
-            <div class="ms-auto me-3 d-lg-none">
+            <div class="ms-auto d-lg-none">
                 <a href="#" class="btn btn-book-now fw-bold px-4 py-2 trigger-book-engine">BOOK NOW</a>
             </div>
 

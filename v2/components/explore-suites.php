@@ -1,39 +1,52 @@
 <?php
+
 /**
  * Reusable Suites Component
  */
 
 // Inherit $pageResort context if set, otherwise default to yellow theme
 $resortBtnClass = 'btn-yellow';
+$resortSuitesClass = '';
+
 if (isset($pageResort)) {
-    if ($pageResort === 'waterfront') $resortBtnClass = 'btn-waterfront';
-    if ($pageResort === 'regina') $resortBtnClass = 'btn-regina';
-    if ($pageResort === 'seaway') $resortBtnClass = 'btn-seaway';
+    if ($pageResort === 'waterfront') {
+        $resortBtnClass = 'btn-waterfront';
+        $resortSuitesClass = 'suite-waterfront';
+    }
+    if ($pageResort === 'regina') {
+        $resortBtnClass = 'btn-regina';
+        $resortSuitesClass = 'suite-regina';
+    }
+    if ($pageResort === 'seaway') {
+        $resortBtnClass = 'btn-seaway';
+        $resortSuitesClass = 'suite-seaway';
+    }
 }
 ?>
 
-<section class="explore-suites-section py-5 bg-lightest-blue position-relative">
+<section class="explore-suites-section py-5 bg-lightest-blue position-relative <?= $resortSuitesClass ?>">
+    <img src="v2/assets/shell.png" class="decorative-shell-2" alt="Decorative Scallop Shell">
     <div class="container py-4 position-relative z-1">
         <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading"><?= $suitesHeading; ?></h2>
 
         <?php foreach ($suitesList as $index => $suite):
             // Alternate layouts for desktop
             $isAlternate = ($index % 2 !== 0);
-            
+
             // Swap ordering AND padding based on row index
             $textOrder = $isAlternate ? 'order-2 ps-lg-5' : 'order-2 order-lg-1 pe-lg-5';
             $imgOrder  = $isAlternate ? 'order-1' : 'order-1 order-lg-2';
             $imgWrapperPadding = $isAlternate ? 'pe-lg-4' : 'ps-lg-4';
         ?>
-        
-        <?php if ($index > 0): ?>
-            <div class="hotel-section-divider reveal"></div>
-        <?php endif; ?>
+
+            <?php if ($index > 0): ?>
+                <div class="hotel-section-divider reveal"></div>
+            <?php endif; ?>
 
             <div class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 suite-row reveal">
                 <div class="col-lg-6 <?= $textOrder ?>">
                     <h3 class="fw-bold text-blue-grey mb-3 fs-3"><?= $suite['name'] ?></h3>
-                    
+
                     <p class="text-blue-grey opacity-75 mb-4 small fw-medium lh-lg <?= $isAlternate ? '' : 'pe-lg-4' ?>">
                         <?= $suite['description'] ?>
                     </p>
@@ -56,7 +69,7 @@ if (isset($pageResort)) {
                 <div class="col-lg-6 <?= $imgOrder ?>">
                     <div class="suite-image-composition position-relative <?= $imgWrapperPadding ?>">
                         <div id="<?= $suite['id'] ?>Carousel" class="carousel slide suite-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
-                            
+
                             <div class="carousel-loader">
                                 <svg viewBox="0 0 36 36">
                                     <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
@@ -78,13 +91,13 @@ if (isset($pageResort)) {
                                 <button class="promo-control-btn border-0 bg-transparent d-flex align-items-center" type="button" data-bs-target="#<?= $suite['id'] ?>Carousel" data-bs-slide="prev">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </button>
-                                
+
                                 <div class="carousel-indicators promo-indicators position-static m-0">
                                     <?php foreach ($suite['images'] as $imgIndex => $imgSrc): ?>
                                         <button type="button" data-bs-target="#<?= $suite['id'] ?>Carousel" data-bs-slide-to="<?= $imgIndex ?>" class="<?= $imgIndex === 0 ? 'active' : '' ?>" aria-label="Slide <?= $imgIndex + 1 ?>"></button>
                                     <?php endforeach; ?>
                                 </div>
-                                
+
                                 <button class="promo-control-btn border-0 bg-transparent d-flex align-items-center" type="button" data-bs-target="#<?= $suite['id'] ?>Carousel" data-bs-slide="next">
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </button>

@@ -13,6 +13,7 @@ if (isset($pageResort)) {
 ?>
 
 <section class="explore-rooms-section py-5 bg-white position-relative">
+    <img src="v2/assets/frond.png" class="decorative-frond" alt="Decorative Palm Frond">
     <div class="container py-4 position-relative z-1">
         <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading"><?= $roomsHeading; ?></h2>
 
@@ -31,6 +32,9 @@ if (isset($pageResort)) {
       <?php endif; ?>
 
             <div class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal">
+                <?php if ($index === 2): ?>
+                    <img src="v2/assets/poolring.png" class="decorative-poolring" alt="Decorative Pool Ring">
+                <?php endif; ?>
                 <div class="col-lg-6 <?= $textOrder ?>">
                     <h3 class="fw-bold text-blue-grey mb-3 fs-3"><?= $room['name'] ?></h3>
                     
