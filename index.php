@@ -1,22 +1,32 @@
 <?php
 $pageResort = '';
 
-$amenitiesTemplate = ['Xxxxxxxx Xxxx', 'Xxx & Xxx', 'Xxxxxxxxxxx Xxxxxxxx', 'Xxxxx Xxxx & Xxxxx', 'Xxxxxxxx Xxxx & Xxxxxxx'];
-$placeholderImages = ['https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400', 'https://placehold.co/600x400'];
+$h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
 
 $hotels = [
   [
     'id' => 'waterfront',
     'name' => 'Acron Waterfront Resort',
     'location' => 'BAGA, GOA',
-    'heroTagline' => 'Baga, Goa',
-    'heroImage' => 'https://placehold.co/600x400', // Image for Hero
+    'heroImage' => 'https://placehold.co/600x400',
     'heroExtraClass' => '',
     'dotClass' => 'dot-waterfront',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => './waterfront.php',
-    'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages, // Images for Carousel
+    'amenities' => [
+      'Xxxxxxxx Xxxx',
+      'Xxx & Xxx',
+      'Xxxxxxxxxxx Xxxxxxxx',
+      'Xxxxx Xxxx & Xxxxx',
+      'Xxxxxxxx Xxxx & Xxxxxxx'
+    ],
+    'images' => [
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400'
+    ],
     'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
     'staahId' => 'MzAw',
     'walkthroughLink' => '#',
@@ -28,14 +38,25 @@ $hotels = [
     'id' => 'regina',
     'name' => 'Acron Candolim Regina',
     'location' => 'CANDOLIM, GOA',
-    'heroTagline' => 'Candolim, Goa',
     'heroImage' => 'https://placehold.co/600x400',
     'heroExtraClass' => 'middle-resort-col',
     'dotClass' => 'dot-regina',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => './candolim-regina.php',
-    'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages,
+    'amenities' => [
+      'Xxxxxxxx Xxxx',
+      'Xxx & Xxx',
+      'Xxxxxxxxxxx Xxxxxxxx',
+      'Xxxxx Xxxx & Xxxxx',
+      'Xxxxxxxx Xxxx & Xxxxxxx'
+    ],
+    'images' => [
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400'
+    ],
     'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
     'staahId' => 'Mjk4',
     'walkthroughLink' => '#',
@@ -47,14 +68,25 @@ $hotels = [
     'id' => 'seaway',
     'name' => 'Acron Seaway Resort',
     'location' => 'CANDOLIM, GOA',
-    'heroTagline' => 'Candolim, Goa',
     'heroImage' => 'https://placehold.co/600x400',
     'heroExtraClass' => '',
     'dotClass' => 'dot-seaway',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'link' => './seaway.php',
-    'amenities' => $amenitiesTemplate,
-    'images' => $placeholderImages,
+    'amenities' => [
+      'Xxxxxxxx Xxxx',
+      'Xxx & Xxx',
+      'Xxxxxxxxxxx Xxxxxxxx',
+      'Xxxxx Xxxx & Xxxxx',
+      'Xxxxxxxx Xxxx & Xxxxxxx'
+    ],
+    'images' => [
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400',
+      'https://placehold.co/600x400'
+    ],
     'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
     'staahId' => 'NzQy',
     'walkthroughLink' => '#',
@@ -71,17 +103,14 @@ $filterData = [
   'deal-pack-3' => 'WINTER LUXURY'
 ];
 $deals = [
-  // SUMMER OFFERS
   ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
   ['category' => 'deal-pack-1', 'hotel' => 'Acron Candolim Regina', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
   ['category' => 'deal-pack-1', 'hotel' => 'Acron Seaway Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
 
-  // MONSOON MAGIC
   ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
   ['category' => 'deal-pack-2', 'hotel' => 'Acron Candolim Regina', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
   ['category' => 'deal-pack-2', 'hotel' => 'Acron Seaway Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
 
-  // WINTER ESCAPES
   ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
   ['category' => 'deal-pack-3', 'hotel' => 'Acron Candolim Regina', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
   ['category' => 'deal-pack-3', 'hotel' => 'Acron Seaway Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
@@ -120,7 +149,7 @@ $videos = [
   <div class="hero-top-bar bg-white py-3 py-lg-4 border-bottom">
     <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
       <h1 class="hero-h1 text-blue-grey fw-bold m-0">
-        GOA'S FINEST RIVER, SEA & VILLAGE STAYS<br>
+        <?= $h1; ?><br>
       </h1>
       <div class="ta-badge-wrapper">
         <img src="https://placehold.co/100x100" alt="TripAdvisor Travellers' Choice" class="ta-badge-img">
@@ -140,7 +169,7 @@ $videos = [
               <div class="resort-top">
                 <h2 class="resort-h2 fw-bold mb-2"><?= $hotel['name'] ?></h2>
                 <div class="d-flex align-items-center gap-3">
-                  <p class="resort-tagline mb-0 h6"><?= $hotel['heroTagline'] ?></p>
+                  <p class="resort-tagline mb-0 h6"><?= $hotel['location'] ?></p>
                   <a href="<?= $hotel['mapLink'] ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none">
                     <i class="fa-solid fa-location-dot"></i> Show on Map
                   </a>
