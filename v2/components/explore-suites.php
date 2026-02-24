@@ -70,12 +70,8 @@ if (isset($pageResort)) {
                     <div class="suite-image-composition position-relative <?= $imgWrapperPadding ?>">
                         <div id="<?= $suite['id'] ?>Carousel" class="carousel slide suite-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
 
-                            <div class="carousel-loader">
-                                <svg viewBox="0 0 36 36">
-                                    <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
-                                    <circle class="loader-track" cx="18" cy="18" r="16"></circle>
-                                </svg>
-                            </div>
+                            <?php include("v2/components/carousel-loader.php"); ?>
+
 
                             <div class="carousel-inner h-100 rounded-4 shadow-sm">
                                 <?php foreach ($suite['images'] as $imgIndex => $imgSrc): ?>

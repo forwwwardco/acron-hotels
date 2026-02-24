@@ -1,6 +1,8 @@
 <?php
 $pageResort = 'waterfront';
 
+$h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
+
 $dealsHeading = "Waterfront Deals, Just For You";
 $filterData = [
   'deal-pack-1' => 'COLLECTION A',
@@ -175,12 +177,16 @@ $videos = [
 ];
 ?>
 
+<!-- HEADER -->
 <?php include("v2/header.php"); ?>
 
+<!-- BOOKING ENGINE -->
 <?php include("v2/components/booking-engine.php"); ?>
+
+<!-- ENQUIRY FORM -->
 <?php include("v2/components/enquiry-form.php"); ?>
 
-<!-- WATERFRONT HERO -->
+<!-- HERO -->
 <section class="resort-hero-wrapper position-relative overflow-hidden">
   <div class="hero-content-overlay d-flex align-items-center justify-content-center text-center">
     <div class="container">
@@ -252,6 +258,8 @@ $videos = [
     </div>
   </div>
 </section>
+
+<!-- HERO TOOLTIP -->
 <?php include("v2/components/hero-tooltip-overlay.php"); ?>
 
 <!-- SIGNATURE AMENITIES -->
@@ -272,6 +280,7 @@ $videos = [
 <!-- HIGHLIGHTS -->
 <?php include("v2/components/highlight-amenities.php"); ?>
 
+<!-- REVIEWS -->
 <section class="reviews-section py-5 bg-lightest-blue" style="padding-bottom:0!important;">
   <div class="container py-4" style="padding-bottom: 0!important;">
     <h2 class="text-center fw-bold text-blue-grey mb-2 reveal section-heading">What Our Guests Say</h2>
@@ -294,22 +303,14 @@ $videos = [
   <?php include("v2/components/reviews-slider.php"); ?>
 </section>
 
-<!-- VIDEO SLIDER --><?php include("v2/components/video-carousel.php"); ?>
+<!-- VIDEO SLIDER -->
+<?php include("v2/components/video-carousel.php"); ?>
 
+<!-- ACRON HOMES CROSSLINK -->
 <?php include("v2/components/acron-homes-crosslink.php"); ?>
 
+<!-- ACRON HOTELS LEGACY -->
 <?php include("v2/components/acron-hotels-legacy.php"); ?>
 
+<!-- FOOTER -->
 <?php include("v2/footer.php"); ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-
-<?php include("footer-tracking.php"); ?>
-</body>
-
-</html>

@@ -22,12 +22,8 @@ $crossPromoData = [
             <div class="col-lg-5">
                 <div id="<?= $crossPromoData['id'] ?>" class="carousel slide rounded-4 shadow overflow-hidden position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
 
-                    <div class="carousel-loader">
-                        <svg viewBox="0 0 36 36">
-                            <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
-                            <circle class="loader-track" cx="18" cy="18" r="16"></circle>
-                        </svg>
-                    </div>
+                    <?php include("v2/components/carousel-loader.php"); ?>
+
 
                     <div class="carousel-inner">
                         <?php foreach ($crossPromoData['images'] as $index => $imgUrl): ?>
