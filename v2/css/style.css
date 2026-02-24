@@ -2318,7 +2318,7 @@ select.enquiry-input {
 
 /* Scaling the heading for a true Hero feel */
 .hero-text-box .resort-h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 1px;
   line-height: 1.1;
 }
@@ -2410,7 +2410,7 @@ select.enquiry-input {
   .resort-hero-wrapper .hero-btn,
   .resort-hero-wrapper .btn-outline-hero {
     min-width: 140px;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     padding: 10px 5px;
   }
 }
@@ -2635,7 +2635,7 @@ select.enquiry-input {
   color: var(--blue-grey);
   border-radius: 6px;
   letter-spacing: 0.5px;
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
   transition: all var(--transition-speed);
 }
 
@@ -2774,4 +2774,16 @@ select.enquiry-input {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+/* === 21. VIDEO CAROUSEL THEMES === */
+
+/* Resort Themes */
+.yt-embed-waterfront,
+.yt-embed-regina,
+.yt-embed-seaway {
+    background-color: var(--lightest-blue)!important;
+}
+.yt-embed-home {
+    background-color: var(--white);
 }

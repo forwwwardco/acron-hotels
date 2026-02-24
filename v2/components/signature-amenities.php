@@ -52,7 +52,7 @@ $amenitiesList = $pageAmenities ?? [
 
 <section class="signature-amenities-section py-5 position-relative bg-lightest-blue overflow-hidden">
     <div class="container py-4 position-relative z-1">
-        <h2 class="text-center fw-bold text-blue-grey mb-5 reveal section-heading">
+        <h2 class="text-center fw-bold text-blue-grey reveal section-heading">
             <?= $amenitiesHeading; ?>
         </h2>
     </div>

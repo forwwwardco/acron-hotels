@@ -274,7 +274,7 @@ $videos = [
 <section class="reviews-section py-5 bg-lightest-blue" style="padding-bottom:0!important;">
   <div class="container py-4" style="padding-bottom: 0!important;">
     <h2 class="text-center fw-bold text-blue-grey mb-2 reveal section-heading">What Our Guests Say</h2>
-    
+
     <div class="review-summary-wrapper reveal">
       <div class="tripadvisor-pill">
         <div class="ta-icon-circle">
@@ -285,7 +285,7 @@ $videos = [
           <span class="ta-count">from 2,379 reviews</span>
         </div>
       </div>
-      
+
       <img src="https://placehold.co/200x200" alt="Travellers' Choice Badge" class="ta-badge-image shadow-sm">
     </div>
   </div>
@@ -293,7 +293,7 @@ $videos = [
   <?php include("v2/components/reviews-slider.php"); ?>
 </section>
 
-<!-- VIDEO SLIDER -->
+<!-- VIDEO SLIDER --><?php include("v2/components/video-carousel.php"); ?>
 
 <?php include("v2/components/acron-homes-crosslink.php"); ?>
 

@@ -30,7 +30,6 @@ if (isset($pageResort)) {
         <div class="hotel-section-divider reveal"></div>
       <?php endif; ?>
 
-
             <div class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal">
                 <div class="col-lg-6 <?= $textOrder ?>">
                     <h3 class="fw-bold text-blue-grey mb-3 fs-3"><?= $room['name'] ?></h3>
@@ -58,6 +57,13 @@ if (isset($pageResort)) {
                     <div class="room-image-composition position-relative <?= $imgWrapperPadding ?>">
                         <div id="<?= $room['id'] ?>Carousel" class="carousel slide room-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
                             
+                            <div class="carousel-loader">
+                                <svg viewBox="0 0 36 36">
+                                    <circle class="loader-bg" cx="18" cy="18" r="16"></circle>
+                                    <circle class="loader-track" cx="18" cy="18" r="16"></circle>
+                                </svg>
+                            </div>
+
                             <div class="carousel-inner h-100 rounded-4 shadow-sm">
                                 <?php foreach ($room['images'] as $imgIndex => $imgSrc): ?>
                                     <div class="carousel-item <?= $imgIndex === 0 ? 'active' : '' ?> h-100">
