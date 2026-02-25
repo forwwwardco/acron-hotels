@@ -10,11 +10,11 @@ $hotels = [
     'location' => 'BAGA, GOA',
     'heroImage' => 'v2/assets/waterfront-feature.jpg',
     'images' => [
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400'
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/waterfront-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
@@ -43,11 +43,11 @@ $hotels = [
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/regina-feature.jpg',
     'images' => [
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400'
+      'v2/assets/regina-carousel-1.jpg',
+      'v2/assets/regina-carousel-2.jpg',
+      'v2/assets/regina-carousel-3.jpg',
+      'v2/assets/regina-carousel-4.jpg',
+      'v2/assets/regina-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/regina-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
@@ -76,11 +76,11 @@ $hotels = [
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/seaway-feature.jpg',
     'images' => [
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400',
-      'https://placehold.co/600x400'
+      'v2/assets/seaway-carousel-1.jpg',
+      'v2/assets/seaway-carousel-2.jpg',
+      'v2/assets/seaway-carousel-3.jpg',
+      'v2/assets/seaway-carousel-4.jpg',
+      'v2/assets/seaway-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/seaway-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
