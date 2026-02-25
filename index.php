@@ -2,13 +2,13 @@
 $pageResort = '';
 
 $h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
-$travellersChoiceAward = 'https://placehold.co/100x100';
+$travellersChoiceAward = 'v2/assets/travelers-choice-200.jpg';
 
 $hotels = [
   [
     'name' => 'Acron Waterfront Resort',
     'location' => 'BAGA, GOA',
-    'heroImage' => 'https://placehold.co/600x400',
+    'heroImage' => 'v2/assets/waterfront-feature.jpg',
     'images' => [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400',
@@ -16,7 +16,7 @@ $hotels = [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400'
     ],
-    'overlappingImg' => 'https://placehold.co/600x400',
+    'overlappingImg' => 'v2/assets/waterfront-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'amenities' => [
       ['icon' => 'fa-solid fa-person-swimming', 'label' => 'Infinity Pool'],
@@ -41,7 +41,7 @@ $hotels = [
   [
     'name' => 'Acron Candolim Regina',
     'location' => 'CANDOLIM, GOA',
-    'heroImage' => 'https://placehold.co/600x400',
+    'heroImage' => 'v2/assets/regina-feature.jpg',
     'images' => [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400',
@@ -49,7 +49,7 @@ $hotels = [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400'
     ],
-    'overlappingImg' => 'https://placehold.co/600x400',
+    'overlappingImg' => 'v2/assets/regina-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'amenities' => [
       ['icon' => 'fa-solid fa-umbrella-beach', 'label' => 'Near Beach'],
@@ -74,7 +74,7 @@ $hotels = [
   [
     'name' => 'Acron Seaway Resort',
     'location' => 'CANDOLIM, GOA',
-    'heroImage' => 'https://placehold.co/600x400',
+    'heroImage' => 'v2/assets/seaway-feature.jpg',
     'images' => [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400',
@@ -82,7 +82,7 @@ $hotels = [
       'https://placehold.co/600x400',
       'https://placehold.co/600x400'
     ],
-    'overlappingImg' => 'https://placehold.co/600x400',
+    'overlappingImg' => 'v2/assets/seaway-overlap.jpg',
     'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
     'amenities' => [
       ['icon' => 'fa-solid fa-water', 'label' => 'Pool View'],
@@ -108,91 +108,35 @@ $hotels = [
 
 $dealsHeading = "Exclusive Deals, Just For You";
 $filterData = [
-  'deal-pack-1' => 'SUMMER SAVINGS',
-  'deal-pack-2' => 'RIVERSIDE MONSOON',
-  'deal-pack-3' => 'WINTER LUXURY'
+  'deal-pack-1' => 'SUMMER SAVINGS'
 ];
 $deals = [
   [
     'category' => 'deal-pack-1',
     'hotel' => 'Acron Waterfront Resort',
-    'discount' => 'XX% OFF',
-    'condition' => 'PER PERSON PER NIGHT',
+    'discount' => '10% Off',
+    'condition' => 'LAST MINUTE OFFER',
     'link' => '#',
-    'img' => 'https://placehold.co/600x400',
+    'img' => 'v2/assets/deal-1.jpg',
     'hidden' => false
   ],
   [
     'category' => 'deal-pack-1',
     'hotel' => 'Acron Candolim Regina',
-    'discount' => 'XX% OFF',
-    'condition' => 'PER PERSON PER NIGHT',
+    'discount' => '20% Off',
+    'condition' => 'LONG STAY OFFER',
     'link' => '#',
-    'img' => 'https://placehold.co/600x400',
+    'img' => 'v2/assets/deal-2.jpg',
     'hidden' => false
   ],
   [
     'category' => 'deal-pack-1',
     'hotel' => 'Acron Seaway Resort',
-    'discount' => 'XX% OFF',
-    'condition' => 'PER PERSON PER NIGHT',
+    'discount' => '15% Off',
+    'condition' => 'EARLY BIRD OFFER',
     'link' => '#',
-    'img' => 'https://placehold.co/600x400',
+    'img' => 'v2/assets/deal-3.jpg',
     'hidden' => false
-  ],
-  [
-    'category' => 'deal-pack-2',
-    'hotel' => 'Acron Waterfront Resort',
-    'discount' => '15% OFF',
-    'condition' => 'PER ROOM PER NIGHT',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
-  ],
-  [
-    'category' => 'deal-pack-2',
-    'hotel' => 'Acron Candolim Regina',
-    'discount' => '15% OFF',
-    'condition' => 'PER ROOM PER NIGHT',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
-  ],
-  [
-    'category' => 'deal-pack-2',
-    'hotel' => 'Acron Seaway Resort',
-    'discount' => '15% OFF',
-    'condition' => 'PER ROOM PER NIGHT',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
-  ],
-  [
-    'category' => 'deal-pack-3',
-    'hotel' => 'Acron Waterfront Resort',
-    'discount' => '10% OFF',
-    'condition' => 'INCLUSIVE OF BREAKFAST',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
-  ],
-  [
-    'category' => 'deal-pack-3',
-    'hotel' => 'Acron Candolim Regina',
-    'discount' => '10% OFF',
-    'condition' => 'INCLUSIVE OF BREAKFAST',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
-  ],
-  [
-    'category' => 'deal-pack-3',
-    'hotel' => 'Acron Seaway Resort',
-    'discount' => '10% OFF',
-    'condition' => 'INCLUSIVE OF BREAKFAST',
-    'link' => '#',
-    'img' => 'https://placehold.co/600x400',
-    'hidden' => true
   ]
 ];
 
