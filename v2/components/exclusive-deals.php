@@ -70,9 +70,9 @@ $deals = [
 ];
 ?>
 
-<section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative <?php echo $activeTheme['context']; ?>">
+<section id="exclusiveDeals" class="exclusive-deals py-5 position-relative <?php echo $activeTheme['context']; ?>">
     <img src="<?php echo $activeTheme['src']; ?>" class="<?php echo $activeTheme['class']; ?>" alt="<?php echo $activeTheme['alt']; ?>">
-    <div class="container py-4">
+    <div class="container py-4 reveal">
         <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading"><?php echo $dealsHeading ?? 'Exclusive Deals, Just For You'; ?></h2>
         <!--<div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
             <?php

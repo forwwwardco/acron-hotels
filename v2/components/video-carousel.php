@@ -19,8 +19,8 @@ $activeTheme = $themeConfig[$pageResort] ?? 'yt-embed-home';
 $carouselId = 'videoCarousel_' . uniqid();
 ?>
 
-<section class="video-section py-5 bg-white reveal <?php echo $activeTheme; ?>" style="padding-bottom:0!important;">
-  <div class="container py-4">
+<section class="video-section py-5 bg-white <?php echo $activeTheme; ?>" style="padding-bottom:0!important;">
+  <div class="container py-4 reveal">
     <div class="row align-items-center gy-5">
       <div class="col-lg-12 position-relative">
         <img src="v2/assets/crab.png" class="decorative-crab" alt="Decorative Crab">

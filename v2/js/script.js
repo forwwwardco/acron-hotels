@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================================
      9. GALLERY FILTER & LIGHTBOX
      ========================================================================== */
-  
+
   // Initialize GLightbox
   const galleryLightbox = GLightbox({
     selector: '.glightbox',
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Scroll Reveal Observer
   const revealOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px' // Starts animation slightly before element enters view
+    rootMargin: '0px 0px 100px 0px' // Starts animation slightly before element enters view
   };
 
   const revealObserver = new IntersectionObserver((entries) => {

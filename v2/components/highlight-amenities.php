@@ -21,4 +21,7 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <div class="wave-divider-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+        </svg></div>
 </section>

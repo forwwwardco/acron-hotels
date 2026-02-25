@@ -193,7 +193,7 @@ button:active,
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: all 1.4s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .reveal-visible,
@@ -1858,6 +1858,12 @@ select.enquiry-input {
   overflow: hidden;
 }
 
+@media (min-width: 992px) {
+  .reviews-section.bg-lightest-bg {
+    padding-top: 1rem !important;
+  }
+}
+
 .reviews-slider {
   display: flex;
   overflow-x: auto;
@@ -1873,6 +1879,7 @@ select.enquiry-input {
 .reviews-slider::-webkit-scrollbar {
   display: none;
 }
+
 
 /* Review Card & Typography */
 .review-card {
@@ -2082,9 +2089,9 @@ select.enquiry-input {
   z-index: 10;
 }
 
-.credit-text {
-  letter-spacing: 1px;
-  font-size: 0.75rem;
+.footer-bottom .container-fluid {
+
+  max-width: 90%;
 }
 
 .brand-forwwward {
@@ -2238,12 +2245,12 @@ select.enquiry-input {
 
 .decorative-shell-2 {
   position: absolute;
-  top: -60px;
+  bottom: -60px;
   left: calc(calc(100vw - 110px) / 2);
   width: 110px;
   height: auto;
   object-fit: contain;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.8;
   pointer-events: none;
   transform: rotate(-10deg);
@@ -2312,7 +2319,7 @@ select.enquiry-input {
   }
 
   .decorative-shell-2 {
-    top: -40px;
+    bottom: -40px;
     left: 50px;
     width: 160px;
     opacity: 1;
@@ -2707,6 +2714,10 @@ select.enquiry-input {
     bottom: -80px;
     width: 180px;
   }
+
+  .signature-amenities-section {
+    padding-bottom: 8rem !important;
+  }
 }
 
 /* Mobile Overrides */
@@ -2721,10 +2732,16 @@ select.enquiry-input {
 }
 
 /* === 18. EXPLORE SUITES SECTION === */
-
 .explore-suites-section {
   background-color: var(--lightest-blue);
   padding-bottom: 3rem !important;
+}
+
+.explore-suites-section.suite-waterfront {
+  background-image: url('./../assets/sand-2.png');
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 991px) {
@@ -2733,13 +2750,10 @@ select.enquiry-input {
     padding-bottom: 12rem !important;
   }
 
-}
-
-.explore-suites-section.suite-waterfront {
-  background-image: url('./../assets/sand-2.png');
-  background-position: bottom center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  .explore-suites-section.suite-waterfront {
+    background-color: var(--lightest-blue);
+    padding-bottom: 16rem !important;
+  }
 }
 
 .suite-carousel {
@@ -2805,7 +2819,7 @@ select.enquiry-input {
 @media (min-width: 992px) {
   .highlight-amenities-section {
     padding-top: 5rem !important;
-    padding-bottom: 6rem !important;
+    padding-bottom: 10rem !important;
   }
 
   .highlight-img {

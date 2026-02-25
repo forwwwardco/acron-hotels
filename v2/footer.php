@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <p class="mb-0 credit-text text-uppercase fw-bold small ls-1">
-                        Powered by <span class="brand-forwwward">Forwwward</span>
+                        <a href="https://forwwward.co" style="all:initial!important;cursor:pointer!important;font:inherit!important;font-size:inherit!important;color:inherit!important;text-decoration:inherit!important;text-transform:inherit!important;" target="_blank" rel="nofollow noopener noreferrer">Powered by <span class="brand-forwwward">Forwwward</span></a>
                     </p>
                 </div>
             </div>
