@@ -363,7 +363,7 @@ $videos = [
         </div>
       </div>
 
-      <img src="https://placehold.co/200x200" alt="Travellers' Choice Badge" class="ta-badge-image shadow-sm">
+      <img src="v2/assets/travelers-choice-200.jpg" alt="Travellers' Choice Badge" class="ta-badge-image shadow-sm">
     </div>
   </div>
 
