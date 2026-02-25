@@ -203,7 +203,9 @@ $videos = [
               </div>
             </div>
             <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
-              <button class="btn btn-book-now hero-btn fw-bold flex-fill text-center trigger-book-engine" data-staah-id="<?= $hotel['staahId'] ?>">Book Now</button>
+              <a href="<?= $hotel['link'] ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">
+                Explore
+              </a>
               <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= $hotel['id'] ?>">
                 Why Stay Here?
               </button>

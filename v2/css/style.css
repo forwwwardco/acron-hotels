@@ -816,6 +816,36 @@ select.enquiry-input {
   padding: 12px 10px;
   font-size: 0.7rem;
   letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  height: 45px;
+}
+
+#heroSection .btn-outline-hero,
+.resort-hero-wrapper .btn-outline-hero {
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  color: var(--blue-grey);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#heroSection .btn-outline-hero:hover,
+.resort-hero-wrapper .btn-outline-hero:hover {
+  background-color: var(--lightest-blue);
+  color: var(--blue-grey);
+  border-color: var(--lightest-blue);
+}
+
+@media (min-width: 992px) {
+
+  .hero-btn,
+  .btn-outline-hero {
+    font-size: 0.9rem;
+    height: 50px;
+  }
 }
 
 .btn-outline-hero {
@@ -922,11 +952,6 @@ select.enquiry-input {
   .tooltip-features-list li {
     margin-bottom: 16px;
     font-size: 1.55rem;
-  }
-
-  .hero-btn,
-  .btn-outline-hero {
-    font-size: 0.9rem;
   }
 
   .middle-resort-col {
@@ -2474,7 +2499,6 @@ select.enquiry-input {
   .resort-hero-wrapper .hero-btn,
   .resort-hero-wrapper .btn-outline-hero {
     min-width: 140px;
-    /* font-size: 0.75rem; */
     padding: 10px 5px;
   }
 }
