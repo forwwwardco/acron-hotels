@@ -120,7 +120,7 @@ $direct_booking_benefits = [
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="whyBookDropdown" role="button" aria-expanded="false">
-                                Why Book Directly?
+                                Direct Booking Benefits
                             </a>
 
                             <ul class="dropdown-menu border-0 desktop-tooltip-menu p-3" aria-labelledby="whyBookDropdown">
@@ -133,7 +133,7 @@ $direct_booking_benefits = [
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileWhyBookMenu" role="button" aria-expanded="false" aria-controls="mobileWhyBookMenu">
-                                Why Book Directly?
+                                Direct Booking Benefits
                             </a>
 
                             <div class="collapse d-lg-none" id="mobileWhyBookMenu">

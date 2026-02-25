@@ -297,11 +297,15 @@ $videos = [
       </div>
     <?php endforeach; ?>
   </div>
+
+  <div class="wave-divider-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+    </svg></div>
 </section>
 
 <!-- STATISTICS -->
 <section class="stats-section py-5 position-relative">
-  <img src="v2/assets/shell.png" class="decorative-shell" alt="Decorative Shell">
+  <!-- <img src=" v2/assets/shell.png" class="decorative-shell" alt="Decorative Shell"> -->
   <div class="container py-4">
     <div class="row g-5 text-center justify-content-center">
       <?php foreach ($stats as $stat): ?>
@@ -315,12 +319,19 @@ $videos = [
       <?php endforeach; ?>
     </div>
   </div>
+
+  <div class="wave-divider-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="var(--white)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+    </svg></div>
 </section>
 
 <!-- REVIEWS -->
-<section class="reviews-section py-5" style="padding-bottom:0!important;">
+<section class="reviews-section py-5" style="padding-bottom:0!important;padding-top:1rem!important;">
   <div class="container py-4">
     <h2 class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
+    <div class="review-summary-wrapper reveal">
+      <img src="v2/assets/travelers-choice-200.jpg" alt="Travellers' Choice Badge" class="ta-badge-image shadow-sm">
+    </div>
   </div>
   <?php include("v2/components/reviews-slider.php"); ?>
 </section>

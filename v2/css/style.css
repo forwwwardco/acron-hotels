@@ -1801,6 +1801,13 @@ select.enquiry-input {
 /* Section Layout */
 .stats-section {
   background-color: var(--lightest-blue);
+  padding-top: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .stats-section {
+    padding-bottom: 8rem !important;
+  }
 }
 
 .stat-item {
