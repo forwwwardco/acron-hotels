@@ -10,8 +10,8 @@ $themeConfig = [
     'seaway'     => ['id' => 'NzQy', 'color' => 'var(--seaway)']
 ];
 $activeTheme = $themeConfig[$pageResort] ?? null;
-$id   = $activeTheme['id'] ?? '';
-$btnStyle     = $activeTheme ? "style='background-color: {$activeTheme['color']}; color: var(--white) !important;'" : "";
+$id = $activeTheme['id'] ?? '';
+$btnStyle = $activeTheme ? "style='background-color: {$activeTheme['color']}; color: var(--white) !important;'" : "";
 ?>
 <section class="booking-engine-fixed w-100" id="bookingEngine">
     <button class="engine-toggle-btn d-lg-none" id="engineToggle">

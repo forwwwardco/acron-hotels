@@ -4,23 +4,12 @@
  * Reusable Gallery Component
  */
 
-// Centralised Configuration Mapping
 $themeConfig = [
-    'waterfront' => [
-        'context'   => 'gallery-waterfront'
-    ],
-    'regina' => [
-        'context'   => 'gallery-regina'
-    ],
-    'seaway' => [
-        'context'   => 'gallery-seaway'
-    ]
+    'waterfront' => ['context'   => 'gallery-waterfront'],
+    'regina' => ['context'   => 'gallery-regina'],
+    'seaway' => ['context'   => 'gallery-seaway']
 ];
-
-// Fallback to Home/Default Configuration if no match is found
-$activeTheme = $themeConfig[$pageResort] ?? [
-    'context'   => 'gallery-home'
-];
+$activeTheme = $themeConfig[$pageResort] ?? ['context'   => 'gallery-home'];
 ?>
 
 <section id="resortGallery" class="resort-gallery py-5 reveal <?php echo $activeTheme['context']; ?>">

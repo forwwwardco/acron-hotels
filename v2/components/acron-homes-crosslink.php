@@ -33,18 +33,18 @@ $data = [
                     </div>
                     <div class="carousel-gradient-overlay"></div>
                     <div class="promo-controls-wrapper d-flex align-items-center justify-content-center gap-3">
-                        <button class="promo-control-btn" type="button" data-bs-target="#<?= $data['id'] ?>" data-bs-slide="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="promo-control-btn" type="button" data-bs-target="#crossPromoCarousel" data-bs-slide="prev"><i class="fa-solid fa-chevron-left"></i></button>
                         <div class="carousel-indicators promo-indicators position-static m-0">
                             <?php foreach ($data['images'] as $index => $imgUrl): ?>
                                 <button type="button"
-                                    data-bs-target="#<?= $data['id'] ?>"
+                                    data-bs-target="#crossPromoCarousel"
                                     data-bs-slide-to="<?= $index ?>"
                                     class="<?= $index === 0 ? 'active' : '' ?>"
                                     aria-label="Slide <?= $index + 1 ?>">
                                 </button>
                             <?php endforeach; ?>
                         </div>
-                        <button class="promo-control-btn" type="button" data-bs-target="#<?= $data['id'] ?>" data-bs-slide="next"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="promo-control-btn" type="button" data-bs-target="#crossPromoCarousel" data-bs-slide="next"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>

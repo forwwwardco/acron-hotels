@@ -8,54 +8,44 @@
  * @param array  $filterData    - The filter button configuration [ID => Label]
  */
 
-// Centralised Configuration Mapping
 $themeConfig = [
     'waterfront' => [
         'context'   => 'deals-waterfront',
-        'decoSrc'   => 'v2/assets/flamingo.png',
-        'decoClass' => 'decorative-flamingo',
-        'decoAlt'   => 'Decorative Flamingo'
+        'src'   => 'v2/assets/flamingo.png',
+        'class' => 'decorative-flamingo',
+        'alt'   => 'Decorative Flamingo'
     ],
     'regina' => [
         'context'   => 'deals-regina',
-        'decoSrc'   => 'v2/assets/coconut.png',
-        'decoClass' => 'decorative-coconut',
-        'decoAlt'   => 'Decorative Beach Coconut'
+        'src'   => 'v2/assets/coconut.png',
+        'class' => 'decorative-coconut',
+        'alt'   => 'Decorative Beach Coconut'
     ],
     'seaway' => [
         'context'   => 'deals-seaway',
-        'decoSrc'   => 'v2/assets/starfish.png',
-        'decoClass' => 'decorative-starfish',
-        'decoAlt'   => 'Decorative Starfish'
+        'src'   => 'v2/assets/starfish.png',
+        'class' => 'decorative-starfish',
+        'alt'   => 'Decorative Starfish'
     ]
 ];
-
-// Fallback to Home/Default Configuration if no match is found
 $activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'deals-home',
-    'decoSrc'   => 'v2/assets/coconut.png',
-    'decoClass' => 'decorative-coconut',
-    'decoAlt'   => 'Decorative Coconut'
+    'src'   => 'v2/assets/coconut.png',
+    'class' => 'decorative-coconut',
+    'alt'   => 'Decorative Coconut'
 ];
 ?>
 
 <section id="exclusiveDeals" class="exclusive-deals py-5 reveal position-relative <?php echo $activeTheme['context']; ?>">
-    <img src="<?php echo $activeTheme['decoSrc']; ?>"
-        class="<?php echo $activeTheme['decoClass']; ?>"
-        alt="<?php echo $activeTheme['decoAlt']; ?>">
-
+    <img src="<?php echo $activeTheme['src']; ?>" class="<?php echo $activeTheme['class']; ?>" alt="<?php echo $activeTheme['alt']; ?>">
     <div class="container py-4">
-        <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading">
-            <?php echo $dealsHeading ?? 'Exclusive Deals, Just For You'; ?>
-        </h2>
-
+        <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading"><?php echo $dealsHeading ?? 'Exclusive Deals, Just For You'; ?></h2>
         <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
             <?php
             $isFirst = true;
             foreach ($filterData as $id => $label):
             ?>
-                <button class="filter-pill <?php echo $isFirst ? 'active' : ''; ?>"
-                    data-filter="<?php echo $id; ?>">
+                <button class="filter-pill <?php echo $isFirst ? 'active' : ''; ?>" data-filter="<?php echo $id; ?>">
                     <?php echo $label; ?>
                 </button>
             <?php
