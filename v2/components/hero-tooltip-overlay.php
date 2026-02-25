@@ -1,3 +1,9 @@
+<?php
+
+/**
+ * Reusable Hero Tooltip Overlay Component
+ */
+?>
 <div class="hero-tooltip-overlay" id="heroTooltip">
     <div class="hero-tooltip-box p-4 p-md-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
