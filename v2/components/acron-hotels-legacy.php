@@ -1,13 +1,15 @@
 <?php
-$legacyData = [
+
+/**
+ * Reusable Acron Hotels Legacy Component
+ */
+$data = [
     'image'   => 'https://placehold.co/600x400',
     'tagline' => 'The Architects of Luxury',
     'heading' => "Acron Hotels Legacy Trusted Homes, We Craft Goa’s Most Loved Experiences",
-    'btnText' => 'Book Now',
-    'btnLink' => '#' // Link used if not triggering the booking engine
+    'btnText' => 'Book Now'
 ];
-// Centralised Configuration Mapping
-$resortThemeConfig = [
+$themeConfig = [
     'waterfront' => [
         'context'   => 'legacy-waterfront'
     ],
@@ -18,9 +20,7 @@ $resortThemeConfig = [
         'context'   => 'legacy-seaway'
     ]
 ];
-
-// Fallback to Home/Default Configuration if no match is found
-$activeTheme = $resortThemeConfig[$pageResort] ?? [
+$activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'legacy-home'
 ];
 ?>
@@ -28,26 +28,21 @@ $activeTheme = $resortThemeConfig[$pageResort] ?? [
 <section class="legacy-section py-5 position-relative <?php echo $activeTheme['context']; ?>">
     <div class="container py-4">
         <div class="row align-items-center gy-5">
-
             <div class="col-lg-6 reveal">
-                <img src="<?= $legacyData['image'] ?>"
+                <img src="<?= $data['image'] ?>"
                     class="img-fluid w-100 rounded-4 shadow-sm legacy-img"
-                    alt="<?= $legacyData['heading'] ?>"
+                    alt="<?= $data['heading'] ?>"
                     loading="lazy">
             </div>
-
             <div class="col-lg-6 px-lg-5 text-center text-lg-start reveal">
-
                 <h6 class="legacy-tagline text-uppercase fw-bold text-blue-grey opacity-75 mb-3">
-                    <?= $legacyData['tagline'] ?>
+                    <?= $data['tagline'] ?>
                 </h6>
-
                 <h2 class="legacy-heading fw-bold text-blue-grey mb-4">
-                    <?= $legacyData['heading'] ?>
+                    <?= $data['heading'] ?>
                 </h2>
-
-                <a href="<?= $legacyData['btnLink'] ?>" class="btn btn-yellow fw-bold px-5 py-3 trigger-book-engine">
-                    <?= $legacyData['btnText'] ?>
+                <a href="#" class="btn btn-yellow fw-bold px-5 py-3 trigger-book-engine">
+                    <?= $data['btnText'] ?>
                 </a>
 
             </div>

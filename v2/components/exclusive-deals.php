@@ -9,7 +9,7 @@
  */
 
 // Centralised Configuration Mapping
-$resortThemeConfig = [
+$themeConfig = [
     'waterfront' => [
         'context'   => 'deals-waterfront',
         'decoSrc'   => 'v2/assets/flamingo.png',
@@ -31,7 +31,7 @@ $resortThemeConfig = [
 ];
 
 // Fallback to Home/Default Configuration if no match is found
-$activeTheme = $resortThemeConfig[$pageResort] ?? [
+$activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'deals-home',
     'decoSrc'   => 'v2/assets/coconut.png',
     'decoClass' => 'decorative-coconut',

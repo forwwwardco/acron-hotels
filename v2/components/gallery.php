@@ -1,10 +1,11 @@
 <?php
+
 /**
  * Reusable Gallery Component
  */
 
 // Centralised Configuration Mapping
-$resortThemeConfig = [
+$themeConfig = [
     'waterfront' => [
         'context'   => 'gallery-waterfront'
     ],
@@ -17,7 +18,7 @@ $resortThemeConfig = [
 ];
 
 // Fallback to Home/Default Configuration if no match is found
-$activeTheme = $resortThemeConfig[$pageResort] ?? [
+$activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'gallery-home'
 ];
 ?>
@@ -45,10 +46,10 @@ $activeTheme = $resortThemeConfig[$pageResort] ?? [
 
         <div class="gallery-grid-container px-3 px-lg-0" id="galleryGrid">
             <?php foreach ($galleryItems as $item): ?>
-                <a href="<?= $item['full']; ?>" 
-                   class="gallery-item glightbox <?= $item['hidden'] ? 'd-none' : ''; ?>" 
-                   data-category="<?= $item['category']; ?>"
-                   data-gallery="gallery-<?= $item['category']; ?>">
+                <a href="<?= $item['full']; ?>"
+                    class="gallery-item glightbox <?= $item['hidden'] ? 'd-none' : ''; ?>"
+                    data-category="<?= $item['category']; ?>"
+                    data-gallery="gallery-<?= $item['category']; ?>">
                     <img src="<?= $item['thumb']; ?>" alt="<?= $item['alt']; ?>" class="gallery-img placeholder-img" loading="lazy">
                 </a>
             <?php endforeach; ?>

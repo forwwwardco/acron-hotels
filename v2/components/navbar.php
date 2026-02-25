@@ -12,7 +12,7 @@ $seaway = '/acron-hotels/seaway.php';
 $contact = '/acron-hotels/contact.php';
 
 // Centralised Configuration Mapping
-$resortThemeConfig = [
+$themeConfig = [
     'waterfront' => [
         'context'   => 'nav-waterfront'
     ],
@@ -23,9 +23,7 @@ $resortThemeConfig = [
         'context'   => 'nav-seaway'
     ]
 ];
-
-// Fallback to Home/Default Configuration if no match is found
-$activeTheme = $resortThemeConfig[$pageResort] ?? [
+$activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'nav-home'
 ];
 

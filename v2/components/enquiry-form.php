@@ -6,7 +6,7 @@
  */
 
 // Centralised Configuration Mapping
-$resortThemeConfig = [
+$themeConfig = [
     'waterfront' => [
         'context'   => 'enquiry-form-waterfront'
     ],
@@ -17,9 +17,7 @@ $resortThemeConfig = [
         'context'   => 'enquiry-form-seaway'
     ]
 ];
-
-// Fallback to Home/Default Configuration if no match is found
-$activeTheme = $resortThemeConfig[$pageResort] ?? [
+$activeTheme = $themeConfig[$pageResort] ?? [
     'context'   => 'enquiry-form-home'
 ];
 ?>
@@ -57,9 +55,7 @@ $activeTheme = $resortThemeConfig[$pageResort] ?? [
                     I consent to receiving marketing emails, calls and messages for offers.
                 </label>
             </div>
-
             <p class="assurance small text-blue-grey mb-4">Rest assured! We promise not to spam you! :)</p>
-
             <button type="submit" class="btn btn-yellow w-100 enquiry-submit fw-bold py-3">ENQUIRE</button>
         </form>
     </div>
