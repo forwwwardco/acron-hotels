@@ -224,6 +224,11 @@ $highlightAmenitiesList = $pageHighlights ?? [
     'title' => 'River Restaurant',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'image' => 'v2/assets/waterfront-carousel-3.jpg'
+  ],
+  [
+    'title' => 'River Restaurant',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'image' => 'v2/assets/waterfront-carousel-3.jpg'
   ]
 ];
 
