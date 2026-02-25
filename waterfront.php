@@ -3,26 +3,6 @@ $pageResort = 'waterfront';
 
 $h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
 
-$dealsHeading = "Waterfront Deals, Just For You";
-$filterData = [
-  'deal-pack-1' => 'COLLECTION A',
-  'deal-pack-2' => 'COLLECTION B',
-  'deal-pack-3' => 'COLLECTION C'
-];
-$deals = [
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
-  ['category' => 'deal-pack-1', 'hotel' => 'Acron Waterfront Resort', 'discount' => 'XX% OFF', 'condition' => 'PER PERSON PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => false],
-
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-  ['category' => 'deal-pack-2', 'hotel' => 'Acron Waterfront Resort', 'discount' => '15% OFF', 'condition' => 'PER ROOM PER NIGHT', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/waterfront/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/candolim-regina/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-  ['category' => 'deal-pack-3', 'hotel' => 'Acron Waterfront Resort', 'discount' => '10% OFF', 'condition' => 'INCLUSIVE OF BREAKFAST', 'link' => '/seaway/offers', 'img' => 'https://placehold.co/600x400', 'hidden' => true],
-];
-
 $galleryHeading = "Browse Gallery";
 $galleryFilters = [
   'rooms'         => 'ROOMS',
@@ -33,21 +13,72 @@ $galleryFilters = [
 ];
 // Simulating 8 images per category with varied aspect ratios for the masonry effect
 $galleryItems = [];
-foreach (array_keys($galleryFilters) as $category) {
-  for ($i = 1; $i <= 8; $i++) {
-    // Alternating dimensions purely to demonstrate the masonry effect with placeholders
-    $width = ($i % 2 == 0) ? 600 : 400;
-    $height = ($i % 3 == 0) ? 600 : 400;
+// foreach (array_keys($galleryFilters) as $category) {
+//   for ($i = 1; $i <= 8; $i++) {
+//     // Alternating dimensions purely to demonstrate the masonry effect with placeholders
+//     $width = ($i % 2 == 0) ? 600 : 400;
+//     $height = ($i % 3 == 0) ? 600 : 400;
 
-    $galleryItems[] = [
-      'category' => $category,
-      'thumb'    => "https://placehold.co/{$width}x{$height}",
-      'full'     => "https://placehold.co/1200x800",
-      'alt'      => ucfirst($category) . " Image " . $i,
-      'hidden'   => ($category !== 'rooms') // Hide non-rooms on load
-    ];
-  }
-}
+//     $galleryItems[] = [
+//       'category' => $category,
+//       'thumb'    => "https://placehold.co/{$width}x{$height}",
+//       'full'     => "https://placehold.co/1200x800",
+//       'alt'      => ucfirst($category) . " Image " . $i,
+//       'hidden'   => ($category !== 'rooms') // Hide non-rooms on load
+//     ];
+//   }
+// }
+$galleryItems = [
+  // --- Rooms ---
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 1', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 2', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 3', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 4', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 5', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 6', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 7', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Rooms Image 8', 'hidden' => false],
+
+  // --- Exterior ---
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 1', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 2', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 3', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 4', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 5', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 6', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 7', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Exterior Image 8', 'hidden' => true],
+
+  // --- Restaurant ---
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 1', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 2', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 3', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 4', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 5', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 6', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 7', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Image 8', 'hidden' => true],
+
+  // --- Common Spaces ---
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 1', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 2', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 3', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 4', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 5', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 6', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 7', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Common Spaces Image 8', 'hidden' => true],
+
+  // --- Amenities ---
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 1', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 2', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 3', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 4', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 5', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 6', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 7', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Amenities Image 8', 'hidden' => true],
+];
 
 $roomsHeading = "Explore Our Rooms";
 $roomsList = $roomsData ?? [
@@ -61,7 +92,13 @@ $roomsList = $roomsData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ],
@@ -75,7 +112,13 @@ $roomsList = $roomsData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ],
@@ -89,7 +132,13 @@ $roomsList = $roomsData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ],
@@ -103,7 +152,13 @@ $roomsList = $roomsData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ]
@@ -121,7 +176,13 @@ $suitesList = $suitesData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ],
@@ -135,7 +196,13 @@ $suitesList = $suitesData ?? [
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
-    'images' => ['https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700', 'https://placehold.co/600x700'],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
     'bookLink' => '#',
     'learnLink' => '#'
   ]
@@ -146,17 +213,17 @@ $highlightAmenitiesList = $pageHighlights ?? [
   [
     'title' => 'Al Fresco',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-    'image' => 'https://placehold.co/600x600'
+    'image' => 'v2/assets/waterfront-carousel-5.jpg'
   ],
   [
     'title' => 'Board Room',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-    'image' => 'https://placehold.co/600x600'
+    'image' => 'v2/assets/waterfront-carousel-4.jpg'
   ],
   [
     'title' => 'River Restaurant',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
-    'image' => 'https://placehold.co/600x600'
+    'image' => 'v2/assets/waterfront-carousel-3.jpg'
   ]
 ];
 
@@ -224,11 +291,11 @@ $videos = [
     <div class="carousel-inner h-100">
       <?php
       $heroImages = [
-        'v2/assets/waterfront/hero-1.jpg',
-        'v2/assets/waterfront/hero-2.jpg',
-        'v2/assets/waterfront/hero-3.jpg',
-        'v2/assets/waterfront/hero-4.jpg',
-        'v2/assets/waterfront/hero-5.jpg'
+        'v2/assets/waterfront-carousel-1.jpg',
+        'v2/assets/waterfront-carousel-2.jpg',
+        'v2/assets/waterfront-carousel-3.jpg',
+        'v2/assets/waterfront-carousel-4.jpg',
+        'v2/assets/waterfront-carousel-5.jpg'
       ];
       foreach ($heroImages as $index => $img):
       ?>

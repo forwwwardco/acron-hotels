@@ -106,40 +106,6 @@ $hotels = [
   ]
 ];
 
-$dealsHeading = "Exclusive Deals, Just For You";
-$filterData = [
-  'deal-pack-1' => 'SUMMER SAVINGS'
-];
-$deals = [
-  [
-    'category' => 'deal-pack-1',
-    'hotel' => 'Acron Waterfront Resort',
-    'discount' => '10% Off',
-    'condition' => 'LAST MINUTE OFFER',
-    'link' => '#',
-    'img' => 'v2/assets/deal-1.jpg',
-    'hidden' => false
-  ],
-  [
-    'category' => 'deal-pack-1',
-    'hotel' => 'Acron Candolim Regina',
-    'discount' => '20% Off',
-    'condition' => 'LONG STAY OFFER',
-    'link' => '#',
-    'img' => 'v2/assets/deal-2.jpg',
-    'hidden' => false
-  ],
-  [
-    'category' => 'deal-pack-1',
-    'hotel' => 'Acron Seaway Resort',
-    'discount' => '15% Off',
-    'condition' => 'EARLY BIRD OFFER',
-    'link' => '#',
-    'img' => 'v2/assets/deal-3.jpg',
-    'hidden' => false
-  ]
-];
-
 $stats = [
   ['icon' => 'fa-regular fa-face-smile', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
   ['icon' => 'fa-regular fa-star', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],

@@ -8,11 +8,11 @@ $data = [
     'heading'     => 'Acron Homes Cross Promotion',
     'description' => 'Xxxxxxx xx x xxxxxx xx xxxxxxx xxxx xxxxxx xxx xxxxxxxxxxx, xxx Xxxxx Xxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxx xxxxxxxxx xxx xxxxxx xxxxxx xx xxx xxxxxx xx xxxxxxxxxxx. Xxxx xxxxxxxxxx xx xxxxxxxxxx xxxxxx xx xx xxxxxx xxxxxx xxxxxxxxxx xxxxxxxxxxx, xxxx xxxxxxxx x xxxxxx xxxxxxxxxxx xx Xxx’x xxxxxxx xxxxx.',
     'images'      => [
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400',
-        'https://placehold.co/600x400'
+        'v2/assets/homes.jpeg',
+        'v2/assets/homes.jpeg',
+        'v2/assets/homes.jpeg',
+        'v2/assets/homes.jpeg',
+        'v2/assets/homes.jpeg'
     ]
 ];
 ?>

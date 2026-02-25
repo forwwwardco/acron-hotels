@@ -4,7 +4,7 @@
  * Reusable Acron Hotels Legacy Component
  */
 $data = [
-    'image'   => 'https://placehold.co/600x400',
+    'image'   => 'v2/assets/legacy.jpg',
     'tagline' => 'The Architects of Luxury',
     'heading' => "Acron Hotels Legacy Trusted Homes, We Craft Goa’s Most Loved Experiences"
 ];

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Reusable Signature Amenities Component
  */
@@ -10,42 +11,42 @@ $amenitiesList = $pageAmenities ?? [
     [
         'title' => 'AMENITY 1',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-1.jpg'
     ],
     [
         'title' => 'AMENITY 2',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-2.jpg'
     ],
     [
         'title' => 'AMENITY 3',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-3.jpg'
     ],
     [
         'title' => 'AMENITY 4',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-4.jpg'
     ],
     [
         'title' => 'AMENITY 5',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-5.jpg'
     ],
     [
         'title' => 'AMENITY 6',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-1.jpg'
     ],
     [
         'title' => 'AMENITY 7',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-2.jpg'
     ],
     [
         'title' => 'AMENITY 8',
         'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-        'image' => 'https://placehold.co/600x500'
+        'image' => 'v2/assets/waterfront-carousel-3.jpg'
     ]
 ];
 ?>
