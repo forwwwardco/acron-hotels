@@ -40,7 +40,7 @@ $activeTheme = $themeConfig[$pageResort] ?? [
     <img src="<?php echo $activeTheme['src']; ?>" class="<?php echo $activeTheme['class']; ?>" alt="<?php echo $activeTheme['alt']; ?>">
     <div class="container py-4">
         <h2 class="text-center fw-bold text-blue-grey mb-4 section-heading"><?php echo $dealsHeading ?? 'Exclusive Deals, Just For You'; ?></h2>
-        <div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
+        <!--<div class="filter-pills-wrapper d-flex justify-content-lg-center gap-3 mb-5 px-3 px-lg-0">
             <?php
             $isFirst = true;
             foreach ($filterData as $id => $label):
@@ -52,7 +52,7 @@ $activeTheme = $themeConfig[$pageResort] ?? [
                 $isFirst = false;
             endforeach;
             ?>
-        </div>
+        </div> -->
 
         <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
             <?php foreach ($deals as $deal): ?>
