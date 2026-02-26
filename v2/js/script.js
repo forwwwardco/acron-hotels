@@ -271,8 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================================
      WAVY DIVIDER SCROLL ANIMATION
      ========================================================================== */
-  const dividers = document.querySelectorAll('.hotel-section-divider');
-  if (dividers.length) {
+  const dividers = document.querySelectorAll('.hotel-section-divider:not(.home-wave-row):not(.home-flower-row)'); if (dividers.length) {
     window.addEventListener('scroll', () => {
       const scrollPos = window.scrollY;
       dividers.forEach(divider => {

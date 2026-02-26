@@ -1732,6 +1732,43 @@ select.enquiry-input {
   opacity: 0.9;
 }
 
+.hotel-section-divider.home-wave-row {
+  height: 40px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 5rem auto;
+  background-image: url('../assets/wave-row.png');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.hotel-section-divider.home-flower-row {
+  background-image: url('../assets/flower-row.png');
+}
+
+.hotel-section-divider.home-wave-row,
+.hotel-section-divider.home-flower-row {
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  transform: none;
+  opacity: 1;
+}
+
+.hotel-section-divider.home-wave-row {
+  height: 40px;
+  background-image: url('../assets/wave-row.png');
+}
+
+.hotel-section-divider.home-flower-row {
+  height: 60px;
+  background-image: url('../assets/flower-row.png');
+}
+
 @media (min-width: 992px) {
   .our-hotels-section {
     padding-top: 3rem !important;
@@ -2090,7 +2127,6 @@ select.enquiry-input {
 }
 
 .footer-bottom .container-fluid {
-
   max-width: 90%;
 }
 

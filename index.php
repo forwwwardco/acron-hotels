@@ -233,8 +233,11 @@ $videos = [
       $textOrder = $isAlternate ? 'order-2 pe-lg-5 position-relative' : 'order-2 order-lg-1 pe-lg-5';
       $imgOrder  = $isAlternate ? 'order-1' : 'order-1 order-lg-2';
     ?>
-      <?php if ($index > 0): ?>
-        <div class="hotel-section-divider reveal"></div>
+      <?php if ($index == 1): ?>
+        <div class="hotel-section-divider home-wave-row reveal"></div>
+      <?php endif; ?>
+      <?php if ($index == 2): ?>
+        <div class="hotel-section-divider home-flower-row reveal"></div>
       <?php endif; ?>
       <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
         <div class="col-lg-6 <?= $textOrder ?>">
