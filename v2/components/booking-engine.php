@@ -1,52 +1,56 @@
 <?php
 
 /**
- * Reusable Enquiry Form Component
- * @param string $pageResort - Options: 'waterfront', 'regina', 'seaway' (optional)
+ * Reusable Booking Engine Component
+ *
+ * @global string|null $pageResort Optional. The context key ('waterfront', 'regina', 'seaway') 
+ * passed from the parent page to determine the active hotel and colour theme.
  */
-$themeConfig = [
-    'waterfront' => ['id' => 'MzAw', 'color' => 'var(--waterfront)'],
-    'regina'     => ['id' => 'Mjk4', 'color' => 'var(--regina)'],
-    'seaway'     => ['id' => 'NzQy', 'color' => 'var(--seaway)']
+$staahIds = [
+    'waterfront' => 'MzAw',
+    'regina'     => 'Mjk4',
+    'seaway'     => 'NzQy'
 ];
-$activeTheme = $themeConfig[$pageResort] ?? null;
-$id = $activeTheme['id'] ?? '';
-$btnStyle = $activeTheme ? "style='background-color: {$activeTheme['color']}; color: var(--white) !important;'" : "";
-$engineContext = !empty($pageResort) ? 'engine-' . $pageResort : 'engine-home';
+$resortKey = $pageResort ?? '';
+$selectedId = $staahIds[$resortKey] ?? '';
+$engineContext = !empty($resortKey) ? 'engine-' . $resortKey : 'engine-home';
+$btnClass      = !empty($resortKey) ? 'btn-' . $resortKey : 'btn-yellow';
 ?>
-
-<section class="booking-engine-fixed w-100 <?= $engineContext ?>" id="bookingEngine">
-    <button class="engine-toggle-btn d-lg-none" id="engineToggle">
-        <span class="btn-text">BOOK NOW</span>
-    </button>
+<section class="booking-engine-fixed w-100 <?= htmlspecialchars($engineContext) ?>" id="bookingEngine" aria-label="Hotel Booking Engine">
+    <button type="button" class="engine-toggle-btn d-lg-none" id="engineToggle" aria-expanded="false" aria-controls="book-direct-form"><span class="btn-text">BOOK NOW</span></button>
     <div class="booking-panel container-fluid px-lg-5">
-        <form class="booking-form py-3 py-lg-4" id="book-direct-form" target="_blank">
+        <form class="booking-form py-3 py-lg-4" id="book-direct-form" target="_blank" aria-label="Book Direct Form">
             <div class="row align-items-end g-3 g-lg-4">
                 <div class="col-12 col-lg-3">
-                    <label class="form-label text-white small fw-semibold d-none d-lg-block">Check In</label>
-                    <label class="form-label d-lg-none fw-bold text-blue-grey">Check In</label>
+                    <label for="checkin" class="form-label mb-1 d-block">
+                        <span class="visually-hidden">Check In Date</span>
+                        <span class="text-white small fw-semibold d-none d-lg-block" aria-hidden="true">Check In</span>
+                        <span class="d-lg-none fw-bold text-blue-grey" aria-hidden="true">Check In</span>
+                    </label>
                     <input type="date" id="checkin" name="checkin" class="form-control date-input" required>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <label class="form-label text-white small fw-semibold d-none d-lg-block">Check Out</label>
-                    <label class="form-label d-lg-none fw-bold text-blue-grey">Check Out</label>
+                    <label for="checkout" class="form-label mb-1 d-block">
+                        <span class="visually-hidden">Check Out Date</span>
+                        <span class="text-white small fw-semibold d-none d-lg-block" aria-hidden="true">Check Out</span>
+                        <span class="d-lg-none fw-bold text-blue-grey" aria-hidden="true">Check Out</span>
+                    </label>
                     <input type="date" id="checkout" name="checkout" class="form-control date-input" required>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <label class="form-label text-white small fw-semibold d-none d-lg-block">Select Hotel</label>
-                    <label class="form-label d-lg-none fw-bold text-blue-grey">Select Hotel</label>
+                    <label for="select_prop" class="form-label mb-1 d-block">
+                        <span class="visually-hidden">Select Hotel</span>
+                        <span class="text-white small fw-semibold d-none d-lg-block" aria-hidden="true">Select Hotel</span>
+                        <span class="d-lg-none fw-bold text-blue-grey" aria-hidden="true">Select Hotel</span>
+                    </label>
                     <select class="form-select custom-select" name="select_prop" id="select_prop" required>
-                        <option value="" <?= empty($id) ? 'selected' : '' ?> disabled>SELECT</option>
-                        <option value="MzAw" <?= $id === 'MzAw' ? 'selected' : '' ?>>Acron Waterfront Resort</option>
-                        <option value="Mjk4" <?= $id === 'Mjk4' ? 'selected' : '' ?>>Acron Candolim Regina</option>
-                        <option value="NzQy" <?= $id === 'NzQy' ? 'selected' : '' ?>>Acron Seaway Resort</option>
+                        <option value="" <?= empty($selectedId) ? 'selected' : '' ?> disabled>SELECT</option>
+                        <option value="MzAw" <?= $selectedId === 'MzAw' ? 'selected' : '' ?>>Acron Waterfront Resort</option>
+                        <option value="Mjk4" <?= $selectedId === 'Mjk4' ? 'selected' : '' ?>>Acron Candolim Regina</option>
+                        <option value="NzQy" <?= $selectedId === 'NzQy' ? 'selected' : '' ?>>Acron Seaway Resort</option>
                     </select>
                 </div>
-                <div class="col-12 col-lg-3">
-                    <button type="submit" class="btn btn-book-now w-100 fw-bold py-2 py-lg-3" <?= $btnStyle ?>>
-                        BOOK NOW
-                    </button>
-                </div>
+                <div class="col-12 col-lg-3"><button type="submit" class="btn btn-book-now <?= htmlspecialchars($btnClass) ?> w-100 fw-bold py-2 py-lg-3">BOOK NOW</button></div>
             </div>
         </form>
     </div>

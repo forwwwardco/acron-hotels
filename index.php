@@ -1,9 +1,7 @@
 <?php
 $pageResort = '';
-
 $h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
 $travellersChoiceAward = 'v2/assets/travelers-choice-200.jpg';
-
 $hotels = [
   [
     'name' => 'Acron Waterfront Resort',
@@ -105,14 +103,12 @@ $hotels = [
     'dotClass' => 'dot-seaway'
   ]
 ];
-
 $stats = [
   ['icon' => 'fa-regular fa-face-smile', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
   ['icon' => 'fa-regular fa-star', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
   ['icon' => 'fa-regular fa-building', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
   ['icon' => 'fa-solid fa-location-dot', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx']
 ];
-
 $pageReviews = [
   [
     'name' => 'John Doe',
@@ -157,196 +153,174 @@ $pageReviews = [
     'text' => 'We celebrated our honeymoon here and the resort completely spoiled us. From the towel art on the bed to the complimentary cake, the attention to detail was marvellous. Thank you Acron for the beautiful memories!'
   ]
 ];
-
 $videos = [
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
   'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
 ];
 ?>
-
-<!-- HEADER -->
 <?php include("v2/header.php"); ?>
-
-<!-- BOOKING ENGINE -->
 <?php include("v2/components/booking-engine.php"); ?>
-
-<!-- ENQUIRY FORM -->
 <?php include("v2/components/enquiry-form.php"); ?>
-
-<!-- HERO -->
-<section class="hero-section d-flex flex-column" id="heroSection">
-  <div class="hero-top-bar bg-white py-3 py-lg-4 border-bottom">
-    <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
-      <h1 class="hero-h1 text-blue-grey fw-bold m-0">
-        <?= $h1 ?><br>
-      </h1>
-      <div class="ta-badge-wrapper">
-        <img src="<?= $travellersChoiceAward ?>" alt="TripAdvisor Travellers' Choice" class="ta-badge-img">
+<main id="mainContent">
+  <section class="hero-section d-flex flex-column" id="heroSection" aria-labelledby="heroHeading">
+    <div class="hero-top-bar bg-white py-3 py-lg-4 border-bottom">
+      <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
+        <h1 id="heroHeading" class="hero-h1 text-blue-grey fw-bold m-0">
+          <?= htmlspecialchars($h1) ?><br>
+        </h1>
+        <div class="ta-badge-wrapper">
+          <img src="<?= htmlspecialchars($travellersChoiceAward) ?>" alt="" aria-hidden="true" class="ta-badge-img">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="hero-resorts-container container-fluid px-0 flex-fill position-relative">
-    <div class="row g-0 h-100" id="heroResortsContainerRow">
-      <?php foreach ($hotels as $hotel): ?>
-        <div class="col-12 col-lg-4 resort-col <?= $hotel['heroExtraClass'] ?>">
-          <img src="<?= $hotel['heroImage'] ?>" alt="<?= $hotel['name'] ?>" class="resort-bg-img" fetchpriority="high">
-          <div class="resort-overlay"></div>
-          <div class="resort-content-wrapper p-4 p-xxl-5">
-            <div class="resort-top">
-              <h2 class="resort-h2 fw-bold mb-2"><?= $hotel['name'] ?></h2>
-              <div class="d-flex align-items-center gap-3">
-                <p class="resort-tagline mb-0 h6"><?= $hotel['location'] ?></p>
-                <a href="<?= $hotel['mapLink'] ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none">
-                  <i class="fa-solid fa-location-dot"></i> Show on Map
+    <div class="hero-resorts-container container-fluid px-0 flex-fill position-relative">
+      <div class="row g-0 h-100" id="heroResortsContainerRow">
+        <?php foreach ($hotels as $hotel): ?>
+          <div class="col-12 col-lg-4 resort-col <?= htmlspecialchars($hotel['heroExtraClass']) ?>">
+            <img src="<?= htmlspecialchars($hotel['heroImage']) ?>" alt="" aria-hidden="true" class="resort-bg-img" fetchpriority="high">
+            <div class="resort-overlay" aria-hidden="true"></div>
+            <div class="resort-content-wrapper p-4 p-xxl-5">
+              <div class="resort-top">
+                <h2 class="resort-h2 fw-bold mb-2"><?= htmlspecialchars($hotel['name']) ?></h2>
+                <div class="d-flex align-items-center gap-3">
+                  <p class="resort-tagline mb-0 h6"><?= htmlspecialchars($hotel['location']) ?></p>
+                  <a href="<?= htmlspecialchars($hotel['mapLink']) ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Show on Map
+                  </a>
+                </div>
+              </div>
+              <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
+                <a href="<?= htmlspecialchars($hotel['link']) ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center" aria-label="Explore <?= htmlspecialchars($hotel['name']) ?>">
+                  Explore
+                </a>
+                <button type="button" class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= htmlspecialchars($hotel['id']) ?>" aria-label="Why stay at <?= htmlspecialchars($hotel['name']) ?>?">
+                  Why Stay Here?
+                </button>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php include("v2/components/hero-tooltip-overlay.php"); ?>
+  <?php include("v2/components/exclusive-deals.php"); ?>
+  <section class="our-hotels-section py-5 bg-white position-relative" aria-labelledby="hotelsHeading">
+    <img src="v2/assets/starfish.png" class="decorative-starfish" alt="" aria-hidden="true" loading="lazy">
+    <div class="container py-4 position-relative z-1">
+      <h2 id="hotelsHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
+      <?php foreach ($hotels as $index => $hotel):
+        $isAlternate = ($index % 2 !== 0);
+        $textOrder = $isAlternate ? 'order-2 pe-lg-5 position-relative' : 'order-2 order-lg-1 pe-lg-5';
+        $imgOrder  = $isAlternate ? 'order-1' : 'order-1 order-lg-2';
+      ?>
+        <?php if ($index == 1): ?>
+          <div class="hotel-section-divider home-wave-row reveal" aria-hidden="true"></div>
+        <?php endif; ?>
+        <?php if ($index == 2): ?>
+          <div class="hotel-section-divider home-flower-row reveal" aria-hidden="true"></div>
+        <?php endif; ?>
+        <article class="row align-items-center gy-5 mb-5 hotel-row reveal">
+          <div class="col-lg-6 <?= $textOrder ?>">
+            <?php if ($isAlternate): ?>
+              <img src="v2/assets/umbrella-2.png" class="decorative-umbrella" alt="" aria-hidden="true" loading="lazy">
+            <?php endif; ?>
+            <header>
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <span class="text-blue-grey fw-bold small ls-1"><?= htmlspecialchars($hotel['location']) ?></span>
+                <a href="<?= htmlspecialchars($hotel['mapLink']) ?>" target="_blank" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
                 </a>
               </div>
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <h3 class="fw-bold text-blue-grey mb-0 fs-2"><?= htmlspecialchars($hotel['name']) ?></h3>
+                <div class="hotel-brand-dot <?= htmlspecialchars($hotel['dotClass']) ?> flex-shrink-0" aria-hidden="true"></div>
+              </div>
+            </header>
+            <p class="text-blue-grey opacity-75 mb-3 small fw-medium lh-lg">
+              <?= htmlspecialchars($hotel['description']) ?>
+            </p>
+            <div class="row gy-3 mb-4 hotel-amenities">
+              <?php foreach ($hotel['amenities'] as $amenity): ?>
+                <div class="col-6 d-flex align-items-center gap-2">
+                  <i class="<?= htmlspecialchars($amenity['icon']) ?> hotel-amenity-icon" aria-hidden="true"></i>
+                  <span class="fw-bold text-blue-grey opacity-75 small"><?= htmlspecialchars($amenity['label']) ?></span>
+                </div>
+              <?php endforeach; ?>
             </div>
-            <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
-              <a href="<?= $hotel['link'] ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center">
-                Explore
+            <div class="hotel-action-buttons">
+              <a href="<?= htmlspecialchars($hotel['link']) ?>" class="btn btn-explore">EXPLORE PROPERTY</a>
+              <button type="button" class="btn btn-yellow hotel-btn trigger-book-engine" data-staah-id="<?= htmlspecialchars($hotel['staahId']) ?>">BOOK NOW</button>
+              <a href="<?= htmlspecialchars($hotel['walkthroughLink']) ?>" class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2 text-decoration-none" aria-label="Take a 3D walkthrough of <?= htmlspecialchars($hotel['name']) ?>">
+                <i class="fa-solid fa-cube" aria-hidden="true"></i> 3D WALKTHROUGH
               </a>
-              <button class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= $hotel['id'] ?>">
-                Why Stay Here?
-              </button>
             </div>
           </div>
-        </div>
+          <div class="col-lg-6 <?= $imgOrder ?>">
+            <div class="hotel-image-composition position-relative">
+              <div id="<?= htmlspecialchars($hotel['id']) ?>Carousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover" role="region" aria-label="<?= htmlspecialchars($hotel['name']) ?> Image Gallery">
+                <?php include("v2/components/carousel-loader.php"); ?>
+                <a href="<?= htmlspecialchars($hotel['taLink']) ?>" target="_blank" class="review-badge shadow-sm text-decoration-none" aria-label="Read TripAdvisor reviews for <?= htmlspecialchars($hotel['name']) ?>">
+                  <img src="v2/assets/tripadvisor-logo.png" alt="" aria-hidden="true" class="review-badge-icon me-2" loading="lazy">
+                  <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;"><?= htmlspecialchars($hotel['taRating']) ?> rating from <?= htmlspecialchars($hotel['taReviews']) ?> reviews</span>
+                </a>
+                <div class="carousel-inner h-100 rounded-4 shadow">
+                  <?php foreach ($hotel['images'] as $imgIndex => $imgSrc): ?>
+                    <div class="carousel-item <?= $imgIndex === 0 ? 'active' : '' ?> h-100">
+                      <img src="<?= htmlspecialchars($imgSrc) ?>" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="View <?= $imgIndex + 1 ?> of <?= htmlspecialchars($hotel['name']) ?>" loading="lazy">
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+                <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
+                  <?php foreach ($hotel['images'] as $imgIndex => $imgSrc): ?>
+                    <button type="button" data-bs-target="#<?= htmlspecialchars($hotel['id']) ?>Carousel" data-bs-slide-to="<?= $imgIndex ?>" class="<?= $imgIndex === 0 ? 'active' : '' ?>" aria-label="Slide <?= $imgIndex + 1 ?>" <?= $imgIndex === 0 ? 'aria-current="true"' : '' ?>></button>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <img src="<?= htmlspecialchars($hotel['overlappingImg']) ?>" class="overlapping-img shadow rounded-3 border border-white placeholder-img" alt="" aria-hidden="true" loading="lazy">
+            </div>
+          </div>
+        </article>
       <?php endforeach; ?>
     </div>
-  </div>
-</section>
-
-<!-- HERO TOOLTIP -->
-<?php include("v2/components/hero-tooltip-overlay.php"); ?>
-
-<!-- EXCLUSIVE DEALS -->
-<?php include("v2/components/exclusive-deals.php"); ?>
-
-<!-- OUR HOTELS -->
-<section class="our-hotels-section py-5 bg-white position-relative">
-  <img src="v2/assets/starfish.png" class="decorative-starfish" alt="Decorative Starfish">
-  <div class="container py-4 position-relative z-1">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
-    <?php foreach ($hotels as $index => $hotel):
-      $isAlternate = ($index % 2 !== 0);
-      $textOrder = $isAlternate ? 'order-2 pe-lg-5 position-relative' : 'order-2 order-lg-1 pe-lg-5';
-      $imgOrder  = $isAlternate ? 'order-1' : 'order-1 order-lg-2';
-    ?>
-      <?php if ($index == 1): ?>
-        <div class="hotel-section-divider home-wave-row reveal"></div>
-      <?php endif; ?>
-      <?php if ($index == 2): ?>
-        <div class="hotel-section-divider home-flower-row reveal"></div>
-      <?php endif; ?>
-      <div class="row align-items-center gy-5 mb-5 hotel-row reveal">
-        <div class="col-lg-6 <?= $textOrder ?>">
-          <?php if ($isAlternate): ?>
-            <img src="v2/assets/umbrella-2.png" class="decorative-umbrella" alt="Decorative Umbrella">
-          <?php endif; ?>
-          <div class="d-flex align-items-center gap-3 mb-2">
-            <span class="text-blue-grey fw-bold small ls-1"><?= $hotel['location'] ?></span>
-            <a href="<?= $hotel['mapLink'] ?>" target="_blank" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey">
-              <i class="fa-solid fa-location-dot"></i> SHOW ON MAP
-            </a>
-          </div>
-          <div class="d-flex align-items-center gap-3 mb-2">
-            <h3 class="fw-bold text-blue-grey mb-0 fs-2"><?= $hotel['name'] ?></h3>
-            <div class="hotel-brand-dot <?= $hotel['dotClass'] ?> flex-shrink-0"></div>
-          </div>
-          <p class="text-blue-grey opacity-75 mb-3 small fw-medium lh-lg">
-            <?= $hotel['description'] ?>
-          </p>
-          <div class="row gy-3 mb-4 hotel-amenities">
-            <?php foreach ($hotel['amenities'] as $amenity): ?>
-              <div class="col-6 d-flex align-items-center gap-2">
-                <i class="<?= $amenity['icon'] ?> hotel-amenity-icon"></i>
-                <span class="fw-bold text-blue-grey opacity-75 small"><?= $amenity['label'] ?></span>
-              </div>
-            <?php endforeach; ?>
-          </div>
-          <div class="hotel-action-buttons">
-            <a href="<?= $hotel['link'] ?>" class="btn btn-explore">EXPLORE PROPERTY</a>
-            <button class="btn btn-yellow hotel-btn trigger-book-engine" data-staah-id="<?= $hotel['staahId'] ?>">BOOK NOW</button>
-            <a href="<?= $hotel['walkthroughLink'] ?>" class="btn btn-walkthrough d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-              <i class="fa-solid fa-cube"></i> 3D WALKTHROUGH
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-6 <?= $imgOrder ?>">
-          <div class="hotel-image-composition position-relative">
-            <div id="<?= $hotel['id'] ?>Carousel" class="carousel slide hotel-carousel position-relative" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
-              <?php include("v2/components/carousel-loader.php"); ?>
-              <a href="<?= $hotel['taLink'] ?>" target="_blank" class="review-badge shadow-sm text-decoration-none">
-                <img src="v2/assets/tripadvisor-logo.png" alt="TripAdvisor" class="review-badge-icon me-2">
-                <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;"><?= $hotel['taRating'] ?> rating from <?= $hotel['taReviews'] ?> reviews</span>
-              </a>
-              <div class="carousel-inner h-100 rounded-4 shadow">
-                <?php foreach ($hotel['images'] as $imgIndex => $imgSrc): ?>
-                  <div class="carousel-item <?= $imgIndex === 0 ? 'active' : '' ?> h-100">
-                    <img src="<?= $imgSrc ?>" class="d-block w-100 h-100 object-fit-cover placeholder-img" alt="<?= $hotel['name'] ?> <?= $imgIndex + 1 ?>">
-                  </div>
-                <?php endforeach; ?>
-              </div>
-              <div class="carousel-indicators hotel-indicators m-0 mb-3 ms-4 justify-content-start">
-                <?php foreach ($hotel['images'] as $imgIndex => $imgSrc): ?>
-                  <button type="button" data-bs-target="#<?= $hotel['id'] ?>Carousel" data-bs-slide-to="<?= $imgIndex ?>" class="<?= $imgIndex === 0 ? 'active' : '' ?>" aria-label="Slide <?= $imgIndex + 1 ?>"></button>
-                <?php endforeach; ?>
-              </div>
+    <div class="wave-divider-bottom" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
+  </section>
+  <section class="stats-section py-5 position-relative" aria-labelledby="statsHeading">
+    <h2 id="statsHeading" class="visually-hidden">Our Statistics</h2>
+    <div class="container py-4">
+      <div class="row g-5 text-center justify-content-center">
+        <?php foreach ($stats as $stat): ?>
+          <div class="col-6 col-lg-3 stat-item reveal">
+            <div class="stat-icon mb-3" aria-hidden="true">
+              <i class="<?= htmlspecialchars($stat['icon']) ?>"></i>
             </div>
-            <img src="<?= $hotel['overlappingImg'] ?>" class="overlapping-img shadow rounded-3 border border-white placeholder-img" alt="<?= $hotel['name'] ?> Detail">
+            <h3 class="stat-number fw-bold mb-1 text-blue-grey"><?= htmlspecialchars($stat['number']) ?></h3>
+            <p class="stat-label mb-0 text-blue-grey"><?= htmlspecialchars($stat['label']) ?></p>
           </div>
-        </div>
+        <?php endforeach; ?>
       </div>
-    <?php endforeach; ?>
-  </div>
-
-  <div class="wave-divider-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
-    </svg></div>
-</section>
-
-<!-- STATISTICS -->
-<section class="stats-section py-5 position-relative">
-  <!-- <img src=" v2/assets/shell.png" class="decorative-shell" alt="Decorative Shell"> -->
-  <div class="container py-4">
-    <div class="row g-5 text-center justify-content-center">
-      <?php foreach ($stats as $stat): ?>
-        <div class="col-6 col-lg-3 stat-item reveal">
-          <div class="stat-icon mb-3">
-            <i class="<?= $stat['icon'] ?>"></i>
-          </div>
-          <h3 class="stat-number fw-bold mb-1 text-blue-grey"><?= $stat['number'] ?></h3>
-          <p class="stat-label mb-0 text-blue-grey"><?= $stat['label'] ?></p>
-        </div>
-      <?php endforeach; ?>
     </div>
-  </div>
-
-  <div class="wave-divider-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path fill="var(--white)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
-    </svg></div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews-section py-5" style="padding-bottom:0!important;padding-top:1rem!important;">
-  <div class="container py-4">
-    <h2 class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
-    <div class="review-summary-wrapper reveal">
-      <img src="v2/assets/travelers-choice-200.jpg" alt="Travellers' Choice Badge" class="ta-badge-image shadow-sm">
+    <div class="wave-divider-bottom" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="var(--white)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+      </svg>
     </div>
-  </div>
-  <?php include("v2/components/reviews-slider.php"); ?>
-</section>
-
-<!-- VIDEO SLIDER -->
-<?php include("v2/components/video-carousel.php"); ?>
-
-<!-- ACRON HOMES CROSSLINK -->
-<?php include("v2/components/acron-homes-crosslink.php"); ?>
-
-<!-- ACRON HOTELS LEGACY -->
-<?php include("v2/components/acron-hotels-legacy.php"); ?>
-
-<!-- FOOTER -->
-<?php include("v2/footer.php"); ?>
+  </section>
+  <section class="reviews-section py-5" style="padding-bottom:0!important;padding-top:1rem!important;" aria-labelledby="homeReviewsHeading">
+    <div class="container py-4">
+      <h2 id="homeReviewsHeading" class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
+      <div class="review-summary-wrapper reveal">
+        <img src="v2/assets/travelers-choice-200.jpg" alt="TripAdvisor Travellers' Choice Badge" class="ta-badge-image shadow-sm" loading="lazy">
+      </div>
+    </div>
+    <?php include("v2/components/reviews-slider.php"); ?>
+  </section>
+  <?php include("v2/components/video-carousel.php"); ?>
+  <?php include("v2/components/acron-homes-crosslink.php"); ?>
+  <?php include("v2/components/acron-hotels-legacy.php"); ?>
+</main> <?php include("v2/footer.php"); ?>

@@ -557,26 +557,6 @@ img {
   }
 }
 
-/* Ensure the highlightEngine keyframe also uses the variable if you use it */
-@keyframes highlightEngine {
-  0% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  50% {
-    box-shadow: 0 -15px 40px var(--pulse-glow-color);
-  }
-
-  100% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* Note: Retained duplicate selector to safely preserve your original cascade */
-.engine-highlight-pulse .booking-panel {
-  animation: highlightEngine 0.8s ease-out;
-}
-
 .engine-highlight-pulse .booking-panel {
   animation: pulseAndGlow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform-origin: bottom center;
@@ -1397,15 +1377,6 @@ select.enquiry-input {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
   z-index: 1;
   pointer-events: none;
-}
-
-/* Controls & Indicators Base */
-.promo-controls-wrapper {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  z-index: 2;
 }
 
 .custom-video-indicators,
