@@ -12,8 +12,10 @@ $themeConfig = [
 $activeTheme = $themeConfig[$pageResort] ?? null;
 $id = $activeTheme['id'] ?? '';
 $btnStyle = $activeTheme ? "style='background-color: {$activeTheme['color']}; color: var(--white) !important;'" : "";
+$engineContext = !empty($pageResort) ? 'engine-' . $pageResort : 'engine-home';
 ?>
-<section class="booking-engine-fixed w-100" id="bookingEngine">
+
+<section class="booking-engine-fixed w-100 <?= $engineContext ?>" id="bookingEngine">
     <button class="engine-toggle-btn d-lg-none" id="engineToggle">
         <span class="btn-text">BOOK NOW</span>
     </button>

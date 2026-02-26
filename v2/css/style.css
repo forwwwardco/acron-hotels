@@ -39,6 +39,7 @@
   --deals-grad-regina-btm: #E3F6F5;
 
   --base-font: 'Plus Jakarta Sans', sans-serif;
+  --pulse-glow-color: rgba(255, 217, 0, 0.7);
 }
 
 /* Base & Layout */
@@ -521,21 +522,23 @@ img {
   transition: all var(--transition-speed);
 }
 
-/* Animations */
-@keyframes highlightEngine {
-  0% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  50% {
-    box-shadow: 0 -15px 40px rgba(255, 204, 0, 0.4);
-  }
-
-  100% {
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  }
+/* Override the glow color based on the resort context */
+.engine-waterfront {
+  --pulse-glow-color: rgba(0, 144, 183, 0.7);
+  /* Waterfront Blue */
 }
 
+.engine-seaway {
+  --pulse-glow-color: rgba(97, 72, 130, 0.7);
+  /* Seaway Purple */
+}
+
+.engine-regina {
+  --pulse-glow-color: rgba(255, 59, 78, 0.7);
+  /* Regina Red */
+}
+
+/* Update your existing pulseAndGlow keyframe */
 @keyframes pulseAndGlow {
   0% {
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
@@ -543,13 +546,29 @@ img {
   }
 
   50% {
-    box-shadow: 0 -40px 100px rgba(255, 217, 0, 0.7);
+    /* Use the dynamic variable here */
+    box-shadow: 0 -40px 100px var(--pulse-glow-color);
     transform: translateY(-8px) scale(1.1);
   }
 
   100% {
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(0) scale(1);
+  }
+}
+
+/* Ensure the highlightEngine keyframe also uses the variable if you use it */
+@keyframes highlightEngine {
+  0% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 -15px 40px var(--pulse-glow-color);
+  }
+
+  100% {
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
   }
 }
 
