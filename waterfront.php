@@ -95,10 +95,62 @@ $roomsList = [
       'v2/assets/waterfront-carousel-3.jpg'
     ],
     'learnLink' => '#'
+  ],
+  [
+    'id' => 'seaside-room',
+    'name' => 'Seaside Room',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'amenities' => [
+      ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+      ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+    ],
+    'images' => [
+      'v2/assets/waterfront-carousel-1.jpg',
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-5.jpg'
+    ],
+    'learnLink' => '#'
+  ],
+  [
+    'id' => 'riverside-room',
+    'name' => 'Riverside Room',
+    'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
+    'amenities' => [
+      ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
+      ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'King Size Bed'],
+      ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
+    ],
+    'images' => [
+      'v2/assets/waterfront-carousel-5.jpg',
+      'v2/assets/waterfront-carousel-4.jpg',
+      'v2/assets/waterfront-carousel-3.jpg'
+    ],
+    'learnLink' => '#'
   ]
 ];
 $suitesHeading = "Explore Our Suites";
 $suitesList = [
+  [
+    'id' => 'emerald-suite',
+    'name' => 'Emerald Suite',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
+    'amenities' => [
+      ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
+      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
+      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Private Kitchenette'],
+      ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
+    ],
+    'images' => [
+      'v2/assets/waterfront-carousel-2.jpg',
+      'v2/assets/waterfront-carousel-3.jpg'
+    ],
+    'learnLink' => '#'
+  ],
   [
     'id' => 'emerald-suite',
     'name' => 'Emerald Suite',
@@ -132,11 +184,21 @@ $highlightAmenitiesList = [
     'title' => 'Infinity Pool',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
     'image' => 'v2/assets/waterfront-carousel-3.jpg'
+  ],
+  [
+    'title' => 'Infinity Pool',
+    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
+    'image' => 'v2/assets/waterfront-carousel-3.jpg'
   ]
 ];
 $pageReviews = [
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
-  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.']
+  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
+  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
+  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.']
 ];
 $videos = [
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
