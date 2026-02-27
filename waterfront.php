@@ -120,11 +120,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-1.jpg',
-      'v2/assets/waterfront-carousel-2.jpg',
-      'v2/assets/waterfront-carousel-3.jpg',
-      'v2/assets/waterfront-carousel-4.jpg',
-      'v2/assets/waterfront-carousel-5.jpg'
+      'v2/assets/waterfront-seaside-room-1.jpg',
+      'v2/assets/waterfront-seaside-room-2.jpg',
+      'v2/assets/waterfront-seaside-room-3.jpg'
     ],
     'learnLink' => '#'
   ],
@@ -139,9 +137,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-5.jpg',
-      'v2/assets/waterfront-carousel-4.jpg',
-      'v2/assets/waterfront-carousel-3.jpg'
+      'v2/assets/waterfront-riverside-room-1.jpg',
+      'v2/assets/waterfront-riverside-room-2.jpg',
+      'v2/assets/waterfront-riverside-room-3.jpg'
     ],
     'learnLink' => '#'
   ],
@@ -156,11 +154,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-1.jpg',
-      'v2/assets/waterfront-carousel-2.jpg',
-      'v2/assets/waterfront-carousel-3.jpg',
-      'v2/assets/waterfront-carousel-4.jpg',
-      'v2/assets/waterfront-carousel-5.jpg'
+      'v2/assets/waterfront-courtyard-room-1.jpg',
+      'v2/assets/waterfront-courtyard-room-2.jpg',
+      'v2/assets/waterfront-courtyard-room-3.jpg'
     ],
     'learnLink' => '#'
   ],
@@ -175,9 +171,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-5.jpg',
-      'v2/assets/waterfront-carousel-4.jpg',
-      'v2/assets/waterfront-carousel-3.jpg'
+      'v2/assets/waterfront-upperdeck-room-1.jpg',
+      'v2/assets/waterfront-upperdeck-room-2.jpg',
+      'v2/assets/waterfront-upperdeck-room-3.jpg'
     ],
     'learnLink' => '#'
   ]
@@ -195,8 +191,9 @@ $suitesList = [
       ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-2.jpg',
-      'v2/assets/waterfront-carousel-3.jpg'
+      'v2/assets/waterfront-emerald-suite-1.jpg',
+      'v2/assets/waterfront-emerald-suite-2.jpg',
+      'v2/assets/waterfront-emerald-suite-3.jpg'
     ],
     'learnLink' => '#'
   ],
@@ -211,8 +208,9 @@ $suitesList = [
       ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
     ],
     'images' => [
-      'v2/assets/waterfront-carousel-2.jpg',
-      'v2/assets/waterfront-carousel-3.jpg'
+      'v2/assets/waterfront-royal-suite-1.jpg',
+      'v2/assets/waterfront-royal-suite-2.jpg',
+      'v2/assets/waterfront-royal-suite-3.jpg'
     ],
     'learnLink' => '#'
   ]
@@ -222,22 +220,22 @@ $highlightAmenitiesList = [
   [
     'title' => 'Al Fresco',
     'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
-    'image' => 'v2/assets/waterfront-carousel-5.jpg'
+    'image' => 'v2/assets/waterfront-benefit-1.jpg'
   ],
   [
     'title' => 'The Spa',
     'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
-    'image' => 'v2/assets/waterfront-carousel-4.jpg'
+    'image' => 'v2/assets/waterfront-benefit-2.jpg'
   ],
   [
     'title' => 'Infinity Pool',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/waterfront-carousel-3.jpg'
+    'image' => 'v2/assets/waterfront-benefit-3.jpg'
   ],
   [
     'title' => 'Infinity Pool',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/waterfront-carousel-3.jpg'
+    'image' => 'v2/assets/waterfront-benefit-4.jpg'
   ]
 ];
 $pageReviews = [
@@ -251,7 +249,8 @@ $pageReviews = [
 ];
 $videos = [
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
-  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0'
+  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
+  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
 ];
 ?>
 <?php include("v2/header.php"); ?>
