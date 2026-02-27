@@ -2,11 +2,60 @@
 $pageResort = 'waterfront';
 $pageTitle = "Acron Waterfront Resort | Luxury Boutique Stay in Baga, Goa";
 $pageDescription = "Experience the finest riverfront luxury at Acron Waterfront Resort. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
-$h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
+$h1 = 'Acron Waterfront Resort';
+$heroImages = [
+  'v2/assets/waterfront-hero-carousel-1.jpg',
+  'v2/assets/waterfront-hero-carousel-2.jpg',
+  'v2/assets/waterfront-hero-carousel-3.jpg',
+  'v2/assets/waterfront-hero-carousel-4.jpg',
+  'v2/assets/waterfront-hero-carousel-5.jpg'
+];
+$pageAmenities = [
+  [
+    'title' => 'AMENITY 1',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-1.jpg'
+  ],
+  [
+    'title' => 'AMENITY 2',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-2.jpg'
+  ],
+  [
+    'title' => 'AMENITY 3',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-3.jpg'
+  ],
+  [
+    'title' => 'AMENITY 4',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-4.jpg'
+  ],
+  [
+    'title' => 'AMENITY 5',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-5.jpg'
+  ],
+  [
+    'title' => 'AMENITY 6',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-6.jpg'
+  ],
+  [
+    'title' => 'AMENITY 7',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-7.jpg'
+  ],
+  [
+    'title' => 'AMENITY 8',
+    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'image' => 'v2/assets/waterfront-amenity-8.jpg'
+  ]
+];
 $galleryHeading = "Browse Gallery";
 $galleryFilters = [
-  'rooms'         => 'ROOMS',
   'exterior'      => 'EXTERIOR',
+  'rooms'         => 'ROOMS',
   'restaurant'    => 'RESTAURANT',
   'common-spaces' => 'COMMON SPACES',
   'amenities'     => 'AMENITIES'
@@ -214,7 +263,7 @@ $videos = [
       <div class="container">
         <header class="hero-text-box reveal">
           <h1 id="resortHeroHeading" class="resort-h2 fw-bold mb-2 text-uppercase text-white">
-            Acron Waterfront Resort
+            <?= $h1 ?>
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
@@ -239,13 +288,6 @@ $videos = [
     <div id="heroCarousel" class="carousel slide hero-carousel-bg" data-bs-ride="carousel" data-bs-interval="5000" role="region" aria-label="Resort Banner Gallery">
       <div class="carousel-inner h-100">
         <?php
-        $heroImages = [
-          'v2/assets/waterfront-carousel-1.jpg',
-          'v2/assets/waterfront-carousel-2.jpg',
-          'v2/assets/waterfront-carousel-3.jpg',
-          'v2/assets/waterfront-carousel-4.jpg',
-          'v2/assets/waterfront-carousel-5.jpg'
-        ];
         foreach ($heroImages as $index => $img):
         ?>
           <div class="carousel-item h-100 <?= $index === 0 ? 'active' : '' ?>">
