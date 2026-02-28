@@ -2948,3 +2948,10 @@ select.enquiry-input {
 .yt-embed-home {
   background-color: var(--white);
 }
+
+
+#homeReviewsSection img#reviewBadge {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 12px !important;
+}

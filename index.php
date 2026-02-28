@@ -314,11 +314,11 @@ $videos = [
       </svg>
     </div>
   </section>
-  <section class="reviews-section py-5" style="padding-bottom:0!important;padding-top:1rem!important;" aria-labelledby="homeReviewsHeading">
+  <section class="reviews-section py-5" id="homeReviewsSection" style="padding-bottom:0!important;padding-top:1rem!important;" aria-labelledby="homeReviewsHeading">
     <div class="container py-4">
-      <h2 id="homeReviewsHeading" class="text-center fw-bold text-blue-grey mb-5 reveal section-heading" style="margin-bottom: 0!important;">What Our Guests Say</h2>
-      <div class="review-summary-wrapper reveal">
-        <img src="v2/assets/travelers-choice-200.jpg" alt="TripAdvisor Travellers' Choice Badge" class="ta-badge-image shadow-sm" loading="lazy">
+      <div class="d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-5 reveal">
+        <h2 id="homeReviewsHeading" class="text-center fw-bold text-blue-grey m-0 section-heading">What Our Guests Say</h2>
+        <img src="v2/assets/travelers-choice-200.jpg" alt="TripAdvisor Travellers' Choice Badge" class="ta-badge-image shadow-sm" id="reviewBadge" loading="lazy">
       </div>
     </div>
     <?php include("v2/components/reviews-slider.php"); ?>
