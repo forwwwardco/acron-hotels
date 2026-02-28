@@ -1,6 +1,3 @@
-/**
- * Acron Group of Hotels - Master Script Controller
- */
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ==========================================================================
@@ -118,15 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!bookingEnginePanel) return;
 
-      // 1. Check for specific resort ID
       const staahId = btn.getAttribute('data-staah-id');
+      if (staahId && hotelSelect) { hotelSelect.value = staahId; }
 
-      if (staahId && hotelSelect) {
-        // Resort button clicked: update the dropdown
-        hotelSelect.value = staahId;
-      }
-
-      // 2. Handle Mobile vs Desktop behaviour
       if (window.innerWidth < 992) {
         // --- MOBILE BEHAVIOUR ---
         if (!bookingEnginePanel.classList.contains('engine-expanded')) {
@@ -156,12 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (enquiryPanel && enquiryTrigger) {
     const triggerText = enquiryTrigger.querySelector(".btn-text");
-
     const togglePanel = () => {
       const isActive = enquiryPanel.classList.toggle("active");
       triggerText.textContent = isActive ? "CLOSE" : "ENQUIRE";
     };
-
     enquiryTrigger.addEventListener("click", togglePanel);
 
     // Auto-close on outside click
@@ -211,48 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================================
-     5. EXCLUSIVE DEALS FILTER
-     ========================================================================== */
-  const filterPills = document.querySelectorAll(".exclusive-deals .filter-pill");
-  const dealCards = document.querySelectorAll(".deal-card");
-
-  if (filterPills.length && dealCards.length) {
-    // Initial State Prep
-    dealCards.forEach(card => card.classList.contains("d-none") && card.classList.add("fade-out"));
-    let isAnimating = false;
-
-    filterPills.forEach(pill => {
-      pill.addEventListener("click", () => {
-        if (isAnimating || pill.classList.contains("active")) return;
-        isAnimating = true;
-
-        // Toggle Active Pill
-        filterPills.forEach(p => p.classList.remove("active"));
-        pill.classList.add("active");
-
-        const targetCategory = pill.dataset.filter;
-
-        // Fade out current cards
-        dealCards.forEach(card => !card.classList.contains("d-none") && card.classList.add("fade-out"));
-
-        // Wait for fade-out (300ms), then swap and fade in
-        setTimeout(() => {
-          dealCards.forEach(card => {
-            if (card.dataset.category === targetCategory) {
-              card.classList.remove("d-none");
-              void card.offsetWidth; // Force reflow
-              card.classList.remove("fade-out");
-            } else {
-              card.classList.add("d-none", "fade-out");
-            }
-          });
-          setTimeout(() => isAnimating = false, 300); // Unlock
-        }, 300);
-      });
-    });
-  }
-
-  /* ==========================================================================
      6. MEDIA & CAROUSELS
      ========================================================================== */
   const videoCarousel = document.getElementById('acronVideoCarousel');
@@ -279,36 +226,25 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================================
      8. DECORATIVE ELEMENTS SCROLL ANIMATION
      ========================================================================== */
-  const starfish = document.querySelector('.decorative-starfish');
-  const umbrella = document.querySelector('.decorative-umbrella');
+  const leftDecor = document.querySelectorAll('.left-decor');
+  const rightDecor = document.querySelectorAll('.right-decor');
   const crab = document.querySelector('.decorative-crab');
-  const coconut = document.querySelector('.decorative-coconut');
   const videoSection = document.querySelector('.video-section');
 
-  if (starfish || umbrella || crab || coconut) {
+  if (leftDecor || rightDecor) {
     window.addEventListener('scroll', () => {
       // Use requestAnimationFrame for buttery smooth rendering
       window.requestAnimationFrame(() => {
         const scrollY = window.scrollY;
+        const scale = Math.min(1.2, 1 + (scrollY * 0.0001));
+        const rotate = scrollY * 0.04;
 
-        // --- Starfish, Umbrella & Coconut Logic ---
-        if (starfish) {
-          const scaleStar = Math.min(1.2, 1 + (scrollY * 0.0001));
-          const rotStar = scrollY * 0.02;
-          starfish.style.transform = `scale(${scaleStar}) rotate(${rotStar}deg)`;
+        for (i = 0; i < leftDecor.length; i++) {
+          leftDecor[i].style.transform = `scale(${scale}) rotate(${rotate * 1}deg)`;
         }
 
-        if (umbrella) {
-          const scaleUmb = Math.min(1.15, 1 + (scrollY * 0.00008));
-          const rotUmb = scrollY * -0.02;
-          umbrella.style.transform = `scale(${scaleUmb}) rotate(${rotUmb}deg)`;
-        }
-
-        if (coconut) {
-          // Scales up slightly, rotates at a custom speed for an organic feel
-          const scaleCoco = Math.min(1.2, 1 + (scrollY * 0.0001));
-          const rotCoco = scrollY * -0.02;
-          coconut.style.transform = `scale(${scaleCoco}) rotate(${rotCoco}deg)`;
+        for (i = 0; i < rightDecor.length; i++) {
+          rightDecor[i].style.transform = `scale(${scale}) rotate(${rotate * -1}deg)`;
         }
 
         // --- Crab Slide Logic ---
@@ -403,9 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach(el => fadeObserver.observe(el));
   }
 
-});
 
-document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Image Fade-In Logic
   const handleImageLoad = (img) => {
@@ -447,77 +381,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-});
 
-/* ==========================================================================
-   CAROUSEL PROGRESS TRACKER LOGIC
-   ========================================================================== */
-const initCarouselProgress = () => {
-  const carousels = document.querySelectorAll('.carousel[data-bs-ride="carousel"]');
 
-  carousels.forEach(carousel => {
-    if (carousel.id === 'acronVideoCarousel') return;
+  /* ==========================================================================
+     CAROUSEL PROGRESS TRACKER LOGIC
+     ========================================================================== */
+  const initCarouselProgress = () => {
+    const carousels = document.querySelectorAll('.carousel[data-bs-ride="carousel"]');
 
-    const loader = carousel.querySelector('.carousel-loader');
-    const track = carousel.querySelector('.loader-track');
-    if (!track || !loader) return;
+    carousels.forEach(carousel => {
+      if (carousel.id === 'acronVideoCarousel') return;
 
-    const interval = parseInt(carousel.getAttribute('data-bs-interval')) || 5000;
-    let startTime, remainingTime = interval, isPaused = false, animationFrame;
+      const loader = carousel.querySelector('.carousel-loader');
+      const track = carousel.querySelector('.loader-track');
+      if (!track || !loader) return;
 
-    const runAnimation = (duration) => {
-      if (animationFrame) cancelAnimationFrame(animationFrame);
+      const interval = parseInt(carousel.getAttribute('data-bs-interval')) || 5000;
+      let startTime, remainingTime = interval, isPaused = false, animationFrame;
 
-      track.classList.remove('is-locked'); // Unlock if it was locked
-      track.style.transition = 'none';
-      track.style.strokeDashoffset = '100';
+      const runAnimation = (duration) => {
+        if (animationFrame) cancelAnimationFrame(animationFrame);
 
-      void track.offsetWidth; // Reflow
+        track.classList.remove('is-locked'); // Unlock if it was locked
+        track.style.transition = 'none';
+        track.style.strokeDashoffset = '100';
 
-      animationFrame = requestAnimationFrame(() => {
-        track.style.transition = `stroke-dashoffset ${duration}ms linear`;
-        track.style.strokeDashoffset = '0';
-        startTime = Date.now();
+        void track.offsetWidth; // Reflow
+
+        animationFrame = requestAnimationFrame(() => {
+          track.style.transition = `stroke-dashoffset ${duration}ms linear`;
+          track.style.strokeDashoffset = '0';
+          startTime = Date.now();
+        });
+      };
+
+      const resetAndStart = () => {
+        isPaused = false;
+        remainingTime = interval;
+        loader.classList.remove('is-paused');
+        runAnimation(interval);
+      };
+
+      carousel.addEventListener('mouseenter', () => {
+        isPaused = true;
+        loader.classList.add('is-paused');
+        const timePassed = Date.now() - startTime;
+        remainingTime = Math.max(0, remainingTime - timePassed);
+        const computedStyle = window.getComputedStyle(track);
+        const currentOffset = computedStyle.getPropertyValue('stroke-dashoffset');
+        track.style.transition = 'none';
+        track.style.strokeDashoffset = currentOffset;
       });
-    };
 
-    const resetAndStart = () => {
-      isPaused = false;
-      remainingTime = interval;
-      loader.classList.remove('is-paused');
-      runAnimation(interval);
-    };
+      carousel.addEventListener('mouseleave', () => {
+        isPaused = false;
+        loader.classList.remove('is-paused');
+        if (remainingTime > 0) {
+          track.style.transition = `stroke-dashoffset ${remainingTime}ms linear`;
+          track.style.strokeDashoffset = '0';
+          startTime = Date.now();
+        }
+      });
 
-    carousel.addEventListener('mouseenter', () => {
-      isPaused = true;
-      loader.classList.add('is-paused');
-      const timePassed = Date.now() - startTime;
-      remainingTime = Math.max(0, remainingTime - timePassed);
-      const computedStyle = window.getComputedStyle(track);
-      const currentOffset = computedStyle.getPropertyValue('stroke-dashoffset');
-      track.style.transition = 'none';
-      track.style.strokeDashoffset = currentOffset;
+      carousel.addEventListener('slide.bs.carousel', resetAndStart);
+
+      // --- INITIALIZATION ---
+      track.classList.add('is-locked'); // Lock it instantly on load
+
+      setTimeout(() => {
+        resetAndStart(); // This now handles the removal of 'is-locked' via runAnimation
+      }, 400);
     });
+  };
 
-    carousel.addEventListener('mouseleave', () => {
-      isPaused = false;
-      loader.classList.remove('is-paused');
-      if (remainingTime > 0) {
-        track.style.transition = `stroke-dashoffset ${remainingTime}ms linear`;
-        track.style.strokeDashoffset = '0';
-        startTime = Date.now();
-      }
-    });
-
-    carousel.addEventListener('slide.bs.carousel', resetAndStart);
-
-    // --- INITIALIZATION ---
-    track.classList.add('is-locked'); // Lock it instantly on load
-
-    setTimeout(() => {
-      resetAndStart(); // This now handles the removal of 'is-locked' via runAnimation
-    }, 400);
-  });
-};
-
-initCarouselProgress();
+  initCarouselProgress();
+});

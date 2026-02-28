@@ -28,17 +28,23 @@ $themeConfig = [
     'waterfront' => [
         'context' => 'deals-waterfront',
         'src'     => 'v2/assets/flamingo.png',
-        'class'   => 'decorative-flamingo'
+        'class'   => 'decorative-flamingo left-decor',
+        'desktopSrc' => '',
+        'desktopClass' => ''
     ],
     'regina' => [
         'context' => 'deals-regina',
         'src'     => 'v2/assets/coconut.png',
-        'class'   => 'decorative-coconut'
+        'class'   => 'decorative-coconut',
+        'desktopSrc' => '',
+        'desktopClass' => ''
     ],
     'seaway' => [
         'context' => 'deals-seaway',
         'src'     => 'v2/assets/starfish.png',
-        'class'   => 'decorative-starfish'
+        'class'   => 'decorative-starfish',
+        'desktopSrc' => '',
+        'desktopClass' => ''
     ]
 ];
 
@@ -48,7 +54,9 @@ $activeTheme = (isset($pageResort) && isset($themeConfig[$pageResort]))
     : [
         'context' => 'deals-home',
         'src'     => 'v2/assets/coconut.png',
-        'class'   => 'decorative-coconut'
+        'class'   => 'decorative-coconut right-decor',
+        'desktopSrc' => 'v2/assets/frond.png',
+        'desktopClass' => 'decorative-palmleaf left-decor'
     ];
 
 $heading = $dealsHeading ?? "Exclusive Deals, Just For You";
@@ -94,6 +102,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 <section id="exclusiveDeals" class="exclusive-deals py-5 position-relative <?= $esc_html($activeTheme['context']) ?>" aria-labelledby="dealsHeading">
 
     <img src="<?= $esc_html($activeTheme['src']) ?>" class="<?= $esc_html($activeTheme['class']) ?>" alt="" aria-hidden="true" loading="lazy">
+    <img src="<?= $esc_html($activeTheme['desktopSrc']) ?>" class="<?= $esc_html($activeTheme['desktopClass']) ?>" alt="" aria-hidden="true" loading="lazy">
 
     <div class="container py-4 reveal">
         <h2 id="dealsHeading" class="text-center fw-bold text-blue-grey mb-4 section-heading">
