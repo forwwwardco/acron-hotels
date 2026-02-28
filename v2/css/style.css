@@ -958,9 +958,13 @@ select.enquiry-input {
     font-size: 1.55rem;
   }
 
-  .middle-resort-col {
-    border-left: 6px solid var(--white);
-    border-right: 6px solid var(--white);
+  .resort-col {
+    border-left: 8px solid var(--white);
+    border-bottom: 8px solid var(--white);
+  }
+
+  .resort-col:nth-child(3) {
+    border-right: 8px solid var(--white);
   }
 
   .resort-content-wrapper {
