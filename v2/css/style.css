@@ -1715,10 +1715,11 @@ select.enquiry-input {
 
 .hotel-section-divider {
   height: 19px;
-  max-width: 1000px;
-  width: 85%;
-  margin: 5rem auto;
-
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-right: 0;
+  margin-left: 0;
   background-color: transparent;
   box-shadow: none;
 

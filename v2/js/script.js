@@ -124,12 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (staahId && hotelSelect) {
         // Resort button clicked: update the dropdown
         hotelSelect.value = staahId;
-      } else {
-        // Generic button clicked (Navbar or Legacy): scroll to top smoothly
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
       }
 
       // 2. Handle Mobile vs Desktop behaviour
