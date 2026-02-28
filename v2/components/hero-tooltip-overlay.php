@@ -6,6 +6,8 @@
  * This component acts as a modal overlay to display specific resort features.
  * The content (title and list items) is dynamically populated via script.js 
  * based on the 'data-resort' attribute of the trigger button.
+ *
+ * @see script.js -> Section 4 (HERO SECTION TOOLTIPS)
  */
 ?>
 <div class="hero-tooltip-overlay" id="heroTooltip" role="dialog" aria-modal="true" aria-labelledby="tooltipTitle">
