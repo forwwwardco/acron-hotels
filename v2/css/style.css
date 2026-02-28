@@ -759,8 +759,12 @@ select.enquiry-input {
 .resort-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
+}
+
+#homeOverlay.resort-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .resort-content-wrapper {
@@ -777,7 +781,7 @@ select.enquiry-input {
 
 .resort-h2 {
   font-size: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .resort-tagline {
@@ -785,6 +789,7 @@ select.enquiry-input {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .resort-bottom {
@@ -2484,6 +2489,21 @@ select.enquiry-input {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  margin-top: 20vh;
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
+  opacity: 1 !important;
 }
 
 .resort-hero-wrapper .hero-btn {

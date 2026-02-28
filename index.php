@@ -182,7 +182,7 @@ $videos = [
         <?php foreach ($hotels as $hotel): ?>
           <div class="col-12 col-lg-4 resort-col <?= htmlspecialchars($hotel['heroExtraClass']) ?>">
             <img src="<?= htmlspecialchars($hotel['heroImage']) ?>" alt="" aria-hidden="true" class="resort-bg-img" fetchpriority="high">
-            <div class="resort-overlay" aria-hidden="true"></div>
+            <div class="resort-overlay" id="homeOverlay" aria-hidden="true"></div>
             <div class="resort-content-wrapper p-4 p-xxl-5">
               <div class="resort-top">
                 <h2 class="resort-h2 fw-bold mb-2"><?= htmlspecialchars($hotel['name']) ?></h2>
