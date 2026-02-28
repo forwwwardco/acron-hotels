@@ -10,7 +10,7 @@
         <div class="row gy-5 align-items-start">
             <div class="col-lg-4 col-md-12 text-center text-lg-start">
                 <a href="/acron-hotels" aria-label="Acron Group of Hotels Home">
-                    <img src="https://placehold.co/200x60" alt="Acron Group of Hotels Logo" class="footer-logo img-fluid" width="220" loading="lazy">
+                    <img src="v2/assets/acron-group-of-hotels-logo-main.png" alt="Acron Group of Hotels Logo" class="footer-logo img-fluid" width="220" loading="lazy">
                 </a>
             </div>
             <nav class="col-lg-2 col-md-4 col-6" aria-label="Sitemap">

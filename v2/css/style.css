@@ -1572,22 +1572,11 @@ select.enquiry-input {
   font-size: 1.1rem;
 }
 
-.hotel-brand-dot {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.dot-waterfront {
-  background-color: var(--waterfront);
-}
-
-.dot-seaway {
-  background-color: var(--seaway);
-}
-
-.dot-regina {
-  background-color: var(--regina);
+.hotel-brand-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
 }
 
 .btn-explore,

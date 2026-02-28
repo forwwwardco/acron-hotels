@@ -7,6 +7,7 @@ $hotels = [
     'name' => 'Acron Waterfront Resort',
     'location' => 'BAGA, GOA',
     'heroImage' => 'v2/assets/waterfront-feature.jpg',
+    'iconUrl' => 'v2/assets/waterfront-icon.png',
     'images' => [
       'v2/assets/waterfront-carousel-1.jpg',
       'v2/assets/waterfront-carousel-2.jpg',
@@ -40,6 +41,7 @@ $hotels = [
     'name' => 'Acron Candolim Regina',
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/regina-feature.jpg',
+    'iconUrl' => 'v2/assets/regina-icon.png',
     'images' => [
       'v2/assets/regina-carousel-1.jpg',
       'v2/assets/regina-carousel-2.jpg',
@@ -73,6 +75,7 @@ $hotels = [
     'name' => 'Acron Seaway Resort',
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/seaway-feature.jpg',
+    'iconUrl' => 'v2/assets/seaway-icon.png',
     'images' => [
       'v2/assets/seaway-carousel-1.jpg',
       'v2/assets/seaway-carousel-2.jpg',
@@ -235,7 +238,7 @@ $videos = [
               </div>
               <div class="d-flex align-items-center gap-3 mb-2">
                 <h3 class="fw-bold text-blue-grey mb-0 fs-2"><?= htmlspecialchars($hotel['name']) ?></h3>
-                <div class="hotel-brand-dot <?= htmlspecialchars($hotel['dotClass']) ?> flex-shrink-0" aria-hidden="true"></div>
+                <img src="<?= htmlspecialchars($hotel['iconUrl']) ?>" class="hotel-brand-icon flex-shrink-0" alt="<?= htmlspecialchars($hotel['name']) ?> Icon" aria-hidden="true">
               </div>
             </header>
             <p class="text-blue-grey opacity-75 mb-3 small fw-medium lh-lg">

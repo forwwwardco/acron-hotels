@@ -51,7 +51,7 @@ $direct_booking_benefits = [
     <nav class="navbar navbar-expand-lg bg-white py-3" aria-label="Main Navigation">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand me-auto me-lg-0" href="<?= htmlspecialchars($home) ?>" aria-label="Acron Hotels Home">
-                <img src="https://placehold.co/200x60" alt="Acron Group of Hotels Logo" class="img-fluid main-logo">
+                <img src="v2/assets/acron-group-of-hotels-logo-main.png" alt="Acron Group of Hotels Logo" class="img-fluid main-logo">
             </a>
             <div class="ms-auto d-lg-none">
                 <button type="button" class="btn btn-book-now fw-bold px-4 py-2 trigger-book-engine">BOOK NOW</button>
