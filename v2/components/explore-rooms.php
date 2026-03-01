@@ -30,7 +30,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 
 <section id="exploreRooms" class="explore-rooms-section py-5 bg-white position-relative" aria-labelledby="roomsSectionHeading">
 
-    <img src="v2/assets/frond.png" class="decorative-frond" alt="" aria-hidden="true" loading="lazy">
+    <img src="v2/assets/frond.png" class="decor decorative-frond" alt="" aria-hidden="true" loading="lazy">
 
     <div class="container py-4 position-relative z-1">
         <h2 id="roomsSectionHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">
@@ -54,7 +54,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
             <article class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal position-relative">
 
                 <?php if ($index === 2): ?>
-                    <img src="v2/assets/poolring.png" class="decorative-poolring" alt="" aria-hidden="true" loading="lazy">
+                    <img src="v2/assets/poolring.png" class="decor decorative-poolring" alt="" aria-hidden="true" loading="lazy">
                 <?php endif; ?>
 
                 <div class="col-lg-6 <?= $textOrder ?>">
@@ -101,9 +101,9 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                                 <?php endforeach; ?>
                             </div>
 
-                            <div class="carousel-gradient-overlay" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;" aria-hidden="true"></div>
+                            <div class="carousel-gradient-overlay" aria-hidden="true"></div>
 
-                            <div class="room-controls-wrapper d-flex align-items-center justify-content-center gap-4 position-absolute w-100 pb-3 z-3" style="bottom: 0;">
+                            <div class="room-controls-wrapper d-flex align-items-center justify-content-center gap-4 position-absolute w-100 pb-3 z-3">
                                 <button class="promo-control-btn border-0 bg-transparent d-flex align-items-center" type="button" data-bs-target="#<?= $carouselId ?>" data-bs-slide="prev" aria-label="Previous slide" aria-controls="<?= $carouselId ?>">
                                     <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
                                 </button>
@@ -134,5 +134,5 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
         </svg>
     </div>
 
-    <img src="v2/assets/shell.png" class="decorative-shell-2" alt="" aria-hidden="true" loading="lazy">
+    <img src="v2/assets/shell.png" class="decor decorative-shell-2" alt="" aria-hidden="true" loading="lazy">
 </section>

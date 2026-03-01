@@ -14,8 +14,10 @@
 // Define internal routing
 $home       = '/acron-hotels';
 $waterfront = '/acron-hotels/waterfront.php';
-$regina     = '/acron-hotels/candolim-regina.php';
-$seaway     = '/acron-hotels/seaway.php';
+$regina     = '/acron-hotels/acron-candolim-regina.php';
+$seaway     = '/acron-hotels/acron-seaway-resort.php';
+$exclusiveDeals    = '#exclusive-deals';
+$directBookingBenefits    = 'javascript:void(0);';
 $contact    = '/acron-hotels/contact.php';
 
 // Helper function for secure output escaping
@@ -114,11 +116,11 @@ $direct_booking_benefits = [
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Exclusive Deals</a>
+                            <a class="nav-link" href="<?= $exclusiveDeals ?>">Exclusive Deals</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="whyBookDropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="<?= $directBookingBenefits ?>" id="whyBookDropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 Direct Booking Benefits
                             </a>
                             <ul class="dropdown-menu border-0 desktop-tooltip-menu p-3" aria-labelledby="whyBookDropdown">
@@ -168,8 +170,8 @@ $direct_booking_benefits = [
             </button>
 
             <div class="modal-body text-center py-4">
-                <h6 id="specialOffersModalLabel" class="fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Call for Special Offers</h6>
-                <hr class="mx-auto mb-4" style="width: 40px; border-top: 2px solid var(--blue-grey); opacity: 1;" aria-hidden="true">
+                <h6 id="specialOffersModalLabel" class="fw-bold text-uppercase mb-3">Call for Special Offers</h6>
+                <hr class="modal-line mx-auto mb-4" aria-hidden="true">
 
                 <div class="modal-contacts d-flex flex-column gap-3">
                     <?php

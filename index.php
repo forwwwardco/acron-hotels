@@ -210,7 +210,7 @@ $videos = [
   <?php include("v2/components/hero-tooltip-overlay.php"); ?>
   <?php include("v2/components/exclusive-deals.php"); ?>
   <section class="our-hotels-section py-5 bg-white position-relative" aria-labelledby="hotelsHeading">
-    <img src="v2/assets/starfish.png" class="decorative-starfish left-decor" alt="" aria-hidden="true" loading="lazy">
+    <img src="v2/assets/starfish.png" class="decor our-hotels-heading-decor" alt="" aria-hidden="true" loading="lazy">
     <div class="container py-4 position-relative z-1">
       <h2 id="hotelsHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
       <?php foreach ($hotels as $index => $hotel):
@@ -231,7 +231,7 @@ $videos = [
         <article class="row align-items-center gy-5 mb-5 hotel-row reveal">
           <div class="col-lg-6 <?= $textOrder ?>">
             <?php if ($isAlternate): ?>
-              <img src="v2/assets/umbrella-2.png" class="decorative-umbrella right-decor" alt="" aria-hidden="true" loading="lazy">
+              <img src="v2/assets/umbrella-2.png" class="decor our-hotels-mid-decor" alt="" aria-hidden="true" loading="lazy">
             <?php endif; ?>
             <header>
               <div class="d-flex align-items-center gap-3 mb-2">
@@ -270,7 +270,7 @@ $videos = [
                 <?php include("v2/components/carousel-loader.php"); ?>
                 <a href="<?= htmlspecialchars($hotel['taLink']) ?>" target="_blank" class="review-badge shadow-sm text-decoration-none" aria-label="Read TripAdvisor reviews for <?= htmlspecialchars($hotel['name']) ?>">
                   <img src="v2/assets/tripadvisor-logo.png" alt="" aria-hidden="true" class="review-badge-icon me-2" loading="lazy">
-                  <span class="fw-bold text-blue-grey small" style="font-size: 0.75rem;"><?= htmlspecialchars($hotel['taRating']) ?> rating from <?= htmlspecialchars($hotel['taReviews']) ?> reviews</span>
+                  <span class="fw-bold text-blue-grey small"><?= htmlspecialchars($hotel['taRating']) ?> rating from <?= htmlspecialchars($hotel['taReviews']) ?> reviews</span>
                 </a>
                 <div class="carousel-inner h-100 rounded-4 shadow">
                   <?php foreach ($hotel['images'] as $imgIndex => $imgSrc): ?>
@@ -318,7 +318,7 @@ $videos = [
       </svg>
     </div>
   </section>
-  <section class="reviews-section py-5" id="homeReviewsSection" style="padding-bottom:0!important;padding-top:1rem!important;" aria-labelledby="homeReviewsHeading">
+  <section class="reviews-section py-5" id="homeReviewsSection" aria-labelledby="homeReviewsHeading">
     <div class="container py-4">
       <div class="d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-5 reveal">
         <h2 id="homeReviewsHeading" class="text-center fw-bold text-blue-grey m-0 section-heading">What Our Guests Say</h2>
@@ -328,6 +328,6 @@ $videos = [
     <?php include("v2/components/reviews-slider.php"); ?>
   </section>
   <?php include("v2/components/video-carousel.php"); ?>
-  <?php include("v2/components/acron-homes-crosslink.php"); ?>
-  <?php include("v2/components/acron-hotels-legacy.php"); ?>
+  <?php include("v2/components/image-head-body.php"); ?>
+  <?php include("v2/components/image-head-btn.php"); ?>
 </main> <?php include("v2/footer.php"); ?>

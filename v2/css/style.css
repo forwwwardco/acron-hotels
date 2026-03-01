@@ -411,6 +411,10 @@ img.loaded {
   background-color: var(--seaway-dark);
 }
 
+.skip-to-main-content {
+  border-radius: 0 0 8px 0;
+}
+
 @keyframes fadeInDropdown {
   from {
     opacity: 0;
@@ -421,6 +425,16 @@ img.loaded {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#specialOffersModalLabel {
+  letter-spacing: 1px;
+}
+
+.modal-line {
+  width: 40px;
+  border-top: 2px solid var(--blue-grey);
+  opacity: 1;
 }
 
 /* Desktop Enhancements */
@@ -798,7 +812,7 @@ select.enquiry-input {
 .resort-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
 }
 
@@ -1159,10 +1173,11 @@ select.enquiry-input {
 /* Section & Context Gradients */
 .exclusive-deals {
   min-height: 800px;
-  padding-top: 10rem !important;
+  padding-top: 6rem !important;
 }
 
 .exclusive-deals.deals-home {
+  padding-top: 10rem !important;
   background: linear-gradient(to bottom, var(--deals-grad-home-top) 0%, var(--deals-grad-home-mid) 50%, var(--deals-grad-home-btm) 100%);
 }
 
@@ -1290,6 +1305,10 @@ select.enquiry-input {
 /* Deals Desktop Enhancements */
 @media (min-width: 992px) {
   .exclusive-deals {
+    padding-top: 0 !important;
+  }
+
+  .exclusive-deals.deals-home {
     padding-top: 6rem !important;
   }
 
@@ -1307,6 +1326,10 @@ select.enquiry-input {
 .promo-carousel-img {
   height: 350px;
   object-fit: cover;
+}
+
+.video-section {
+  padding-bottom: 0 !important;
 }
 
 .video-section h3 {
@@ -1330,6 +1353,8 @@ select.enquiry-input {
 
 /* Overlays */
 .carousel-gradient-overlay {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1568,6 +1593,10 @@ select.enquiry-input {
   display: block;
 }
 
+.our-hotels-section .review-badge span.small {
+  font-size: 0.75rem;
+}
+
 /* Indicators */
 .hotel-indicators {
   display: flex;
@@ -1792,6 +1821,11 @@ select.enquiry-input {
   background-color: var(--lightest-blue);
 }
 
+.resort-reviews,
+.resort-reviews .container {
+  padding-bottom: 0 !important;
+}
+
 /* Scroll Container */
 .reviews-slider {
   display: flex;
@@ -1858,15 +1892,15 @@ select.enquiry-input {
    ========================================================================== */
 
 /* Section Backgrounds */
-.legacy-section {
+.image-head-btn-section {
   background-color: var(--lightest-blue);
 }
 
-.cross-promo-section {
+.image-head-body-section {
   background-color: var(--light-blue);
 }
 
-.cross-promo-section .container {
+.image-head-body-section .container {
   padding-bottom: 5rem !important;
 }
 
@@ -1923,7 +1957,7 @@ select.enquiry-input {
     min-height: 400px;
   }
 
-  .cross-promo-section .container {
+  .image-head-body-section .container {
     margin-bottom: 0 !important;
     padding-bottom: 7rem !important;
   }
@@ -2007,12 +2041,22 @@ select.enquiry-input {
   opacity: 1;
 }
 
+.forwwward-tag {
+  all: initial !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  text-decoration: inherit !important;
+  text-transform: inherit !important;
+}
+
 /* ==========================================================================
    13. DECORATIVE FLOATING ITEMS
    ========================================================================== */
 
 /* Shared Base Properties */
-[class*="decorative-"] {
+.decor {
   position: absolute;
   object-fit: contain;
   pointer-events: none;
@@ -2021,36 +2065,32 @@ select.enquiry-input {
 }
 
 /* Specific Element Positioning (Mobile Base) */
-.decorative-coconut {
+.home-deals-decor {
   top: 20px;
   right: calc(50vw - 65px);
   width: 130px;
   height: auto;
-  opacity: 0.9;
 }
 
-.decorative-flamingo {
-  top: 40px;
+.resort-deals-decor {
+  top: 0;
   left: calc(50vw - 65px);
   width: 130px;
   height: auto;
-  opacity: 0.9;
 }
 
-.decorative-starfish {
+.our-hotels-heading-decor {
   top: -60px;
   left: calc(50vw - 90px);
   width: 180px;
   height: 180px;
-  opacity: 0.8;
 }
 
-.decorative-umbrella {
+.our-hotels-mid-decor {
   bottom: -80px;
-  right: -60px;
-  width: 150px;
-  height: 150px;
-  opacity: 0.8;
+  right: -50px;
+  width: 160px;
+  height: 160px;
 }
 
 .decorative-shell {
@@ -2071,7 +2111,6 @@ select.enquiry-input {
 }
 
 .decor-t0-r0 {
-  position: absolute;
   top: 0;
   right: 0;
   width: 200px;
@@ -2084,7 +2123,6 @@ select.enquiry-input {
   left: -40px;
   width: 140px;
   height: auto;
-  opacity: 0.9;
 }
 
 .decorative-poolring {
@@ -2102,7 +2140,6 @@ select.enquiry-input {
   width: 110px;
   height: auto;
   z-index: 1;
-  opacity: 0.8;
   transform: rotate(-10deg);
 }
 
@@ -2112,11 +2149,10 @@ select.enquiry-input {
 
 /* Desktop Enhancements */
 @media (min-width: 992px) {
-  .decorative-coconut {
+  .home-deals-decor {
     right: 50px;
     width: 180px;
     top: 20px;
-    opacity: 1;
   }
 
   .decorative-palmleaf {
@@ -2124,29 +2160,27 @@ select.enquiry-input {
     left: 0;
     top: 0;
     width: 200px;
-    opacity: 1;
   }
 
-  .decorative-flamingo {
+  .resort-deals-decor {
+    top: -50px;
     left: 50px;
     width: 180px;
-    opacity: 1;
+    z-index: 1;
   }
 
-  .decorative-starfish {
+  .our-hotels-heading-decor {
     top: -120px;
     left: 20px;
     width: 300px;
     height: 300px;
-    opacity: 1;
   }
 
-  .decorative-umbrella {
+  .our-hotels-mid-decor {
     bottom: -130px;
-    right: -200px;
+    right: -100px;
     width: 250px;
     height: 250px;
-    opacity: 1;
   }
 
   .decorative-shell {
@@ -2166,7 +2200,6 @@ select.enquiry-input {
     top: -80px;
     left: -40px;
     width: 300px;
-    opacity: 1;
   }
 
   .decorative-poolring {
@@ -2180,7 +2213,6 @@ select.enquiry-input {
     bottom: -40px;
     left: 50px;
     width: 160px;
-    opacity: 1;
     transform: rotate(15deg);
   }
 }
@@ -2270,6 +2302,11 @@ select.enquiry-input {
 
 /* Feature List (Mobile Base) */
 .hero-feature-list {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 1rem 20px;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -2280,11 +2317,6 @@ select.enquiry-input {
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-  padding: 1rem 20px;
 }
 
 /* Action Buttons (Mobile Base) */
@@ -2520,6 +2552,11 @@ select.enquiry-input {
   color: var(--white);
 }
 
+.room-controls-wrapper,
+.suite-controls-wrapper {
+  bottom: 0;
+}
+
 /* Desktop Enhancements */
 @media (min-width: 992px) {
   .explore-rooms-section {
@@ -2592,20 +2629,6 @@ select.enquiry-input {
   /* Ensures text blocks stretch to match equal heights if content varies */
 }
 
-/* Specific Decorative Element (Mobile Base) */
-.amenities-flamingo {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: auto;
-  object-fit: contain;
-  z-index: 0;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
 /* Desktop Enhancements */
 @media (min-width: 992px) {
   .signature-amenities-section {
@@ -2618,11 +2641,6 @@ select.enquiry-input {
 
   .amenity-img {
     height: 280px;
-  }
-
-  .amenities-flamingo {
-    bottom: -80px;
-    width: 180px;
   }
 }
 
@@ -2797,6 +2815,11 @@ select.enquiry-input {
   object-fit: cover;
 }
 
+#homeReviewsSection {
+  padding-bottom: 0 !important;
+  padding-top: 1rem !important;
+}
+
 #homeReviewsSection img#reviewBadge {
   width: 200px !important;
   height: 200px !important;
@@ -2808,6 +2831,10 @@ select.enquiry-input {
   .review-summary-wrapper {
     flex-direction: row;
     gap: 20px;
+  }
+
+  #homeReviewsSection {
+    padding-top: 0 !important;
   }
 }
 

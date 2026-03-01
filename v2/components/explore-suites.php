@@ -96,11 +96,11 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                                 <?php endforeach; ?>
                             </div>
 
-                            <div class="carousel-gradient-overlay" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;" aria-hidden="true"></div>
+                            <div class="carousel-gradient-overlay" aria-hidden="true"></div>
 
-                            <div class="suite-controls-wrapper d-flex align-items-center justify-content-center gap-4 position-absolute w-100 pb-3 z-3" style="bottom: 0;">
+                            <div class="suite-controls-wrapper d-flex align-items-center justify-content-center gap-4 position-absolute w-100 pb-3 z-3"
                                 <button class="promo-control-btn border-0 bg-transparent d-flex align-items-center" type="button" data-bs-target="#<?= $carouselId ?>" data-bs-slide="prev" aria-label="Previous slide" aria-controls="<?= $carouselId ?>">
-                                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
                                 </button>
 
                                 <div class="carousel-indicators promo-indicators position-static m-0">

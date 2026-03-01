@@ -62,7 +62,7 @@ $description = $pageDescription ?? "Experience luxury at Acron Group of Hotels. 
 </head>
 
 <body>
-    <a href="#mainContent" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white z-3" style="border-radius: 0 0 8px 0;">
+    <a href="#mainContent" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white z-3 skip-to-main-content">
         Skip to main content
     </a>
     <?php include("v2/components/navbar.php"); ?>

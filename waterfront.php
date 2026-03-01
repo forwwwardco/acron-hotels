@@ -270,7 +270,7 @@ $videos = [
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </a>
           </div>
-          <p class="hero-feature-list text-white opacity-75 mb-4">
+          <p class="hero-feature-list text-white mb-4">
             Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
@@ -324,8 +324,8 @@ $videos = [
   <?php include("v2/components/explore-rooms.php"); ?>
   <?php include("v2/components/explore-suites.php"); ?>
   <?php include("v2/components/highlight-amenities.php"); ?>
-  <section class="reviews-section py-5 bg-lightest-blue" style="padding-bottom:0!important;" aria-labelledby="reviewsHeading">
-    <div class="container py-4" style="padding-bottom: 0!important;">
+  <section class="reviews-section py-5 bg-lightest-blue resort-reviews" aria-labelledby="reviewsHeading">
+    <div class="container py-4">
       <h2 id="reviewsHeading" class="text-center fw-bold text-blue-grey mb-2 reveal section-heading">What Our Guests Say</h2>
       <div class="review-summary-wrapper reveal">
         <div class="tripadvisor-pill" aria-label="TripAdvisor Rating Summary">
@@ -343,6 +343,6 @@ $videos = [
     <?php include("v2/components/reviews-slider.php"); ?>
   </section>
   <?php include("v2/components/video-carousel.php"); ?>
-  <?php include("v2/components/acron-homes-crosslink.php"); ?>
-  <?php include("v2/components/acron-hotels-legacy.php"); ?>
+  <?php include("v2/components/image-head-body.php"); ?>
+  <?php include("v2/components/image-head-btn.php"); ?>
 </main> <?php include("v2/footer.php"); ?>
