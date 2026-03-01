@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const bsOffcanvas = document.getElementById("acronOffcanvas");
   if (bsOffcanvas) {
     // Exclude links that toggle dropdowns or collapses
-    bsOffcanvas.querySelectorAll(".nav-link:not([data-bs-toggle='collapse']):not([data-bs-toggle='dropdown'])").forEach(link => {
+    bsOffcanvas.querySelectorAll(".nav-link:not([data-bs-toggle]):not(.dropdown-toggle)").forEach(link => {
       link.addEventListener("click", () => {
         const openedCanvas = bootstrap.Offcanvas.getInstance(bsOffcanvas);
         if (openedCanvas) openedCanvas.hide();
