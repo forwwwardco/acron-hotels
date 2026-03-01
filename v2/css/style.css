@@ -1649,8 +1649,7 @@ select.enquiry-input {
 
 .hotel-action-buttons .btn-walkthrough {
   order: 2;
-  width: 100%;
-  /* Forces to bottom naturally */
+  width: auto;
 }
 
 /* Section Dividers */
