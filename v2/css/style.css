@@ -518,7 +518,7 @@ img.loaded {
 }
 
 /* ==========================================================================
-   3. BOOKING ENGINE (Mobile-First)
+   3. BOOKING ENGINE
    ========================================================================== */
 
 /* Base Layout (Mobile Drawer State) */
@@ -732,7 +732,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   5. HERO SECTION (Mobile-First)
+   5. HERO SECTION
    ========================================================================== */
 
 /* Base Layout & Text */
@@ -1300,7 +1300,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   7. MEDIA CAROUSELS (Mobile-First)
+   7. MEDIA CAROUSELS
    ========================================================================== */
 
 /* Base Typography & Layout (Mobile) */
@@ -1500,7 +1500,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   8. OUR HOTELS (Mobile-First)
+   8. OUR HOTELS
    ========================================================================== */
 
 /* Section Layout & Background */
@@ -1726,7 +1726,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   9. STATISTICS (Mobile-First)
+   9. STATISTICS
    ========================================================================== */
 
 /* Section Layout */
@@ -1780,7 +1780,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   10. REVIEWS SLIDER (Mobile-First)
+   10. REVIEWS SLIDER
    ========================================================================== */
 
 /* Section & Layout Base */
@@ -1855,7 +1855,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   11. LEGACY & CROSS PROMOTION (Mobile-First)
+   11. LEGACY & CROSS PROMOTION
    ========================================================================== */
 
 /* Section Backgrounds */
@@ -2009,7 +2009,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   13. DECORATIVE FLOATING ITEMS (Mobile-First)
+   13. DECORATIVE FLOATING ITEMS
    ========================================================================== */
 
 /* Shared Base Properties */
@@ -2019,28 +2019,6 @@ select.enquiry-input {
   pointer-events: none;
   z-index: 0;
   /* Default z-index */
-}
-
-/* Shared Scroll Animation Properties */
-.decorative-coconut,
-.decorative-flamingo,
-.decorative-starfish,
-.decorative-umbrella,
-.decorative-crab,
-.decorative-frond,
-.decorative-poolring,
-.decorative-shell-2 {
-  will-change: transform;
-}
-
-.decorative-coconut,
-.decorative-flamingo,
-.decorative-starfish,
-.decorative-umbrella,
-.decorative-crab,
-.decorative-frond,
-.decorative-shell-2 {
-  transition: transform 0.1s ease-out;
 }
 
 /* Specific Element Positioning (Mobile Base) */
@@ -2068,10 +2046,6 @@ select.enquiry-input {
   opacity: 0.8;
 }
 
-.deals-regina .decorative-starfish {
-  top: 0;
-}
-
 .decorative-umbrella {
   bottom: -80px;
   right: -60px;
@@ -2097,7 +2071,8 @@ select.enquiry-input {
   z-index: 10;
 }
 
-.decorative-palm {
+.decor-t0-r0 {
+  position: absolute;
   top: 0;
   right: 0;
   width: 200px;
@@ -2167,10 +2142,6 @@ select.enquiry-input {
     opacity: 1;
   }
 
-  .deals-seaway .decorative-starfish {
-    top: 0;
-  }
-
   .decorative-umbrella {
     bottom: -130px;
     right: -200px;
@@ -2216,7 +2187,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   14. RESORT PAGE HERO (Mobile-First)
+   14. RESORT PAGE HERO
    ========================================================================== */
 
 /* Base Layout & Overlays */
@@ -2394,7 +2365,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   15. GALLERY SECTION (Mobile-First)
+   15. GALLERY SECTION
    ==========================================================================*/
 
 /* Section Backgrounds */
@@ -2520,7 +2491,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   16. EXPLORE ROOMS SECTION (Mobile-First)
+   16. EXPLORE ROOMS SECTION
    ========================================================================== */
 
 /* Image Carousel & Composition (Mobile Base) */
@@ -2574,7 +2545,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   17. SIGNATURE AMENITIES (Mobile-First)
+   17. SIGNATURE AMENITIES
    ========================================================================== */
 
 /* Section Background */
@@ -2657,7 +2628,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   18. EXPLORE SUITES SECTION (Mobile-First)
+   18. EXPLORE SUITES SECTION
    ========================================================================== */
 
 /* Section Backgrounds & Spacing (Mobile Base) */
@@ -2729,7 +2700,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   19. HIGHLIGHT AMENITIES SECTION (Mobile-First)
+   19. HIGHLIGHT AMENITIES SECTION
    ========================================================================== */
 
 .highlight-amenities-section {
@@ -2759,7 +2730,7 @@ select.enquiry-input {
 }
 
 /* ==========================================================================
-   20. TRIPADVISOR SUMMARY (Mobile-First)
+   20. TRIPADVISOR SUMMARY
    ========================================================================== */
 
 .review-summary-wrapper {

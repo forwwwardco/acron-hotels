@@ -31,7 +31,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 ?>
 
 <section class="cross-promo-section pt-5 position-relative reveal" aria-labelledby="crossPromoHeading">
-    <img src="v2/assets/palm.png" class="decorative-palm" alt="" aria-hidden="true" loading="lazy">
+    <img src="v2/assets/palm.png" class="decor-t0-r0" alt="" aria-hidden="true" loading="lazy">
 
     <div class="container pb-5 mb-lg-4">
         <div class="row align-items-center gy-5 justify-content-between">

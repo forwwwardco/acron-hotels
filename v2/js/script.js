@@ -305,6 +305,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const crab = document.querySelector('.decorative-crab');
+  const videoSection = document.querySelector('.video-section');
+
+  if (crab || videoSection) {
+    window.addEventListener('scroll', () => {
+      // Use requestAnimationFrame for buttery smooth rendering
+      window.requestAnimationFrame(() => {
+        const rect = videoSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top <= windowHeight && rect.bottom >= 0) {
+          let progress = 1 - (rect.top / windowHeight);
+          progress = Math.max(0, Math.min(1, progress));
+
+          const parentWidth = crab.parentElement.offsetWidth;
+          const crabWidth = crab.offsetWidth;
+          const currentLeftOffset = crab.offsetLeft;
+
+          const maxTravelX = (parentWidth / 2) - currentLeftOffset - (crabWidth / 2);
+
+          crab.style.transform = `translateX(${progress * maxTravelX}px)`;
+        }
+      });
+    });
+  }
+
   /* ==========================================================================
      9. TACTILE VIBRATION (Android/Mobile)
      ========================================================================== */
