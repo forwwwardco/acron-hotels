@@ -1,7 +1,6 @@
 <?php
-$pageResort = 'waterfront';
-$staahId = 'MzAw';
-$pageTitle = "Acron Waterfront Resort | Luxury Boutique Stay in Baga, Goa";
+$pageResort = 'regina';
+$pageTitle = "Acron Candolim Regina | Luxury Boutique Stay in Baga, Goa";
 $pageDescription = "Experience the finest riverfront luxury at Acron Waterfront Resort. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
 $h1 = 'Acron Waterfront Resort';
 $heroImages = [
@@ -275,7 +274,7 @@ $videos = [
             Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
-            <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">
+            <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="MzAw">
               BOOK NOW
             </button>
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">

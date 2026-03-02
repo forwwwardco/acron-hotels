@@ -14,9 +14,10 @@
 // Define internal routing
 $home       = '/acron-hotels';
 $waterfront = '/acron-hotels/waterfront.php';
-$regina     = '/acron-hotels/acron-candolim-regina.php';
-$seaway     = '/acron-hotels/acron-seaway-resort.php';
+$regina     = '/acron-hotels/candolim-regina.php';
+$seaway     = '/acron-hotels/seaway.php';
 $exclusiveDeals    = '#exclusive-deals';
+$ourHotels = 'javascript:void(0);';
 $directBookingBenefits    = 'javascript:void(0);';
 $contact    = '/acron-hotels/contact.php';
 
@@ -94,7 +95,7 @@ $direct_booking_benefits = [
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="hotelsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            <a class="nav-link dropdown-toggle d-none d-lg-block" href="<?= $ourHotels; ?>" id="hotelsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 Our Hotels
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm desktop-dropdown-menu" aria-labelledby="hotelsDropdown">

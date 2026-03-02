@@ -2139,13 +2139,23 @@ select.enquiry-input {
   height: auto;
 }
 
-.decorative-poolring {
+.room-decor-2-3 {
   top: -140px;
   right: -60px;
   width: 200px;
   height: auto;
   z-index: 10;
   transform: rotate(-10deg);
+}
+
+.room-decor-5-6 {
+  top: -140px;
+  width: 200px;
+  height: auto;
+  z-index: 10;
+  transform: rotate(-10deg);
+  right: auto;
+  left: -60px;
 }
 
 .decorative-shell-2 {
@@ -2216,11 +2226,19 @@ select.enquiry-input {
     width: 300px;
   }
 
-  .decorative-poolring {
+  .room-decor-2-3 {
     top: -250px;
     right: -200px;
     width: 380px;
     transform: rotate(-15deg);
+  }
+
+  .room-decor-5-6 {
+    top: -250px;
+    width: 380px;
+    transform: rotate(-15deg);
+    right: auto;
+    left: -200px;
   }
 
   .decorative-shell-2 {

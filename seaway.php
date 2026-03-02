@@ -1,9 +1,9 @@
 <?php
-$pageResort = 'waterfront';
-$staahId = 'MzAw';
-$pageTitle = "Acron Waterfront Resort | Luxury Boutique Stay in Baga, Goa";
-$pageDescription = "Experience the finest riverfront luxury at Acron Waterfront Resort. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
-$h1 = 'Acron Waterfront Resort';
+$pageResort = 'seaway';
+$staahId = 'NzQy';
+$pageTitle = "Acron Seaway Resort | Luxury Boutique Stay in Candolim, Goa";
+$pageDescription = "Experience the finest luxury at Acron Seaway Resort. Located in Candolim, our boutique resort offers an infinity pool, spa, and premium dining.";
+$h1 = 'Acron Seaway Resort';
 $heroImages = [
   'v2/assets/waterfront-hero-carousel-1.jpg',
   'v2/assets/waterfront-hero-carousel-2.jpg',
@@ -14,42 +14,42 @@ $heroImages = [
 $pageAmenities = [
   [
     'title' => 'AMENITY 1',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-1.jpg'
   ],
   [
     'title' => 'AMENITY 2',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-2.jpg'
   ],
   [
     'title' => 'AMENITY 3',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-3.jpg'
   ],
   [
     'title' => 'AMENITY 4',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-4.jpg'
   ],
   [
     'title' => 'AMENITY 5',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-5.jpg'
   ],
   [
     'title' => 'AMENITY 6',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-6.jpg'
   ],
   [
     'title' => 'AMENITY 7',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-7.jpg'
   ],
   [
     'title' => 'AMENITY 8',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
     'image' => 'v2/assets/waterfront-amenity-8.jpg'
   ]
 ];
@@ -177,41 +177,72 @@ $roomsList = [
       'v2/assets/waterfront-upperdeck-room-3.jpg'
     ],
     'learnLink' => '#'
-  ]
-];
-$suitesHeading = "Explore Our Suites";
-$suitesList = [
+  ],
   [
-    'id' => 'emerald-suite',
-    'name' => 'Emerald Suite',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
+    'id' => 'seaside-room',
+    'name' => 'Seaside Room',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Private Kitchenette'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
+      ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+      ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
     'images' => [
-      'v2/assets/waterfront-emerald-suite-1.jpg',
-      'v2/assets/waterfront-emerald-suite-2.jpg',
-      'v2/assets/waterfront-emerald-suite-3.jpg'
+      'v2/assets/waterfront-seaside-room-1.jpg',
+      'v2/assets/waterfront-seaside-room-2.jpg',
+      'v2/assets/waterfront-seaside-room-3.jpg'
     ],
     'learnLink' => '#'
   ],
   [
-    'id' => 'emerald-suite',
-    'name' => 'Emerald Suite',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
+    'id' => 'riverside-room',
+    'name' => 'Riverside Room',
+    'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Private Kitchenette'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
+      ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
+      ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'King Size Bed'],
+      ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/waterfront-royal-suite-1.jpg',
-      'v2/assets/waterfront-royal-suite-2.jpg',
-      'v2/assets/waterfront-royal-suite-3.jpg'
+      'v2/assets/waterfront-riverside-room-1.jpg',
+      'v2/assets/waterfront-riverside-room-2.jpg',
+      'v2/assets/waterfront-riverside-room-3.jpg'
+    ],
+    'learnLink' => '#'
+  ],
+  [
+    'id' => 'seaside-room',
+    'name' => 'Seaside Room',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'amenities' => [
+      ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
+      ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+    ],
+    'images' => [
+      'v2/assets/waterfront-courtyard-room-1.jpg',
+      'v2/assets/waterfront-courtyard-room-2.jpg',
+      'v2/assets/waterfront-courtyard-room-3.jpg'
+    ],
+    'learnLink' => '#'
+  ],
+  [
+    'id' => 'riverside-room',
+    'name' => 'Riverside Room',
+    'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
+    'amenities' => [
+      ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
+      ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
+      ['icon' => 'fa-solid fa-bed', 'text' => 'King Size Bed'],
+      ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
+    ],
+    'images' => [
+      'v2/assets/waterfront-upperdeck-room-1.jpg',
+      'v2/assets/waterfront-upperdeck-room-2.jpg',
+      'v2/assets/waterfront-upperdeck-room-3.jpg'
     ],
     'learnLink' => '#'
   ]
@@ -219,24 +250,19 @@ $suitesList = [
 $highlightsHeading = "Resort Highlights";
 $highlightAmenitiesList = [
   [
-    'title' => 'Al Fresco',
+    'title' => 'Cinnebar Signature Cafe',
     'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
     'image' => 'v2/assets/waterfront-benefit-1.jpg'
   ],
   [
-    'title' => 'The Spa',
+    'title' => 'Outdoor Events',
     'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
     'image' => 'v2/assets/waterfront-benefit-2.jpg'
   ],
   [
-    'title' => 'Infinity Pool',
+    'title' => 'Jacuzzi',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
     'image' => 'v2/assets/waterfront-benefit-3.jpg'
-  ],
-  [
-    'title' => 'Infinity Pool',
-    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/waterfront-benefit-4.jpg'
   ]
 ];
 $pageReviews = [
@@ -266,8 +292,8 @@ $videos = [
             <?= $h1 ?>
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-            <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
-            <a href="https://maps.google.com/?q=Acron+Waterfront+Resort" target="_blank" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none" aria-label="Show Acron Waterfront Resort on Map">
+            <p class="resort-tagline mb-0 h6 text-white">Candolim, Goa</p>
+            <a href="https://maps.google.com/?q=Acron+Seaway+Resort" target="_blank" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none" aria-label="Show Acron Seaway Resort on Map">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </a>
           </div>
@@ -278,7 +304,7 @@ $videos = [
             <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">
               BOOK NOW
             </button>
-            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">
+            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Seaway Resort?">
               WHY STAY HERE?
             </button>
           </div>
@@ -323,7 +349,6 @@ $videos = [
   <?php include("v2/components/exclusive-deals.php"); ?>
   <?php include("v2/components/gallery.php"); ?>
   <?php include("v2/components/explore-rooms.php"); ?>
-  <?php include("v2/components/explore-suites.php"); ?>
   <?php include("v2/components/highlight-amenities.php"); ?>
   <section class="reviews-section py-5 bg-lightest-blue resort-reviews" aria-labelledby="reviewsHeading">
     <div class="container py-4">

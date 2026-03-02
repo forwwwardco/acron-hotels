@@ -5,7 +5,7 @@
  *
  * This template renders the alternating zigzag layout for exploring rooms.
  *
- * @var string|null $pageResort   Optional. The context key ('waterfront', 'regina', 'seaway') 
+ * @var string|null $pageResort   Required. The context key ('waterfront', 'regina', 'seaway') 
  * passed from the parent page to determine the button colour theme.
  * @var string|null $roomsHeading Optional. The main section title.
  * @var array|null  $roomsList    Optional. The data array containing room details.
@@ -54,7 +54,15 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
             <article class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal position-relative">
 
                 <?php if ($index === 2): ?>
-                    <img src="v2/assets/poolring.png" class="decor decorative-poolring" alt="" aria-hidden="true" loading="lazy">
+                    <img src="v2/assets/poolring.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                <?php endif; ?>
+
+                <?php if ($index === 4): ?>
+                    <img src="v2/assets/poolring.png" class="decor room-decor-5-6" alt="" aria-hidden="true" loading="lazy">
+                <?php endif; ?>
+
+                <?php if ($index === 6): ?>
+                    <img src="v2/assets/poolring.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
                 <?php endif; ?>
 
                 <div class="col-lg-6 <?= $textOrder ?>">
@@ -127,10 +135,14 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
         <?php endforeach; ?>
 
     </div>
-
     <div class="wave-divider-bottom" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-            <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+            <?php if ($pageResort != 'seaway'): ?>
+                <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+            <?php endif; ?>
+            <?php if ($pageResort == 'seaway'): ?>
+                <path fill="var(--light-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
+            <?php endif; ?>
         </svg>
     </div>
 
