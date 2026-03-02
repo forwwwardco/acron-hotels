@@ -34,7 +34,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
     <img src="v2/assets/palm.png" class="decor decor-t0-r0" alt="" aria-hidden="true" loading="lazy">
 
     <div class="container pb-5 mb-lg-4">
-        <div class="row align-items-center gy-5 justify-content-between">
+        <div class="row align-items-center gy-5">
 
             <div class="col-lg-5">
                 <figure class="rounded-4 shadow overflow-hidden position-relative m-0">
@@ -43,7 +43,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                 </figure>
             </div>
 
-            <div class="col-lg-6 text-center text-lg-start">
+            <div class="col-lg-6 text-center px-lg-5 text-lg-start">
                 <header>
                     <p class="promo-tagline fw-bold text-uppercase mb-2 text-blue-grey opacity-75">
                         <?= $esc_html($imgHeadBodyComponentData['tagline']) ?>

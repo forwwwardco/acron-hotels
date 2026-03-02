@@ -1894,6 +1894,7 @@ select.enquiry-input {
 /* Section Backgrounds */
 .image-head-btn-section {
   background-color: var(--lightest-blue);
+  padding-top: 1rem !important;
 }
 
 .image-head-body-section {
@@ -1964,6 +1965,11 @@ select.enquiry-input {
 
   .wave-divider-bottom svg {
     height: 110px;
+  }
+
+  .image-head-btn-section {
+    background-color: var(--lightest-blue);
+    padding-top: 0 !important;
   }
 }
 
@@ -2118,6 +2124,14 @@ select.enquiry-input {
   z-index: 10;
 }
 
+.decor-b0-l0 {
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
 .decorative-frond {
   top: -60px;
   left: -40px;
@@ -2214,6 +2228,10 @@ select.enquiry-input {
     left: 50px;
     width: 160px;
     transform: rotate(15deg);
+  }
+
+  .decor-b0-l0 {
+    width: 200px;
   }
 }
 

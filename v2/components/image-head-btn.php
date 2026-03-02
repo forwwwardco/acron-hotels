@@ -37,6 +37,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 ?>
 
 <section class="image-head-btn-section py-5 position-relative <?= $themeContext ?>" aria-labelledby="legacyHeading">
+    <img src="v2/assets/hat-towel.png" class="decor decor-b0-l0" alt="" aria-hidden="true" loading="lazy">
     <div class="container py-4">
         <div class="row align-items-center gy-5">
 
