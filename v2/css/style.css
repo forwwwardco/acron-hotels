@@ -18,8 +18,8 @@
   --waterfront-dark: #167bd9;
   --regina: #ff3c4d;
   --regina-dark: #c51f2d;
-  --seaway: #664393;
-  --seaway-dark: #452b68;
+  --seaway: #fe8e22;
+  --seaway-dark: #cb7728;
 
   /* Typography & Layout */
   --base-font: 'Plus Jakarta Sans', sans-serif;
@@ -44,8 +44,8 @@
   --deals-grad-regina-mid: #FFF4B8;
   --deals-grad-regina-btm: #E3F6F5;
 
-  --deals-grad-seaway-top: #614882;
-  --deals-grad-seaway-mid: #F07B98;
+  --deals-grad-seaway-top: #fe8e22;
+  --deals-grad-seaway-mid: #fff4e0;
   --deals-grad-seaway-btm: #E3F6F5;
 }
 
