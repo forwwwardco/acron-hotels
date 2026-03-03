@@ -103,20 +103,41 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       e.stopPropagation();
 
-      const staahId = bookBtn.getAttribute('data-staah-id');
-      if (staahId && hotelSelect) hotelSelect.value = staahId;
+      const triggerEngineAnimation = () => {
+        const staahId = bookBtn.getAttribute('data-staah-id');
+        if (staahId && hotelSelect) hotelSelect.value = staahId;
 
-      if (window.innerWidth < 992) {
-        // Mobile: Pop up the drawer
-        if (!engine.classList.contains('engine-expanded')) {
-          document.getElementById('engineToggle')?.click();
+        if (window.innerWidth < 992) {
+          // Mobile: Pop up the drawer
+          if (!engine.classList.contains('engine-expanded')) {
+            document.getElementById('engineToggle')?.click();
+          }
+        } else {
+          // Desktop: Pulse the engine bar and focus date
+          engine.classList.remove('engine-highlight-pulse');
+          void engine.offsetWidth; // Force CSS reflow
+          engine.classList.add('engine-highlight-pulse');
+          if (checkinInput) setTimeout(() => checkinInput.focus(), 150);
         }
+      };
+
+      // Check if this specific button should scroll to the section first
+      if (bookBtn.classList.contains('scroll-top-book-btn')) {
+        const targetSection = document.getElementById('imgHeadBtnSection');
+        if (targetSection) {
+          // Calculate the element's distance from the top of the page, minus 200px
+          const sectionPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = sectionPosition - 400;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth' // Note: JS requires the American spelling
+          });
+        }
+        // Delay the engine attention animation to allow the smooth scroll to complete
+        setTimeout(triggerEngineAnimation, 300);
       } else {
-        // Desktop: Pulse the engine bar and focus date
-        engine.classList.remove('engine-highlight-pulse');
-        void engine.offsetWidth; // Force CSS reflow
-        engine.classList.add('engine-highlight-pulse');
-        if (checkinInput) setTimeout(() => checkinInput.focus(), 150);
+        triggerEngineAnimation();
       }
     }
   });
@@ -408,4 +429,100 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   initCarouselProgress();
+
+  /* ==========================================================================
+     WATER RIPPLE EFFECT LOGIC
+     ========================================================================== */
+  const exploreRooms = document.getElementById('exploreRooms');
+
+  if (exploreRooms) {
+    let lastRippleTime = 0;
+
+    exploreRooms.addEventListener('mousemove', (e) => {
+      const now = Date.now();
+      // Throttle the ripple creation to every 60ms for smooth performance
+      if (now - lastRippleTime < 50) return;
+      lastRippleTime = now;
+
+      const ripple = document.createElement('div');
+      ripple.classList.add('room-ripple');
+
+      // Calculate the mouse position relative to the section itself
+      const rect = exploreRooms.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Base size of the ripple
+      const size = 40;
+      ripple.style.width = `${size}px`;
+      ripple.style.height = `${size}px`;
+      ripple.style.left = `${x - (size / 2)}px`;
+      ripple.style.top = `${y - (size / 2)}px`;
+
+      exploreRooms.appendChild(ripple);
+
+      // Remove the ripple from the DOM after the animation completes
+      setTimeout(() => {
+        ripple.remove();
+      }, 1000);
+    });
+  }
+
+  /* ==========================================================================
+     DECOR SCROLL & PARALLAX ANIMATION
+     ========================================================================== */
+  const decorElements = document.querySelectorAll('.decor');
+
+  if (decorElements.length > 0) {
+    // Read the tweakable values from your CSS :root
+    const rootStyles = getComputedStyle(document.documentElement);
+    const minScale = parseFloat(rootStyles.getPropertyValue('--decor-scale-min')) || 0.9;
+    const maxScale = parseFloat(rootStyles.getPropertyValue('--decor-scale-max')) || 1.0;
+    const parallaxIntensity = parseFloat(rootStyles.getPropertyValue('--decor-parallax-intensity')) || 40;
+
+    let isDecorScrolling = false;
+
+    const updateDecorAnimations = () => {
+      const windowCenter = window.innerHeight / 2;
+
+      decorElements.forEach(decor => {
+        const rect = decor.getBoundingClientRect();
+        const elementCenter = rect.top + (rect.height / 2);
+
+        // 1. Scale Logic (Absolute distance from center)
+        const absoluteDistanceFromCenter = Math.abs(windowCenter - elementCenter);
+        let scaleProgress = 1 - (absoluteDistanceFromCenter / windowCenter);
+        scaleProgress = Math.max(0, Math.min(1, scaleProgress));
+        const currentScale = minScale + (maxScale - minScale) * scaleProgress;
+
+        // 2. Parallax Logic (Directional distance from center)
+        // This value goes from +1 (bottom of screen) to -1 (top of screen)
+        const relativePosition = (elementCenter - windowCenter) / windowCenter;
+
+        // Clamp the position just in case the element is far off-screen
+        const clampedPosition = Math.max(-1, Math.min(1, relativePosition));
+
+        // Multiply by our intensity variable to get the pixel offset
+        const currentTranslate = clampedPosition * parallaxIntensity;
+
+        // Apply both updates via CSS variables
+        decor.style.setProperty('--current-decor-scale', currentScale);
+        decor.style.setProperty('--current-decor-translate', `${currentTranslate}px`);
+      });
+    };
+
+    // Attach to the scroll event using a throttle for performance
+    window.addEventListener('scroll', () => {
+      if (!isDecorScrolling) {
+        window.requestAnimationFrame(() => {
+          updateDecorAnimations();
+          isDecorScrolling = false;
+        });
+        isDecorScrolling = true;
+      }
+    }, { passive: true });
+
+    // Trigger immediately on page load to set their initial states
+    updateDecorAnimations();
+  }
 });

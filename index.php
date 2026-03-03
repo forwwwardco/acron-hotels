@@ -210,7 +210,7 @@ $videos = [
   <?php include("v2/components/hero-tooltip-overlay.php"); ?>
   <?php include("v2/components/exclusive-deals.php"); ?>
   <section class="our-hotels-section py-5 bg-white position-relative" aria-labelledby="hotelsHeading">
-    <img src="v2/assets/starfish.png" class="decor our-hotels-heading-decor" alt="" aria-hidden="true" loading="lazy">
+    <img src="v2/assets/starfish.png" class="decor scale-decor our-hotels-heading-decor" alt="" aria-hidden="true" loading="lazy">
     <div class="container py-4 position-relative z-1">
       <h2 id="hotelsHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
       <?php foreach ($hotels as $index => $hotel):
@@ -231,7 +231,7 @@ $videos = [
         <article class="row align-items-center gy-5 mb-5 hotel-row reveal">
           <div class="col-lg-6 <?= $textOrder ?>">
             <?php if ($isAlternate): ?>
-              <img src="v2/assets/umbrella-2.png" class="decor our-hotels-mid-decor" alt="" aria-hidden="true" loading="lazy">
+              <img src="v2/assets/umbrella-2.png" class="decor scale-decor our-hotels-mid-decor" alt="" aria-hidden="true" loading="lazy">
             <?php endif; ?>
             <header>
               <div class="d-flex align-items-center gap-3 mb-2">

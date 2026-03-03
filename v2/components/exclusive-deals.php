@@ -101,8 +101,8 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 
 <section id="exclusiveDeals" class="exclusive-deals py-5 position-relative <?= $esc_html($activeTheme['context']) ?>" aria-labelledby="dealsHeading">
 
-    <img src="<?= $esc_html($activeTheme['src']) ?>" class="decor <?= $esc_html($activeTheme['class']) ?>" alt="" aria-hidden="true" loading="lazy">
-    <img src="<?= $esc_html($activeTheme['desktopSrc']) ?>" class="decor <?= $esc_html($activeTheme['desktopClass']) ?>" alt="" aria-hidden="true" loading="lazy">
+    <img src="<?= $esc_html($activeTheme['src']) ?>" class="decor scale-decor <?= $esc_html($activeTheme['class']) ?>" alt="" aria-hidden="true" loading="lazy">
+    <img src="<?= $esc_html($activeTheme['desktopSrc']) ?>" class="decor scale-decor <?= $esc_html($activeTheme['desktopClass']) ?>" alt="" aria-hidden="true" loading="lazy">
 
     <div class="container py-4 reveal">
         <h2 id="dealsHeading" class="text-center fw-bold text-blue-grey mb-4 section-heading">

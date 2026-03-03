@@ -47,9 +47,20 @@
   --deals-grad-seaway-top: #fe8e22;
   --deals-grad-seaway-mid: #fff4e0;
   --deals-grad-seaway-btm: #E3F6F5;
+
+  /* Decor Animation Controls */
+  --decor-scale-min: 0.85;
+  --decor-scale-max: 1.15;
+  --decor-parallax-intensity: 60;
 }
 
 /* Base & Layout defaults */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height-gap);
+  /* Ensures the scroll stops right below your fixed header */
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -532,6 +543,87 @@ img.loaded {
 }
 
 /* ==========================================================================
+   MOBILE MENU SPECIAL OFFERS ANIMATIONS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+  /* Prevent the sheen gradient from spilling out horizontally */
+  .top-bar {
+    position: relative;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* The Sheen Element */
+  .top-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    /* Create a translucent white sheen */
+    background: linear-gradient(120deg,
+        transparent 10%,
+        rgba(163, 215, 252, 0.6) 50%,
+        transparent 90%);
+    /* Slower 6s cycle */
+    animation: ctaSheen 6s infinite ease-in-out;
+    z-index: 1;
+    /* Places the sheen above the background but you may need to check it doesnt block clicks */
+    pointer-events: none;
+    /* Crucial: allows clicks to pass through the sheen */
+  }
+
+  @keyframes ctaSheen {
+    0% {
+      left: -120%;
+    }
+
+    20%,
+    100% {
+      left: 120%;
+    }
+  }
+
+  /* The Wobbling Lightning Emoji */
+  .special-offers-cta .cta-link .d-lg-none::before {
+    content: '⚡ ';
+    /* Add the emoji */
+    display: inline-block;
+    animation: lightningWobble 6s infinite;
+    /* 3 second delay to offset it completely from the sheen */
+    animation-delay: 3s;
+  }
+
+  @keyframes lightningWobble {
+
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+
+    5% {
+      transform: rotate(-15deg);
+    }
+
+    10% {
+      transform: rotate(15deg);
+    }
+
+    15% {
+      transform: rotate(-10deg);
+    }
+
+    20% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/* ==========================================================================
    3. BOOKING ENGINE
    ========================================================================== */
 
@@ -607,7 +699,7 @@ img.loaded {
 }
 
 .engine-seaway {
-  --pulse-glow-color: rgba(97, 72, 130, 0.7);
+  --pulse-glow-color: rgba(254, 140, 34, 0.7);
 }
 
 .engine-regina {
@@ -2066,7 +2158,18 @@ select.enquiry-input {
   object-fit: contain;
   pointer-events: none;
   z-index: 0;
-  /* Default z-index */
+}
+
+.scale-decor {
+  /* New Animation Properties */
+  --current-decor-scale: var(--decor-scale-min);
+  --current-decor-translate: 0px;
+
+  scale: var(--current-decor-scale);
+  translate: 0 var(--current-decor-translate);
+  /* The first 0 keeps the X-axis fixed */
+
+  will-change: scale, translate;
 }
 
 /* Specific Element Positioning (Mobile Base) */
@@ -2082,6 +2185,7 @@ select.enquiry-input {
   left: calc(50vw - 65px);
   width: 130px;
   height: auto;
+  z-index: 1;
 }
 
 .our-hotels-heading-decor {
@@ -2886,4 +2990,30 @@ select.enquiry-input {
 
 .yt-embed-home {
   background-color: var(--white);
+}
+
+/* ==========================================================================
+   WATER RIPPLE EFFECT (EXPLORE ROOMS)
+   ========================================================================== */
+.room-ripple {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--light-blue);
+  background: rgba(227, 246, 245, 0.4);
+  transform: scale(0);
+  animation: rippleDrop 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes rippleDrop {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
 }

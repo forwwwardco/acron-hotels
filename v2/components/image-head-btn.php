@@ -36,7 +36,7 @@ $themeContext = !empty($pageResort)
 $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 ?>
 
-<section class="image-head-btn-section py-5 position-relative <?= $themeContext ?>" aria-labelledby="legacyHeading">
+<section class="image-head-btn-section py-5 position-relative <?= $themeContext ?>" aria-labelledby="legacyHeading" id="imgHeadBtnSection">
     <img src="v2/assets/hat-towel.png" class="decor decor-b0-l0" alt="" aria-hidden="true" loading="lazy">
     <div class="container py-4">
         <div class="row align-items-center gy-5">
@@ -56,7 +56,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                         <?= nl2br($esc_html($imgHeadBtnComponentData['heading'])) ?>
                     </h2>
                 </header>
-                <button type="button" class="btn fw-bold px-5 py-3 trigger-book-engine">BOOK NOW</button>
+                <button type="button" class="btn fw-bold px-5 py-3 trigger-book-engine scroll-top-book-btn">BOOK NOW</button>
             </div>
 
         </div>
