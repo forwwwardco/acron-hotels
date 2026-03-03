@@ -32,7 +32,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
         <div class="row gy-5 justify-content-center">
             <?php foreach ($highlights as $highlight): ?>
 
-                <article class="col-12 col-md-6 col-lg-3 highlight-item reveal">
+                <article class="col-12 col-md-6 col-lg-<?php if ($pageResort == 'seaway'): ?>4<?php else: ?>3<?php endif; ?> highlight-item reveal">
 
                     <img src="<?= $esc_html($highlight['image']) ?>"
                         class="highlight-img placeholder-img mb-4 shadow-sm"

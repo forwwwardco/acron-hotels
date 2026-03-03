@@ -298,7 +298,7 @@ $videos = [
             </a>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
+            Boutique Comfort | Open-air Dining | Azure Pool | Family Friendly | Near Candolim Beach
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
             <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">

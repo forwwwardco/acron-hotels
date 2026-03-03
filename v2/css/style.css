@@ -1172,7 +1172,6 @@ select.enquiry-input {
 
 /* Section & Context Gradients */
 .exclusive-deals {
-  min-height: 800px;
   padding-top: 6rem !important;
 }
 
@@ -2132,7 +2131,7 @@ select.enquiry-input {
   z-index: 10;
 }
 
-.decorative-frond {
+.explore-rooms-heading-decor {
   top: -60px;
   left: -40px;
   width: 140px;
@@ -2220,7 +2219,7 @@ select.enquiry-input {
     width: 180px;
   }
 
-  .decorative-frond {
+  .explore-rooms-heading-decor {
     top: -80px;
     left: -40px;
     width: 300px;
@@ -2772,8 +2771,8 @@ select.enquiry-input {
 /* Desktop Enhancements */
 @media (min-width: 992px) {
   .highlight-amenities-section {
-    padding-top: 5rem !important;
-    padding-bottom: 10rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 7rem !important;
   }
 
   .highlight-img {

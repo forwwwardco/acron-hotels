@@ -41,7 +41,7 @@ $themeConfig = [
     ],
     'seaway' => [
         'context' => 'deals-seaway',
-        'src'     => 'v2/assets/starfish.png',
+        'src'     => 'v2/assets/starfish-2.png',
         'class'   => 'resort-deals-decor',
         'desktopSrc' => '',
         'desktopClass' => ''

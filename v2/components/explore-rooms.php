@@ -30,7 +30,12 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 
 <section id="exploreRooms" class="explore-rooms-section py-5 bg-white position-relative" aria-labelledby="roomsSectionHeading">
 
-    <img src="v2/assets/frond.png" class="decor decorative-frond" alt="" aria-hidden="true" loading="lazy">
+    <?php if ($pageResort == 'waterfront'): ?>
+        <img src="v2/assets/frond.png" class="decor explore-rooms-heading-decor" alt="" aria-hidden="true" loading="lazy">
+    <?php endif; ?>
+    <?php if ($pageResort == 'seaway'): ?>
+        <img src="v2/assets/coconut-2.png" class="decor explore-rooms-heading-decor" alt="" aria-hidden="true" loading="lazy">
+    <?php endif; ?>
 
     <div class="container py-4 position-relative z-1">
         <h2 id="roomsSectionHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">
@@ -54,15 +59,20 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
             <article class="row align-items-center gy-4 gy-lg-5 mb-5 mb-lg-5 pb-3 room-row reveal position-relative">
 
                 <?php if ($index === 2): ?>
-                    <img src="v2/assets/poolring.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                    <?php if ($pageResort == 'waterfront'): ?>
+                        <img src="v2/assets/poolring.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                    <?php endif; ?>
+                    <?php if ($pageResort == 'seaway'): ?>
+                        <img src="v2/assets/boat.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                    <?php endif; ?>
                 <?php endif; ?>
 
                 <?php if ($index === 4): ?>
-                    <img src="v2/assets/poolring.png" class="decor room-decor-5-6" alt="" aria-hidden="true" loading="lazy">
+                    <img src="v2/assets/umbrella.png" class="decor room-decor-5-6" alt="" aria-hidden="true" loading="lazy">
                 <?php endif; ?>
 
                 <?php if ($index === 6): ?>
-                    <img src="v2/assets/poolring.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                    <img src="v2/assets/float.png" class="decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
                 <?php endif; ?>
 
                 <div class="col-lg-6 <?= $textOrder ?>">
@@ -145,6 +155,10 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
             <?php endif; ?>
         </svg>
     </div>
-
-    <img src="v2/assets/shell.png" class="decor decorative-shell-2" alt="" aria-hidden="true" loading="lazy">
+    <?php if ($pageResort == 'waterfront'): ?>
+        <img src="v2/assets/shell.png" class="decor decorative-shell-2" alt="" aria-hidden="true" loading="lazy">
+    <?php endif; ?>
+    <?php if ($pageResort == 'seaway'): ?>
+        <img src="v2/assets/conch-shell.png" class="decor decorative-shell-2" alt="" aria-hidden="true" loading="lazy">
+    <?php endif; ?>
 </section>
