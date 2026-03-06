@@ -29,8 +29,8 @@ $themeConfig = [
         'context' => 'deals-waterfront',
         'src'     => 'v2/assets/flamingo.png',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => '',
-        'desktopClass' => ''
+        'desktopSrc' => 'v2/assets/beach-toys.png',
+        'desktopClass' => 'deals-desktop-decor'
     ],
     'regina' => [
         'context' => 'deals-regina',
@@ -43,8 +43,8 @@ $themeConfig = [
         'context' => 'deals-seaway',
         'src'     => 'v2/assets/starfish-2.png',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => '',
-        'desktopClass' => ''
+        'desktopSrc' => 'v2/assets/beach-balls.png',
+        'desktopClass' => 'deals-desktop-decor'
     ]
 ];
 

@@ -224,7 +224,6 @@ $videos = [
         <?php if ($index == 2): ?>
           <div class="hotel-section-divider home-flower-row reveal" aria-hidden="true"></div>
         <?php endif; ?> -->
-
         <?php if ($index > 0): ?>
           <div class="hotel-section-divider reveal" aria-hidden="true"></div>
         <?php endif; ?>

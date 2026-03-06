@@ -1773,14 +1773,14 @@ select.enquiry-input {
 
 /* Section Dividers */
 .hotel-section-divider {
-  height: 19px;
+  height: 24px;
   width: 100%;
   margin: 4rem auto;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='32' height='19'%3E%3Cpath d='M0 12 Q 10 2, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='40' height='24'%3E%3Cpath d='M0 12 Q 10 -1, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: center;
-  background-size: 32px 19px;
+  background-size: 32px 24px;
   opacity: 0.9;
 }
 
@@ -2273,6 +2273,10 @@ select.enquiry-input {
   display: none;
 }
 
+.deals-desktop-decor {
+  display: none;
+}
+
 /* Desktop Enhancements */
 @media (min-width: 992px) {
   .home-deals-decor {
@@ -2286,6 +2290,14 @@ select.enquiry-input {
     left: 0;
     top: 0;
     width: 200px;
+  }
+
+  .deals-desktop-decor {
+    display: block;
+    right: 0;
+    top: -50px;
+    width: 200px;
+    z-index: 1;
   }
 
   .resort-deals-decor {
