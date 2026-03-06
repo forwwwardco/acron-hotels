@@ -525,4 +525,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Trigger immediately on page load to set their initial states
     updateDecorAnimations();
   }
+
+  /* ==========================================================================
+     CUSTOM MAP MODAL LOGIC
+     ========================================================================== */
+  const customMapModal = document.getElementById('customMapModal');
+  if (customMapModal) {
+    customMapModal.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      const button = event.relatedTarget;
+
+      // Extract info from data-* attributes
+      const mapLink = button.getAttribute('data-map-link');
+      const hotelName = button.getAttribute('data-hotel-name');
+
+      // Update the modal's title and button link
+      const modalTitle = customMapModal.querySelector('.modal-title');
+      const googleMapsBtn = customMapModal.querySelector('#dynamicGoogleMapsBtn');
+
+      if (modalTitle) modalTitle.textContent = hotelName + ' Map';
+      if (googleMapsBtn) googleMapsBtn.href = mapLink;
+    });
+  }
 });

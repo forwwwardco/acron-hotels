@@ -1,8 +1,8 @@
 <?php
 $pageResort = 'regina';
 $pageTitle = "Acron Candolim Regina | Luxury Boutique Stay in Baga, Goa";
-$pageDescription = "Experience the finest riverfront luxury at Acron Waterfront Resort. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
-$h1 = 'Acron Waterfront Resort';
+$pageDescription = "Experience the finest riverfront luxury at Acron Candolim Regina. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
+$h1 = 'Acron Candolim Regina';
 $heroImages = [
   'v2/assets/waterfront-hero-carousel-1.jpg',
   'v2/assets/waterfront-hero-carousel-2.jpg',
@@ -112,7 +112,7 @@ $roomsList = [
   [
     'id' => 'seaside-room',
     'name' => 'Seaside Room',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
@@ -146,7 +146,7 @@ $roomsList = [
   [
     'id' => 'seaside-room',
     'name' => 'Seaside Room',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Waterfront Resort, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
@@ -239,13 +239,13 @@ $highlightAmenitiesList = [
   ]
 ];
 $pageReviews = [
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.'],
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.']
+  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.']
 ];
 $videos = [
   'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
@@ -265,10 +265,10 @@ $videos = [
             <?= $h1 ?>
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-            <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
-            <a href="https://maps.google.com/?q=Acron+Waterfront+Resort" target="_blank" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none" aria-label="Show Acron Waterfront Resort on Map">
+            <p class="resort-tagline mb-0 h6 text-white">Candolim, Goa</p>
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Candolim Regina on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="https://maps.google.com/?q=Acron+Waterfront+Resort" data-hotel-name="Acron Candolim Regina">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
-            </a>
+            </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
             Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
@@ -277,7 +277,7 @@ $videos = [
             <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="MzAw">
               BOOK NOW
             </button>
-            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">
+            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Candolim Regina?">
               WHY STAY HERE?
             </button>
           </div>

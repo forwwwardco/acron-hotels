@@ -267,9 +267,9 @@ $videos = [
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
-            <a href="https://maps.google.com/?q=Acron+Waterfront+Resort" target="_blank" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none" aria-label="Show Acron Waterfront Resort on Map">
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="https://maps.google.com/?q=Acron+Waterfront+Resort" data-hotel-name="Acron Waterfront Resort">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
-            </a>
+            </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
             Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
@@ -346,4 +346,5 @@ $videos = [
   <?php include("v2/components/video-carousel.php"); ?>
   <?php include("v2/components/image-head-body.php"); ?>
   <?php include("v2/components/image-head-btn.php"); ?>
+  <?php include("v2/components/map-modal.php"); ?>
 </main> <?php include("v2/footer.php"); ?>

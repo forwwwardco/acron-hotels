@@ -16,8 +16,8 @@
   /* Resort Context Colours */
   --waterfront: #319bff;
   --waterfront-dark: #167bd9;
-  --regina: #ff3c4d;
-  --regina-dark: #c51f2d;
+  --regina: #860cc6;
+  --regina-dark: #5f297d;
   --seaway: #fe8e22;
   --seaway-dark: #cb7728;
 
@@ -40,8 +40,8 @@
   --deals-grad-waterfront-mid: #67D6F4;
   --deals-grad-waterfront-btm: #E3F6F5;
 
-  --deals-grad-regina-top: #FF3B4E;
-  --deals-grad-regina-mid: #FFF4B8;
+  --deals-grad-regina-top: #860cc6;
+  --deals-grad-regina-mid: #eeebfc;
   --deals-grad-regina-btm: #E3F6F5;
 
   --deals-grad-seaway-top: #fe8e22;
@@ -952,6 +952,7 @@ select.enquiry-input {
   transition: all 0.3s ease;
   text-transform: uppercase;
   box-shadow: none !important;
+  border: none;
 }
 
 .btn-map-link:hover {
@@ -987,13 +988,13 @@ select.enquiry-input {
 /* Specific Home/Resort Outline Hero Styles */
 #heroSection .btn-outline-hero,
 .resort-hero-wrapper .btn-outline-hero {
-  background-color: rgba(150, 150, 150, 0.6);
+  background-color: rgba(55, 55, 55, 0.8);
   color: #ffffff !important;
 }
 
 #heroSection .btn-outline-hero:hover,
 .resort-hero-wrapper .btn-outline-hero:hover {
-  background-color: rgba(150, 150, 150, 0);
+  background-color: rgba(55, 55, 55, 0.3);
   border-color: var(--lightest-blue);
 }
 

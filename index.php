@@ -188,9 +188,9 @@ $videos = [
                 <h2 class="resort-h2 fw-bold mb-2"><?= htmlspecialchars($hotel['name']) ?></h2>
                 <div class="d-flex align-items-center gap-3">
                   <p class="resort-tagline mb-0 h6"><?= htmlspecialchars($hotel['location']) ?></p>
-                  <a href="<?= htmlspecialchars($hotel['mapLink']) ?>" target="_blank" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map">
+                  <button type="button" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>" data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>">
                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Show on Map
-                  </a>
+                  </button>
                 </div>
               </div>
               <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
@@ -235,9 +235,9 @@ $videos = [
             <header>
               <div class="d-flex align-items-center gap-3 mb-2">
                 <span class="text-blue-grey fw-bold small ls-1"><?= htmlspecialchars($hotel['location']) ?></span>
-                <a href="<?= htmlspecialchars($hotel['mapLink']) ?>" target="_blank" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map">
+                <button type="button" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>" data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>">
                   <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
-                </a>
+                </button>
               </div>
               <div class="d-flex align-items-center gap-3 mb-2">
                 <h3 class="fw-bold text-blue-grey mb-0 fs-2"><?= htmlspecialchars($hotel['name']) ?></h3>
@@ -329,4 +329,5 @@ $videos = [
   <?php include("v2/components/video-carousel.php"); ?>
   <?php include("v2/components/image-head-body.php"); ?>
   <?php include("v2/components/image-head-btn.php"); ?>
+  <?php include("v2/components/map-modal.php"); ?>
 </main> <?php include("v2/footer.php"); ?>
