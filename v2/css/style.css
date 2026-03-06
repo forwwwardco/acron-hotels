@@ -987,15 +987,14 @@ select.enquiry-input {
 /* Specific Home/Resort Outline Hero Styles */
 #heroSection .btn-outline-hero,
 .resort-hero-wrapper .btn-outline-hero {
-  background-color: var(--white);
-  color: var(--blue-grey);
+  background-color: rgba(150, 150, 150, 0.6);
+  color: #ffffff !important;
 }
 
 #heroSection .btn-outline-hero:hover,
 .resort-hero-wrapper .btn-outline-hero:hover {
-  background-color: var(--lightest-blue);
+  background-color: rgba(150, 150, 150, 0);
   border-color: var(--lightest-blue);
-  color: var(--blue-grey);
 }
 
 /* Form Helper Text (Hero Overrides) */

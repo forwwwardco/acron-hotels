@@ -131,7 +131,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                         </div>
 
                         <a href="<?= $esc_html($deal['link']) ?>" class="btn btn-deal-book w-100 rounded-0 mt-auto" aria-label="Book the <?= $esc_html($deal['offer_name']) ?>">
-                            BOOK NOW
+                            GRAB IT NOW
                         </a>
 
                     </article>
