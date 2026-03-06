@@ -36,8 +36,8 @@ $themeConfig = [
         'context' => 'deals-regina',
         'src'     => 'v2/assets/coconut.png',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => '',
-        'desktopClass' => ''
+        'desktopSrc' => 'v2/assets/cashew.png',
+        'desktopClass' => 'deals-desktop-decor'
     ],
     'seaway' => [
         'context' => 'deals-seaway',
