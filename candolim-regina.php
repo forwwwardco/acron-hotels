@@ -4,52 +4,52 @@ $pageTitle = "Acron Candolim Regina | Luxury Boutique Stay in Baga, Goa";
 $pageDescription = "Experience the finest riverfront luxury at Acron Candolim Regina. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
 $h1 = 'Acron Candolim Regina';
 $heroImages = [
-  'v2/assets/waterfront-hero-carousel-1.jpg',
-  'v2/assets/waterfront-hero-carousel-2.jpg',
-  'v2/assets/waterfront-hero-carousel-3.jpg',
-  'v2/assets/waterfront-hero-carousel-4.jpg',
-  'v2/assets/waterfront-hero-carousel-5.jpg'
+  'v2/assets/regina-hero-carousel-1.jpg',
+  'v2/assets/regina-hero-carousel-2.jpg',
+  'v2/assets/regina-hero-carousel-3.jpg',
+  'v2/assets/regina-hero-carousel-4.jpg',
+  'v2/assets/regina-hero-carousel-5.jpg'
 ];
 $pageAmenities = [
   [
     'title' => 'AMENITY 1',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-1.jpg'
+    'image' => 'v2/assets/regina-amenity-1.jpg'
   ],
   [
     'title' => 'AMENITY 2',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-2.jpg'
+    'image' => 'v2/assets/regina-amenity-2.jpg'
   ],
   [
     'title' => 'AMENITY 3',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-3.jpg'
+    'image' => 'v2/assets/regina-amenity-3.jpg'
   ],
   [
     'title' => 'AMENITY 4',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-4.jpg'
+    'image' => 'v2/assets/regina-amenity-4.jpg'
   ],
   [
     'title' => 'AMENITY 5',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-5.jpg'
+    'image' => 'v2/assets/regina-amenity-5.jpg'
   ],
   [
     'title' => 'AMENITY 6',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-6.jpg'
+    'image' => 'v2/assets/regina-amenity-6.jpg'
   ],
   [
     'title' => 'AMENITY 7',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-7.jpg'
+    'image' => 'v2/assets/regina-amenity-7.jpg'
   ],
   [
     'title' => 'AMENITY 8',
     'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/waterfront-amenity-8.jpg'
+    'image' => 'v2/assets/regina-amenity-8.jpg'
   ]
 ];
 $galleryHeading = "Browse Gallery";
@@ -62,56 +62,56 @@ $galleryFilters = [
 ];
 $galleryItems = [
   // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Luxury Seaside Room Interior', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Luxury Seaside Room Interior', 'hidden' => false],
   ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Decor Detail', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Suite View', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Suite View', 'hidden' => false],
   ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Room Balcony', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Emerald Suite Bedroom', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Emerald Suite Bedroom', 'hidden' => false],
   ['category' => 'rooms', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Standard Deluxe Room', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Room Amenity Setup', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Suite Living Area', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Room Amenity Setup', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Suite Living Area', 'hidden' => false],
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Riverfront Exterior', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Riverfront Exterior', 'hidden' => true],
   ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Side View', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Entrance Aerial', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'River Deck at Sunset', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Entrance Aerial', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'River Deck at Sunset', 'hidden' => true],
   ['category' => 'exterior', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Lush Garden Walkways', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Hotel Facade Night View', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Hotel Facade Night View', 'hidden' => true],
   ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Pool Area', 'hidden' => true],
   ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Courtyard', 'hidden' => true],
   // --- Restaurant ---
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverfront Dining Table', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Signature Cocktail at Bar', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Indoor Seating', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverfront Dining Table', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Signature Cocktail at Bar', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Indoor Seating', 'hidden' => true],
   ['category' => 'restaurant', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Chef Specialty Dish', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Buffet Spread Layout', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Breakfast View on Baga River', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Buffet Spread Layout', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Breakfast View on Baga River', 'hidden' => true],
   ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Open Air Kitchen Experience', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'The River Restaurant Entrance', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'The River Restaurant Entrance', 'hidden' => true],
   // --- Common Spaces ---
   ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Lobby Lounge', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Reception Welcome Area', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Reception Welcome Area', 'hidden' => true],
   ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Waiting Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Concierge Desk', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Lounge Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Relaxation Spot', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Concierge Desk', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Lounge Area', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Relaxation Spot', 'hidden' => true],
   ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Library and Reading Nook', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Activity Center', 'hidden' => true],
+  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Activity Center', 'hidden' => true],
   // --- Amenities ---
   ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Fitness Center Equipment', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Treatment Room', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Close-up', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Treatment Room', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Close-up', 'hidden' => true],
   ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Laundry and Housekeeping services', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Valet and Parking Area', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Valet and Parking Area', 'hidden' => true],
   ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Childrens Play Zone', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'In-room Safety Box', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Wi-Fi Setup', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'In-room Safety Box', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Wi-Fi Setup', 'hidden' => true],
 ];
 $roomsHeading = "Explore Our Rooms";
 $roomsList = [
   [
-    'id' => 'seaside-room',
-    'name' => 'Seaside Room',
+    'id' => 'deluxe-villa',
+    'name' => 'Deluxe Villa',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
@@ -120,15 +120,15 @@ $roomsList = [
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
     'images' => [
-      'v2/assets/waterfront-seaside-room-1.jpg',
-      'v2/assets/waterfront-seaside-room-2.jpg',
-      'v2/assets/waterfront-seaside-room-3.jpg'
+      'v2/assets/regina-deluxe-villa-1.jpg',
+      'v2/assets/regina-deluxe-villa-2.jpg',
+      'v2/assets/regina-deluxe-villa-3.jpg'
     ],
     'learnLink' => '#'
   ],
   [
-    'id' => 'riverside-room',
-    'name' => 'Riverside Room',
+    'id' => 'luxury-pool-facing-room',
+    'name' => 'Luxury Pool Facing Room',
     'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
@@ -137,15 +137,15 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/waterfront-riverside-room-1.jpg',
-      'v2/assets/waterfront-riverside-room-2.jpg',
-      'v2/assets/waterfront-riverside-room-3.jpg'
+      'v2/assets/regina-luxury-pool-facing-room-1.jpg',
+      'v2/assets/regina-luxury-pool-facing-room-2.jpg',
+      'v2/assets/regina-luxury-pool-facing-room-3.jpg'
     ],
     'learnLink' => '#'
   ],
   [
-    'id' => 'seaside-room',
-    'name' => 'Seaside Room',
+    'id' => 'luxury-room-with-bathtub',
+    'name' => 'Luxury Room with Bathtub',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
@@ -154,15 +154,15 @@ $roomsList = [
       ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
     ],
     'images' => [
-      'v2/assets/waterfront-courtyard-room-1.jpg',
-      'v2/assets/waterfront-courtyard-room-2.jpg',
-      'v2/assets/waterfront-courtyard-room-3.jpg'
+      'v2/assets/regina-luxury-room-with-bathtub-1.jpg',
+      'v2/assets/regina-luxury-room-with-bathtub-2.jpg',
+      'v2/assets/regina-luxury-room-with-bathtub-3.jpg'
     ],
     'learnLink' => '#'
   ],
   [
-    'id' => 'riverside-room',
-    'name' => 'Riverside Room',
+    'id' => 'suite-room',
+    'name' => 'Suite Room',
     'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
@@ -171,9 +171,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/waterfront-upperdeck-room-1.jpg',
-      'v2/assets/waterfront-upperdeck-room-2.jpg',
-      'v2/assets/waterfront-upperdeck-room-3.jpg'
+      'v2/assets/regina-suite room-1.jpg',
+      'v2/assets/regina-suite room-2.jpg',
+      'v2/assets/regina-suite room-3.jpg'
     ],
     'learnLink' => '#'
   ]
@@ -181,8 +181,8 @@ $roomsList = [
 $suitesHeading = "Explore Our Suites";
 $suitesList = [
   [
-    'id' => 'emerald-suite',
-    'name' => 'Emerald Suite',
+    'id' => 'regina-room',
+    'name' => 'Unnamed Room',
     'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
@@ -191,26 +191,9 @@ $suitesList = [
       ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
     ],
     'images' => [
-      'v2/assets/waterfront-emerald-suite-1.jpg',
-      'v2/assets/waterfront-emerald-suite-2.jpg',
-      'v2/assets/waterfront-emerald-suite-3.jpg'
-    ],
-    'learnLink' => '#'
-  ],
-  [
-    'id' => 'emerald-suite',
-    'name' => 'Emerald Suite',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
-    'amenities' => [
-      ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Private Kitchenette'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
-    ],
-    'images' => [
-      'v2/assets/waterfront-royal-suite-1.jpg',
-      'v2/assets/waterfront-royal-suite-2.jpg',
-      'v2/assets/waterfront-royal-suite-3.jpg'
+      'v2/assets/regina-room-1.jpg',
+      'v2/assets/regina-room-2.jpg',
+      'v2/assets/regina-room-3.jpg'
     ],
     'learnLink' => '#'
   ]
@@ -220,22 +203,22 @@ $highlightAmenitiesList = [
   [
     'title' => 'Al Fresco',
     'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
-    'image' => 'v2/assets/waterfront-benefit-1.jpg'
+    'image' => 'v2/assets/regina-benefit-1.jpg'
   ],
   [
     'title' => 'The Spa',
     'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
-    'image' => 'v2/assets/waterfront-benefit-2.jpg'
+    'image' => 'v2/assets/regina-benefit-2.jpg'
   ],
   [
     'title' => 'Infinity Pool',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/waterfront-benefit-3.jpg'
+    'image' => 'v2/assets/regina-benefit-3.jpg'
   ],
   [
     'title' => 'Infinity Pool',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/waterfront-benefit-4.jpg'
+    'image' => 'v2/assets/regina-benefit-4.jpg'
   ]
 ];
 $pageReviews = [
@@ -322,7 +305,6 @@ $videos = [
   <?php include("v2/components/exclusive-deals.php"); ?>
   <?php include("v2/components/gallery.php"); ?>
   <?php include("v2/components/explore-rooms.php"); ?>
-  <?php include("v2/components/explore-suites.php"); ?>
   <?php include("v2/components/highlight-amenities.php"); ?>
   <section class="reviews-section py-5 bg-lightest-blue resort-reviews" aria-labelledby="reviewsHeading">
     <div class="container py-4">
@@ -345,4 +327,5 @@ $videos = [
   <?php include("v2/components/video-carousel.php"); ?>
   <?php include("v2/components/image-head-body.php"); ?>
   <?php include("v2/components/image-head-btn.php"); ?>
+  <?php include("v2/components/map-modal.php"); ?>
 </main> <?php include("v2/footer.php"); ?>

@@ -147,10 +147,10 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
     </div>
     <div class="wave-divider-bottom" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-            <?php if ($pageResort != 'seaway'): ?>
+            <?php if ($pageResort == 'waterfront'): ?>
                 <path fill="var(--lightest-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
             <?php endif; ?>
-            <?php if ($pageResort == 'seaway'): ?>
+            <?php if ($pageResort != 'waterfront'): ?>
                 <path fill="var(--light-blue)" d="M0,40 C480,120 960,-40 1440,40 L1440,100 L0,100 Z"></path>
             <?php endif; ?>
         </svg>

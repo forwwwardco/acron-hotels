@@ -30,17 +30,17 @@ $pageAmenities = [
   [
     'title' => 'AMENITY 4',
     'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
-    'image' => 'v2/assets/seaway-amenity-1.jpg'
+    'image' => 'v2/assets/seaway-amenity-4.jpg'
   ],
   [
     'title' => 'AMENITY 5',
     'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
-    'image' => 'v2/assets/seaway-amenity-2.jpg'
+    'image' => 'v2/assets/seaway-amenity-5.jpg'
   ],
   [
     'title' => 'AMENITY 6',
     'description' => 'Unwind in serene surroundsings in the hear of Candolim, Goa.',
-    'image' => 'v2/assets/seaway-amenity-3.jpg'
+    'image' => 'v2/assets/seaway-amenity-6.jpg'
   ]
 ];
 $galleryHeading = "Browse Gallery";
@@ -361,4 +361,5 @@ $videos = [
   <?php include("v2/components/video-carousel.php"); ?>
   <?php include("v2/components/image-head-body.php"); ?>
   <?php include("v2/components/image-head-btn.php"); ?>
+  <?php include("v2/components/map-modal.php"); ?>
 </main> <?php include("v2/footer.php"); ?>
