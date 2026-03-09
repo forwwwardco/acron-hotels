@@ -52,7 +52,7 @@ $pageAmenities = [
     'image' => 'v2/assets/regina-amenity-8.jpg'
   ]
 ];
-$galleryHeading = "Browse Gallery";
+$galleryHeading = "Gallery";
 $galleryFilters = [
   'exterior'      => 'EXTERIOR',
   'rooms'         => 'ROOMS',
@@ -61,51 +61,50 @@ $galleryFilters = [
   'amenities'     => 'AMENITIES'
 ];
 $galleryItems = [
-  // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Luxury Seaside Room Interior', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Decor Detail', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Suite View', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Room Balcony', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Emerald Suite Bedroom', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Standard Deluxe Room', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Room Amenity Setup', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Suite Living Area', 'hidden' => false],
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Riverfront Exterior', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Side View', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Entrance Aerial', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'River Deck at Sunset', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Lush Garden Walkways', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Hotel Facade Night View', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Pool Area', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Courtyard', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-1.jpg', 'full' => 'v2/assets/regina-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-2.jpg', 'full' => 'v2/assets/regina-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-3.jpg', 'full' => 'v2/assets/regina-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-4.jpg', 'full' => 'v2/assets/regina-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-5.jpg', 'full' => 'v2/assets/regina-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-6.jpg', 'full' => 'v2/assets/regina-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-7.jpg', 'full' => 'v2/assets/regina-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-8.jpg', 'full' => 'v2/assets/regina-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => true],
+  // --- Rooms ---
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-1.jpg', 'full' => 'v2/assets/regina-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-2.jpg', 'full' => 'v2/assets/regina-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-3.jpg', 'full' => 'v2/assets/regina-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-4.jpg', 'full' => 'v2/assets/regina-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-5.jpg', 'full' => 'v2/assets/regina-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-6.jpg', 'full' => 'v2/assets/regina-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-7.jpg', 'full' => 'v2/assets/regina-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-8.jpg', 'full' => 'v2/assets/regina-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => false],
   // --- Restaurant ---
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverfront Dining Table', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Signature Cocktail at Bar', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Indoor Seating', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Chef Specialty Dish', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Buffet Spread Layout', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Breakfast View on Baga River', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Open Air Kitchen Experience', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'The River Restaurant Entrance', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-1.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-2.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-3.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-4.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-5.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-6.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-7.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-8.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-8-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Common Spaces ---
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Lobby Lounge', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Reception Welcome Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Waiting Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Concierge Desk', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Lounge Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Relaxation Spot', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Library and Reading Nook', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Activity Center', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-1.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-2.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-3.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-4.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-5.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-6.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-7.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-8.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-8-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Amenities ---
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Fitness Center Equipment', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Treatment Room', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Close-up', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Laundry and Housekeeping services', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Valet and Parking Area', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Childrens Play Zone', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'In-room Safety Box', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Wi-Fi Setup', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-1.jpg', 'full' => 'v2/assets/regina-gallery-amenities-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-2.jpg', 'full' => 'v2/assets/regina-gallery-amenities-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-3.jpg', 'full' => 'v2/assets/regina-gallery-amenities-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-4.jpg', 'full' => 'v2/assets/regina-gallery-amenities-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-5.jpg', 'full' => 'v2/assets/regina-gallery-amenities-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-6.jpg', 'full' => 'v2/assets/regina-gallery-amenities-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-7.jpg', 'full' => 'v2/assets/regina-gallery-amenities-7-large.jpg', 'alt' => '', 'hidden' => true],
 ];
 $roomsHeading = "Explore Our Rooms";
 $roomsList = [
@@ -198,25 +197,30 @@ $suitesList = [
     'learnLink' => '#'
   ]
 ];
-$highlightsHeading = "Resort Highlights";
+$highlightsHeading = "Meetings & Events";
 $highlightAmenitiesList = [
   [
-    'title' => 'Al Fresco',
+    'title' => 'Courtyard ',
     'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
     'image' => 'v2/assets/regina-benefit-1.jpg'
   ],
   [
-    'title' => 'The Spa',
+    'title' => 'Abbe Faria',
     'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
     'image' => 'v2/assets/regina-benefit-2.jpg'
   ],
   [
-    'title' => 'Infinity Pool',
+    'title' => 'Edmond Dantes',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
     'image' => 'v2/assets/regina-benefit-3.jpg'
   ],
   [
-    'title' => 'Infinity Pool',
+    'title' => 'Goan Curry',
+    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
+    'image' => 'v2/assets/regina-benefit-4.jpg'
+  ],
+  [
+    'title' => 'Monte Cristo',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
     'image' => 'v2/assets/regina-benefit-4.jpg'
   ]

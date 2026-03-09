@@ -17,8 +17,8 @@
   /* Resort Context Colours */
   --waterfront: #319bff;
   --waterfront-dark: #167bd9;
-  --regina: #860cc6;
-  --regina-dark: #5f297d;
+  --regina: #9d5fd3;
+  --regina-dark: rgb(120, 84, 154);
   --seaway: #fe8e22;
   --seaway-dark: #cb7728;
 
@@ -41,8 +41,8 @@
   --deals-grad-waterfront-mid: #67D6F4;
   --deals-grad-waterfront-btm: #E3F6F5;
 
-  --deals-grad-regina-top: #860cc6;
-  --deals-grad-regina-mid: #eeebfc;
+  --deals-grad-regina-top: #c493db;
+  --deals-grad-regina-mid: #e1deff;
   --deals-grad-regina-btm: #E3F6F5;
 
   --deals-grad-seaway-top: #fe8e22;
@@ -1425,6 +1425,7 @@ select.enquiry-input {
 }
 
 .video-section {
+  padding-top: 5rem !important;
   padding-bottom: 0 !important;
 }
 
@@ -2216,10 +2217,10 @@ select.enquiry-input {
   z-index: 10;
 }
 
-.decorative-crab {
-  top: -45px;
-  left: 20px;
-  width: 110px;
+.video-decor {
+  top: -88px;
+  left: 10px;
+  width: 130px;
   height: auto;
   z-index: 10;
 }
@@ -2334,10 +2335,10 @@ select.enquiry-input {
     height: 200px;
   }
 
-  .decorative-crab {
-    top: -75px;
+  .video-decor {
+    top: -135px;
     left: 40px;
-    width: 180px;
+    width: 200px;
   }
 
   .explore-rooms-heading-decor {

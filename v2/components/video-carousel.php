@@ -15,7 +15,7 @@ $videoList = $videos ?? [];
   <div class="container py-4 reveal">
     <div class="row align-items-center gy-5">
       <div class="col-lg-12 position-relative">
-        <img src="v2/assets/crab.png" class="decor decorative-crab" alt="" aria-hidden="true" loading="lazy">
+        <img src="v2/assets/scooter.png" class="decor video-decor" alt="" aria-hidden="true" loading="lazy">
         <div id="<?= htmlspecialchars($carouselId) ?>" class="carousel slide" data-bs-ride="false" data-bs-interval="false" role="region" aria-label="Resort Video Carousel">
           <div class="carousel-inner rounded-4 shadow-sm">
             <?php foreach ($videoList as $index => $videoUrl): ?>

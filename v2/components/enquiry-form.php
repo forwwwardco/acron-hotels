@@ -22,7 +22,7 @@ $themeContext = !empty($pageResort)
 <aside class="enquiry-panel-wrapper" id="enquiryPanel" aria-label="Quick Enquiry Panel">
 
     <button type="button" class="enquiry-trigger" id="enquiryTrigger" aria-expanded="false" aria-controls="enquiryContentWrapper">
-        <span class="btn-text">ENQUIRE</span>
+        <span class="btn-text">ENQUIRE NOW</span>
     </button>
 
     <div id="enquiryContentWrapper" class="enquiry-content <?= $themeContext ?> py-4 px-4">

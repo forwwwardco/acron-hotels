@@ -60,10 +60,10 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
 
                 <?php if ($index === 2): ?>
                     <?php if ($pageResort == 'waterfront'): ?>
-                        <img src="v2/assets/poolring.png" class="decor scale-decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                        <img src="v2/assets/boat.png" class="decor scale-decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
                     <?php endif; ?>
                     <?php if ($pageResort == 'seaway'): ?>
-                        <img src="v2/assets/boat.png" class="decor scale-decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
+                        <img src="v2/assets/poolring.png" class="decor scale-decor room-decor-2-3" alt="" aria-hidden="true" loading="lazy">
                     <?php endif; ?>
                 <?php endif; ?>
 

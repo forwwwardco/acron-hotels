@@ -153,14 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     enquiryTrigger.addEventListener("click", () => {
       const isActive = enquiryPanel.classList.toggle("active");
-      if (triggerText) triggerText.textContent = isActive ? "CLOSE" : "ENQUIRE";
+      if (triggerText) triggerText.textContent = isActive ? "CLOSE" : "ENQUIRE NOW";
     });
 
     // Auto-close on outside click handled via global listener
     document.addEventListener("click", (e) => {
       if (enquiryPanel.classList.contains("active") && !enquiryPanel.contains(e.target) && !enquiryTrigger.contains(e.target)) {
         enquiryPanel.classList.remove("active");
-        if (triggerText) triggerText.textContent = "ENQUIRE";
+        if (triggerText) triggerText.textContent = "ENQUIRE NOW";
       }
     });
   }
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tooltipTitle = document.getElementById('tooltipTitle');
     const tooltipList = document.getElementById('tooltipList');
     const resortFeatures = {
-      waterfront: { title: "Waterfront Highlights", features: ["Situated on the Baga River", "Infinity Pool with River View", "Premium Riverfront Dining", "Walking Distance to Baga Beach", "Luxury Boutique Rooms", "Ideal for Couples & Honeymoons"] },
+      waterfront: { title: "Waterfront Highlights", features: ["One of a kind location on the Baga river", "Infinity pool on the river's edge!", "Luxury boutique rooms and suites", "Idea for couples, honeymoon and gatherings", "Dine on the Baga riverfront"] },
       seaway: { title: "Seaway Highlights", features: ["300m from Candolim Beach", "Large Lagoon-style Pool", "Family-Friendly Atmosphere", "Spacious Rooms with Balconies", "Near Candolim Main Street", "Poolside Bar & Restaurant"] },
       regina: { title: "Regina Highlights", features: ["Heart of Candolim Village", "Rated Best for Families", "Expansive Resort Grounds", "Multiple Dining Options", "Kids Club & Activities", "Generic Feature Six", "Generic Feature Seven"] }
     };
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const crab = document.querySelector('.decorative-crab');
+  const crab = document.querySelector('.video-decor');
   const videoSection = document.querySelector('.video-section');
 
   if (crab || videoSection) {
@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const crabWidth = crab.offsetWidth;
           const currentLeftOffset = crab.offsetLeft;
 
-          const maxTravelX = (parentWidth / 2) - currentLeftOffset - (crabWidth / 2);
+          const maxTravelX = ((parentWidth / 2) - currentLeftOffset - (crabWidth / 2)) + 100;
 
           crab.style.transform = `translateX(${progress * maxTravelX}px)`;
         }
