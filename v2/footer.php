@@ -32,7 +32,7 @@
                 </ul>
             </nav>
             <nav class="col-lg-3 col-md-4 col-12" aria-label="Legal Information">
-                <h3 class="h6 footer-heading text-uppercase fw-bold mb-4">Ts & Cs</h3>
+                <h3 class="h6 footer-heading text-uppercase fw-bold mb-4">T<span style="text-transform:lowercase;">s</span> & C<span style="text-transform:lowercase;">s</span></h3>
                 <ul class="list-unstyled footer-links">
                     <li><a href="privacy-policy.php">Privacy Policy</a></li>
                     <li><a href="cancellation-policy.php">Cancellation Policy</a></li>

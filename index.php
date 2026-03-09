@@ -194,12 +194,12 @@ $videos = [
                 </div>
               </div>
               <div class="resort-bottom d-flex flex-row gap-2 gap-md-3 mt-5 mt-lg-0">
-                <a href="<?= htmlspecialchars($hotel['link']) ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center" aria-label="Explore <?= htmlspecialchars($hotel['name']) ?>">
-                  Explore
-                </a>
                 <button type="button" class="btn btn-outline-hero fw-bold flex-fill tooltip-trigger" data-resort="<?= htmlspecialchars($hotel['id']) ?>" aria-label="Why stay at <?= htmlspecialchars($hotel['name']) ?>?">
                   Why Stay Here?
                 </button>
+                <a href="<?= htmlspecialchars($hotel['link']) ?>" class="btn btn-book-now hero-btn fw-bold flex-fill text-center" aria-label="Explore <?= htmlspecialchars($hotel['name']) ?>">
+                  Explore
+                </a>
               </div>
             </div>
           </div>

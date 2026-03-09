@@ -89,7 +89,7 @@ $direct_booking_benefits = [
                 </div>
 
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-uppercase fw-semibold" id="mainNavLinks">
+                    <ul class="navbar-nav mx-auto mb-1 mb-lg-0 gap-lg-5 text-uppercase fw-semibold" id="mainNavLinks">
                         <li class="nav-item">
                             <a class="nav-link" href="<?= $esc_html($home) ?>">Home</a>
                         </li>

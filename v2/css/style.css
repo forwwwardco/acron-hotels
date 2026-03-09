@@ -12,6 +12,7 @@
   --dark-blue: #339999;
   --lightest-blue: #e3f6f5;
   --light-blue: #bae8e8;
+  --acron-green: #1d6847;
 
   /* Resort Context Colours */
   --waterfront: #319bff;
@@ -988,13 +989,13 @@ select.enquiry-input {
 /* Specific Home/Resort Outline Hero Styles */
 #heroSection .btn-outline-hero,
 .resort-hero-wrapper .btn-outline-hero {
-  background-color: rgba(55, 55, 55, 0.8);
-  color: #ffffff !important;
+  background-color: var(--white);
+  color: var(--blue-grey) !important;
 }
 
 #heroSection .btn-outline-hero:hover,
 .resort-hero-wrapper .btn-outline-hero:hover {
-  background-color: rgba(55, 55, 55, 0.3);
+  background-color: var(--lightest-blue);
   border-color: var(--lightest-blue);
 }
 
@@ -1154,17 +1155,17 @@ select.enquiry-input {
   .resort-col {
     height: 100%;
     min-height: 300px;
-    border-left: 8px solid var(--white);
-    border-bottom: 8px solid var(--white);
+    border-left: 12px solid var(--white);
+    border-bottom: 12px solid var(--white);
   }
 
   .middle-resort-col {
     border-top: none;
-    border-bottom: 8px solid var(--white);
+    border-bottom: 12px solid var(--white);
   }
 
   .resort-col:nth-child(3) {
-    border-right: 8px solid var(--white);
+    border-right: 12px solid var(--white);
   }
 
   .resort-content-wrapper {
@@ -1282,6 +1283,10 @@ select.enquiry-input {
 
 .exclusive-deals.deals-seaway {
   background: linear-gradient(to bottom, var(--deals-grad-seaway-top) 0%, var(--deals-grad-seaway-mid) 50%, var(--deals-grad-seaway-btm) 100%);
+}
+
+.exclusive-deals .card-title {
+  text-transform: uppercase;
 }
 
 /* Heading Colours */
@@ -1778,7 +1783,7 @@ select.enquiry-input {
   width: 100%;
   margin: 4rem auto;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='40' height='24'%3E%3Cpath d='M0 12 Q 10 -1, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24' width='40' height='24'%3E%3Cpath d='M0 12 Q 10 -1, 20 12 T 40 12' fill='none' stroke='%23339999' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: center;
   background-size: 32px 24px;
@@ -2079,7 +2084,7 @@ select.enquiry-input {
 
 /* Footer Typography & Links */
 .footer-heading {
-  color: var(--dark-blue);
+  color: var(--acron-green);
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
@@ -2453,7 +2458,7 @@ select.enquiry-input {
 
 /* Feature List (Mobile Base) */
 .hero-feature-list {
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid #ccc;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   border-radius: 16px;
@@ -2462,7 +2467,7 @@ select.enquiry-input {
   font-weight: 500;
   letter-spacing: 0.5px;
   max-width: 800px;
-  margin: 20vh auto 1rem auto;
+  margin: 30vh auto 1rem auto;
   line-height: 1.6;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.25);
@@ -2535,8 +2540,8 @@ select.enquiry-input {
   }
 
   .hero-feature-list {
-    font-size: 0.9rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 1rem 10px;
   }
 
   .resort-hero-wrapper .hero-btn,
@@ -2657,7 +2662,7 @@ select.enquiry-input {
   .gallery-grid-container {
     display: block;
     column-count: 3;
-    column-gap: 20px;
+    gap: 24px;
   }
 
   .gallery-item {

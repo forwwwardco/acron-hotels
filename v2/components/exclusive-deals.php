@@ -65,8 +65,18 @@ $heading = $dealsHeading ?? "Exclusive Deals, Just For You";
 $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
     [
         'category'    => 'deal-pack-1',
-        'offer_name'  => 'Last Minute Offer',
-        'discount'    => '10% Off',
+        'offer_name'  => 'Early Bird Discount',
+        'discount'    => '15% off',
+        'condition'   => 'per person per night',
+        'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
+        'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Offer',
+        'img'         => 'v2/assets/deal-3.jpg',
+        'hidden'      => false
+    ],
+    [
+        'category'    => 'deal-pack-1',
+        'offer_name'  => 'Last Minute Booking',
+        'discount'    => '10% off',
         'condition'   => 'per person per night',
         'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
         'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Offer',
@@ -76,21 +86,11 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
     [
         'category'    => 'deal-pack-1',
         'offer_name'  => 'Long Stay Offer',
-        'discount'    => '20% Off',
+        'discount'    => '20% off',
         'condition'   => 'per person per night',
         'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
         'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
         'img'         => 'v2/assets/deal-1.jpg',
-        'hidden'      => false
-    ],
-    [
-        'category'    => 'deal-pack-1',
-        'offer_name'  => 'Early Bird Offer',
-        'discount'    => '15% Off',
-        'condition'   => 'per person per night',
-        'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
-        'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Offer',
-        'img'         => 'v2/assets/deal-3.jpg',
         'hidden'      => false
     ]
 ];
@@ -123,7 +123,7 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                             </h3>
                             <div class="mb-3 d-flex align-items-baseline justify-content-center flex-wrap">
                                 <span class="deal-offer fw-bold"><?= $esc_html($deal['discount']) ?></span>
-                                <span class="deal-condition fw-bold ms-2"><?= $esc_html($deal['condition']) ?></span>
+                                <span class="deal-condition fw-bold ms-1"><?= $esc_html($deal['condition']) ?></span>
                             </div>
                             <p class="small text-blue-grey opacity-75 mb-0 mx-auto">
                                 <?= $esc_html($deal['description']) ?>

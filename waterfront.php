@@ -275,11 +275,11 @@ $videos = [
             Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
-            <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">
-              BOOK NOW
-            </button>
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">
               WHY STAY HERE?
+            </button>
+            <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">
+              BOOK NOW
             </button>
           </div>
         </header>
