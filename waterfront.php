@@ -186,14 +186,14 @@ $suitesList = [
     'name' => 'Emerald Suite',
     'description' => 'Our Apartment Suites feature spacious 2–3 bedroom homes set within a charming garden setting—perfect for families and groups traveling together. With bright interiors, large French windows, and a generous living area, there’s plenty of space to relax, reconnect, and enjoy your Goa getaway together.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-user-group', 'text' => 'Living Room'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Mini Refrigerator'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Flat-Panel Television'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'In-Room Safe'],
-      ['icon' => 'fa-solid fa-user-group', 'text' => 'Coffee Maker & Tea Service'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Ceiling Fans'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Air Conditioning'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'Netflix'],
+      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Room'],
+      ['icon' => 'fa-solid fa-temperature-low', 'text' => 'Mini Refrigerator'],
+      ['icon' => 'fa-solid fa-tv', 'text' => 'Flat-Panel Television'],
+      ['icon' => 'fa-solid fa-vault', 'text' => 'In-Room Safe'],
+      ['icon' => 'fa-solid fa-mug-hot', 'text' => 'Coffee Maker & Tea Service'],
+      ['icon' => 'fa-solid fa-fan', 'text' => 'Ceiling Fans'],
+      ['icon' => 'fa-solid fa-snowflake', 'text' => 'Air Conditioning'],
+      ['icon' => 'fa-solid fa-circle-play', 'text' => 'Netflix'],
     ],
     'images' => [
       'v2/assets/waterfront-emerald-suite-1.jpg',
@@ -207,10 +207,14 @@ $suitesList = [
     'name' => 'Royal Suite',
     'description' => 'Our Royal Suite is a lavish penthouse-style retreat designed for those who enjoy space, privacy, and a touch of luxury. With expansive interiors, elegant bedrooms, and a generous living area, it’s perfect for families or groups who want to stay together while enjoying their own private comfort.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
-      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
-      ['icon' => 'fa-solid fa-kitchen-set', 'text' => 'Private Kitchenette'],
-      ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
+      ['icon' => 'fa-solid fa-couch', 'text' => 'Living Room'],
+      ['icon' => 'fa-solid fa-temperature-low', 'text' => 'Mini Refrigerator'],
+      ['icon' => 'fa-solid fa-tv', 'text' => 'Flat-Panel Television'],
+      ['icon' => 'fa-solid fa-vault', 'text' => 'In-Room Safe'],
+      ['icon' => 'fa-solid fa-mug-hot', 'text' => 'Coffee Maker & Tea Service'],
+      ['icon' => 'fa-solid fa-fan', 'text' => 'Ceiling Fans'],
+      ['icon' => 'fa-solid fa-snowflake', 'text' => 'Air Conditioning'],
+      ['icon' => 'fa-solid fa-circle-play', 'text' => 'Netflix'],
     ],
     'images' => [
       'v2/assets/waterfront-royal-suite-1.jpg',
@@ -225,17 +229,17 @@ $highlightAmenitiesList = [
   [
     'title' => 'Al Fresco',
     'description' => 'It’s when you want to take the good times outside. Our riverside Al Fresco Area is perfect for sunset drinks, easy conversations, and relaxed celebrations by the Baga River. Kick back with friends, raise a toast, and enjoy the Goa breeze in an open-air setting where good company, fresh air, and laid-back vibes make every moment worth lingering over.',
-    'image' => 'v2/assets/waterfront-benefit-1.jpg'
+    'image' => 'v2/assets/waterfront-benefit-2.jpg'
   ],
   [
     'title' => 'The River Restaurant',
     'description' => 'Where breezy afternoons turn into long, relaxed lunches by the water. Set where the Baga River meets the sea, it’s perfect for fresh seafood, Goan favourites, and easy conversations. As evening falls, warm lights glow and the river shimmers, creating a cosy setting for dinners that feel effortlessly intimate and memorable.',
-    'image' => 'v2/assets/waterfront-benefit-2.jpg'
+    'image' => 'v2/assets/waterfront-benefit-3.jpg'
   ],
   [
     'title' => 'Boardroom',
     'description' => 'Our boardroom is where business meets a change of scenery. Set within the calm surrounds of the resort, it’s ideal for team discussions, strategy sessions, and small corporate gatherings. A quiet, well-equipped space where ideas flow easily—and when the meeting wraps up, the riverside setting makes it just as easy to unwind.',
-    'image' => 'v2/assets/waterfront-benefit-3.jpg'
+    'image' => 'v2/assets/waterfront-benefit-1.jpg'
   ],
   [
     'title' => 'Pet Friendly Resort',

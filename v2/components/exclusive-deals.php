@@ -70,7 +70,7 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
         'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Offer',
-        'img'         => 'v2/assets/deal-3.jpg',
+        'img'         => 'v2/assets/deal-3.jpeg',
         'hidden'      => false
     ],
     [
@@ -80,7 +80,7 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
         'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Offer',
-        'img'         => 'v2/assets/deal-2.jpg',
+        'img'         => 'v2/assets/deal-2.jpeg',
         'hidden'      => false
     ],
     [
@@ -90,7 +90,7 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
         'link'        => 'https://wa.me/919922944634?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
-        'img'         => 'v2/assets/deal-1.jpg',
+        'img'         => 'v2/assets/deal-1.jpeg',
         'hidden'      => false
     ]
 ];
