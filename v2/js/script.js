@@ -174,9 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const tooltipTitle = document.getElementById('tooltipTitle');
     const tooltipList = document.getElementById('tooltipList');
     const resortFeatures = {
-      waterfront: { title: "Waterfront Highlights", features: ["One of a kind location on the Baga river", "Infinity pool on the river's edge!", "Luxury boutique rooms and suites", "Idea for couples, honeymoon and gatherings", "Dine on the Baga riverfront"] },
-      seaway: { title: "Seaway Highlights", features: ["300m from Candolim Beach", "Large Lagoon-style Pool", "Family-Friendly Atmosphere", "Spacious Rooms with Balconies", "Near Candolim Main Street", "Poolside Bar & Restaurant"] },
-      regina: { title: "Regina Highlights", features: ["Heart of Candolim Village", "Rated Best for Families", "Expansive Resort Grounds", "Multiple Dining Options", "Kids Club & Activities", "Generic Feature Six", "Generic Feature Seven"] }
+      waterfront: { title: "Waterfront Highlights", features: ["One of a kind location on the Baga river", "Infinity pool on the river's edge!", "Luxury boutique rooms and suites", "Ideal for couples, honeymoon and gatherings", "Dine on the Baga riverfront"] },
+      seaway: { title: "Seaway Highlights", features: ["Boutique stay in the heart of Candolim", "Just steps from Candolim Beach", "Cozy resort with 24 stylish rooms", "Relaxing poolside holiday vibes", "Garden and pool view rooms", "Easy access to North Goa hotspots"] },
+      regina: { title: "Regina Highlights", features: ["10 min Walk to Candolim Beach", "Spacious modern Rooms", "Contemporary resort in Vibrant Candolim", "Multi-cusine restaurant", "Pool, Lounge bar and more!", "Ideal for holidays, corporate stays, and events"] }
     };
 
     const closeTooltip = () => {

@@ -10,46 +10,27 @@ $heroImages = [
   'v2/assets/regina-hero-carousel-4.jpg',
   'v2/assets/regina-hero-carousel-5.jpg'
 ];
+$amenitiesHeading = "The Regina Experience";
 $pageAmenities = [
   [
-    'title' => 'AMENITY 1',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'title' => 'Multicuisine Restaurant',
+    'description' => 'From Goan favourites to global bites, great food is always on the menu at the Regina.',
     'image' => 'v2/assets/regina-amenity-1.jpg'
   ],
   [
-    'title' => 'AMENITY 2',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'title' => 'Regina Pool Deck',
+    'description' => 'Take a dip, grab a lounger, and let slow Goa afternoons unfold by the pool.',
     'image' => 'v2/assets/regina-amenity-2.jpg'
   ],
   [
-    'title' => 'AMENITY 3',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'title' => '3 Conference halls',
+    'description' => 'Host corporate meetings, get-togethers, or events in our well-equipped, calm resort spaces.',
     'image' => 'v2/assets/regina-amenity-3.jpg'
   ],
   [
-    'title' => 'AMENITY 4',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
+    'title' => 'Courtyard Area',
+    'description' => 'Lush courtyard by the pool and restaurant—perfect for relaxing, catching up, or enjoying Goa at your own pace.',
     'image' => 'v2/assets/regina-amenity-4.jpg'
-  ],
-  [
-    'title' => 'AMENITY 5',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/regina-amenity-5.jpg'
-  ],
-  [
-    'title' => 'AMENITY 6',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/regina-amenity-6.jpg'
-  ],
-  [
-    'title' => 'AMENITY 7',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/regina-amenity-7.jpg'
-  ],
-  [
-    'title' => 'AMENITY 8',
-    'description' => 'Unwind in serene riverfront surroundings beside the flowing Baga River.',
-    'image' => 'v2/assets/regina-amenity-8.jpg'
   ]
 ];
 $galleryHeading = "Gallery";
@@ -109,9 +90,9 @@ $galleryItems = [
 $roomsHeading = "Explore Our Rooms";
 $roomsList = [
   [
-    'id' => 'deluxe-villa',
-    'name' => 'Deluxe Villa',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'id' => 'deluxe-room',
+    'name' => 'Deluxe Room',
+    'description' => 'Greet the day with serene sights of the pool and lush garden,our  Deluxe Room is your cosy Candolim hideaway — perfect for couples or solo travellers seeking easygoing comfort, a splash of sun, and the relaxed rhythm of Goa just outside your door.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
@@ -126,9 +107,9 @@ $roomsList = [
     'learnLink' => '#'
   ],
   [
-    'id' => 'luxury-pool-facing-room',
-    'name' => 'Luxury Pool Facing Room',
-    'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
+    'id' => 'luxury-room',
+    'name' => 'Luxury Room',
+    'description' => 'Stretch out and soak in the lively Candolim vibes from your private balcony. The Luxury Room is made for those who want a little extra space to lounge, sip a drink, or simply watch the day unfold at the pool or gardens. Comfort meets relaxed style for a stay you won’t forget.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
       ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
@@ -144,8 +125,8 @@ $roomsList = [
   ],
   [
     'id' => 'luxury-room-with-bathtub',
-    'name' => 'Luxury Room with Bathtub',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'name' => 'Luxury Room with Bathtub CONTENT NEEDED',
+    'description' => 'CONTENT NEEDED Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
@@ -162,7 +143,7 @@ $roomsList = [
   [
     'id' => 'suite-room',
     'name' => 'Suite Room',
-    'description' => 'Experience the serenity of the Baga river right from your window. These rooms offer a perfect blend of modern comfort and natural beauty, ensuring a peaceful stay.',
+    'description' => 'EIdeal for families or friends, the Suite offers room to spread out and make memories. With a spacious living area and a balcony overlooking the pool or garden, it’s the perfect setting for lazy mornings, long conversations, and evenings filled with laughter under the Goan sun.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
       ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
@@ -200,29 +181,19 @@ $suitesList = [
 $highlightsHeading = "Meetings & Events";
 $highlightAmenitiesList = [
   [
-    'title' => 'Courtyard ',
-    'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
+    'title' => 'Abbe Faria Hall',
+    'description' => 'A grand 2,200 sq ft hall hosting up to 150 guests — ideal for large meetings or events.',
     'image' => 'v2/assets/regina-benefit-1.jpg'
   ],
   [
-    'title' => 'Abbe Faria',
-    'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
+    'title' => 'Edmond Dantes Hall',
+    'description' => 'A versatile 1,162 sq ft space seating up to 75 guests for meetings, presentations, and events.',
     'image' => 'v2/assets/regina-benefit-2.jpg'
   ],
   [
-    'title' => 'Edmond Dantes',
-    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
+    'title' => 'Monte Cristo Hall',
+    'description' => 'A cosy 473 sq ft venue perfect for intimate gatherings, workshops, and focused discussions.',
     'image' => 'v2/assets/regina-benefit-3.jpg'
-  ],
-  [
-    'title' => 'Goan Curry',
-    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/regina-benefit-4.jpg'
-  ],
-  [
-    'title' => 'Monte Cristo',
-    'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/regina-benefit-4.jpg'
   ]
 ];
 $pageReviews = [
@@ -258,7 +229,7 @@ $videos = [
             </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            Boutique Luxury | Riverside Dining | Infinity Pool | Couple Friendly | Near Baga Beach
+            10-Minute Walk to Candolim Beach | Spacious, Modern Rooms Designed for Comfort | Contemporary Resort in Vibrant Candolim | Multi-Cuisine Restaurant with Global Flavours | Pool, Lounge Bar & Relaxed Hangout Spaces | Perfect for Holidays, Corporate get-togethers & Events
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Candolim Regina?">

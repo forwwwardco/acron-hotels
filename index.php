@@ -1,10 +1,11 @@
 <?php
 $pageResort = '';
-$h1 = 'GOA\'S FINEST RIVER, SEA & VILLAGE STAYS';
+$h1 = 'One Name. Three Exceptional Stays.';
 $travellersChoiceAward = 'v2/assets/travelers-choice-200.jpg';
+$dealsHeading = 'Exclusive Deals From Us to You';
 $hotels = [
   [
-    'name' => 'Acron Waterfront Resort',
+    'name' => 'The Waterfront Resort by Acron',
     'location' => 'BAGA, GOA',
     'heroImage' => 'v2/assets/waterfront-feature.jpg',
     'iconUrl' => 'v2/assets/waterfront-icon.png',
@@ -16,13 +17,13 @@ $hotels = [
       'v2/assets/waterfront-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/waterfront-overlap.jpg',
-    'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
+    'description' => 'Set along the Baga river, The Waterfront Resort by Acron offers thoughtfully planned spaces and modern amenities in a calm, one-of-a-kind waterfront setting.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-person-swimming', 'label' => 'Infinity Pool'],
-      ['icon' => 'fa-solid fa-spa', 'label' => 'Spa & Wellness'],
-      ['icon' => 'fa-solid fa-utensils', 'label' => 'Riverside Dining'],
-      ['icon' => 'fa-solid fa-wifi', 'label' => 'Free Wi-Fi'],
-      ['icon' => 'fa-solid fa-dumbbell', 'label' => 'Fitness Centre']
+      ['icon' => 'fa-solid fa-location-dot', 'label' => 'One of a kind location on the Baga river'],
+      ['icon' => 'fa-solid fa-water-ladder', 'label' => 'Infinity pool on the river\'s edge!'],
+      ['icon' => 'fa-solid fa-star', 'label' => 'Luxury boutique rooms and suites'],
+      ['icon' => 'fa-solid fa-heart', 'label' => 'Ideal for couples, honeymoon and gatherings'],
+      ['icon' => 'fa-solid fa-utensils', 'label' => 'Dine on the Baga riverfront']
     ],
     'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
     'walkthroughLink' => '#',
@@ -38,7 +39,7 @@ $hotels = [
     'dotClass' => 'dot-waterfront'
   ],
   [
-    'name' => 'Acron Candolim Regina',
+    'name' => 'The Regina Resort by Acron',
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/regina-feature.jpg',
     'iconUrl' => 'v2/assets/regina-icon.png',
@@ -50,13 +51,14 @@ $hotels = [
       'v2/assets/regina-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/regina-overlap.jpg',
-    'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
+    'description' => 'Located on Candolim’s main stretch,The Regina Resort by Acron offers modern comforts with easy access to the beach, dining, and local attractions.',
     'amenities' => [
-      ['icon' => 'fa-solid fa-umbrella-beach', 'label' => 'Near Beach'],
-      ['icon' => 'fa-solid fa-mug-hot', 'label' => 'Buffet Breakfast'],
-      ['icon' => 'fa-solid fa-child-reaching', 'label' => 'Kids Play Area'],
-      ['icon' => 'fa-solid fa-martini-glass-citrus', 'label' => 'Sunken Bar'],
-      ['icon' => 'fa-solid fa-van-shuttle', 'label' => 'Airport Shuttle']
+      ['icon' => 'fa-solid fa-umbrella-beach', 'label' => '10 min Walk to Candolim Beach'],
+      ['icon' => 'fa-solid fa-couch', 'label' => 'Spacious modern Rooms'],
+      ['icon' => 'fa-solid fa-location-dot', 'label' => 'Contemporary resort in Vibrant Candolim'],
+      ['icon' => 'fa-solid fa-utensils', 'label' => 'Multi-cusine restaurant'],
+      ['icon' => 'fa-solid fa-water-ladder', 'label' => 'Pool, Lounge bar and more!'],
+      ['icon' => 'fa-solid fa-plane', 'label' => 'Ideal for holidays, corporate stays, and events']
     ],
     'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
     'walkthroughLink' => '#',
@@ -72,7 +74,7 @@ $hotels = [
     'dotClass' => 'dot-regina'
   ],
   [
-    'name' => 'Acron Seaway Resort',
+    'name' => 'The Beachwalk Resort by Acron',
     'location' => 'CANDOLIM, GOA',
     'heroImage' => 'v2/assets/seaway-feature.jpg',
     'iconUrl' => 'v2/assets/seaway-icon.png',
@@ -84,7 +86,7 @@ $hotels = [
       'v2/assets/seaway-carousel-5.jpg'
     ],
     'overlappingImg' => 'v2/assets/seaway-overlap.jpg',
-    'description' => 'Xxxxx xxxxx xxxxx xxx xxxx, xxxxxxxxxxx xxxxxxxxxx xxxx. Xxxxxx xxx xxxxx xxxxxx xxxx xxxxxxxxxx xxxx xxxxxxxxxx xxxxxx xxxxxx xxxx.',
+    'description' => 'Just a short walk from the shoreline,The Beachwalk Resort by Acron delivers a relaxed coastal stay with practical amenities and open, breathable spaces.',
     'amenities' => [
       ['icon' => 'fa-solid fa-water', 'label' => 'Pool View'],
       ['icon' => 'fa-solid fa-car', 'label' => 'Free Parking'],
@@ -212,7 +214,7 @@ $videos = [
   <section class="our-hotels-section py-5 bg-white position-relative" aria-labelledby="hotelsHeading">
     <img src="v2/assets/starfish.png" class="decor scale-decor our-hotels-heading-decor" alt="" aria-hidden="true" loading="lazy">
     <div class="container py-4 position-relative z-1">
-      <h2 id="hotelsHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Our Hotels</h2>
+      <h2 id="hotelsHeading" class="text-center fw-bold text-blue-grey mb-5 pb-lg-3 reveal section-heading">Three Unique Experiences with Acron</h2>
       <?php foreach ($hotels as $index => $hotel):
         $isAlternate = ($index % 2 !== 0);
         $textOrder = $isAlternate ? 'order-2 pe-lg-5 position-relative' : 'order-2 order-lg-1 pe-lg-5';

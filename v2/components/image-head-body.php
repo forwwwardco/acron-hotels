@@ -18,7 +18,7 @@
 $imgHeadBodyDefaultData = [
     'tagline'     => 'XYZ TAGLINE',
     'heading'     => 'Acron Homes Cross Promotion',
-    'description' => 'Xxxxxxx xx x xxxxxx xx xxxxxxx xxxx xxxxxx xxx xxxxxxxxxxx, xxx Xxxxx Xxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxx xxxxxxxxx xxx xxxxxx xxxxxx xx xxx xxxxxx xx xxxxxxxxxxx. Xxxx xxxxxxxxxx xx xxxxxxxxxx xxxxxx xx xx xxxxxx xxxxxx xxxxxxxxxx xxxxxxxxxxx, xxxx xxxxxxxx x xxxxxx xxxxxxxxxxx xx Xxx’x xxxxxxx xxxxx.',
+    'description' => 'With over 40+ developments, 1600 happy homeowners and over 4 million sqft developed in Western and Southern India, Acron continues to be Goa\'s trusted real estate leader for over 38 years. From luxury villas to thoughtfully designed communities, we build homes that offer comfort, style and long‑term value, bringing dreams to life with quality you can trust',
     'image'       => 'v2/assets/homes.jpeg'
 ];
 
