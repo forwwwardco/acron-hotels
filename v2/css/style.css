@@ -807,6 +807,19 @@ img.loaded {
   font-size: 0.8rem;
 }
 
+
+/* Desktop Enhancements */
+@media (min-width: 992px) {
+  .enquiry-trigger {
+    border-width: 0;
+    left: -38px;
+  }
+
+  .enquiry-trigger span {
+    font-size: 1rem;
+  }
+}
+
 /* Form Inputs */
 .enquiry-input {
   background-color: var(--white);
@@ -1135,6 +1148,8 @@ select.enquiry-input {
 @media (min-width: 992px) {
   .hero-h1 {
     font-size: 2.4rem;
+    width: 100%;
+    text-align: center;
   }
 
   .ta-badge-img {
@@ -1153,8 +1168,6 @@ select.enquiry-input {
   }
 
   .resort-col {
-    height: 100%;
-    min-height: 300px;
     border-left: 12px solid var(--white);
     border-bottom: 12px solid var(--white);
   }
@@ -1168,12 +1181,9 @@ select.enquiry-input {
     border-right: 12px solid var(--white);
   }
 
-  .resort-content-wrapper {
-    padding-bottom: 200px !important;
-  }
-
   #heroResortsContainerRow {
-    height: calc(calc(90vh - var(--nav-height-gap)) - 1px) !important;
+    height: calc(calc(90vh - var(--nav-height-gap)) - 167px) !important;
+    min-height: 100px !important;
   }
 
   /* Tooltip Desktop Scaling */
@@ -1191,7 +1201,7 @@ select.enquiry-input {
 
   .tooltip-features-list li {
     margin-bottom: 16px;
-    font-size: 1.55rem;
+    font-size: 1.35rem;
   }
 
   /* Hero Desktop Animations */
@@ -1425,7 +1435,7 @@ select.enquiry-input {
 }
 
 .video-section {
-  padding-top: 5rem !important;
+  padding-top: 4rem !important;
   padding-bottom: 0 !important;
 }
 
@@ -1594,6 +1604,10 @@ select.enquiry-input {
 
 /* Desktop Enhancements */
 @media (min-width: 992px) {
+  .video-section {
+    padding-top: 7rem !important;
+  }
+
   .promo-carousel-img {
     height: 450px;
   }
@@ -1718,10 +1732,6 @@ select.enquiry-input {
   opacity: 1 !important;
   width: 24px !important;
   border-radius: 6px !important;
-}
-
-.hotel-amenities {
-  max-width: 450px;
 }
 
 /* Action Buttons (Mobile Base) */
@@ -3034,4 +3044,8 @@ select.enquiry-input {
     transform: scale(4);
     opacity: 0;
   }
+}
+
+#dynamicCustomMapImg {
+  max-height: 90vh !important;
 }

@@ -20,19 +20,18 @@ $hotels = [
     'description' => 'Set along the Baga river, The Waterfront Resort by Acron offers thoughtfully planned spaces and modern amenities in a calm, one-of-a-kind waterfront setting.',
     'amenities' => [
       ['icon' => 'fa-solid fa-location-dot', 'label' => 'One of a kind location on the Baga river'],
-      ['icon' => 'fa-solid fa-water-ladder', 'label' => 'Infinity pool on the river\'s edge!'],
       ['icon' => 'fa-solid fa-star', 'label' => 'Luxury boutique rooms and suites'],
-      ['icon' => 'fa-solid fa-heart', 'label' => 'Ideal for couples, honeymoon and gatherings'],
-      ['icon' => 'fa-solid fa-utensils', 'label' => 'Dine on the Baga riverfront']
+      ['icon' => 'fa-solid fa-water-ladder', 'label' => 'Infinity pool on the river\'s edge!'],
+      ['icon' => 'fa-solid fa-utensils', 'label' => 'Dine on the Baga riverfront'],
+      ['icon' => 'fa-solid fa-heart', 'label' => 'Ideal for couples, honeymoon & gatherings']
     ],
-    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
     'walkthroughLink' => '#',
     'staahId' => 'MzAw',
     'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g635747-d7289335-Reviews-Acron_Waterfront_Resort-Baga_North_Goa_District_Goa.html?m=19905',
     'taRating' => '4.8',
     'taReviews' => '2,386',
-
-    /* Don't change below */
+    'mapLink' => 'https://maps.app.goo.gl/sckeNcpmKmw4qQyJ6',
+    'customMapImg' => 'v2/assets/waterfront-map.jpeg',
     'id' => 'waterfront',
     'link' => './waterfront.php',
     'heroExtraClass' => '',
@@ -55,19 +54,18 @@ $hotels = [
     'amenities' => [
       ['icon' => 'fa-solid fa-umbrella-beach', 'label' => '10 min Walk to Candolim Beach'],
       ['icon' => 'fa-solid fa-couch', 'label' => 'Spacious modern Rooms'],
-      ['icon' => 'fa-solid fa-location-dot', 'label' => 'Contemporary resort in Vibrant Candolim'],
       ['icon' => 'fa-solid fa-utensils', 'label' => 'Multi-cusine restaurant'],
       ['icon' => 'fa-solid fa-water-ladder', 'label' => 'Pool, Lounge bar and more!'],
+      ['icon' => 'fa-solid fa-location-dot', 'label' => 'Contemporary resort in Vibrant Candolim'],
       ['icon' => 'fa-solid fa-plane', 'label' => 'Ideal for holidays, corporate stays, and events']
     ],
-    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
     'walkthroughLink' => '#',
     'staahId' => 'Mjk4',
     'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g297605-d1657397-Reviews-Acron_Candolim_Regina-Candolim_Bardez_North_Goa_District_Goa.html?m=19905',
     'taRating' => '4.4',
     'taReviews' => '2,752',
-
-    /* Don't change below */
+    'mapLink' => 'https://maps.app.goo.gl/aM2rQY2ij4m259Dx6',
+    'customMapImg' => 'v2/assets/regina-map.jpeg',
     'id' => 'regina',
     'link' => './candolim-regina.php',
     'heroExtraClass' => 'middle-resort-col',
@@ -94,14 +92,13 @@ $hotels = [
       ['icon' => 'fa-solid fa-clock', 'label' => '24h Service'],
       ['icon' => 'fa-solid fa-vault', 'label' => 'In-room Safe']
     ],
-    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
     'walkthroughLink' => '#',
     'staahId' => 'NzQy',
     'taLink' => 'https://www.tripadvisor.in/Hotel_Review-g297605-d15871394-Reviews-Acron_Seaway_Resort-Candolim_Bardez_North_Goa_District_Goa.html?m=19905',
     'taRating' => '4.8',
     'taReviews' => '581',
-
-    /* Don't change below */
+    'mapLink' => 'https://maps.app.goo.gl/txh7qXzFoykgg1rEA',
+    'customMapImg' => 'v2/assets/seaway-map.jpeg',
     'id' => 'seaway',
     'link' => './seaway.php',
     'heroExtraClass' => '',
@@ -190,8 +187,10 @@ $videos = [
                 <h2 class="resort-h2 fw-bold mb-2"><?= htmlspecialchars($hotel['name']) ?></h2>
                 <div class="d-flex align-items-center gap-3">
                   <p class="resort-tagline mb-0 h6"><?= htmlspecialchars($hotel['location']) ?></p>
-                  <button type="button" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>" data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>">
-                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Show on Map
+                  <button type="button" class="btn-map-link d-none d-lg-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+                    data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>"
+                    data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>"
+                    data-map-image="<?= htmlspecialchars($hotel['customMapImg']) ?>"> <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
                   </button>
                 </div>
               </div>
@@ -237,8 +236,10 @@ $videos = [
             <header>
               <div class="d-flex align-items-center gap-3 mb-2">
                 <span class="text-blue-grey fw-bold small ls-1"><?= htmlspecialchars($hotel['location']) ?></span>
-                <button type="button" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>" data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>">
-                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
+                <button type="button" class="btn-map-link d-flex align-items-center gap-2 m-0 text-decoration-none text-blue-grey border-0" aria-label="Show <?= htmlspecialchars($hotel['name']) ?> on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+                  data-map-link="<?= htmlspecialchars($hotel['mapLink']) ?>"
+                  data-hotel-name="<?= htmlspecialchars($hotel['name']) ?>"
+                  data-map-image="<?= htmlspecialchars($hotel['customMapImg']) ?>"> <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
                 </button>
               </div>
               <div class="d-flex align-items-center gap-3 mb-2">

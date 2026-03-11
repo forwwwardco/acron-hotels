@@ -11,26 +11,26 @@ $heroImages = [
   'v2/assets/waterfront-hero-carousel-4.jpg',
   'v2/assets/waterfront-hero-carousel-5.jpg'
 ];
-$amenitiesHeading = "Your Riverside Perks / Comforts";
+$amenitiesHeading = "Your Riverside Perks";
 $pageAmenities = [
   [
     'title' => 'Infinity Pool',
     'description' => 'Riverfront infinity pool, Goa sunsets, Baga views, and your favourite drink in hand, what more could you need.',
-    'image' => 'v2/assets/waterfront-amenity-1.jpg'
+    'image' => 'v2/assets/waterfront-amenity-2.jpg'
   ],
   [
     'title' => 'Jacuzzi',
     'description' => 'Our hot water Jacuzzi is the perfect place to sink into warm bubbling waters and let the day melt away.',
-    'image' => 'v2/assets/waterfront-amenity-2.jpg'
+    'image' => 'v2/assets/waterfront-amenity-1.jpg'
   ],
   [
     'title' => 'Boutique Riverside Resort',
-    'description' => 'A One of a kind location on the Baga River - Watch boats drift by, catch golden sunsets, and enjoy peaceful riverside views.',
+    'description' => 'A one of a kind location on the Baga River - watch boats drift by, catch golden sunsets & enjoy peaceful riverside views.',
     'image' => 'v2/assets/waterfront-amenity-3.jpg'
   ],
   [
     'title' => 'The River Restaurant',
-    'description' => 'Great food tastes even better by the water. Enjoy a relaxed riverside setting with a menu full of Goan favourites, fresh seafood, and global classics.',
+    'description' => 'Great food tastes even better by the water. Enjoy a relaxed riverside setting with a menu full of Goan favourites, fresh seafood & global classics.',
     'image' => 'v2/assets/waterfront-amenity-5.jpg'
   ],
   [
@@ -50,7 +50,7 @@ $pageAmenities = [
   ],
   [
     'title' => 'A Prime Location',
-    'description' => 'Right where the action is. Our prime location puts you minutes away from Goa’s best beaches, buzzing cafés, lively nightlife, and popular hotspots.',
+    'description' => 'Right where the action is. Our prime location puts you minutes away from Goa\'s best beaches, buzzing cafés, lively nightlife & popular hotspots.',
     'image' => 'v2/assets/waterfront-amenity-8.jpg'
   ]
 ];
@@ -64,23 +64,23 @@ $galleryFilters = [
 ];
 $galleryItems = [
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-1.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-2.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-3.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-4.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-5.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-6.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-7.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-8.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-1.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-2.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-3.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-4.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-5.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-6.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-7.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-gallery-exterior-8.jpg', 'full' => 'v2/assets/waterfront-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => false],
   // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-1.jpg', 'full' => 'v2/assets/waterfront-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-2.jpg', 'full' => 'v2/assets/waterfront-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-3.jpg', 'full' => 'v2/assets/waterfront-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-4.jpg', 'full' => 'v2/assets/waterfront-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-5.jpg', 'full' => 'v2/assets/waterfront-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-6.jpg', 'full' => 'v2/assets/waterfront-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-7.jpg', 'full' => 'v2/assets/waterfront-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-8.jpg', 'full' => 'v2/assets/waterfront-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-1.jpg', 'full' => 'v2/assets/waterfront-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-2.jpg', 'full' => 'v2/assets/waterfront-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-3.jpg', 'full' => 'v2/assets/waterfront-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-4.jpg', 'full' => 'v2/assets/waterfront-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-5.jpg', 'full' => 'v2/assets/waterfront-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-6.jpg', 'full' => 'v2/assets/waterfront-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-7.jpg', 'full' => 'v2/assets/waterfront-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-gallery-room-8.jpg', 'full' => 'v2/assets/waterfront-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Restaurant ---
   ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-gallery-restaurant-1.jpg', 'full' => 'v2/assets/waterfront-gallery-restaurant-1-large.jpg', 'alt' => '', 'hidden' => true],
   ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-gallery-restaurant-2.jpg', 'full' => 'v2/assets/waterfront-gallery-restaurant-2-large.jpg', 'alt' => '', 'hidden' => true],
@@ -275,7 +275,10 @@ $videos = [
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Baga, Goa</p>
-            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="https://maps.google.com/?q=Acron+Waterfront+Resort" data-hotel-name="Acron Waterfront Resort">
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+              data-map-link="https://maps.google.com/?q=Acron+Waterfront+Resort"
+              data-hotel-name="Acron Waterfront Resort"
+              data-map-image="v2/assets/waterfront-map.jpeg">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </button>
           </div>

@@ -47,13 +47,13 @@ $direct_booking_benefits = [
                         <span class="d-none d-lg-inline">FOR SPECIAL OFFERS</span>
                     </button>
                     <div class="d-none d-lg-inline-block ms-3 contact-numbers" id="desktopContactNumbers">
-                        <a href="tel:+91XXXXXXXXXX" class="me-3 text-decoration-none">+91 XXXXX XXXXX</a>
-                        <a href="tel:+91XXXXXXXXXX" class="me-3 text-decoration-none">+91 XXXXX XXXXX</a>
-                        <a href="tel:+91XXXXXXXXXX" class="text-decoration-none">+91 XXXXX XXXXX</a>
+                        <a href="tel:+918888848038" class="me-3 text-decoration-none">+91 8888 848 038</a>
+                        <a href="tel:+917741088822" class="me-3 text-decoration-none">+91 7741 088 822</a>
+                        <a href="tel:+917722016888" class="text-decoration-none">+91 7722 016 888</a>
                     </div>
                 </div>
 
-                <div class="social-icons d-none d-lg-flex gap-3">
+                <div class="social-icons d-none d-lg-flex gap-3" style="display:none!important;">
                     <a href="#" aria-label="Visit our TripAdvisor page" class="social-link">
                         <img src="v2/assets/icon-tripadvisor.png" alt="" aria-hidden="true" class="ta-custom-icon">
                     </a>
@@ -96,7 +96,7 @@ $direct_booking_benefits = [
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none d-lg-block" href="<?= $ourHotels; ?>" id="hotelsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                Our Hotels
+                                Our&nbsp;&nbsp;Hotels
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm desktop-dropdown-menu" aria-labelledby="hotelsDropdown">
                                 <li><a class="dropdown-item fw-semibold text-uppercase" href="<?= $esc_html($waterfront) ?>">Acron Waterfront Resort</a></li>
@@ -105,7 +105,7 @@ $direct_booking_benefits = [
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileHotelsMenu" role="button" aria-expanded="true" aria-controls="mobileHotelsMenu">
-                                Our Hotels
+                                Our&nbsp;&nbsp;Hotels
                             </a>
                             <div class="collapse show d-lg-none" id="mobileHotelsMenu">
                                 <ul class="navbar-nav ps-4">
@@ -117,12 +117,12 @@ $direct_booking_benefits = [
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $exclusiveDeals ?>">Exclusive Deals</a>
+                            <a class="nav-link" href="<?= $exclusiveDeals ?>">Exclusive&nbsp;&nbsp;Deals</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none d-lg-block" href="<?= $directBookingBenefits ?>" id="whyBookDropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                Direct Booking Benefits
+                                Direct&nbsp;&nbsp;Booking&nbsp;&nbsp;Benefits
                             </a>
                             <ul class="dropdown-menu border-0 desktop-tooltip-menu p-3" aria-labelledby="whyBookDropdown">
                                 <?php foreach ($direct_booking_benefits as $index => $benefit): ?>
@@ -134,7 +134,7 @@ $direct_booking_benefits = [
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileWhyBookMenu" role="button" aria-expanded="false" aria-controls="mobileWhyBookMenu">
-                                Direct Booking Benefits
+                                Direct&nbsp;&nbsp;Booking&nbsp;&nbsp;Benefits
                             </a>
                             <div class="collapse d-lg-none" id="mobileWhyBookMenu">
                                 <ul class="list-unstyled ps-4 mt-2 mb-3 why-book-mobile-list">
@@ -149,7 +149,7 @@ $direct_booking_benefits = [
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $esc_html($contact) ?>">Contact Us</a>
+                            <a class="nav-link" href="<?= $esc_html($contact) ?>">Contact&nbsp;&nbsp;Us</a>
                         </li>
                     </ul>
 
@@ -173,25 +173,46 @@ $direct_booking_benefits = [
             <div class="modal-body text-center py-4">
                 <h6 id="specialOffersModalLabel" class="fw-bold text-uppercase mb-3">Call for Special Offers</h6>
                 <hr class="modal-line mx-auto mb-4" aria-hidden="true">
-
                 <div class="modal-contacts d-flex flex-column gap-3">
-                    <?php
-                    // To keep the HTML DRY, we can loop the contact block 3 times
-                    for ($i = 0; $i < 3; $i++):
-                    ?>
-                        <div class="d-flex align-items-center justify-content-center gap-2">
-                            <a href="tel:+91XXXXXXXXXX" aria-label="Call +91 XXXXX XXXXX" class="text-decoration-none text-blue-grey">
-                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                            </a>
-                            <span class="opacity-50 fw-light" aria-hidden="true">/</span>
-                            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp +91 XXXXX XXXXX" class="text-decoration-none text-blue-grey wa-link">
-                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                            </a>
-                            <a href="tel:+91XXXXXXXXXX" aria-label="Call +91 XXXXX XXXXX" class="text-decoration-none ms-1 text-blue-grey">
-                                <span aria-hidden="true">+91 XXXXX XXXXX</span>
-                            </a>
-                        </div>
-                    <?php endfor; ?>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+918888848038" aria-label="Call +91 8888 848 038" class="text-decoration-none text-blue-grey">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <span class="opacity-50 fw-light" aria-hidden="true">/</span>
+                        <a href="https://wa.me/918888848038" target="_blank" aria-label="WhatsApp +91 8888 848 038" class="text-decoration-none text-blue-grey wa-link">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="tel:+918888848038" aria-label="Call +91 8888 848 038" class="text-decoration-none ms-1 text-blue-grey">
+                            <span aria-hidden="true">+91 8888 848 038</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+917741088822" aria-label="Call +91 7741 088 822" class="text-decoration-none text-blue-grey">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <span class="opacity-50 fw-light" aria-hidden="true">/</span>
+                        <a href="https://wa.me/917741088822" target="_blank" aria-label="WhatsApp +91 7741 088 822" class="text-decoration-none text-blue-grey wa-link">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="tel:+917741088822" aria-label="Call +91 7741 088 822" class="text-decoration-none ms-1 text-blue-grey">
+                            <span aria-hidden="true">+91 7741 088 822</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="tel:+917722016888" aria-label="Call +91 7722 016 888" class="text-decoration-none text-blue-grey">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <span class="opacity-50 fw-light" aria-hidden="true">/</span>
+                        <a href="https://wa.me/917722016888" target="_blank" aria-label="WhatsApp +91 7722 016 888" class="text-decoration-none text-blue-grey wa-link">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="tel:+917722016888" aria-label="Call +91 7722 016 888" class="text-decoration-none ms-1 text-blue-grey">
+                            <span aria-hidden="true">+91 7722 016 888</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>

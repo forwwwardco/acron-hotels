@@ -16,8 +16,8 @@
 
 // Define defaults and merge with provided data if available to prevent undefined keys
 $imgHeadBodyDefaultData = [
-    'tagline'     => 'XYZ TAGLINE',
-    'heading'     => 'Acron Homes Cross Promotion',
+    'tagline'     => 'Acron Developers',
+    'heading'     => 'Goa\'s Leading Real Estate Developer since 1988',
     'description' => 'With over 40+ developments, 1600 happy homeowners and over 4 million sqft developed in Western and Southern India, Acron continues to be Goa\'s trusted real estate leader for over 38 years. From luxury villas to thoughtfully designed communities, we build homes that offer comfort, style and long‑term value, bringing dreams to life with quality you can trust',
     'image'       => 'v2/assets/homes.jpeg'
 ];

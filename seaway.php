@@ -252,7 +252,10 @@ $videos = [
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Candolim, Goa</p>
-            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Seaway Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="https://maps.google.com/?q=Acron+Seaway+Resort" data-hotel-name="Acron Seaway Resort">
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+              data-map-link="https://maps.google.com/?q=Acron+Beachwalk+Resort"
+              data-hotel-name="Acron Beachwalk Resort"
+              data-map-image="v2/assets/seaway-map.jpeg">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </button>
           </div>

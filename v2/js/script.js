@@ -538,13 +538,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // Extract info from data-* attributes
       const mapLink = button.getAttribute('data-map-link');
       const hotelName = button.getAttribute('data-hotel-name');
+      const mapImageSrc = button.getAttribute('data-map-image'); // New attribute
 
-      // Update the modal's title and button link
+      // Update the modal's title, button link, and map image
       const modalTitle = customMapModal.querySelector('.modal-title');
       const googleMapsBtn = customMapModal.querySelector('#dynamicGoogleMapsBtn');
+      const customMapImgEl = customMapModal.querySelector('#dynamicCustomMapImg');
 
       if (modalTitle) modalTitle.textContent = hotelName + ' Map';
       if (googleMapsBtn) googleMapsBtn.href = mapLink;
+      if (customMapImgEl && mapImageSrc) customMapImgEl.src = mapImageSrc;
     });
   }
 });

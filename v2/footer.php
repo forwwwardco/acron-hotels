@@ -45,7 +45,7 @@
         <div class="container-fluid px-lg-5">
             <div class="row align-items-center gy-3">
                 <div class="col-md-6 text-center text-md-start">
-                    <div class="footer-social-icons d-flex justify-content-center justify-content-md-start gap-4">
+                    <div class="footer-social-icons d-flex justify-content-center justify-content-md-start gap-4" style="display:none!important;">
                         <a href="#" aria-label="Visit our TripAdvisor page" class="social-link">
                             <img src="v2/assets/icon-tripadvisor.png" alt="" aria-hidden="true" class="ta-custom-icon" loading="lazy">
                         </a>

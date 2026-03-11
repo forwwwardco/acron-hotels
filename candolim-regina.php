@@ -43,23 +43,23 @@ $galleryFilters = [
 ];
 $galleryItems = [
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-1.jpg', 'full' => 'v2/assets/regina-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-2.jpg', 'full' => 'v2/assets/regina-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-3.jpg', 'full' => 'v2/assets/regina-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-4.jpg', 'full' => 'v2/assets/regina-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-5.jpg', 'full' => 'v2/assets/regina-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-6.jpg', 'full' => 'v2/assets/regina-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-7.jpg', 'full' => 'v2/assets/regina-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-8.jpg', 'full' => 'v2/assets/regina-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-1.jpg', 'full' => 'v2/assets/regina-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-2.jpg', 'full' => 'v2/assets/regina-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-3.jpg', 'full' => 'v2/assets/regina-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-4.jpg', 'full' => 'v2/assets/regina-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-5.jpg', 'full' => 'v2/assets/regina-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-6.jpg', 'full' => 'v2/assets/regina-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-7.jpg', 'full' => 'v2/assets/regina-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-8.jpg', 'full' => 'v2/assets/regina-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => false],
   // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-1.jpg', 'full' => 'v2/assets/regina-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-2.jpg', 'full' => 'v2/assets/regina-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-3.jpg', 'full' => 'v2/assets/regina-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-4.jpg', 'full' => 'v2/assets/regina-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-5.jpg', 'full' => 'v2/assets/regina-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-6.jpg', 'full' => 'v2/assets/regina-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-7.jpg', 'full' => 'v2/assets/regina-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-8.jpg', 'full' => 'v2/assets/regina-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-1.jpg', 'full' => 'v2/assets/regina-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-2.jpg', 'full' => 'v2/assets/regina-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-3.jpg', 'full' => 'v2/assets/regina-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-4.jpg', 'full' => 'v2/assets/regina-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-5.jpg', 'full' => 'v2/assets/regina-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-6.jpg', 'full' => 'v2/assets/regina-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-7.jpg', 'full' => 'v2/assets/regina-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-8.jpg', 'full' => 'v2/assets/regina-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Restaurant ---
   ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-1.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-1-large.jpg', 'alt' => '', 'hidden' => true],
   ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-2.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-2-large.jpg', 'alt' => '', 'hidden' => true],
@@ -224,7 +224,11 @@ $videos = [
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Candolim, Goa</p>
-            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Candolim Regina on Map" data-bs-toggle="modal" data-bs-target="#customMapModal" data-map-link="https://maps.google.com/?q=Acron+Waterfront+Resort" data-hotel-name="Acron Candolim Regina">
+
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+              data-map-link="https://maps.google.com/?q=Acron+Candolim+Regina"
+              data-hotel-name="Acron Candolim Regina"
+              data-map-image="v2/assets/regina-map.jpeg">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </button>
           </div>

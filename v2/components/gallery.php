@@ -21,7 +21,7 @@
  */
 
 $themeContext = !empty($pageResort) ? 'gallery-' . $pageResort : 'gallery-home';
-$heading = $galleryHeading ?? "Browse Gallery";
+$heading = $galleryHeading ?? "Gallery";
 $filters = $galleryFilters ?? [];
 $items   = $galleryItems ?? [];
 
