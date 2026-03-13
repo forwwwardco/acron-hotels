@@ -283,8 +283,7 @@ $videos = [
             </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            Scenic views of Baga river | Infinity pool | Stylish rooms & apartment suites | Riverfront dining | Private jetty access | 5 mins from Baga beach
-          </p>
+            River Views | Infinity Pool | Stylish Rooms & Suites | Riverfront Dining | 5 mins from Baga Beach </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">
               WHY STAY HERE?

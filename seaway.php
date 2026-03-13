@@ -37,51 +37,28 @@ $galleryFilters = [
   'amenities'     => 'AMENITIES'
 ];
 $galleryItems = [
-  // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Luxury Seaside Room Interior', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Decor Detail', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Suite View', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Room Balcony', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Emerald Suite Bedroom', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Standard Deluxe Room', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Room Amenity Setup', 'hidden' => false],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Suite Living Area', 'hidden' => false],
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Riverfront Exterior', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Side View', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Entrance Aerial', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'River Deck at Sunset', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Lush Garden Walkways', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Hotel Facade Night View', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Pool Area', 'hidden' => true],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Courtyard', 'hidden' => true],
-  // --- Restaurant ---
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverfront Dining Table', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Signature Cocktail at Bar', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Restaurant Indoor Seating', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Chef Specialty Dish', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Buffet Spread Layout', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Breakfast View on Baga River', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Open Air Kitchen Experience', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'The River Restaurant Entrance', 'hidden' => true],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-1.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-2.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-3.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-4.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => false],
+  // --- Rooms ---
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-1.jpg', 'full' => 'v2/assets/seaway-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-2.jpg', 'full' => 'v2/assets/seaway-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-3.jpg', 'full' => 'v2/assets/seaway-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-4.jpg', 'full' => 'v2/assets/seaway-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-5.jpg', 'full' => 'v2/assets/seaway-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-6.jpg', 'full' => 'v2/assets/seaway-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-7.jpg', 'full' => 'v2/assets/seaway-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-8.jpg', 'full' => 'v2/assets/seaway-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Common Spaces ---
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Main Lobby Lounge', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-2.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Reception Welcome Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Waiting Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Concierge Desk', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Upper Deck Lounge Area', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Riverside Relaxation Spot', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/seaway-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Library and Reading Nook', 'hidden' => true],
-  ['category' => 'common spaces', 'thumb' => 'v2/assets/waterfront-carousel-4.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Resort Activity Center', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-1.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-2.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-2-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-3.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-3-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-4.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-4-large.jpg', 'alt' => '', 'hidden' => true],
   // --- Amenities ---
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Fitness Center Equipment', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Spa Treatment Room', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-1.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Infinity Pool Close-up', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Laundry and Housekeeping services', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-3.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Valet and Parking Area', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-feature.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Childrens Play Zone', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-carousel-5.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'In-room Safety Box', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/waterfront-overlap.jpg', 'full' => 'https://placehold.co/1200x900', 'alt' => 'Boutique Room Wi-Fi Setup', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-gallery-amenities-1.jpg', 'full' => 'v2/assets/seaway-gallery-amenities-1-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-gallery-amenities-2.jpg', 'full' => 'v2/assets/seaway-gallery-amenities-2-large.jpg', 'alt' => '', 'hidden' => true]
 ];
 $roomsHeading = "Explore Our Rooms";
 $roomsList = [
