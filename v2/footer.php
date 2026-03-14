@@ -28,7 +28,7 @@
                 <ul class="list-unstyled footer-links">
                     <li><a href="waterfront-resort.php">Acron Waterfront Resort</a></li>
                     <li><a href="candolim-regina.php">Acron Candolim Regina</a></li>
-                    <li><a href="seaway-resort.php">Acron Seaway Resort</a></li>
+                    <li><a href="seaway-resort.php">The Beachwalk Resort</a></li>
                 </ul>
             </nav>
             <nav class="col-lg-3 col-md-4 col-12" aria-label="Legal Information">

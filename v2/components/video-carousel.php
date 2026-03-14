@@ -9,7 +9,11 @@
  */
 $activeTheme = !empty($pageResort) ? 'yt-embed-' . $pageResort : 'yt-embed-home';
 $carouselId = 'videoCarousel_' . uniqid();
-$videoList = $videos ?? [];
+$videoList = $videos ?? [
+  'https://www.youtube.com/embed/hR4be6mqJc0?si=BVdRi9CcmtEd3qd1',
+  'https://www.youtube.com/embed/Vr4gmjShQXI?si=J2uUgBI6bhtCOdhw',
+  'https://www.youtube.com/embed/zH0A_5SSxvw?si=nsDyrNouHLCBk0T2'
+];
 ?>
 <section class="video-section py-5 bg-white <?= htmlspecialchars($activeTheme) ?>" aria-label="Video Gallery">
   <div class="container py-4 reveal">
@@ -21,7 +25,8 @@ $videoList = $videos ?? [];
             <?php foreach ($videoList as $index => $videoUrl): ?>
               <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                 <div class="ratio ratio-16x9">
-                  <iframe src="<?= htmlspecialchars($videoUrl) ?>" title="YouTube video player - Video <?= $index + 1 ?>" loading="lazy" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="<?= htmlspecialchars($videoUrl) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe src="" title="YouTube video player - Video <?= $index + 1 ?>" loading="lazy" allowfullscreen></iframe>
                 </div>
               </div>
             <?php endforeach; ?>

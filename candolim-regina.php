@@ -205,11 +205,6 @@ $pageReviews = [
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.']
 ];
-$videos = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
-  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
-];
 ?>
 <?php include("v2/header.php"); ?>
 <?php include("v2/components/booking-engine.php"); ?>
@@ -233,7 +228,7 @@ $videos = [
             </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            10-Minute Walk to Candolim Beach | Spacious, Modern Rooms Designed for Comfort | Contemporary Resort in Vibrant Candolim | Multi-Cuisine Restaurant with Global Flavours | Pool, Lounge Bar & Relaxed Hangout Spaces | Perfect for Holidays, Corporate get-togethers & Events
+            10min Walk to Candolim Beach | Stylish, Spacious Rooms | Dining, Pool & Bar | For Stays & Events
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Candolim Regina?">

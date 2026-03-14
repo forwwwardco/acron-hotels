@@ -1,9 +1,9 @@
 <?php
 $pageResort = 'seaway';
 $staahId = 'NzQy';
-$pageTitle = "Acron Seaway Resort | Luxury Boutique Stay in Candolim, Goa";
-$pageDescription = "Experience the finest luxury at Acron Seaway Resort. Located in Candolim, our boutique resort offers an infinity pool, spa, and premium dining.";
-$h1 = 'Acron Seaway Resort';
+$pageTitle = "The Beachwalk Resort | Luxury Boutique Stay in Candolim, Goa";
+$pageDescription = "Experience the finest luxury at The Beachwalk Resort. Located in Candolim, our boutique resort offers an infinity pool, spa, and premium dining.";
+$h1 = 'The Beachwalk Resort';
 $heroImages = [
   'v2/assets/seaway-hero-carousel-1.jpg',
   'v2/assets/seaway-hero-carousel-2.jpg',
@@ -65,7 +65,7 @@ $roomsList = [
   [
     'id' => 'cozy-room',
     'name' => 'Cozy Room',
-    'description' => 'Our Cozy Rooms are exactly that... a cozy and comfortable space that is more about stay back and unwinding at the Acron Seaway Resort.',
+    'description' => 'Our Cozy Rooms are exactly that... a cozy and comfortable space that is more about stay back and unwinding at the The Beachwalk Resort.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '2 Adults'],
       ['icon' => 'fa-solid fa-water', 'text' => 'River View Balcony'],
@@ -210,11 +210,6 @@ $pageReviews = [
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.']
 ];
-$videos = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
-  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
-];
 ?>
 <?php include("v2/header.php"); ?>
 <?php include("v2/components/booking-engine.php"); ?>
@@ -237,10 +232,10 @@ $videos = [
             </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            Steps from Candolim Beach | Boutique Candolim Escape | 24 Cozy Resort Rooms | Relaxing Poolside Vibes | Garden & Pool View Rooms | Near North Goa Hotspots
+            Steps to Candolim Beach | 24-Room Boutique Stay | Garden & Pool Views | Near Goa Hotspots
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
-            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Seaway Resort?">
+            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at The Beachwalk Resort?">
               WHY STAY HERE?
             </button>
             <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="<?= $staahId ?>">

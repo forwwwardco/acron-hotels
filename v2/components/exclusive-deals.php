@@ -95,6 +95,110 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
     ]
 ];
 
+if ($pageResort == 'waterfront') {
+    $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Early Bird Discount',
+            'discount'    => '15% off',
+            'condition'   => 'per person per night',
+            'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
+            'img'         => 'v2/assets/deal-3-waterfront.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Last Minute Booking',
+            'discount'    => '10% off',
+            'condition'   => 'per person per night',
+            'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
+            'img'         => 'v2/assets/deal-2-waterfront.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Long Stay Offer',
+            'discount'    => '20% off',
+            'condition'   => 'per person per night',
+            'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
+            'img'         => 'v2/assets/deal-1-waterfront.jpeg',
+            'hidden'      => false
+        ]
+    ];
+}
+
+if ($pageResort == 'seaway') {
+    $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Early Bird Discount',
+            'discount'    => '15% off',
+            'condition'   => 'per person per night',
+            'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
+            'img'         => 'v2/assets/deal-3-seaway.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Last Minute Booking',
+            'discount'    => '10% off',
+            'condition'   => 'per person per night',
+            'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
+            'img'         => 'v2/assets/deal-2-seaway.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Long Stay Offer',
+            'discount'    => '20% off',
+            'condition'   => 'per person per night',
+            'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
+            'img'         => 'v2/assets/deal-1-seaway.jpeg',
+            'hidden'      => false
+        ]
+    ];
+}
+if ($pageResort == 'regina') {
+    $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Early Bird Discount',
+            'discount'    => '15% off',
+            'condition'   => 'per person per night',
+            'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
+            'img'         => 'v2/assets/deal-3-seaway.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Last Minute Booking',
+            'discount'    => '10% off',
+            'condition'   => 'per person per night',
+            'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
+            'img'         => 'v2/assets/deal-2-regina.jpeg',
+            'hidden'      => false
+        ],
+        [
+            'category'    => 'deal-pack-1',
+            'offer_name'  => 'Long Stay Offer',
+            'discount'    => '20% off',
+            'condition'   => 'per person per night',
+            'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
+            'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
+            'img'         => 'v2/assets/deal-1-regina.jpeg',
+            'hidden'      => false
+        ]
+    ];
+}
+
 // Helper function for secure output escaping
 $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 ?>

@@ -101,7 +101,7 @@ $direct_booking_benefits = [
                             <ul class="dropdown-menu border-0 shadow-sm desktop-dropdown-menu" aria-labelledby="hotelsDropdown">
                                 <li><a class="dropdown-item fw-semibold text-uppercase" href="<?= $esc_html($waterfront) ?>">Acron Waterfront Resort</a></li>
                                 <li><a class="dropdown-item fw-semibold text-uppercase" href="<?= $esc_html($regina) ?>">Acron Candolim Regina</a></li>
-                                <li><a class="dropdown-item fw-semibold text-uppercase" href="<?= $esc_html($seaway) ?>">Acron Seaway Resort</a></li>
+                                <li><a class="dropdown-item fw-semibold text-uppercase" href="<?= $esc_html($seaway) ?>">The Beachwalk Resort</a></li>
                             </ul>
 
                             <a class="nav-link dropdown-toggle d-lg-none" data-bs-toggle="collapse" href="#mobileHotelsMenu" role="button" aria-expanded="true" aria-controls="mobileHotelsMenu">
@@ -111,7 +111,7 @@ $direct_booking_benefits = [
                                 <ul class="navbar-nav ps-4">
                                     <li class="nav-item"><a class="nav-link" href="<?= $esc_html($waterfront) ?>">Acron Waterfront Resort</a></li>
                                     <li class="nav-item"><a class="nav-link" href="<?= $esc_html($regina) ?>">Acron Candolim Regina</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="<?= $esc_html($seaway) ?>">Acron Seaway Resort</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?= $esc_html($seaway) ?>">The Beachwalk Resort</a></li>
                                 </ul>
                             </div>
                         </li>

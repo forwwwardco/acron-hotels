@@ -106,10 +106,10 @@ $hotels = [
   ]
 ];
 $stats = [
-  ['icon' => 'fa-regular fa-face-smile', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
-  ['icon' => 'fa-regular fa-star', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
-  ['icon' => 'fa-regular fa-building', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx'],
-  ['icon' => 'fa-solid fa-location-dot', 'number' => 'XXXXXX', 'label' => 'Xxxxx Xxxxxxxxx']
+  ['icon' => 'fa-solid fa-location-dot', 'number' => 'North Goa', 'label' => 'Prime Locations'],
+  ['icon' => 'fa-regular fa-star', 'number' => '5,500+ Reviews', 'label' => 'From Happy Guests'],
+  ['icon' => 'fa-regular fa-building', 'number' => '177', 'label' => 'Total Room Keys'],
+  ['icon' => 'fa-regular fa-face-smile', 'number' => '#1', 'label' => 'Goa\'s Favourite Hotel Brand'],
 ];
 $pageReviews = [
   [
@@ -154,11 +154,6 @@ $pageReviews = [
     'title' => 'Beautiful Memories',
     'text' => 'We celebrated our honeymoon here and the resort completely spoiled us. From the towel art on the bed to the complimentary cake, the attention to detail was marvellous. Thank you Acron for the beautiful memories!'
   ]
-];
-$videos = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
-  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
 ];
 ?>
 <?php include("v2/header.php"); ?>

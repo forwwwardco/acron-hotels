@@ -256,11 +256,6 @@ $pageReviews = [
   ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
   ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Waterfront Resort is unmatched. The infinity pool views are spectacular.']
 ];
-$videos = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
-  'https://www.youtube.com/embed/tgbNymZ7vqY?rel=0',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0'
-];
 ?>
 <?php include("v2/header.php"); ?>
 <?php include("v2/components/booking-engine.php"); ?>
@@ -283,7 +278,8 @@ $videos = [
             </button>
           </div>
           <p class="hero-feature-list text-white mb-4">
-            River Views | Infinity Pool | Stylish Rooms & Suites | Riverfront Dining | 5 mins from Baga Beach </p>
+            River Views | Infinity Pool | Chic Rooms & Suites | Riverfront Dining | Private Jetty | 5mins to Baga
+          </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
             <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Waterfront Resort?">
               WHY STAY HERE?
