@@ -1,13 +1,12 @@
 <?php
-
 /**
  * Reusable Exclusive Deals Component
  *
  * This template renders a grid of exclusive deals. It maps the provided
- * resort context to specific decorative elements (like flamingos or coconuts)
- * and applies contextual gradients and CSS variables.
+ * resort context to specific decorative elements and applies contextual
+ * gradients and CSS variables.
  *
- * @var string|null $pageResort   Optional. The context key ('waterfront', 'regina', 'seaway') 
+ * @var string|null $pageResort   Optional. The context key ('waterfront', 'regina', 'beachwalk') 
  * passed from the parent page to determine the theme.
  * @var string|null $dealsHeading Optional. Overrides the default main section title.
  * @var array|null  $dealsData    Optional. Overrides the default array of individual deal items.
@@ -23,45 +22,39 @@
  * 'hidden'      => bool    // Controls initial visibility via 'd-none'
  * ]
  */
-
 $themeConfig = [
     'waterfront' => [
         'context' => 'deals-waterfront',
-        'src'     => 'v2/assets/flamingo.png',
+        'src'     => 'v2/assets/flamingo.webp',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => 'v2/assets/beach-toys.png',
+        'desktopSrc' => 'v2/assets/beach-toys.webp',
         'desktopClass' => 'deals-desktop-decor'
     ],
     'regina' => [
         'context' => 'deals-regina',
-        'src'     => 'v2/assets/coconut.png',
+        'src'     => 'v2/assets/coconut.webp',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => 'v2/assets/cashew.png',
+        'desktopSrc' => 'v2/assets/cashew.webp',
         'desktopClass' => 'deals-desktop-decor'
     ],
-    'seaway' => [
-        'context' => 'deals-seaway',
-        'src'     => 'v2/assets/starfish-2.png',
+    'beachwalk' => [
+        'context' => 'deals-beachwalk',
+        'src'     => 'v2/assets/starfish-2.webp',
         'class'   => 'resort-deals-decor',
-        'desktopSrc' => 'v2/assets/beach-balls.png',
+        'desktopSrc' => 'v2/assets/beach-balls.webp',
         'desktopClass' => 'deals-desktop-decor'
     ]
 ];
-
-// Determine the active theme, falling back to 'home' defaults if no valid context is found
 $activeTheme = (isset($pageResort) && isset($themeConfig[$pageResort]))
     ? $themeConfig[$pageResort]
     : [
         'context' => 'deals-home',
-        'src'     => 'v2/assets/coconut.png',
+        'src'     => 'v2/assets/coconut.webp',
         'class'   => 'home-deals-decor',
-        'desktopSrc' => 'v2/assets/frond.png',
+        'desktopSrc' => 'v2/assets/frond.webp',
         'desktopClass' => 'decorative-palmleaf'
     ];
-
 $heading = $dealsHeading ?? "Exclusive Deals, Just For You";
-
-// Default array of deals
 $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
     [
         'category'    => 'deal-pack-1',
@@ -70,7 +63,7 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
         'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
-        'img'         => 'v2/assets/deal-3.jpeg',
+        'img'         => 'v2/assets/deal-3.webp',
         'hidden'      => false
     ],
     [
@@ -80,7 +73,7 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
         'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
-        'img'         => 'v2/assets/deal-2.jpeg',
+        'img'         => 'v2/assets/deal-2.webp',
         'hidden'      => false
     ],
     [
@@ -90,11 +83,10 @@ $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         'condition'   => 'per person per night',
         'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
         'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
-        'img'         => 'v2/assets/deal-1.jpeg',
+        'img'         => 'v2/assets/deal-1.webp',
         'hidden'      => false
     ]
 ];
-
 if ($pageResort == 'waterfront') {
     $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         [
@@ -104,7 +96,7 @@ if ($pageResort == 'waterfront') {
             'condition'   => 'per person per night',
             'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
-            'img'         => 'v2/assets/deal-3-waterfront.jpeg',
+            'img'         => 'v2/assets/deal-3-waterfront.webp',
             'hidden'      => false
         ],
         [
@@ -114,7 +106,7 @@ if ($pageResort == 'waterfront') {
             'condition'   => 'per person per night',
             'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
-            'img'         => 'v2/assets/deal-2-waterfront.jpeg',
+            'img'         => 'v2/assets/deal-2-waterfront.webp',
             'hidden'      => false
         ],
         [
@@ -124,13 +116,12 @@ if ($pageResort == 'waterfront') {
             'condition'   => 'per person per night',
             'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
-            'img'         => 'v2/assets/deal-1-waterfront.jpeg',
+            'img'         => 'v2/assets/deal-1-waterfront.webp',
             'hidden'      => false
         ]
     ];
 }
-
-if ($pageResort == 'seaway') {
+if ($pageResort == 'beachwalk') {
     $deals = (isset($dealsData) && is_array($dealsData)) ? $dealsData : [
         [
             'category'    => 'deal-pack-1',
@@ -139,7 +130,7 @@ if ($pageResort == 'seaway') {
             'condition'   => 'per person per night',
             'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
-            'img'         => 'v2/assets/deal-3-seaway.jpeg',
+            'img'         => 'v2/assets/deal-3-seaway.webp',
             'hidden'      => false
         ],
         [
@@ -149,7 +140,7 @@ if ($pageResort == 'seaway') {
             'condition'   => 'per person per night',
             'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
-            'img'         => 'v2/assets/deal-2-seaway.jpeg',
+            'img'         => 'v2/assets/deal-2-seaway.webp',
             'hidden'      => false
         ],
         [
@@ -159,7 +150,7 @@ if ($pageResort == 'seaway') {
             'condition'   => 'per person per night',
             'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
-            'img'         => 'v2/assets/deal-1-seaway.jpeg',
+            'img'         => 'v2/assets/deal-1-seaway.webp',
             'hidden'      => false
         ]
     ];
@@ -173,7 +164,7 @@ if ($pageResort == 'regina') {
             'condition'   => 'per person per night',
             'description' => 'Plan ahead and book at least 7 days in advance to enjoy an additional exclusive 15% discount.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Early%20Bird%20Discount',
-            'img'         => 'v2/assets/deal-3-seaway.jpeg',
+            'img'         => 'v2/assets/deal-3-regina.webp',
             'hidden'      => false
         ],
         [
@@ -183,7 +174,7 @@ if ($pageResort == 'regina') {
             'condition'   => 'per person per night',
             'description' => 'Book for same-day, next-day, or immediate upcoming check-in and enjoy an additional 10% off your booking',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Last%20Minute%20Booking',
-            'img'         => 'v2/assets/deal-2-regina.jpeg',
+            'img'         => 'v2/assets/deal-2-regina.webp',
             'hidden'      => false
         ],
         [
@@ -193,34 +184,24 @@ if ($pageResort == 'regina') {
             'condition'   => 'per person per night',
             'description' => 'Stay with us for a minimum of 5 nights or more and receive and additional 20% off your booking.',
             'link'        => 'https://wa.me/918888848038?text=Hi%2C%20I%20would%20like%20to%20avail%20the%20Long%20Stay%20Offer',
-            'img'         => 'v2/assets/deal-1-regina.jpeg',
+            'img'         => 'v2/assets/deal-1-regina.webp',
             'hidden'      => false
         ]
     ];
 }
-
-// Helper function for secure output escaping
 $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 ?>
 
 <section id="exclusiveDeals" class="exclusive-deals py-5 position-relative <?= $esc_html($activeTheme['context']) ?>" aria-labelledby="dealsHeading">
-
     <img src="<?= $esc_html($activeTheme['src']) ?>" class="decor scale-decor <?= $esc_html($activeTheme['class']) ?>" alt="" aria-hidden="true" loading="lazy">
     <img src="<?= $esc_html($activeTheme['desktopSrc']) ?>" class="decor scale-decor <?= $esc_html($activeTheme['desktopClass']) ?>" alt="" aria-hidden="true" loading="lazy">
-
     <div class="container py-4 reveal">
-        <h2 id="dealsHeading" class="text-center fw-bold text-blue-grey mb-4 section-heading">
-            <?= $esc_html($heading) ?>
-        </h2>
-
+        <h2 id="dealsHeading" class="text-center fw-bold text-blue-grey mb-4 section-heading"><?= $esc_html($heading) ?></h2>
         <div class="row g-4 justify-content-center px-3 px-lg-0" id="dealsGrid">
             <?php foreach ($deals as $deal): ?>
-
                 <div class="col-12 col-lg-4 deal-card <?= $deal['hidden'] ? 'd-none' : '' ?>" data-category="<?= $esc_html($deal['category']) ?>">
                     <article class="card h-100 border-0 shadow deals-card-wrapper d-flex flex-column">
-
                         <img src="<?= $esc_html($deal['img']) ?>" class="card-img-top deal-img" alt="Promotional image for <?= $esc_html($deal['offer_name']) ?>" loading="lazy">
-
                         <div class="card-body text-center d-flex flex-column justify-content-center py-4 px-3 flex-grow-1">
                             <h3 class="card-title h4 fw-bold text-blue-grey mb-3">
                                 <?= $esc_html($deal['offer_name']) ?>
@@ -233,14 +214,9 @@ $esc_html = fn(string $string): string => htmlspecialchars($string, ENT_QUOTES, 
                                 <?= $esc_html($deal['description']) ?>
                             </p>
                         </div>
-
-                        <a href="<?= $esc_html($deal['link']) ?>" target="_blank" class="btn btn-deal-book w-100 rounded-0 mt-auto" aria-label="Book the <?= $esc_html($deal['offer_name']) ?>">
-                            GRAB IT NOW
-                        </a>
-
+                        <a href="<?= $esc_html($deal['link']) ?>" target="_blank" class="btn btn-deal-book w-100 rounded-0 mt-auto" aria-label="Book the <?= $esc_html($deal['offer_name']) ?>">GRAB IT NOW</a>
                     </article>
                 </div>
-
             <?php endforeach; ?>
         </div>
     </div>

@@ -14,9 +14,7 @@
     <div class="hero-tooltip-box p-4 p-md-5">
         <header class="d-flex justify-content-between align-items-center mb-4">
             <h4 class="tooltip-title fw-bold m-0" id="tooltipTitle">Resort Features</h4>
-            <button type="button" class="btn-close-tooltip" id="closeTooltip" aria-label="Close features list">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
+            <button type="button" class="btn-close-tooltip" id="closeTooltip" aria-label="Close features list"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         </header>
         <ul class="tooltip-features-list fa-ul ms-4" id="tooltipList"></ul>
     </div>

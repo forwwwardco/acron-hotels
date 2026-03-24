@@ -1,31 +1,31 @@
 <?php
-$pageResort = 'seaway';
+$pageResort = 'beachwalk';
 $staahId = 'NzQy';
 $pageTitle = "The Beachwalk Resort | Luxury Boutique Stay in Candolim, Goa";
 $pageDescription = "Experience the finest luxury at The Beachwalk Resort. Located in Candolim, our boutique resort offers an infinity pool, spa, and premium dining.";
 $h1 = 'The Beachwalk Resort';
 $heroImages = [
-  'v2/assets/seaway-hero-carousel-1.jpg',
-  'v2/assets/seaway-hero-carousel-2.jpg',
-  'v2/assets/seaway-hero-carousel-3.jpg',
-  'v2/assets/seaway-hero-carousel-4.jpg',
-  'v2/assets/seaway-hero-carousel-5.jpg'
+  'v2/assets/beachwalk/hero/1.webp',
+  'v2/assets/beachwalk/hero/2.webp',
+  'v2/assets/beachwalk/hero/3.webp',
+  'v2/assets/beachwalk/hero/4.webp',
+  'v2/assets/beachwalk/hero/5.webp'
 ];
 $pageAmenities = [
   [
     'title' => 'POOL',
     'description' => 'Just steps from your room, the resort pool is perfect for a quick dip or relaxed sun-soaked breaks.',
-    'image' => 'v2/assets/seaway-amenity-1.jpg'
+    'image' => 'v2/assets/beachwalk/amenities/1.webp'
   ],
   [
     'title' => 'Restaurant',
-    'description' => 'CONTENT NEEDED.',
-    'image' => 'v2/assets/seaway-amenity-2.jpg'
+    'description' => '',
+    'image' => 'v2/assets/beachwalk/amenities/2.webp'
   ],
   [
     'title' => 'Close to the Beach',
     'description' => 'Only minutes from Candolim Beach—perfect for sunrise walks and sunset swims.',
-    'image' => 'v2/assets/seaway-amenity-3.jpg'
+    'image' => 'v2/assets/beachwalk/amenities/3.webp'
   ]
 ];
 $galleryHeading = "Gallery";
@@ -38,27 +38,27 @@ $galleryFilters = [
 ];
 $galleryItems = [
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-1.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-2.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-3.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/seaway-gallery-exterior-4.jpg', 'full' => 'v2/assets/seaway-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/beachwalk/gallery/exterior/1.webp', 'full' => 'v2/assets/beachwalk/gallery/exterior/1-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/beachwalk/gallery/exterior/2.webp', 'full' => 'v2/assets/beachwalk/gallery/exterior/2-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/beachwalk/gallery/exterior/3.webp', 'full' => 'v2/assets/beachwalk/gallery/exterior/3-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/beachwalk/gallery/exterior/4.webp', 'full' => 'v2/assets/beachwalk/gallery/exterior/4-large.webp', 'alt' => '', 'hidden' => false],
   // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-1.jpg', 'full' => 'v2/assets/seaway-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-2.jpg', 'full' => 'v2/assets/seaway-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-3.jpg', 'full' => 'v2/assets/seaway-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-4.jpg', 'full' => 'v2/assets/seaway-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-5.jpg', 'full' => 'v2/assets/seaway-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-6.jpg', 'full' => 'v2/assets/seaway-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-7.jpg', 'full' => 'v2/assets/seaway-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/seaway-gallery-room-8.jpg', 'full' => 'v2/assets/seaway-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/1.webp', 'full' => 'v2/assets/beachwalk/gallery/room/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/2.webp', 'full' => 'v2/assets/beachwalk/gallery/room/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/3.webp', 'full' => 'v2/assets/beachwalk/gallery/room/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/4.webp', 'full' => 'v2/assets/beachwalk/gallery/room/4-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/5.webp', 'full' => 'v2/assets/beachwalk/gallery/room/5-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/6.webp', 'full' => 'v2/assets/beachwalk/gallery/room/6-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/7.webp', 'full' => 'v2/assets/beachwalk/gallery/room/7-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/beachwalk/gallery/room/8.webp', 'full' => 'v2/assets/beachwalk/gallery/room/8-large.webp', 'alt' => '', 'hidden' => true],
   // --- Common Spaces ---
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-1.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-2.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-3.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/seaway-gallery-common-spaces-4.jpg', 'full' => 'v2/assets/seaway-gallery-common-spaces-4-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/beachwalk/gallery/common-spaces/1.webp', 'full' => 'v2/assets/beachwalk/gallery/common-spaces/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/beachwalk/gallery/common-spaces/2.webp', 'full' => 'v2/assets/beachwalk/gallery/common-spaces/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/beachwalk/gallery/common-spaces/3.webp', 'full' => 'v2/assets/beachwalk/gallery/common-spaces/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/beachwalk/gallery/common-spaces/4.webp', 'full' => 'v2/assets/beachwalk/gallery/common-spaces/4-large.webp', 'alt' => '', 'hidden' => true],
   // --- Amenities ---
-  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-gallery-amenities-1.jpg', 'full' => 'v2/assets/seaway-gallery-amenities-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/seaway-gallery-amenities-2.jpg', 'full' => 'v2/assets/seaway-gallery-amenities-2-large.jpg', 'alt' => '', 'hidden' => true]
+  ['category' => 'amenities', 'thumb' => 'v2/assets/beachwalk/gallery/amenities/1.webp', 'full' => 'v2/assets/beachwalk/gallery/amenities/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/beachwalk/gallery/amenities/2.webp', 'full' => 'v2/assets/beachwalk/gallery/amenities/2-large.webp', 'alt' => '', 'hidden' => true],
 ];
 $roomsHeading = "Explore Your Rooms";
 $roomsList = [
@@ -73,9 +73,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/seaway-cozy-room-1.jpg',
-      'v2/assets/seaway-cozy-room-2.jpg',
-      'v2/assets/seaway-cozy-room-3.jpg'
+      'v2/assets/beachwalk/rooms/cozy/1.webp',
+      'v2/assets/beachwalk/rooms/cozy/2.webp',
+      'v2/assets/beachwalk/rooms/cozy/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -87,12 +87,12 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/seaway-courtyard-view-room-1.jpg',
-      'v2/assets/seaway-courtyard-view-room-2.jpg',
-      'v2/assets/seaway-courtyard-view-room-3.jpg'
+      'v2/assets/beachwalk/rooms/courtyard-view/1.webp',
+      'v2/assets/beachwalk/rooms/courtyard-view/2.webp',
+      'v2/assets/beachwalk/rooms/courtyard-view/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -104,12 +104,12 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/seaway-courtyard-room-1.jpg',
-      'v2/assets/seaway-courtyard-room-2.jpg',
-      'v2/assets/seaway-courtyard-room-3.jpg'
+      'v2/assets/beachwalk/rooms/courtyard/1.webp',
+      'v2/assets/beachwalk/rooms/courtyard/2.webp',
+      'v2/assets/beachwalk/rooms/courtyard/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -121,12 +121,12 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/seaway-pool-view-room-1.jpg',
-      'v2/assets/seaway-pool-view-room-2.jpg',
-      'v2/assets/seaway-pool-view-room-3.jpg'
+      'v2/assets/beachwalk/rooms/pool-view/1.webp',
+      'v2/assets/beachwalk/rooms/pool-view/2.webp',
+      'v2/assets/beachwalk/rooms/pool-view/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -138,12 +138,12 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/seaway-pool-room-1.jpg',
-      'v2/assets/seaway-pool-room-2.jpg',
-      'v2/assets/seaway-pool-room-3.jpg'
+      'v2/assets/beachwalk/rooms/pool/1.webp',
+      'v2/assets/beachwalk/rooms/pool/2.webp',
+      'v2/assets/beachwalk/rooms/pool/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -158,9 +158,9 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/seaway-private-garden-room-1.jpg',
-      'v2/assets/seaway-private-garden-room-2.jpg',
-      'v2/assets/seaway-private-garden-room-3.jpg'
+      'v2/assets/beachwalk/rooms/garden/1.webp',
+      'v2/assets/beachwalk/rooms/garden/2.webp',
+      'v2/assets/beachwalk/rooms/garden/3.webp'
     ],
     'learnLink' => '#'
   ],
@@ -173,12 +173,12 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/seaway-pool-view-room-1.jpg',
-      'v2/assets/seaway-pool-view-room-2.jpg',
-      'v2/assets/seaway-pool-view-room-3.jpg'
+      'v2/assets/beachwalk/rooms/private-garden/1.webp',
+      'v2/assets/beachwalk/rooms/private-garden/2.webp',
+      'v2/assets/beachwalk/rooms/private-garden/3.webp'
     ],
     'learnLink' => '#'
   ]
@@ -188,17 +188,17 @@ $highlightAmenitiesList = [
   [
     'title' => 'Cinnabar Signature Cafe',
     'description' => 'Dine under the Goan stars on our riverside deck, enjoying fresh seafood and signature cocktails.',
-    'image' => 'v2/assets/seaway-benefit-1.jpg'
+    'image' => 'v2/assets/beachwalk/benefits/1.webp'
   ],
   [
     'title' => 'Outdoor Events',
     'description' => 'Rejuvenate your senses with professional treatments designed for ultimate relaxation.',
-    'image' => 'v2/assets/seaway-benefit-2.jpg'
+    'image' => 'v2/assets/beachwalk/benefits/2.webp'
   ],
   [
     'title' => 'Jacuzzi',
     'description' => 'Take a dip in our iconic pool with panoramic views of the flowing Baga river.',
-    'image' => 'v2/assets/seaway-benefit-3.jpg'
+    'image' => 'v2/assets/beachwalk/benefits/3.webp'
   ]
 ];
 $pageReviews = [
@@ -227,7 +227,7 @@ $pageReviews = [
             <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show The Beachwalk Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
               data-map-link="https://maps.google.com/?q=The+Beachwalk+Resort+by+Acron"
               data-hotel-name="The Beachwalk Resort"
-              data-map-image="v2/assets/seaway-map.jpeg">
+              data-map-image="v2/assets/beachwalk/home/map.webp">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </button>
           </div>
@@ -290,14 +290,14 @@ $pageReviews = [
       <div class="review-summary-wrapper reveal">
         <div class="tripadvisor-pill" aria-label="TripAdvisor Rating Summary">
           <div class="ta-icon-circle" aria-hidden="true">
-            <img src="v2/assets/tripadvisor-120.png" alt="" class="review-badge-icon">
+            <img src="v2/assets/tripadvisor-120.webp" alt="" class="review-badge-icon">
           </div>
           <div class="ta-stats">
             <span class="ta-rating">4.8 stars</span>
             <span class="ta-count">from 2,379 reviews</span>
           </div>
         </div>
-        <img src="v2/assets/travelers-choice-200.jpg" alt="TripAdvisor Travellers Choice 2024 Award" class="ta-badge-image shadow-sm" loading="lazy">
+        <img src="v2/assets/travellers-choice-200.webp" alt="TripAdvisor Travellers Choice 2024 Award" class="ta-badge-image shadow-sm" loading="lazy">
       </div>
     </div>
     <?php include("v2/components/reviews-slider.php"); ?>

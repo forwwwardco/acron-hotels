@@ -1,36 +1,36 @@
 <?php
 $pageResort = 'regina';
-$pageTitle = "Acron Candolim Regina | Luxury Boutique Stay in Baga, Goa";
-$pageDescription = "Experience the finest riverfront luxury at Acron Candolim Regina. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
-$h1 = 'Acron Candolim Regina';
+$pageTitle = "The Regina Resort | Luxury Boutique Stay in Baga, Goa";
+$pageDescription = "Experience the finest riverfront luxury at The Regina Resort. Located on the Baga River, our boutique resort offers an infinity pool, spa, and premium dining.";
+$h1 = 'The Regina Resort';
 $heroImages = [
-  'v2/assets/regina-hero-carousel-1.jpg',
-  'v2/assets/regina-hero-carousel-2.jpg',
-  'v2/assets/regina-hero-carousel-3.jpg',
-  'v2/assets/regina-hero-carousel-4.jpg',
-  'v2/assets/regina-hero-carousel-5.jpg'
+  'v2/assets/regina/hero/1.webp',
+  'v2/assets/regina/hero/2.webp',
+  'v2/assets/regina/hero/3.webp',
+  'v2/assets/regina/hero/4.webp',
+  'v2/assets/regina/hero/5.webp'
 ];
 $amenitiesHeading = "The Regina Experience";
 $pageAmenities = [
   [
     'title' => 'Multicuisine Restaurant',
     'description' => 'From Goan favourites to global bites, great food is always on the menu at the Regina.',
-    'image' => 'v2/assets/regina-amenity-1.jpg'
+    'image' => 'v2/assets/regina/amenities/1.webp',
   ],
   [
     'title' => 'Regina Pool Deck',
     'description' => 'Take a dip, grab a lounger, and let slow Goa afternoons unfold by the pool.',
-    'image' => 'v2/assets/regina-amenity-2.jpg'
+    'image' => 'v2/assets/regina/amenities/2.webp',
   ],
   [
     'title' => '3 Conference halls',
     'description' => 'Host corporate meetings, get-togethers, or events in our well-equipped, calm resort spaces.',
-    'image' => 'v2/assets/regina-amenity-3.jpg'
+    'image' => 'v2/assets/regina/amenities/3.webp',
   ],
   [
     'title' => 'Courtyard Area',
     'description' => 'Lush courtyard by the pool and restaurant—perfect for relaxing, catching up, or enjoying Goa at your own pace.',
-    'image' => 'v2/assets/regina-amenity-4.jpg'
+    'image' => 'v2/assets/regina/amenities/4.webp',
   ]
 ];
 $galleryHeading = "Gallery";
@@ -43,51 +43,51 @@ $galleryFilters = [
 ];
 $galleryItems = [
   // --- Exterior ---
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-1.jpg', 'full' => 'v2/assets/regina-gallery-exterior-1-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-2.jpg', 'full' => 'v2/assets/regina-gallery-exterior-2-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-3.jpg', 'full' => 'v2/assets/regina-gallery-exterior-3-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-4.jpg', 'full' => 'v2/assets/regina-gallery-exterior-4-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-5.jpg', 'full' => 'v2/assets/regina-gallery-exterior-5-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-6.jpg', 'full' => 'v2/assets/regina-gallery-exterior-6-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-7.jpg', 'full' => 'v2/assets/regina-gallery-exterior-7-large.jpg', 'alt' => '', 'hidden' => false],
-  ['category' => 'exterior', 'thumb' => 'v2/assets/regina-gallery-exterior-8.jpg', 'full' => 'v2/assets/regina-gallery-exterior-8-large.jpg', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/1.webp', 'full' => 'v2/assets/regina/gallery/exterior/1-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/2.webp', 'full' => 'v2/assets/regina/gallery/exterior/2-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/3.webp', 'full' => 'v2/assets/regina/gallery/exterior/3-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/4.webp', 'full' => 'v2/assets/regina/gallery/exterior/4-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/5.webp', 'full' => 'v2/assets/regina/gallery/exterior/5-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/6.webp', 'full' => 'v2/assets/regina/gallery/exterior/6-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/7.webp', 'full' => 'v2/assets/regina/gallery/exterior/7-large.webp', 'alt' => '', 'hidden' => false],
+  ['category' => 'exterior', 'thumb' => 'v2/assets/regina/gallery/exterior/8.webp', 'full' => 'v2/assets/regina/gallery/exterior/8-large.webp', 'alt' => '', 'hidden' => false],
   // --- Rooms ---
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-1.jpg', 'full' => 'v2/assets/regina-gallery-room-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-2.jpg', 'full' => 'v2/assets/regina-gallery-room-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-3.jpg', 'full' => 'v2/assets/regina-gallery-room-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-4.jpg', 'full' => 'v2/assets/regina-gallery-room-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-5.jpg', 'full' => 'v2/assets/regina-gallery-room-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-6.jpg', 'full' => 'v2/assets/regina-gallery-room-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-7.jpg', 'full' => 'v2/assets/regina-gallery-room-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'rooms', 'thumb' => 'v2/assets/regina-gallery-room-8.jpg', 'full' => 'v2/assets/regina-gallery-room-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/1.webp', 'full' => 'v2/assets/regina/gallery/room/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/2.webp', 'full' => 'v2/assets/regina/gallery/room/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/3.webp', 'full' => 'v2/assets/regina/gallery/room/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/4.webp', 'full' => 'v2/assets/regina/gallery/room/4-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/5.webp', 'full' => 'v2/assets/regina/gallery/room/5-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/6.webp', 'full' => 'v2/assets/regina/gallery/room/6-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/7.webp', 'full' => 'v2/assets/regina/gallery/room/7-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'rooms', 'thumb' => 'v2/assets/regina/gallery/room/8.webp', 'full' => 'v2/assets/regina/gallery/room/8-large.webp', 'alt' => '', 'hidden' => true],
   // --- Restaurant ---
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-1.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-2.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-3.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-4.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-5.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-6.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-7.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina-gallery-restaurant-8.jpg', 'full' => 'v2/assets/regina-gallery-restaurant-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/1.webp', 'full' => 'v2/assets/regina/gallery/restaurant/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/2.webp', 'full' => 'v2/assets/regina/gallery/restaurant/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/3.webp', 'full' => 'v2/assets/regina/gallery/restaurant/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/4.webp', 'full' => 'v2/assets/regina/gallery/restaurant/4-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/5.webp', 'full' => 'v2/assets/regina/gallery/restaurant/5-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/6.webp', 'full' => 'v2/assets/regina/gallery/restaurant/6-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/7.webp', 'full' => 'v2/assets/regina/gallery/restaurant/7-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'restaurant', 'thumb' => 'v2/assets/regina/gallery/restaurant/8.webp', 'full' => 'v2/assets/regina/gallery/restaurant/8-large.webp', 'alt' => '', 'hidden' => true],
   // --- Common Spaces ---
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-1.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-2.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-3.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-4.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-5.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-6.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-7.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-7-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina-gallery-common-spaces-8.jpg', 'full' => 'v2/assets/regina-gallery-common-spaces-8-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/1.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/2.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/3.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/4.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/4-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/5.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/5-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/6.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/6-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/7.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/7-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'common-spaces', 'thumb' => 'v2/assets/regina/gallery/common-spaces/8.webp', 'full' => 'v2/assets/regina/gallery/common-spaces/8-large.webp', 'alt' => '', 'hidden' => true],
   // --- Amenities ---
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-1.jpg', 'full' => 'v2/assets/regina-gallery-amenities-1-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-2.jpg', 'full' => 'v2/assets/regina-gallery-amenities-2-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-3.jpg', 'full' => 'v2/assets/regina-gallery-amenities-3-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-4.jpg', 'full' => 'v2/assets/regina-gallery-amenities-4-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-5.jpg', 'full' => 'v2/assets/regina-gallery-amenities-5-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-6.jpg', 'full' => 'v2/assets/regina-gallery-amenities-6-large.jpg', 'alt' => '', 'hidden' => true],
-  ['category' => 'amenities', 'thumb' => 'v2/assets/regina-gallery-amenities-7.jpg', 'full' => 'v2/assets/regina-gallery-amenities-7-large.jpg', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/1.webp', 'full' => 'v2/assets/regina/gallery/amenities/1-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/2.webp', 'full' => 'v2/assets/regina/gallery/amenities/2-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/3.webp', 'full' => 'v2/assets/regina/gallery/amenities/3-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/4.webp', 'full' => 'v2/assets/regina/gallery/amenities/4-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/5.webp', 'full' => 'v2/assets/regina/gallery/amenities/5-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/6.webp', 'full' => 'v2/assets/regina/gallery/amenities/6-large.webp', 'alt' => '', 'hidden' => true],
+  ['category' => 'amenities', 'thumb' => 'v2/assets/regina/gallery/amenities/7.webp', 'full' => 'v2/assets/regina/gallery/amenities/7-large.webp', 'alt' => '', 'hidden' => true],
 ];
-$roomsHeading = "Explore Our Rooms";
+$roomsHeading = "Explore Your Rooms";
 $roomsList = [
   [
     'id' => 'deluxe-room',
@@ -97,14 +97,14 @@ $roomsList = [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/regina-deluxe-villa-1.jpg',
-      'v2/assets/regina-deluxe-villa-2.jpg',
-      'v2/assets/regina-deluxe-villa-3.jpg'
+      'v2/assets/regina/rooms/deluxe/1.webp',
+      'v2/assets/regina/rooms/deluxe/2.webp',
+      'v2/assets/regina/rooms/deluxe/3.webp'
     ],
-    'learnLink' => '#'
+    'learnLink' => 'https://www.acroncandolimresortgoa.com/deluxe-rooms-hotels-in-candolim-north-goa.php'
   ],
   [
     'id' => 'luxury-room',
@@ -117,28 +117,28 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/regina-luxury-pool-facing-room-1.jpg',
-      'v2/assets/regina-luxury-pool-facing-room-2.jpg',
-      'v2/assets/regina-luxury-pool-facing-room-3.jpg'
+      'v2/assets/regina/rooms/luxury/1.webp',
+      'v2/assets/regina/rooms/luxury/2.webp',
+      'v2/assets/regina/rooms/luxury/3.webp'
     ],
-    'learnLink' => '#'
+    'learnLink' => 'https://www.acroncandolimresortgoa.com/acron-luxury-rooms-candolim-hotels-goa.php'
   ],
   [
     'id' => 'luxury-room-with-bathtub',
-    'name' => 'Luxury Room with Bathtub CONTENT NEEDED',
-    'description' => 'CONTENT NEEDED Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Located within the northern section of Acron Candolim Regina, these spacious private apartments are a welcome treat for large families or groups who are looking to reconnect, share, and make the most out of their Goa experience.',
+    'name' => 'Luxury Room with Bathtub',
+    'description' => 'Stretch out and soak in the lively Candolim vibes from your private balcony. The Luxury Room is made for those who want a little extra space to lounge, sip a drink, or simply watch the day unfold at the pool or gardens. Comfort meets relaxed style for a stay you won’t forget.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '8 Adults'],
       ['icon' => 'fa-solid fa-door-open', 'text' => 'Balcony Attached'],
       ['icon' => 'fa-solid fa-bed', 'text' => 'Queen Size Twin Beds'],
-      ['icon' => 'fa-solid fa-bath', 'text' => '3 Bathrooms']
+      ['icon' => 'fa-solid fa-bath', 'text' => '3 Washrooms']
     ],
     'images' => [
-      'v2/assets/regina-luxury-room-with-bathtub-1.jpg',
-      'v2/assets/regina-luxury-room-with-bathtub-2.jpg',
-      'v2/assets/regina-luxury-room-with-bathtub-3.jpg'
+      'v2/assets/regina/rooms/luxury-2/1.webp',
+      'v2/assets/regina/rooms/luxury-2/2.webp',
+      'v2/assets/regina/rooms/luxury-2/3.webp'
     ],
-    'learnLink' => '#'
+    'learnLink' => 'https://www.acroncandolimresortgoa.com/acron-luxury-rooms-candolim-hotels-goa.php'
   ],
   [
     'id' => 'suite-room',
@@ -151,19 +151,16 @@ $roomsList = [
       ['icon' => 'fa-solid fa-tv', 'text' => 'Smart Entertainment']
     ],
     'images' => [
-      'v2/assets/regina-suite room-1.jpg',
-      'v2/assets/regina-suite room-2.jpg',
-      'v2/assets/regina-suite room-3.jpg'
+      'v2/assets/regina/rooms/suite/1.webp',
+      'v2/assets/regina/rooms/suite/2.webp',
+      'v2/assets/regina/rooms/suite/3.webp'
     ],
-    'learnLink' => '#'
-  ]
-];
-$suitesHeading = "Explore Our Suites";
-$suitesList = [
+    'learnLink' => 'https://www.acroncandolimresortgoa.com/suites-boutique-hotels-in-candolim-north-goa.php'
+  ],
   [
     'id' => 'regina-room',
-    'name' => 'Unnamed Room',
-    'description' => 'Our Emerald suites consist of 3 bedroom apartments nestled in a delightfully intimate garden setting. Perfect for larger groups seeking privacy and connection.',
+    'name' => 'Specially Abled Room',
+    'description' => 'Thoughtfully designed, this room includes accessible features for added comfort and ease. With convenient layouts and a focus on smooth movement, it ensures a relaxed stay. For any specific requirements or assistance, our team is always happy to help make your experience seamless.',
     'amenities' => [
       ['icon' => 'fa-solid fa-user-group', 'text' => '6-8 Adults'],
       ['icon' => 'fa-solid fa-couch', 'text' => 'Living Area'],
@@ -171,39 +168,39 @@ $suitesList = [
       ['icon' => 'fa-solid fa-bath', 'text' => 'Multiple En-suites']
     ],
     'images' => [
-      'v2/assets/regina-room-1.jpg',
-      'v2/assets/regina-room-2.jpg',
-      'v2/assets/regina-room-3.jpg'
+      'v2/assets/regina/rooms/room/1.webp',
+      'v2/assets/regina/rooms/room/2.webp',
+      'v2/assets/regina/rooms/room/3.webp'
     ],
-    'learnLink' => '#'
+    'learnLink' => 'https://www.acroncandolimresortgoa.com/room-for-differently-abled-persons-goa-hotels.php'
   ]
 ];
 $highlightsHeading = "Meetings & Events";
 $highlightAmenitiesList = [
   [
     'title' => 'Abbe Faria Hall',
-    'description' => 'A grand 2,200 sq ft hall hosting up to 150 guests — ideal for large meetings or events.',
-    'image' => 'v2/assets/regina-benefit-1.jpg'
+    'description' => 'A grand 2,200 sq. ft. hall hosting up to 150 guests — ideal for large meetings or events.',
+    'image' => 'v2/assets/regina/benefits/1.webp'
   ],
   [
     'title' => 'Edmond Dantes Hall',
-    'description' => 'A versatile 1,162 sq ft space seating up to 75 guests for meetings, presentations, and events.',
-    'image' => 'v2/assets/regina-benefit-2.jpg'
+    'description' => 'A versatile 1,162 sq. ft. space seating up to 75 guests for meetings, presentations, and events.',
+    'image' => 'v2/assets/regina/benefits/2.webp'
   ],
   [
     'title' => 'Monte Cristo Hall',
-    'description' => 'A cosy 473 sq ft venue perfect for intimate gatherings, workshops, and focused discussions.',
-    'image' => 'v2/assets/regina-benefit-3.jpg'
+    'description' => 'A cosy 473 sq. ft. venue perfect for intimate gatherings, workshops, and focused discussions.',
+    'image' => 'v2/assets/regina/benefits/3.webp'
   ]
 ];
 $pageReviews = [
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
-  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
-  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.'],
-  ['name' => 'Sarah Jenkins', 'stars' => 5, 'title' => 'Perfect Family Holiday', 'text' => 'The rooms were spotless and the buffet breakfast had a wonderful spread.'],
-  ['name' => 'John Doe', 'stars' => 5, 'title' => 'Absolutely Fantastic Stay', 'text' => 'The hospitality at Acron Candolim Regina is unmatched. The infinity pool views are spectacular.']
+  ['name' => 'Victoria S', 'stars' => 5, 'title' => 'Great food, location and staff', 'text' => 'Had an amazing stay! We came over New Years and there was a brilliant New Years ever gala, with unlimited food and drinks, the food was delicious. The rooms are nice and the balcony is so pretty as you can see over the pool and outside the hotel. Great location and less than a 10 minute walk to the beach. All staff are extremely nice and helpful, would definitely recommend staying here!'],
+  ['name' => 'Jitendra Patra', 'stars' => 5, 'title' => 'Excellent Stay at Acron Regina', 'text' => 'Our stay was comfortable. Food was excellent. Pool was great even though the weather was rainy. Room was large although we had some issues with AC control but the staff was really helpful. We celebrated our parents wedding anniversary and the manager and staff (both housekeeping and restaurant staff) really made our evening with music and cake cutting celebration. Spa was excellent too. Overall really satisfied with our stay.'],
+  ['name' => 'Passenger57744045813', 'stars' => 5, 'title' => 'Awesome Stay', 'text' => 'Our stay was absolutely wonderful! The staff was incredibly generous and welcoming, and the hospitality truly stood out—especially thanks to Mr. Ambarish, who went above and beyond to make our experience memorable. The food was delicious, and the room was top-notch: clean, comfortable, and very hygienic. We couldn’t have asked for a better stay!'],
+  ['name' => 'jagdi', 'stars' => 5, 'title' => 'Super hotel', 'text' => 'This is my second visit to this property, this year super stay, rooms are too good, cleaned, service is super good, staff is good, food is yummy, and particularly Mr.Ambarish he really takes care , he\'s polite, always helpful, so kind, due to such good approach and services we keep on coming, thanks Mr.Ambarish..'],
+  ['name' => 'Pam H', 'stars' => 5, 'title' => 'Comfortable and friendly hotel', 'text' => 'The rooms were comfortable and staff friendly and poilte and couldn\'t have helped more. Always found something to eat at breakfast would visit again if in Goa. Not far from main strip with lots of bars and restaurants. Tea and coffee facilities were available in the rooms and they were cleaned and stock replenished daily.'],
+  ['name' => 'LeoMalik', 'stars' => 5, 'title' => 'Perfect hotel to stay', 'text' => 'It was an awesome experience. Sohel at front desk helps us a lot in managing our bookings and extended all help . Ashutosh helped us with all in house needs . Thanks team for all support as it was an amazing stay and a memorable one . Will visit once again'],
+  ['name' => 'Guide47651814782', 'stars' => 5, 'title' => '💟', 'text' => 'The vibe is great. Even though it was raining it didn\'t bother us as the ambience was good. Also the staff is ready to help you even at 4 am. Melvin is there to help even at the midnight or early morning. The food is also great as they have so many options. The desserts too were served in the right sugar proportions. Must visit Place.'],
 ];
 ?>
 <?php include("v2/header.php"); ?>
@@ -213,17 +210,17 @@ $pageReviews = [
   <section class="resort-hero-wrapper position-relative overflow-hidden" aria-labelledby="resortHeroHeading">
     <div class="hero-content-overlay d-flex align-items-center justify-content-center text-center">
       <div class="container">
-        <header class="hero-text-box reveal">
+        <header class="hero-text-box">
           <h1 id="resortHeroHeading" class="resort-h2 fw-bold mb-2 text-uppercase text-white">
             <?= $h1 ?>
           </h1>
           <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
             <p class="resort-tagline mb-0 h6 text-white">Candolim, Goa</p>
 
-            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show Acron Waterfront Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
-              data-map-link="https://maps.google.com/?q=Acron+Candolim+Regina"
-              data-hotel-name="Acron Candolim Regina"
-              data-map-image="v2/assets/regina-map.jpeg">
+            <button type="button" class="btn-map-link d-flex align-items-center gap-2 text-decoration-none border-0" aria-label="Show The Regina Resort on Map" data-bs-toggle="modal" data-bs-target="#customMapModal"
+              data-map-link="https://maps.google.com/?q=The+Regina+Resort+by+Acron"
+              data-hotel-name="The Regina Resort"
+              data-map-image="v2/assets/regina/home/map.webp">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> SHOW ON MAP
             </button>
           </div>
@@ -231,8 +228,8 @@ $pageReviews = [
             10min Walk to Candolim Beach | Stylish, Spacious Rooms | Dining, Pool & Bar | For Stays & Events
           </p>
           <div class="d-flex flex-row justify-content-center gap-2 gap-md-3">
-            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at Acron Candolim Regina?">
-              WHY STAY HERE?
+            <button type="button" class="btn btn-outline-hero fw-bold tooltip-trigger" data-resort="<?= htmlspecialchars($pageResort) ?>" aria-label="Why stay at The Regina Resort?">
+              Stay Here For...
             </button>
             <button type="button" class="btn btn-book-now hero-btn btn-<?= htmlspecialchars($pageResort) ?> fw-bold trigger-book-engine" data-staah-id="MzAw">
               BOOK NOW
@@ -286,14 +283,14 @@ $pageReviews = [
       <div class="review-summary-wrapper reveal">
         <div class="tripadvisor-pill" aria-label="TripAdvisor Rating Summary">
           <div class="ta-icon-circle" aria-hidden="true">
-            <img src="v2/assets/tripadvisor-120.png" alt="" class="review-badge-icon">
+            <img src="v2/assets/tripadvisor-120.webp" alt="" class="review-badge-icon">
           </div>
           <div class="ta-stats">
             <span class="ta-rating">4.8 stars</span>
             <span class="ta-count">from 2,379 reviews</span>
           </div>
         </div>
-        <img src="v2/assets/travelers-choice-200.jpg" alt="TripAdvisor Travellers Choice 2024 Award" class="ta-badge-image shadow-sm" loading="lazy">
+        <img src="v2/assets/travellers-choice-200.webp" alt="TripAdvisor Travellers Choice 2024 Award" class="ta-badge-image shadow-sm" loading="lazy">
       </div>
     </div>
     <?php include("v2/components/reviews-slider.php"); ?>

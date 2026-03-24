@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Reusable Review Slider Component
  *
@@ -38,22 +37,14 @@ $reviews = $pageReviews ?? [];
         <?php foreach ($reviews as $review): ?>
             <article class="review-card shadow bg-white">
                 <header class="d-flex align-items-center mb-3">
-                    <div class="review-avatar d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                    <div class="review-avatar d-flex align-items-center justify-content-center me-3" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
                     <div>
-                        <h3 class="h6 mb-0 fw-bold text-blue-grey">
-                            <?= htmlspecialchars($review['name']) ?>
-                        </h3>
+                        <h3 class="h6 mb-0 fw-bold text-blue-grey"><?= htmlspecialchars($review['name']) ?></h3>
                         <?= renderStars($review['stars']) ?>
                     </div>
                 </header>
-                <h4 class="h6 fw-bold text-blue-grey text-uppercase mb-2">
-                    <?= htmlspecialchars($review['title']) ?>
-                </h4>
-                <blockquote class="review-body text-blue-grey mb-0 small m-0">
-                    <?= htmlspecialchars($review['text']) ?>
-                </blockquote>
+                <h4 class="h6 fw-bold text-blue-grey text-uppercase mb-2"><?= htmlspecialchars($review['title']) ?></h4>
+                <blockquote class="review-body text-blue-grey mb-0 small m-0"><?= htmlspecialchars($review['text']) ?></blockquote>
             </article>
         <?php endforeach; ?>
     </div>

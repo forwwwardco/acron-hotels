@@ -1,19 +1,15 @@
 <?php
-
 /**
  * Master Header Component
  *
  * @global string|null $pageTitle       Optional. The meta title for the specific page.
  * @global string|null $pageDescription Optional. The meta description for the specific page.
  */
-
-// Fallbacks for SEO metadata if not provided by the parent page
 $title       = $pageTitle ?? "Acron Group of Hotels | Premier Boutique Resorts in Goa";
 $description = $pageDescription ?? "Experience luxury at Acron Group of Hotels. Boutique beach resorts in North Goa, ideal for families and couples, located just minutes from the coast.";
 ?>
 <!DOCTYPE html>
 <html lang="en-GB">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,12 +33,10 @@ $description = $pageDescription ?? "Experience luxury at Acron Group of Hotels. 
             opacity: 0;
             animation: pageEntry 0.4s ease-out forwards;
         }
-
         @keyframes pageEntry {
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -51,7 +45,6 @@ $description = $pageDescription ?? "Experience luxury at Acron Group of Hotels. 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RE4RL53T8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -60,9 +53,6 @@ $description = $pageDescription ?? "Experience luxury at Acron Group of Hotels. 
         gtag('config', 'AW-852966872');
     </script>
 </head>
-
 <body>
-    <a href="#mainContent" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white z-3 skip-to-main-content">
-        Skip to main content
-    </a>
+    <a href="#mainContent" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white z-3 skip-to-main-content">Skip to main content</a>
     <?php include("v2/components/navbar.php"); ?>
